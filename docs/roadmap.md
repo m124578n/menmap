@@ -85,6 +85,10 @@ P4 使用者功能)。
   → `export_web_data.py` → `npm run deploy`(shops.json 隨 Pages 上傳,先不用 R2)。
   不做 ingest Worker:本機 SQLite 是正本,一天一次批次推送就夠。
 - ⬜ 新店封面照 → R2(併入 P3 照片快取)
+- ⬜ **Pages 改 GitHub push 自動部署**(之後再弄):現在的 `menmap` 是直接上傳型不能接 Git,
+  要在 Dashboard 授權 GitHub App 另建 Git 型專案(Root `web`、`npm run build`、`dist`、branch `main`),
+  再搬 `menmap.shunzz.com` 過去、刪舊專案、`run_daily.ps1` 拿掉 publish pages。
+  Workers 可選 Workers Builds(Root `worker`、`npx wrangler deploy`)。
 
 ### P3 — 收尾
 
