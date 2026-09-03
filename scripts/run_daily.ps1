@@ -69,6 +69,14 @@ function Start-Snapshot($backend, $limit) {
     [pscustomobject]@{ Backend = $backend; Process = $p; Log = $sub }
 }
 
+# 每週(星期日)重新搜尋一次 seed,放在快照「之前」讓新店當天就被抓:
+# 新店追加並記 added_at(新店雷達)、既有店更新名稱/地址/座標、搜不到的不刪只計數。
+# 報告在 data/diff/{date}-seed.md。$env:SEED_REFRESH = "1" 強制跑、"0" 跳過。
+$refreshSeed = if ($env:SEED_REFRESH) { $env:SEED_REFRESH -eq "1" } else { (Get-Date).DayOfWeek -eq [DayOfWeek]::Sunday }
+if ($refreshSeed) {
+    Run-Step "seed refresh" { uv run python -m ramen seed --refresh 2>&1 }
+}
+
 $jobs = @(
     (Start-Snapshot "static"     $env:SNAPSHOT_LIMIT_STATIC),
     (Start-Snapshot "playwright" $env:SNAPSHOT_LIMIT_PLAYWRIGHT)

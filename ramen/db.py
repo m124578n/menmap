@@ -79,6 +79,17 @@ CREATE TABLE IF NOT EXISTS snapshot (
 
 CREATE INDEX IF NOT EXISTS idx_snapshot_backend_time
     ON snapshot (backend, captured_at);
+
+-- 店家主檔的名稱/地址變動紀錄(upsert_shop 偵測到就寫一筆;diff 報告用)
+CREATE TABLE IF NOT EXISTS shop_change (
+    id          INTEGER PRIMARY KEY AUTOINCREMENT,
+    ftid        TEXT NOT NULL,
+    captured_at TEXT NOT NULL,
+    field       TEXT NOT NULL,
+    old         TEXT,
+    new         TEXT
+);
+CREATE INDEX IF NOT EXISTS idx_shop_change_time ON shop_change (captured_at);
 """
 
 
@@ -109,6 +120,16 @@ def upsert_shop(conn: sqlite3.Connection, d: ShopDetail, now: str) -> None:
     dd = d.to_dict()
     menu_json = (json.dumps(d.menu_photos, ensure_ascii=False)
                  if d.menu_photos else None)
+    # 改名/搬家偵測:覆蓋前先比對,有變就記一筆 shop_change(diff 報告會列出)
+    old = conn.execute("SELECT name, address FROM shop WHERE ftid = ?", (d.ftid,)).fetchone()
+    if old is not None:
+        for field in ("name", "address"):
+            new_val = dd.get(field)
+            if new_val and old[field] and new_val != old[field]:
+                conn.execute(
+                    "INSERT INTO shop_change (ftid, captured_at, field, old, new) "
+                    "VALUES (?, ?, ?, ?, ?)",
+                    (d.ftid, now, field, old[field], new_val))
     conn.execute(
         """
         INSERT INTO shop (ftid, name, address, lat, lng, phone, website,
@@ -231,6 +252,13 @@ def previous_snapshot_time(conn: sqlite3.Connection, backend: str,
     )
     row = cur.fetchone()
     return row["captured_at"] if row else None
+
+
+def shop_changes_at(conn: sqlite3.Connection, captured_at: str) -> list[sqlite3.Row]:
+    """某批次(captured_at)偵測到的名稱/地址變動。"""
+    return conn.execute(
+        "SELECT ftid, field, old, new FROM shop_change WHERE captured_at = ? ORDER BY id",
+        (captured_at,)).fetchall()
 
 
 def last_ok_capture_per_shop(conn: sqlite3.Connection,

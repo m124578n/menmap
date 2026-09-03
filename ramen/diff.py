@@ -44,12 +44,20 @@ def build_diff(conn: sqlite3.Connection, backend: str, date: str,
         lines.append("- 無")
     lines.append("")
 
+    # 名稱/地址變動(upsert_shop 覆蓋主檔前偵測到的;不需要對比基準)
+    shop_changes = db.shop_changes_at(conn, current_at)
+    field_label = {"name": "名稱", "address": "地址"}
+    lines.append(f"## 名稱/地址變動({len(shop_changes)})")
+    lines += [f"- {name_by_ftid.get(r['ftid'], r['ftid'])}:{field_label.get(r['field'], r['field'])}"
+              f" `{r['old']}` → `{r['new']}`" for r in shop_changes] or ["- 無"]
+    lines.append("")
+
     if compared == 0:
         lines.append("## 變動")
         lines.append("- 本次店家皆為首次快照,無對比基準。")
-        return "\n".join(lines) + "\n", 0
+        return "\n".join(lines) + "\n", len(shop_changes)
 
-    changes = 0
+    changes = len(shop_changes)
     status_lines, hours_lines, rating_lines = [], [], []
 
     for ftid, c in cur.items():

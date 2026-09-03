@@ -28,10 +28,12 @@ def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(prog="ramen", description="雙北拉麵地圖資料採集")
     sub = parser.add_subparsers(dest="cmd", required=True)
 
-    p_seed = sub.add_parser("seed", help="建立 seed(只跑一次)")
+    p_seed = sub.add_parser("seed", help="建立 seed(只跑一次);--refresh 合併更新(每週排程)")
     p_seed.add_argument("--backend", default="static", choices=["static"],
                         help="seed 目前只支援 static(快、可分頁)")
     p_seed.add_argument("--force", action="store_true", help="覆蓋既有 seed.json")
+    p_seed.add_argument("--refresh", action="store_true",
+                        help="重新搜尋並合併:新店追加、既有更新、搜不到的不刪;報告在 data/diff/{date}-seed.md")
 
     p_snap = sub.add_parser("snapshot", help="每日快照")
     p_snap.add_argument("--backend", required=True, choices=["static", "playwright"])
@@ -43,6 +45,9 @@ def main(argv: list[str] | None = None) -> int:
     args = parser.parse_args(argv)
 
     if args.cmd == "seed":
+        if args.refresh:
+            from .seed import refresh_seed
+            return refresh_seed()
         from .seed import run_seed
         return run_seed(force=args.force)
     if args.cmd == "snapshot":

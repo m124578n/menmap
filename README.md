@@ -55,6 +55,7 @@ data/        seed.json、ramen.db、每日 raw/diff/compare(進 git 保留歷史
 # 1) 採集端
 uv sync && uv run playwright install chromium
 uv run python -m ramen seed                        # 建 seed(只跑一次,已入庫可跳過)
+uv run python -m ramen seed --refresh              # 重新搜尋並合併(新店/改名/搬家;排程每週日跑)
 uv run python -m ramen snapshot --backend static   # 每日快照(--limit N 可限量)
 uv run python -m ramen snapshot --backend playwright
 uv run python -m ramen compare                     # 兩後端對比報告
@@ -89,6 +90,15 @@ log 在 `data/logs/`(不進 git):`{date}.log` 主流程、`{date}-static.log` /
   (預設 100)。設了 N 就會**輪替**:優先抓從沒被該後端抓過的店,其次最久沒抓的,
   每天跑同樣的數字會自動輪完整個 seed(100 家約 6 天一輪)。被降級/失敗變多時調小。
 - diff 是每家店跟**自己上一次**成功快照比(不是跟上一個批次比),輪抓時才有東西可比。
+  也會列出**改名/搬家**(主檔覆蓋前偵測,記在 `shop_change` 表)。
+- **新店與更替**:每週日快照前跑 `ramen seed --refresh`,重新搜尋所有關鍵字並**合併**進 seed:
+  新 ftid 追加並記 `added_at`(前端「新店雷達」30 天內標 NEW)、既有店更新名稱/地址/座標、
+  搜不到的不刪只累計 `missed`;不符現行過濾規則的(含既有)會移除並列在報告。
+  報告在 `data/diff/{date}-seed.md`。`$env:SEED_REFRESH="1"` 可當天強制跑;搜尋命中不到
+  seed 一半時視為被擋,不動 seed。永久停業的店留在 seed,由每日快照的狀態反映。
+- 過濾規則(`ramen/seed.py` 的 `looks_like_ramen`):類別是「拉麵店」就收;否則名稱要有
+  拉麵訊號且不是咖哩/丼飯/烏龍麵等副品項店;只有「日本餐廳」類別的不收(會混進定食、壽司連鎖)。
+  Google 搜尋結果每次都會浮動(實測同關鍵字前後兩天差 40~50 家),所以 seed 要靠累積。
 
 ## 部署(Cloudflare)
 

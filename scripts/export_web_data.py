@@ -73,9 +73,21 @@ def latest_snapshots() -> dict[str, sqlite3.Row]:
     return out
 
 
+def shop_master() -> dict[str, sqlite3.Row]:
+    """shop 主檔(每日快照 upsert,改名/搬家會反映在這;seed 只有每週更新)。"""
+    if not DB.exists():
+        return {}
+    conn = sqlite3.connect(DB)
+    conn.row_factory = sqlite3.Row
+    rows = {r["ftid"]: r for r in conn.execute("SELECT ftid, name, address, lat, lng FROM shop")}
+    conn.close()
+    return rows
+
+
 def build() -> dict:
     seed = json.loads(SEED.read_text(encoding="utf-8"))
     snaps = latest_snapshots()
+    master = shop_master()
 
     # 新店判定:相對於「初始收錄批次」——初始整批不算新,之後 seed 更新
     # 加入且 30 天內的才標 NEW
@@ -86,7 +98,13 @@ def build() -> dict:
 
     shops = []
     for s in seed:
-        city, dist = city_district(s.get("address"))
+        # 名稱/地址/座標優先用 shop 主檔(天天更新),沒有才退回 seed
+        m = master.get(s["ftid"])
+        name = (m["name"] if m and m["name"] else None) or s.get("name")
+        address = (m["address"] if m and m["address"] else None) or s.get("address")
+        lat = m["lat"] if m and m["lat"] is not None else s.get("lat")
+        lng = m["lng"] if m and m["lng"] is not None else s.get("lng")
+        city, dist = city_district(address)
         snap = snaps.get(s["ftid"])
         hours = None
         if snap and snap["opening_hours_json"]:
@@ -97,9 +115,9 @@ def build() -> dict:
         added = (s.get("added_at") or "")[:10]
         shops.append({
             "ftid": s["ftid"],
-            "name": s.get("name"),
-            "lat": s.get("lat"),
-            "lng": s.get("lng"),
+            "name": name,
+            "lat": lat,
+            "lng": lng,
             "city": city,
             "district": dist,
             "types": s.get("types") or [],
