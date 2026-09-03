@@ -1,7 +1,8 @@
 # menmap worker(API)
 
 詳情 API。Hono on Cloudflare Workers,綁 D1。架構見 `../docs/architecture.md`。
-目前為 **P1**(本地 wrangler dev,尚未部署)。
+已部署:Worker `menmap-api`,正式路由 `menmap.shunzz.com/api/*`,
+備援 `https://menmap-api.m23568n.workers.dev`;D1 `menmap`(APAC)。
 
 ## 端點
 
@@ -28,12 +29,17 @@ npm run dev          # wrangler dev,http://localhost:8787
 
 前端(`../web`)dev server 已設 `/api` proxy 到 `:8787`,兩邊都啟動即可。
 
-## 部署前(P2)
+## 部署
 
-1. `wrangler d1 create menmap` → 把回傳的 `database_id` 填進 `wrangler.toml`
-2. `wrangler d1 execute menmap --remote --file=./schema.sql` 建遠端 schema
-3. 資料改由家裡的 publish 步驟寫入(ingest Worker,見架構文件),不再用 `seed.local.sql`
-4. `npm run deploy`
+```bash
+npm run deploy             # wrangler deploy(路由與 D1 綁定都在 wrangler.toml)
+npm run db:schema:remote   # 遠端 D1 建 schema(只有 schema 變動時需要)
+npm run db:push            # 匯出 ramen.db → seed.local.sql → 整顆重灌遠端 D1(約 5 千列、7 MB)
+```
+
+- `wrangler.toml` 的 `routes` 把 `menmap.shunzz.com/api/*` 指到這個 Worker,和 Pages 前端同源。
+- 線上資料目前是手動 `db:push`(先 DELETE 再 INSERT,跑的那幾秒詳情會查不到);
+  自動 publish(每日排程增量寫入)是 roadmap P2 的下一步。
 
 ## 結構
 

@@ -1,13 +1,24 @@
 name = "menmap-api"
 main = "src/index.ts"
-compatibility_date = "2024-11-01"
+compatibility_date = "2026-08-01"
 
-# D1 綁定。local dev 用本地 sqlite(.wrangler/state),database_id 為佔位;
-# 真正部署前用 `wrangler d1 create menmap` 換成實際 id。
+# 正式站:前端在 Pages(menmap.shunzz.com),API 走同網域的 /api/* 路由到這個 Worker,
+# 同源所以不需要 CORS / VITE_API_BASE;之後 P4 登入的 cookie 也能直接用。
+# workers.dev 網址(menmap-api.m23568n.workers.dev)保留當備援/除錯用。
+workers_dev = true   # 保留 menmap-api.m23568n.workers.dev 當備援/除錯
+routes = [
+  { pattern = "menmap.shunzz.com/api/*", zone_name = "shunzz.com" }
+]
+
+[observability]
+enabled = true
+
+# D1 綁定:遠端資料庫 menmap(APAC)。
+# local dev(wrangler dev)預設走本地 sqlite(.wrangler/state),不會碰遠端。
 [[d1_databases]]
 binding = "DB"
 database_name = "menmap"
-database_id = "local-dev-placeholder"
+database_id = "77afe778-5a39-4c2c-ad17-b2dbe51d94b3"
 
 [dev]
 port = 8787

@@ -1,10 +1,10 @@
 # menmap — 雙北拉麵地圖 🍜
 
 雙北 **591 家拉麵店**的互動地圖:營業狀態、營業時間、評分評論、菜單照片、店家公告,
-外加一顆「今天吃哪間」的拉麵骰子。資料每日自動採集,前後端部署 Cloudflare(規劃中),
+外加一顆「今天吃哪間」的拉麵骰子。資料每日自動採集,前後端部署 Cloudflare,
 爬蟲跑在家裡。
 
-> 目前狀態:本地開發完成(P0 前端 + P1 詳情 API),尚未部署。
+> **正式站:<https://menmap.shunzz.com>**(Pages + Workers + D1,2026-09-03 上線)。
 > 進度與計畫見 [docs/roadmap.md](docs/roadmap.md)。
 
 ## 功能
@@ -86,6 +86,19 @@ Start-ScheduledTask -TaskName RamenDailySnapshot                     # 立即測
   (預設 100)。設了 N 就會**輪替**:優先抓從沒被該後端抓過的店,其次最久沒抓的,
   每天跑同樣的數字會自動輪完整個 seed(100 家約 6 天一輪)。被降級/失敗變多時調小。
 - diff 是每家店跟**自己上一次**成功快照比(不是跟上一個批次比),輪抓時才有東西可比。
+
+## 部署(Cloudflare)
+
+| 元件 | 位置 | 指令 |
+|---|---|---|
+| 前端 | Pages 專案 `menmap` → `menmap.shunzz.com`(備援 `menmap.pages.dev`) | `cd web && npm run deploy` |
+| API | Worker `menmap-api`,路由 `menmap.shunzz.com/api/*`(備援 `menmap-api.m23568n.workers.dev`) | `cd worker && npm run deploy` |
+| 資料 | D1 `menmap`(APAC) | `cd worker && npm run db:push`(整顆 ramen.db 重灌,約 5 千列) |
+
+- 前端與 API 同源,不需要 CORS 或 `VITE_API_BASE`;本機開發仍走 Vite proxy。
+- 更新線上資料:先 `uv run python scripts/export_web_data.py`(shops.json)再 `npm run deploy`;
+  詳情資料 `npm run db:push`。目前是手動,自動 publish 見 roadmap P2。
+- 自訂網域的 DNS(CNAME `menmap` → `menmap.pages.dev`)在 Dashboard 管理。
 
 ## 採集端備忘
 

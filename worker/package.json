@@ -7,13 +7,15 @@
     "dev": "wrangler dev",
     "db:init": "wrangler d1 execute menmap --local --file=./schema.sql -y",
     "db:seed": "uv run python ../scripts/load_local_d1.py",
-    "deploy": "wrangler deploy"
+    "deploy": "wrangler deploy",
+    "db:schema:remote": "wrangler d1 execute menmap --remote --file=./schema.sql -y",
+    "db:push": "uv run python ../scripts/export_d1_seed.py && wrangler d1 execute menmap --remote --file=./seed.local.sql -y"
   },
   "dependencies": {
     "hono": "^4.6.14"
   },
   "devDependencies": {
-    "@cloudflare/workers-types": "^4.20241127.0",
-    "wrangler": "^3.90.0"
+    "@cloudflare/workers-types": "^5.20260903.1",
+    "wrangler": "^4.128.0"
   }
 }

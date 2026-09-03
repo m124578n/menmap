@@ -32,12 +32,13 @@ npm run dev        # http://localhost:5173
 
 ## 部署(Cloudflare Pages)
 
-- 建置:root `web`、指令 `npm run build`、輸出 `dist`。
-- 環境變數 `VITE_API_BASE`:Worker 的網址(如 `https://menmap-api.<帳號>.workers.dev`)。
-  前端的 `/api/*` 呼叫會接在它後面;本機開發留空走 Vite proxy。
-  若之後把 Worker 綁到同網域的 `/api/*` 路由就可拿掉。
-- **正式網域確定後**,把 `index.html` 裡的 `https://menmap.pages.dev` 換掉
-  (canonical、og:url、og:image 需要絕對網址,分享預覽才會出現)。
+- 正式站 **<https://menmap.shunzz.com>**(Pages 專案 `menmap`,備援 `menmap.pages.dev`)。
+- `npm run deploy`:`npm run build` 後用 wrangler(裝在 `../worker`)直接上傳 `dist`。
+  上傳前記得先 `uv run python ../scripts/export_web_data.py` 更新 `public/shops.json`。
+- API 走同網域的 `/api/*` 路由到 Worker(見 `../worker/wrangler.toml`),所以正式建置
+  **不設** `VITE_API_BASE`。只有在別的網域(例如直接開 `menmap.pages.dev`)才需要設成
+  Worker 網址 `https://menmap-api.m23568n.workers.dev`。本機開發留空走 Vite proxy。
+- `index.html` 的 canonical / og:url / og:image 已是 `https://menmap.shunzz.com`;換網域要改。
 - `public/_headers`:Pages 的快取規則(`/assets/*` 長快取、`shops.json` 5~10 分鐘)。
 - SEO/分享資產都在 `public/`:`favicon.svg`、`apple-touch-icon.png`、`og.png`(1200×630)、
   `manifest.webmanifest`、`robots.txt`。
