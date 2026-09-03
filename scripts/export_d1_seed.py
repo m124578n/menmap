@@ -16,13 +16,15 @@ OUT = ROOT / "worker" / "seed.local.sql"
 
 TABLES = {
     "shop": ["ftid", "name", "address", "lat", "lng", "phone", "website",
-             "place_id", "cover_photo", "first_seen", "last_seen"],
+             "place_id", "cover_photo", "fan_page", "location_id", "closed_at",
+             "menu_photos_json", "first_seen", "last_seen"],
     "snapshot": ["ftid", "backend", "captured_at", "ok", "error",
                  "business_status", "opening_hours_json", "price_text", "rating",
                  "user_rating_count", "phone", "website", "is_rich",
                  "review_count_scraped"],
     "review": ["ftid", "backend", "captured_at", "seq", "author", "stars",
                "date_rel", "text", "photos_json"],
+    "post": ["ftid", "backend", "captured_at", "seq", "text", "ts", "link", "photo"],
 }
 
 
@@ -40,7 +42,8 @@ def main() -> None:
     conn = sqlite3.connect(DB)
     conn.row_factory = sqlite3.Row
     lines: list[str] = ["-- 由 scripts/export_d1_seed.py 產生;本地 D1 開發用",
-                        "DELETE FROM review; DELETE FROM snapshot; DELETE FROM shop;"]
+                        "DELETE FROM post; DELETE FROM review; "
+                        "DELETE FROM snapshot; DELETE FROM shop;"]
     counts = {}
     for table, cols in TABLES.items():
         rows = conn.execute(f"SELECT {', '.join(cols)} FROM {table}").fetchall()

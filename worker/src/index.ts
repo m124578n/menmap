@@ -51,6 +51,15 @@ app.get("/api/shop/:ftid", async (c) => {
     .bind(ftid)
     .all();
 
+  // 兩個採集後端可能各存一份同樣的貼文,以文字去重
+  const postsRes = await db
+    .prepare(
+      `SELECT text, MAX(ts) ts, MAX(link) link, MAX(photo) photo
+       FROM post WHERE ftid = ? GROUP BY text ORDER BY ts DESC`
+    )
+    .bind(ftid)
+    .all();
+
   const reviews = (reviewsRes.results ?? []).map((r: any) => ({
     author: r.author,
     stars: r.stars,
@@ -75,6 +84,15 @@ app.get("/api/shop/:ftid", async (c) => {
     website: (latest?.website ?? shop?.website) ?? null,
     place_id: shop?.place_id ?? null,
     cover_photo: shop?.cover_photo ?? null,
+    fan_page: shop?.fan_page ?? null,
+    menu_photos: safeParse(shop?.menu_photos_json as string, [] as string[]),
+    closed_at: shop?.closed_at ?? null,
+    posts: (postsRes.results ?? []).map((p: any) => ({
+      text: p.text,
+      ts: p.ts,
+      link: p.link,
+      photo: p.photo,
+    })),
     latest: latest
       ? {
           captured_at: latest.captured_at,

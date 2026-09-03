@@ -5,8 +5,8 @@
   "type": "module",
   "scripts": {
     "dev": "wrangler dev",
-    "db:init": "wrangler d1 execute menmap --local --file=./schema.sql",
-    "db:seed": "wrangler d1 execute menmap --local --file=./seed.local.sql",
+    "db:init": "wrangler d1 execute menmap --local --file=./schema.sql -y",
+    "db:seed": "uv run python ../scripts/load_local_d1.py",
     "deploy": "wrangler deploy"
   },
   "dependencies": {

@@ -19,9 +19,28 @@ CREATE TABLE IF NOT EXISTS shop (
     website     TEXT,
     place_id    TEXT,
     cover_photo TEXT,
+    fan_page    TEXT,
+    location_id TEXT,
+    closed_at   TEXT,
+    menu_photos_json TEXT,
     first_seen  TEXT,
     last_seen   TEXT
 );
+
+-- 商家「最新動態」貼文(每次抓到完整版就整批取代,同 review)
+CREATE TABLE IF NOT EXISTS post (
+    id          INTEGER PRIMARY KEY AUTOINCREMENT,
+    ftid        TEXT NOT NULL,
+    backend     TEXT NOT NULL,
+    captured_at TEXT NOT NULL,
+    seq         INTEGER,
+    text        TEXT,
+    ts          INTEGER,
+    link        TEXT,
+    photo       TEXT
+);
+
+CREATE INDEX IF NOT EXISTS idx_post_shop ON post (ftid, backend);
 
 -- 每家店「最新一次抓到的」評論(每次成功抓到完整版就整批取代;
 -- 精簡版沒帶評論時保留舊的,不清空)
@@ -63,21 +82,34 @@ CREATE INDEX IF NOT EXISTS idx_snapshot_backend_time
 """
 
 
+# 既有 db 補欄位用(CREATE TABLE IF NOT EXISTS 不會加新欄)
+_SHOP_MIGRATIONS = ["fan_page", "location_id", "closed_at", "menu_photos_json"]
+
+
 def connect(db_path: str | Path) -> sqlite3.Connection:
     Path(db_path).parent.mkdir(parents=True, exist_ok=True)
     conn = sqlite3.connect(str(db_path))
     conn.row_factory = sqlite3.Row
     conn.executescript(SCHEMA)
+    existing = {r["name"] for r in conn.execute("PRAGMA table_info(shop)")}
+    for col in _SHOP_MIGRATIONS:
+        if col not in existing:
+            conn.execute(f"ALTER TABLE shop ADD COLUMN {col} TEXT")
     return conn
 
 
 def upsert_shop(conn: sqlite3.Connection, d: ShopDetail, now: str) -> None:
+    dd = d.to_dict()
+    menu_json = (json.dumps(d.menu_photos, ensure_ascii=False)
+                 if d.menu_photos else None)
     conn.execute(
         """
         INSERT INTO shop (ftid, name, address, lat, lng, phone, website,
-                          place_id, cover_photo, first_seen, last_seen)
+                          place_id, cover_photo, fan_page, location_id,
+                          menu_photos_json, first_seen, last_seen)
         VALUES (:ftid, :name, :address, :lat, :lng, :phone, :website,
-                :place_id, :cover_photo, :now, :now)
+                :place_id, :cover_photo, :fan_page, :location_id,
+                :menu_photos_json, :now, :now)
         ON CONFLICT(ftid) DO UPDATE SET
             name = COALESCE(excluded.name, shop.name),
             address = COALESCE(excluded.address, shop.address),
@@ -87,12 +119,42 @@ def upsert_shop(conn: sqlite3.Connection, d: ShopDetail, now: str) -> None:
             website = COALESCE(excluded.website, shop.website),
             place_id = COALESCE(excluded.place_id, shop.place_id),
             cover_photo = COALESCE(excluded.cover_photo, shop.cover_photo),
+            fan_page = COALESCE(excluded.fan_page, shop.fan_page),
+            location_id = COALESCE(excluded.location_id, shop.location_id),
+            menu_photos_json = COALESCE(excluded.menu_photos_json, shop.menu_photos_json),
             last_seen = excluded.last_seen
         """,
-        {**{k: d.to_dict().get(k) for k in
+        {**{k: dd.get(k) for k in
             ("ftid", "name", "address", "lat", "lng", "phone", "website",
-             "place_id", "cover_photo")}, "now": now},
+             "place_id", "cover_photo", "fan_page", "location_id")},
+         "menu_photos_json": menu_json, "now": now},
     )
+    # 店址沿革:偵測永久停業記 closed_at;重新營業則清除
+    if d.business_status == "CLOSED_PERMANENTLY":
+        conn.execute(
+            "UPDATE shop SET closed_at = COALESCE(closed_at, ?) WHERE ftid = ?",
+            (now, d.ftid))
+    elif d.business_status == "OPERATIONAL":
+        conn.execute(
+            "UPDATE shop SET closed_at = NULL WHERE ftid = ? AND closed_at IS NOT NULL",
+            (d.ftid,))
+
+
+def replace_posts(conn: sqlite3.Connection, ftid: str, backend: str,
+                  captured_at: str, posts: list[dict]) -> None:
+    """整批取代某店的商家貼文。posts 為空(精簡版/沒發文)時不動舊資料。"""
+    if not posts:
+        return
+    conn.execute("DELETE FROM post WHERE ftid = ? AND backend = ?", (ftid, backend))
+    for seq, p in enumerate(posts):
+        conn.execute(
+            """
+            INSERT INTO post (ftid, backend, captured_at, seq, text, ts, link, photo)
+            VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+            """,
+            (ftid, backend, captured_at, seq, p.get("text"), p.get("ts"),
+             p.get("link"), p.get("photo")),
+        )
 
 
 def replace_reviews(conn: sqlite3.Connection, ftid: str, backend: str,

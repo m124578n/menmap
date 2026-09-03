@@ -31,6 +31,8 @@ IDX_COVER = 72            # [[[..., [url,...]]]] 封面照
 IDX_GID = 89              # "/g/..." 知識圖譜 id
 IDX_S6 = (181, 5)         # 詳情請求 pb 需要的店家識別碼
 IDX_S7 = (181, 6)
+IDX_POSTS = 122           # [1] = 商家貼文列表
+MENU_BLOCKS = (105, 171)  # 「菜單」相片分類可能出現的區塊(巢狀位置會浮動)
 
 _PLACE_ID_RE = re.compile(r"placeid=(ChIJ[\w-]+)")
 _PRICE_RE = re.compile(r"^\$[\d$]*(?:[–\-][\d,]+)?$")
@@ -124,9 +126,83 @@ def parse_place_array(p: list, *, raw_text: str | None = None) -> ShopDetail:
             if rv["author"] or rv["text"]:
                 d.reviews.append(rv)
 
+    # 粉專:website 是 FB/IG 時另存(店家把粉專當官網登記)
+    if d.website and re.search(r"facebook\.com|instagram\.com", d.website):
+        d.fan_page = d.website
+
+    # 位置 id(店址沿革歸戶)
+    if isinstance(d.lat, float) and isinstance(d.lng, float):
+        from .geo import geohash
+        d.location_id = geohash(d.lat, d.lng, precision=8)
+
+    # 商家貼文(完整版才有)
+    d.posts = _extract_posts(p)
+
+    # 菜單照片(完整版才有,且店家要有「菜單」相片分類)
+    d.menu_photos = _extract_menu_photos(p)
+
     # 完整版判定:有評論數且營業時間含整週
     d.is_rich = d.user_rating_count is not None and len(d.opening_hours or []) >= 7
     return d
+
+
+def _extract_posts(p: list) -> list[dict]:
+    """商家「最新動態」貼文:p[122][1] 每則 [_, [[..segments]], [ts, ts2], _, [_, link], [[photo]]]"""
+    entries = _get(p, IDX_POSTS, 1)
+    out: list[dict] = []
+    if not isinstance(entries, list):
+        return out
+    for e in entries:
+        segs = _get(e, 1, 0)
+        text = None
+        if isinstance(segs, list):
+            parts = [s[0] for s in segs
+                     if isinstance(s, list) and s and isinstance(s[0], str)]
+            text = "".join(parts).strip() or None
+        if not text:
+            continue
+        link = _get(e, 4, 1)
+        photo = _get(e, 5, 0, 0)
+        ts = _get(e, 2, 0)
+        out.append({
+            "text": text,
+            "ts": ts if isinstance(ts, (int, float)) else None,
+            "link": link if isinstance(link, str) and link.startswith("http") else None,
+            "photo": photo if isinstance(photo, str) and photo.startswith("http") else None,
+        })
+    return out[:10]
+
+
+def _extract_menu_photos(p: list, cap: int = 8) -> list[str]:
+    """「菜單」相片分類的照片 URL。
+
+    分類節點的巢狀位置會隨店家浮動,採防禦性做法:在 MENU_BLOCKS 區塊內
+    找到值為「菜單」的節點,收集其父層子樹內的 googleusercontent 圖片 URL。
+    """
+    urls: list[str] = []
+
+    def collect(node: Any, depth: int = 0) -> None:
+        if len(urls) >= cap or depth > 10:
+            return
+        if isinstance(node, str):
+            if node.startswith("https://lh") and "googleusercontent" in node and node not in urls:
+                urls.append(node)
+        elif isinstance(node, list):
+            for c in node:
+                collect(c, depth + 1)
+
+    def walk(node: Any, parent: list | None) -> None:
+        if isinstance(node, list):
+            for c in node:
+                walk(c, node)
+        elif node in ("菜單", "Menu") and parent is not None:
+            collect(parent)
+
+    for idx in MENU_BLOCKS:
+        blk = _get(p, idx)
+        if isinstance(blk, list):
+            walk(blk, None)
+    return urls[:cap]
 
 
 def _iter_strings(node: Any, max_depth: int, _depth: int = 0):

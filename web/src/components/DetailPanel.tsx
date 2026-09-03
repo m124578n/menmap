@@ -1,5 +1,8 @@
 import { useState } from "react";
-import { X, ExternalLink, Star, MapPin, Tag, Phone, Globe, Clock } from "lucide-react";
+import {
+  X, ExternalLink, Star, MapPin, Tag, Phone, Globe, Clock,
+  Megaphone, BookOpen, Facebook, Instagram,
+} from "lucide-react";
 import type { Shop, BusinessStatus } from "../types";
 import { StatusBadge } from "./StatusBadge";
 import { formatCount, statusColor, hiRes } from "../lib/format";
@@ -86,7 +89,7 @@ export default function DetailPanel({ shop, onClose }: Props) {
               <a href={`tel:${d.phone.replace(/\s/g, "")}`}>{d.phone}</a>
             </div>
           )}
-          {d?.website && (
+          {d?.website && !d.fan_page && (
             <div className="kv">
               <span className="k">
                 <Globe size={14} style={{ verticalAlign: "-2px" }} /> 網站
@@ -96,7 +99,34 @@ export default function DetailPanel({ shop, onClose }: Props) {
               </a>
             </div>
           )}
+          {d?.fan_page && (
+            <div className="kv">
+              <span className="k">
+                {d.fan_page.includes("instagram") ? (
+                  <Instagram size={14} style={{ verticalAlign: "-2px" }} />
+                ) : (
+                  <Facebook size={14} style={{ verticalAlign: "-2px" }} />
+                )}{" "}
+                粉專
+              </span>
+              <a href={d.fan_page} target="_blank" rel="noreferrer" className="truncate-link">
+                {d.fan_page.includes("instagram") ? "Instagram" : "Facebook"}
+              </a>
+            </div>
+          )}
         </div>
+
+        {/* 商家動態(公休公告/活動) */}
+        {d && d.posts.length > 0 && (
+          <div className="detail-section">
+            <h3>
+              <Megaphone size={12} style={{ verticalAlign: "-1px" }} /> 店家動態
+            </h3>
+            {d.posts.slice(0, 3).map((p, i) => (
+              <PostItem key={i} p={p} />
+            ))}
+          </div>
+        )}
 
         {/* 詳情 API 狀態 */}
         {detail.status === "loading" && (
@@ -136,6 +166,29 @@ export default function DetailPanel({ shop, onClose }: Props) {
           </div>
         )}
 
+        {/* 菜單照片 */}
+        {d && d.menu_photos.length > 0 && (
+          <div className="detail-section">
+            <h3>
+              <BookOpen size={12} style={{ verticalAlign: "-1px" }} /> 菜單
+            </h3>
+            <div className="menu-photos">
+              {d.menu_photos.map((m, i) => (
+                <a key={i} href={hiRes(m, "s1600")} target="_blank" rel="noreferrer">
+                  <img
+                    src={hiRes(m, "w400")}
+                    alt={`菜單 ${i + 1}`}
+                    loading="lazy"
+                    onError={(e) => {
+                      e.currentTarget.parentElement!.style.display = "none";
+                    }}
+                  />
+                </a>
+              ))}
+            </div>
+          </div>
+        )}
+
         {/* 評論 */}
         {d && d.reviews.length > 0 && (
           <div className="detail-section">
@@ -167,6 +220,32 @@ function Hours({ hours }: { hours: [string, string[]][] }) {
           <span>{spans.length ? spans.join("、") : "休息"}</span>
         </div>
       ))}
+    </div>
+  );
+}
+
+function PostItem({ p }: { p: import("../hooks/useShopDetail").MerchantPost }) {
+  const [expanded, setExpanded] = useState(false);
+  const long = (p.text?.length ?? 0) > 80;
+  const date = p.ts ? new Date(p.ts * 1000).toLocaleDateString("zh-TW") : null;
+  return (
+    <div className="post">
+      <p className="review-text" data-clamped={long && !expanded}>
+        {p.text}
+      </p>
+      {long && (
+        <button className="review-more" onClick={() => setExpanded((v) => !v)}>
+          {expanded ? "收起" : "展開全文"}
+        </button>
+      )}
+      <div className="post-meta">
+        {date && <span>{date}</span>}
+        {p.link && (
+          <a href={p.link} target="_blank" rel="noreferrer">
+            原始貼文 <ExternalLink size={11} style={{ verticalAlign: "-1px" }} />
+          </a>
+        )}
+      </div>
     </div>
   );
 }

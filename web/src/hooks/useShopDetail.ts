@@ -8,6 +8,13 @@ export interface Review {
   photos: string[];
 }
 
+export interface MerchantPost {
+  text: string | null;
+  ts: number | null;
+  link: string | null;
+  photo: string | null;
+}
+
 export interface ShopDetailData {
   ftid: string;
   found: boolean;
@@ -17,6 +24,10 @@ export interface ShopDetailData {
   website: string | null;
   place_id: string | null;
   cover_photo: string | null;
+  fan_page: string | null;
+  menu_photos: string[];
+  closed_at: string | null;
+  posts: MerchantPost[];
   latest: {
     captured_at: string;
     business_status: string | null;

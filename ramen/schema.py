@@ -29,6 +29,10 @@ class ShopDetail:
     cover_photo: str | None = None
     is_rich: bool = False              # 這次回應是否為完整版(有評論數+整週營業時間)
     req_ids: dict = field(default_factory=dict)      # {gid, s6, s7}:組完整詳情請求所需
+    posts: list = field(default_factory=list)        # 商家貼文 [{text, ts, link, photo}]
+    menu_photos: list[str] = field(default_factory=list)  # 「菜單」分類照片 URL
+    fan_page: str | None = None        # website 為 FB/IG 時的粉專連結
+    location_id: str | None = None     # geohash(店址沿革歸戶用)
 
     def hours_json(self) -> str | None:
         if self.opening_hours is None:

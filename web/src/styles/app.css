@@ -586,6 +586,34 @@ a {
   text-overflow: ellipsis;
   white-space: nowrap;
 }
+.post {
+  padding: 8px 0;
+  border-top: 1px dashed var(--border);
+}
+.post:first-of-type {
+  border-top: none;
+  padding-top: 0;
+}
+.post-meta {
+  display: flex;
+  gap: 12px;
+  margin-top: 4px;
+  font-size: 12px;
+  color: var(--fg-muted);
+}
+.post-meta a {
+  font-size: 12px;
+}
+.menu-photos {
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+}
+.menu-photos img {
+  height: 120px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border);
+}
 .review {
   padding: 10px 0;
   border-top: 1px dashed var(--border);

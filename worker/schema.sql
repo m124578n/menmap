@@ -10,9 +10,27 @@ CREATE TABLE IF NOT EXISTS shop (
     website     TEXT,
     place_id    TEXT,
     cover_photo TEXT,
+    fan_page    TEXT,
+    location_id TEXT,
+    closed_at   TEXT,
+    menu_photos_json TEXT,
     first_seen  TEXT,
     last_seen   TEXT
 );
+
+CREATE TABLE IF NOT EXISTS post (
+    id          INTEGER PRIMARY KEY AUTOINCREMENT,
+    ftid        TEXT NOT NULL,
+    backend     TEXT NOT NULL,
+    captured_at TEXT NOT NULL,
+    seq         INTEGER,
+    text        TEXT,
+    ts          INTEGER,
+    link        TEXT,
+    photo       TEXT
+);
+
+CREATE INDEX IF NOT EXISTS idx_post_shop ON post (ftid, backend);
 
 CREATE TABLE IF NOT EXISTS snapshot (
     id                 INTEGER PRIMARY KEY AUTOINCREMENT,

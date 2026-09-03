@@ -27,6 +27,7 @@ def _snapshot_static(seed: list[dict], date: str, limit: int | None):
             db.upsert_shop(conn, detail, now)
             db.insert_snapshot(conn, ftid, "static", now, ok=True, detail=detail)
             db.replace_reviews(conn, ftid, "static", now, detail.reviews)
+            db.replace_posts(conn, ftid, "static", now, detail.posts)
             ok += 1
             log.info("[%d/%d] %s rich=%s", i, len(entries), name, detail.is_rich)
         except Exception as e:  # noqa: BLE001
@@ -55,6 +56,7 @@ def _snapshot_playwright(seed: list[dict], date: str, limit: int | None):
                 db.upsert_shop(conn, detail, now)
                 db.insert_snapshot(conn, ftid, "playwright", now, ok=True, detail=detail)
                 db.replace_reviews(conn, ftid, "playwright", now, detail.reviews)
+                db.replace_posts(conn, ftid, "playwright", now, detail.posts)
                 ok += 1
                 log.info("[%d/%d] %s rich=%s", i, len(entries), name, detail.is_rich)
             except Exception as e:  # noqa: BLE001
