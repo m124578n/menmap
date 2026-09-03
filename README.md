@@ -21,16 +21,17 @@
 ## 架構(摘要)
 
 ```
-[家裡 Windows]                    [Cloudflare(規劃)]         [使用者]
-爬蟲(每日排程)                    R2  shops.json/照片/圖磚
- static + playwright  ─publish──▶  D1  shop/snapshot/review/post
- → SQLite                          ▲              │
-                                   Pages(前端) ─▶ Workers(Hono API)
+[家裡 Windows,每天 20:00]                 [Cloudflare]                      [使用者]
+爬蟲 static + playwright ─▶ SQLite(正本)   menmap.shunzz.com
+        │                                   ├─ Pages   前端 + shops.json  ◀── 地圖/列表
+        ├─ publish_d1.py 當天增量 ─────────▶ D1       shop/snapshot/review/post
+        └─ export_web_data.py + deploy ───▶ Pages     └─ /api/* ─▶ Worker(Hono)◀── 單店詳情
 ```
 
 - **爬蟲留在家**是刻意決策:住宅 IP,避開資料中心 IP 被 Google 降級/封鎖
-- 讀寫分離:地圖/列表走靜態 `shops.json`(現階段過渡),單店詳情走 Worker + D1
-- 不用付費 API、不需任何金鑰,預期月費 $0
+- **本機 SQLite 是正本,雲端是複本**:每天排程尾端把當天變動推上去(見「部署」)
+- 讀寫分離:地圖/列表走靜態 `shops.json`(隨 Pages 部署),單店詳情走同網域 `/api/*` → Worker + D1
+- 不用付費 API、不需任何金鑰,Cloudflare 免費方案內,月費 $0
 
 細節見 [docs/architecture.md](docs/architecture.md)、設計規格 [docs/design.md](docs/design.md)。
 
@@ -40,9 +41,10 @@
 ramen/       採集(Python):雙後端爬蟲、parser、SQLite、diff
 web/         前端(Vite + React + MapLibre)→ Pages     [web/README.md]
 worker/      詳情 API(Hono + D1)→ Workers            [worker/README.md]
-scripts/     seed/快照匯出、每日排程、模板重錄
+scripts/     每日排程(run_daily/register_task)、publish(publish_d1/export_web_data)、
+             本地 D1 seed、模板重錄、raw 重解析
 docs/        architecture / design / roadmap
-data/        seed.json、ramen.db、每日 raw/diff/compare(進 git 保留歷史)
+data/        seed.json、ramen.db、每日 raw/diff/compare(進 git 保留歷史);logs/ 不進 git
 ```
 
 ## 快速開始
@@ -76,8 +78,9 @@ Start-ScheduledTask -TaskName RamenDailySnapshot                     # 立即測
 ```
 
 `run_daily.ps1`:**兩後端同時**快照(static 全抓 591 家、playwright 每天輪 100 家)→ compare
-→ git commit/push `data/`。log 在 `data/logs/`(不進 git):`{date}.log` 主流程、
-`{date}-static.log` / `{date}-playwright.log` 各後端逐店輸出。
+→ **publish 上線**(D1 當天增量 + Pages 重新部署)→ git commit/push `data/` 與 `shops.json`。
+log 在 `data/logs/`(不進 git):`{date}.log` 主流程、`{date}-static.log` /
+`{date}-playwright.log` 各後端逐店輸出。跑的期間會擋住閒置睡眠,結束後解除。
 
 - 實測 static 每家約 6 秒(全抓約 50 分鐘)、playwright 每家約 8 秒(100 家約 15 分鐘),
   含請求間 2.5~5 秒隨機延遲、每 15 家長休 8~15 秒;兩後端各自節流、並行跑,
@@ -97,10 +100,14 @@ Start-ScheduledTask -TaskName RamenDailySnapshot                     # 立即測
 
 - 前端與 API 同源,不需要 CORS 或 `VITE_API_BASE`;本機開發仍走 Vite proxy。
 - **線上資料每天自動更新**:`run_daily.ps1` 抓完、compare 完後跑 publish——
-  `scripts/publish_d1.py` 只匯出當天新增/取代的列(冪等,失敗隔天可重推)推到 D1,
+  `scripts/publish_d1.py` 只匯出當天新增/取代的列(冪等,同天重跑不會重複)推到 D1,
   再 `export_web_data.py` → `npm run deploy` 重新上傳 Pages(shops.json 一起進 git)。
   手動測試不想上線時設 `$env:PUBLISH="0"`。
-- 自訂網域的 DNS(CNAME `menmap` → `menmap.pages.dev`)在 Dashboard 管理。
+- publish 只推「當天日期」的列;某天沒跑或推失敗,要手動補:
+  `uv run python scripts/publish_d1.py --date YYYY-MM-DD`,再到 `worker/` 執行
+  `npx wrangler d1 execute menmap --remote --file=./publish.local.sql -y`。
+- 自訂網域的 DNS(CNAME `menmap` → `menmap.pages.dev`)在 Dashboard 管理;
+  wrangler 用 `npx wrangler login` 登入的帳號要有 Pages/Workers/D1 權限(採集機已登入)。
 
 ## 採集端備忘
 
