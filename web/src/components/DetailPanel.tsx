@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { X, ExternalLink, Star, MapPin, Tag, Phone, Globe, Clock } from "lucide-react";
 import type { Shop, BusinessStatus } from "../types";
 import { StatusBadge } from "./StatusBadge";
@@ -170,7 +171,11 @@ function Hours({ hours }: { hours: [string, string[]][] }) {
   );
 }
 
+const REVIEW_CLAMP = 90; // 超過這長度先收合
+
 function ReviewItem({ r }: { r: Review }) {
+  const [expanded, setExpanded] = useState(false);
+  const long = (r.text?.length ?? 0) > REVIEW_CLAMP;
   return (
     <div className="review">
       <div className="review-head">
@@ -178,7 +183,16 @@ function ReviewItem({ r }: { r: Review }) {
         {r.stars != null && <span className="review-stars">{"★".repeat(r.stars)}</span>}
         {r.date_rel && <span className="review-date">{r.date_rel}</span>}
       </div>
-      {r.text && <p className="review-text">{r.text}</p>}
+      {r.text && (
+        <p className="review-text" data-clamped={long && !expanded}>
+          {r.text}
+        </p>
+      )}
+      {long && (
+        <button className="review-more" onClick={() => setExpanded((v) => !v)}>
+          {expanded ? "收起" : "展開全文"}
+        </button>
+      )}
       {r.photos.length > 0 && (
         <div className="review-photos">
           {r.photos.slice(0, 6).map((p, i) => (
