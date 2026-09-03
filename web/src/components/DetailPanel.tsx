@@ -241,11 +241,19 @@ export default function DetailPanel({ shop, onClose }: Props) {
   );
 }
 
+// 顯示順序固定星期一~星期日;資料來源(Google)是從抓取當天起算的一週,不重排會每天不同
+const WEEK_ORDER = ["星期一", "星期二", "星期三", "星期四", "星期五", "星期六", "星期日"];
+
 function Hours({ hours }: { hours: [string, string[]][] }) {
   const todayName = WEEKDAYS[new Date().getDay()];
+  const rank = (day: string) => {
+    const i = WEEK_ORDER.indexOf(day);
+    return i === -1 ? 99 : i; // 認不得的名稱排最後、維持原順序
+  };
+  const sorted = [...hours].sort((a, b) => rank(a[0]) - rank(b[0]));
   return (
     <div>
-      {hours.map(([day, spans], i) => (
+      {sorted.map(([day, spans], i) => (
         <div className="hours-row" data-today={day === todayName} key={i}>
           <span className="day">{day}</span>
           <span>{spans.length ? spans.join("、") : "休息"}</span>

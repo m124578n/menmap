@@ -35,6 +35,17 @@ IDX_POSTS = 122           # [1] = 商家貼文列表
 MENU_BLOCKS = (105, 171)  # 「菜單」相片分類可能出現的區塊(巢狀位置會浮動)
 
 _PLACE_ID_RE = re.compile(r"placeid=(ChIJ[\w-]+)")
+_WEEK_ORDER = ["星期一", "星期二", "星期三", "星期四", "星期五", "星期六", "星期日"]
+
+
+def sort_week(hours: list) -> list:
+    """把 [[星期名, spans], ...] 固定排成星期一~星期日;認不得的名稱排最後、維持原順序。"""
+    def rank(item):
+        try:
+            return _WEEK_ORDER.index(item[0])
+        except ValueError:
+            return 99
+    return sorted(hours, key=rank)  # sorted 是穩定排序
 _PRICE_RE = re.compile(r"^\$[\d$]*(?:[–\-][\d,]+)?$")
 
 
@@ -87,7 +98,8 @@ def parse_place_array(p: list, *, raw_text: str | None = None) -> ShopDetail:
             if isinstance(day, str):
                 parsed.append([day, spans])
         if parsed:
-            d.opening_hours = parsed
+            # Google 回傳是從「抓取當天」開始排的一週;固定成星期一~星期日,入庫才一致
+            d.opening_hours = sort_week(parsed)
 
     # 營業狀態:正常時沒有明確欄位,關店時整包 JSON 會出現標記字串
     scan = raw_text if raw_text is not None else json.dumps(p, ensure_ascii=False)
