@@ -614,6 +614,17 @@ a {
   border-radius: var(--radius-sm);
   border: 1px solid var(--border);
 }
+.new-badge {
+  flex-shrink: 0;
+  font-family: var(--font-sans);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  color: #fff;
+  background: var(--accent);
+  padding: 1px 6px;
+  border-radius: 999px;
+}
 .review {
   padding: 10px 0;
   border-top: 1px dashed var(--border);

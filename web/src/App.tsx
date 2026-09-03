@@ -1,4 +1,4 @@
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import type { LngLatBounds } from "maplibre-gl";
 import { Search, X, Moon, Sun, PanelLeftClose, PanelLeftOpen, Dices } from "lucide-react";
 import { useShops } from "./hooks/useShops";
@@ -9,6 +9,7 @@ import FilterChips, { type Filters } from "./components/FilterChips";
 import ShopList from "./components/ShopList";
 import DetailPanel from "./components/DetailPanel";
 import DiceOverlay from "./components/DiceOverlay";
+import { isLateNight, isOpenNow } from "./lib/hours";
 import type { Shop } from "./types";
 
 export default function App() {
@@ -20,9 +21,13 @@ export default function App() {
     cities: new Set(),
     districts: new Set(),
     openNow: false,
+    lateNight: false,
+    newOnly: false,
     minRating: 0,
   });
-  const [selected, setSelected] = useState<string | null>(null);
+  const [selected, setSelected] = useState<string | null>(
+    () => decodeURIComponent(window.location.hash.slice(1)) || null
+  );
   const [bounds, setBounds] = useState<LngLatBounds | null>(null);
   const [collapsed, setCollapsed] = useState(false);
 
@@ -56,11 +61,20 @@ export default function App() {
         const distHit = !!(s.district && filters.districts.has(s.district));
         if (!cityHit && !distHit) return false;
       }
-      if (filters.openNow && s.status !== "OPERATIONAL") return false;
+      if (filters.openNow) {
+        // 有營業時間就精準判斷「現在營業中」;沒有就退回營業狀態
+        const open = isOpenNow(s.hours);
+        if (open === false) return false;
+        if (open === null && s.status !== "OPERATIONAL") return false;
+      }
+      if (filters.lateNight && !isLateNight(s.hours)) return false;
+      if (filters.newOnly && !s.is_new) return false;
       if (filters.minRating > 0 && (s.rating ?? 0) < filters.minRating) return false;
       return true;
     });
   }, [shops, search, filters]);
+
+  const hasNew = useMemo(() => shops.some((s) => s.is_new), [shops]);
 
   const dice = useDice(matched);
 
@@ -74,6 +88,14 @@ export default function App() {
     () => shops.find((s) => s.ftid === selected),
     [shops, selected]
   );
+
+  // 分享連結:#ftid ↔ 選中的店(初始值已從 hash 讀入)
+  useEffect(() => {
+    const url = selected
+      ? `#${encodeURIComponent(selected)}`
+      : window.location.pathname + window.location.search;
+    window.history.replaceState(null, "", url);
+  }, [selected]);
 
   return (
     <div className="app">
@@ -131,6 +153,7 @@ export default function App() {
         filters={filters}
         cities={cities}
         districts={districts}
+        hasNew={hasNew}
         onChange={setFilters}
       />
 

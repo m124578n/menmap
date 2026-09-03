@@ -16,6 +16,9 @@ export interface Shop {
   rating: number | null;
   rating_count: number | null;
   price: string | null;
+  hours: [string, string[]][] | null;  // [[星期名, ["11:00–21:30", ...]], ...]
+  added_at: string | null;
+  is_new: boolean;
   cover: string | null;
   maps_url: string | null;
 }

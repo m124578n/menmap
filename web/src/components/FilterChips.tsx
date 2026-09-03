@@ -6,6 +6,8 @@ export interface Filters {
   cities: Set<string>;      // 縣市層級(粗)
   districts: Set<string>;   // 行政區層級(細)
   openNow: boolean;
+  lateNight: boolean;       // 深夜營業(打烊 ≥23:30 或跨午夜)
+  newOnly: boolean;         // 只看新店
   minRating: number; // 0 = 不限
 }
 
@@ -13,10 +15,11 @@ interface Props {
   filters: Filters;
   cities: { name: string; count: number }[];
   districts: { name: string; count: number }[];
+  hasNew: boolean; // 有新店才顯示「新店」chip
   onChange: (f: Filters) => void;
 }
 
-export default function FilterChips({ filters, cities, districts, onChange }: Props) {
+export default function FilterChips({ filters, cities, districts, hasNew, onChange }: Props) {
   const [openMenu, setOpenMenu] = useState(false);
   const menuRef = useRef<HTMLDivElement>(null);
   const btnRef = useRef<HTMLButtonElement>(null);
@@ -133,6 +136,24 @@ export default function FilterChips({ filters, cities, districts, onChange }: Pr
         營業中
       </button>
 
+      <button
+        className="chip"
+        data-active={filters.lateNight}
+        onClick={() => onChange({ ...filters, lateNight: !filters.lateNight })}
+      >
+        深夜營業
+      </button>
+
+      {hasNew && (
+        <button
+          className="chip"
+          data-active={filters.newOnly}
+          onClick={() => onChange({ ...filters, newOnly: !filters.newOnly })}
+        >
+          新店
+        </button>
+      )}
+
       {ratings.map((r) => (
         <button
           key={r}
@@ -146,7 +167,8 @@ export default function FilterChips({ filters, cities, districts, onChange }: Pr
         </button>
       ))}
 
-      {(regionCount > 0 || filters.openNow || filters.minRating > 0) && (
+      {(regionCount > 0 || filters.openNow || filters.lateNight ||
+        filters.newOnly || filters.minRating > 0) && (
         <button
           className="chip"
           onClick={() =>
@@ -154,6 +176,8 @@ export default function FilterChips({ filters, cities, districts, onChange }: Pr
               cities: new Set(),
               districts: new Set(),
               openNow: false,
+              lateNight: false,
+              newOnly: false,
               minRating: 0,
             })
           }

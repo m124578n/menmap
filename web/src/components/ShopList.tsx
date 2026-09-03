@@ -27,6 +27,7 @@ function ShopCard({
         <div className="card-name">
           <StatusDot status={shop.status} />
           <span>{shop.name}</span>
+          {shop.is_new && <span className="new-badge">NEW</span>}
         </div>
         <div className="card-meta">
           {shop.district && <span>{shop.district}</span>}

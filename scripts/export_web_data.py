@@ -76,10 +76,25 @@ def latest_snapshots() -> dict[str, sqlite3.Row]:
 def build() -> dict:
     seed = json.loads(SEED.read_text(encoding="utf-8"))
     snaps = latest_snapshots()
+
+    # 新店判定:相對於「初始收錄批次」——初始整批不算新,之後 seed 更新
+    # 加入且 30 天內的才標 NEW
+    added_dates = sorted({(s.get("added_at") or "")[:10] for s in seed if s.get("added_at")})
+    baseline = added_dates[0] if added_dates else ""
+    from datetime import datetime, timedelta
+    cutoff = (datetime.now() - timedelta(days=30)).strftime("%Y-%m-%d")
+
     shops = []
     for s in seed:
         city, dist = city_district(s.get("address"))
         snap = snaps.get(s["ftid"])
+        hours = None
+        if snap and snap["opening_hours_json"]:
+            try:
+                hours = json.loads(snap["opening_hours_json"])
+            except (ValueError, TypeError):
+                pass
+        added = (s.get("added_at") or "")[:10]
         shops.append({
             "ftid": s["ftid"],
             "name": s.get("name"),
@@ -92,6 +107,9 @@ def build() -> dict:
             "rating": snap["rating"] if snap else None,
             "rating_count": snap["user_rating_count"] if snap else None,
             "price": snap["price_text"] if snap else None,
+            "hours": hours,
+            "added_at": added or None,
+            "is_new": bool(added and added > baseline and added >= cutoff),
             "cover": None,
             "maps_url": s.get("maps_url"),
         })
