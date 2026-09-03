@@ -1,0 +1,47 @@
+/* 和風設計 tokens。見 docs/design.md */
+:root {
+  --bg: #f6f1e7;
+  --surface: rgba(250, 247, 240, 0.86);
+  --surface-solid: #fbf8f2;
+  --fg: #1f1b16;
+  --fg-muted: #6e655a;
+  --primary: #22405f;
+  --on-primary: #f6f1e7;
+  --accent: #c1352b;
+  --border: #e3dbcc;
+  --open: #3f7a5b;
+  --closed-temp: #c98a1e;
+  --closed-perm: #b23a2e;
+  --unknown: #9c9284;
+
+  --shadow-sm: 0 1px 2px rgba(31, 27, 22, 0.06);
+  --shadow-md: 0 6px 20px rgba(31, 27, 22, 0.1);
+  --radius: 10px;
+  --radius-sm: 8px;
+
+  --font-serif: "Noto Serif JP", "Noto Sans TC", serif;
+  --font-sans: "Noto Sans TC", "Noto Sans JP", system-ui, sans-serif;
+
+  color-scheme: light;
+}
+
+:root[data-theme="dark"] {
+  --bg: #15130f;
+  --surface: rgba(30, 27, 22, 0.86);
+  --surface-solid: #1e1b16;
+  --fg: #f2ece0;
+  --fg-muted: #a99e8e;
+  --primary: #6e93c9;
+  --on-primary: #15130f;
+  --accent: #e05a4e;
+  --border: rgba(242, 236, 224, 0.12);
+  --open: #5a9e78;
+  --closed-temp: #d9a441;
+  --closed-perm: #d8574a;
+  --unknown: #7d7364;
+
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 6px 20px rgba(0, 0, 0, 0.45);
+
+  color-scheme: dark;
+}

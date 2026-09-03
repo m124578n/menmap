@@ -1,0 +1,13 @@
+name = "menmap-api"
+main = "src/index.ts"
+compatibility_date = "2024-11-01"
+
+# D1 綁定。local dev 用本地 sqlite(.wrangler/state),database_id 為佔位;
+# 真正部署前用 `wrangler d1 create menmap` 換成實際 id。
+[[d1_databases]]
+binding = "DB"
+database_name = "menmap"
+database_id = "local-dev-placeholder"
+
+[dev]
+port = 8787

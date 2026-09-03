@@ -1,0 +1,19 @@
+{
+  "name": "menmap-worker",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "wrangler dev",
+    "db:init": "wrangler d1 execute menmap --local --file=./schema.sql",
+    "db:seed": "wrangler d1 execute menmap --local --file=./seed.local.sql",
+    "deploy": "wrangler deploy"
+  },
+  "dependencies": {
+    "hono": "^4.6.14"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20241127.0",
+    "wrangler": "^3.90.0"
+  }
+}
