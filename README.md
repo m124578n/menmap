@@ -1,136 +1,109 @@
-# ramap — 雙北拉麵地圖資料採集(可行性驗證)
+# menmap — 雙北拉麵地圖 🍜
 
-在正式開發拉麵地圖前,先驗證「能不能每天穩定、零成本地採集雙北拉麵店基本資料」。
-這個階段**不做前端、不做地圖**,只做資料採集 pipeline 並連跑數天觀察結果。
+雙北 **591 家拉麵店**的互動地圖:營業狀態、營業時間、評分評論、菜單照片、店家公告,
+外加一顆「今天吃哪間」的拉麵骰子。資料每日自動採集,前後端部署 Cloudflare(規劃中),
+爬蟲跑在家裡。
 
-## 這版用什麼方法
+> 目前狀態:本地開發完成(P0 前端 + P1 詳情 API),尚未部署。
+> 進度與計畫見 [docs/roadmap.md](docs/roadmap.md)。
 
-原本規劃用 Google Places API (New),但每日快照需要的欄位(營業時間、評分、
-電話)全屬 **Enterprise SKU,免費額度僅 1,000 次/月**,無法零成本長跑
-(seed 約 150 家的話 6~10 天就開始收費,一個月約 US$70~90)。
+## 功能
 
-因此改為**直接抓 Google 地圖的內部資料端點**,並實作兩個後端做對比:
+- 🗺️ **全螢幕地圖**(MapLibre):標記依營業狀態上色、低 zoom 聚合;和風設計、深色模式
+- 🔍 **搜尋與篩選**:店名搜尋;區域(縣市/行政區兩層)、**現在營業中**(對當下時刻
+  精準判斷,含跨午夜時段)、**深夜營業**、評分門檻;列表隨地圖範圍同步
+- 🎲 **拉麵骰子**:從目前篩選結果隨機選一間(選了區域就從該區骰,不選就全部)
+- 📋 **店家詳情**:營業時間(今日標記)、評分與評論數、電話/網站/**粉專**、
+  **店家公告與活動貼文**、**菜單照片**、最新評論(全文+照片)、評分趨勢
+- 🆕 **新店雷達**:seed 新收錄 30 天內標 NEW(初始批次不標)
+- 🔗 **分享連結**:`#ftid` deep link 直達單店
 
-| 後端 | 方式 | 特性 |
-|---|---|---|
-| `static` | `requests` 直打 `/search?tbm=map` 與 `/maps/preview/place` 內部 XHR | 快、輕量;精簡欄位穩定,但「完整版」(評論數、整週營業時間、評論)會在同一 IP 大量請求後被**軟性降級** |
-| `playwright` | 無頭 Chromium 開真實地圖頁,攔截頁面自發的 place XHR | 較慢;瀏覽器帶完整 session,**穩定拿到完整版**資料 |
-
-兩後端輸出同一組欄位(`ramen/parser.py` 是唯一的欄位定義),`compare` 指令
-每天量測兩者的覆蓋率與成功率——這就是「哪個方法比較可靠」的證據。
-
-完整版回應還帶**最新約 5~8 則評論**(作者、星等、日期、全文、每則照片連結)與
-**封面照**,存進 SQLite 的 `review` 表與 `shop.cover_photo`;每次抓到完整版就整批
-取代該店評論(精簡版沒帶評論時保留舊的)。photos 連結即店家/菜色照片,可直接下載。
-
-> ⚠️ **合規與風險**:直接抓 Google 地圖違反其服務條款,實務風險是**被封鎖**
-> (CAPTCHA / 空回應 / 降級),不是帳單。程式已加 sleep、退避與禮貌性節流,
-> 但這條路能否長期穩定正是本次要驗證的事。FB/IG 粉專不在範圍內。
-
-## 專案結構
+## 架構(摘要)
 
 ```
-ramen/
-  __main__.py        # CLI:seed / snapshot / compare
-  parser.py          # Google Maps 內部 JSON 解析(欄位索引集中在此)
-  static_backend.py  # requests 後端 + URL 模板參數化
-  dynamic_backend.py # Playwright 後端
-  templates.py       # 實錄的 XHR URL 模板(由 scripts/capture_templates.py 產生)
-  net.py             # session / headers / sleep / 指數退避
-  seed.py  snapshot.py  diff.py  compare.py  db.py  storage.py  schema.py
-scripts/
-  run_daily.ps1        # 每日:兩後端快照 + compare + git commit
-  register_task.ps1    # 註冊 Windows 工作排程(每天 06:00)
-  capture_templates.py # Google 改版導致 static 失效時,重錄 URL 模板
-data/
-  seed.json  ramen.db  raw/{date}/{backend}/  diff/  compare/
+[家裡 Windows]                    [Cloudflare(規劃)]         [使用者]
+爬蟲(每日排程)                    R2  shops.json/照片/圖磚
+ static + playwright  ─publish──▶  D1  shop/snapshot/review/post
+ → SQLite                          ▲              │
+                                   Pages(前端) ─▶ Workers(Hono API)
 ```
 
-## 本機執行
+- **爬蟲留在家**是刻意決策:住宅 IP,避開資料中心 IP 被 Google 降級/封鎖
+- 讀寫分離:地圖/列表走靜態 `shops.json`(現階段過渡),單店詳情走 Worker + D1
+- 不用付費 API、不需任何金鑰,預期月費 $0
 
-需求:Python 3.14、[uv](https://docs.astral.sh/uv/)。
+細節見 [docs/architecture.md](docs/architecture.md)、設計規格 [docs/design.md](docs/design.md)。
+
+## Monorepo 佈局
+
+```
+ramen/       採集(Python):雙後端爬蟲、parser、SQLite、diff
+web/         前端(Vite + React + MapLibre)→ Pages     [web/README.md]
+worker/      詳情 API(Hono + D1)→ Workers            [worker/README.md]
+scripts/     seed/快照匯出、每日排程、模板重錄
+docs/        architecture / design / roadmap
+data/        seed.json、ramen.db、每日 raw/diff/compare(進 git 保留歷史)
+```
+
+## 快速開始
+
+需求:Python 3.14 + [uv](https://docs.astral.sh/uv/)、Node 20+。
 
 ```bash
-uv sync                          # 安裝依賴(requests + playwright)
-uv run playwright install chromium
-
-# 1) 建立 seed(只跑一次;之後人工維護)
-uv run python -m ramen seed              # 產出 data/seed.json(雙北拉麵店)
-
-# 2) 每日快照(兩個後端各跑一次)
-uv run python -m ramen snapshot --backend static
+# 1) 採集端
+uv sync && uv run playwright install chromium
+uv run python -m ramen seed                        # 建 seed(只跑一次,已入庫可跳過)
+uv run python -m ramen snapshot --backend static   # 每日快照(--limit N 可限量)
 uv run python -m ramen snapshot --backend playwright
+uv run python -m ramen compare                     # 兩後端對比報告
 
-# 3) 兩後端對比報告
-uv run python -m ramen compare
+# 2) 匯出前端資料 + 本地 D1
+uv run python scripts/export_web_data.py           # → web/public/shops.json
+cd worker && npm install && npm run db:init && npm run db:seed
+
+# 3) 啟動(兩個都要開)
+cd worker && npm run dev     # API  http://localhost:8787
+cd web && npm install && npm run dev   # 前端 http://localhost:5173(/api 已 proxy)
 ```
 
-Windows 終端若 log 出現亂碼,設 `$env:PYTHONUTF8=1`(排程腳本已內建)。
+Windows 終端 log 亂碼:`$env:PYTHONUTF8=1`。
 
-用量控制:`--limit N` 或環境變數 `SNAPSHOT_LIMIT=N` 只抓 seed 前 N 家,
-驗證期建議設小(例如 60)以縮短時間、減少被降級機率。
-
-### 節流(避免爬太快被擋)
-
-每次請求後隨機延遲,並每隔幾家插入一段長休息,打散節奏。全部可用環境變數調整:
-
-| 變數 | 預設 | 說明 |
-|---|---|---|
-| `RAMEN_SLEEP_MIN` / `RAMEN_SLEEP_MAX` | 2.5 / 5.0 | 每次請求後的隨機延遲(秒) |
-| `RAMEN_LONG_PAUSE_EVERY` | 15 | 每處理幾家店插入一次長休息(0 = 關閉) |
-| `RAMEN_LONG_PAUSE_MIN` / `RAMEN_LONG_PAUSE_MAX` | 20 / 45 | 長休息秒數範圍 |
-| `RAMEN_LITE_RETRIES` | 2 | playwright 拿到精簡版時的重試次數(每次多等讓完整版 render) |
-
-預設值下抓 60 家約需 5~10 分鐘。**若開始出現失敗或大量精簡版,把延遲調更長**、
-或降低單日抓取家數。static 後端每店只發 1 次請求;playwright 每店 1 次(精簡版才重試)。
-
-不用 uv 的環境:`pip install -r requirements.txt` 亦可(但仍需 `playwright install chromium`)。
-
-## 排程(Windows 工作排程器)
+## 每日排程(Windows,採集機)
 
 ```powershell
 powershell -ExecutionPolicy Bypass -File scripts\register_task.ps1   # 註冊,每天 06:00
-Start-ScheduledTask -TaskName RamenDailySnapshot                     # 立即測試一次
-Unregister-ScheduledTask -TaskName RamenDailySnapshot -Confirm:$false # 移除
+Start-ScheduledTask -TaskName RamenDailySnapshot                     # 立即測試
 ```
 
-`run_daily.ps1` 會依序跑 static / playwright 快照、compare,然後以 `ramen-bot`
-身分 `git commit` 整個 `data/`(快照、diff、compare、原始 JSON 都留在 git),
-最後 `git push`。log 寫在 `data/logs/`(此目錄不進 git)。
+`run_daily.ps1`:兩後端快照 → compare → git commit/push `data/`。log 在 `data/logs/`(不進 git)。
 
-> 選這條路是為了避開 GitHub Actions 的資料中心 IP——Google 對那類 IP 特別容易
-> 觸發降級/封鎖。本機住宅 IP 穩定得多,代價是電腦要開著。
+## 採集端備忘
 
-## 驗證期間要觀察什麼
+| 後端 | 方式 | 特性 |
+|---|---|---|
+| `static` | requests 直打 Google Maps 內部 XHR | 快;精簡欄位穩定(狀態/當日時間/評分),完整版會被同 IP 大量請求**軟性降級** |
+| `playwright` | 無頭 Chromium 攔截頁面自發 XHR | 較慢;穩定拿**完整版**(評論數/整週時間/評論/菜單照/貼文) |
 
-連跑數天後,每天看這幾件事:
+- 兩後端共用 `ramen/parser.py`(欄位索引集中於 `IDX_*`,Google 改版對照 `data/raw/` 修)
+- 節流:請求間隨機延遲 + 定期長休息,`RAMEN_SLEEP_MIN/MAX`、`RAMEN_LONG_PAUSE_*`、
+  `RAMEN_LITE_RETRIES` 環境變數可調;出現失敗/大量精簡版就調慢
+- static 的 URL 模板失效時重錄:`uv run python scripts/capture_templates.py`
+- parser 加新欄位後不用重爬:`uv run python scripts/reparse_raw.py [date] [backend]`
 
-1. **每日成功率**:`snapshot` 最後一行 `{ok}/{total} ok, {failed} failed`,以及
-   `data/diff/{date}-{backend}.md` 的「本次失敗」清單。失敗率飆高 = 開始被擋。
-2. **有沒有被降級 / 擋**:翻 `data/raw/{date}/` 的原始 JSON;正常是大檔(數十~上百 KB),
-   若普遍變成 1~3 KB 小檔、或出現 consent/captcha 字樣,代表被降級或擋了。
-3. **完整版比例**:`data/compare/{date}.md` 的 `is_rich` 列。static 若長期偏低、
-   playwright 也開始下降,表示這條路的穩定性有疑慮。
-4. **diff 是否合理**:`data/diff/` 裡 business_status / 營業時間 / 評分變動,對照真實
-   情況看有沒有假變動或漏抓。特別留意標記 ⚠️ 的 `CLOSED_TEMPORARILY / CLOSED_PERMANENTLY`。
-5. **零成本確認**:這版**完全沒用付費 API,也不需要任何 API key**,不會有帳單。
-   (若日後改回 Places API,才需要下面的 GCP 設定。)
+> ⚠️ **合規與風險**:直接抓 Google 地圖違反其 ToS,實務風險是被降級/封鎖(非帳單)。
+> 已加節流與退避;長期穩定性靠每日排程持續驗證。FB/IG 粉專**只記連結、不爬內容**
+> (見 roadmap)。
+
+## 觀察清單(驗證期)
+
+1. 每日成功率:snapshot 摘要行 + `data/diff/{date}-{backend}.md` 失敗清單
+2. 被降級/擋:`data/raw/` 檔案大小(正常數十~數百 KB;普遍 1~3KB = 被降級)
+3. 完整版比例:`data/compare/{date}.md` 的 `is_rich` 列
+4. diff 變動合理性:特別留意 ⚠️ `CLOSED_*`
 
 ## 若日後改用 Places API (New)(本版未使用)
 
-保留給對照:要走官方 API 時,在 GCP 的步驟——
-
-1. **啟用 API**:GCP Console → APIs & Services → 啟用 **Places API (New)**(不是 legacy Places API)。
-2. **建立並限制 API key**:Credentials → 建立 API key → 編輯 →
-   **API restrictions** 選「Restrict key」只勾 **Places API (New)**;
-   **Application restrictions** 依用途設 IP 限制。
-3. **設每日 quota 上限防帳單暴衝**:APIs & Services → Places API (New) → Quotas,
-   把每日請求上限設為 **500 次/天**(擋暴衝,不保證零成本)。
-4. key 從環境變數 `GOOGLE_PLACES_API_KEY` 讀,`.env` 已在 `.gitignore`。
-
-## 維護
-
-- Google 改版導致 `static` 整批失敗時,重錄 URL 模板:
-  `uv run python scripts/capture_templates.py`
-- 欄位索引都在 `ramen/parser.py` 最上方的 `IDX_*` 常數,對照 `data/raw/` 的實際
-  回應調整即可。
+啟用 Places API (New)(非 legacy)→ API key 限制只能用該 API → Quotas 設每日上限
+(如 500/天)防暴衝 → key 走環境變數 `GOOGLE_PLACES_API_KEY`(`.env` 已 gitignore)。
+注意:每日快照欄位屬 Enterprise SKU(免費 1,000 次/月),無法零成本長跑——
+這正是本專案改走爬蟲的原因。
