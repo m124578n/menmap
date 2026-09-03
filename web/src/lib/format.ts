@@ -28,6 +28,18 @@ export function stars(rating: number | null): string {
   return "★".repeat(full) + "☆".repeat(Math.max(0, 5 - full));
 }
 
+/**
+ * 放大 Google 相片解析度。
+ * googleusercontent/ggpht 圖片 URL 尾端的 `=w129-h86-k-no` 是尺寸指令,
+ * 換成較大的尺寸即可拿到清晰圖(採集端存的是縮圖,顯示時才放大,不破壞來源)。
+ */
+export function hiRes(url: string | null | undefined, spec = "w1000"): string {
+  if (!url) return "";
+  if (!/googleusercontent\.com|ggpht\.com/.test(url)) return url;
+  // 尾端有 `=...` 尺寸指令就取代;沒有就補上
+  return /=[\w-]+$/.test(url) ? url.replace(/=[\w-]+$/, `=${spec}`) : `${url}=${spec}`;
+}
+
 export function formatCount(n: number | null): string {
   if (n == null) return "";
   if (n >= 10000) return `${(n / 10000).toFixed(1)}萬`;

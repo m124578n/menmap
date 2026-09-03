@@ -1,7 +1,7 @@
 import { X, ExternalLink, Star, MapPin, Tag, Phone, Globe, Clock } from "lucide-react";
 import type { Shop, BusinessStatus } from "../types";
 import { StatusBadge } from "./StatusBadge";
-import { formatCount, statusColor } from "../lib/format";
+import { formatCount, statusColor, hiRes } from "../lib/format";
 import { useShopDetail, type Review } from "../hooks/useShopDetail";
 
 interface Props {
@@ -30,7 +30,7 @@ export default function DetailPanel({ shop, onClose }: Props) {
         {cover && (
           <img
             className="detail-cover"
-            src={cover}
+            src={hiRes(cover, "w1000")}
             alt=""
             loading="lazy"
             onError={(e) => {
@@ -184,7 +184,7 @@ function ReviewItem({ r }: { r: Review }) {
           {r.photos.slice(0, 6).map((p, i) => (
             <img
               key={i}
-              src={p}
+              src={hiRes(p, "w400")}
               alt=""
               loading="lazy"
               onError={(e) => {
