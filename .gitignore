@@ -38,3 +38,6 @@ data/logs/
 
 # Claude Code
 .claude/settings.local.json
+# SQLite WAL 暫存(程序中途被砍才會殘留)
+data/ramen.db-wal
+data/ramen.db-shm

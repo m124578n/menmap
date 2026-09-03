@@ -71,11 +71,21 @@ Windows 終端 log 亂碼:`$env:PYTHONUTF8=1`。
 ## 每日排程(Windows,採集機)
 
 ```powershell
-powershell -ExecutionPolicy Bypass -File scripts\register_task.ps1   # 註冊,每天 06:00
+powershell -ExecutionPolicy Bypass -File scripts\register_task.ps1   # 註冊,每天 20:00
 Start-ScheduledTask -TaskName RamenDailySnapshot                     # 立即測試
 ```
 
-`run_daily.ps1`:兩後端快照 → compare → git commit/push `data/`。log 在 `data/logs/`(不進 git)。
+`run_daily.ps1`:**兩後端同時**快照(static 全抓 591 家、playwright 每天輪 100 家)→ compare
+→ git commit/push `data/`。log 在 `data/logs/`(不進 git):`{date}.log` 主流程、
+`{date}-static.log` / `{date}-playwright.log` 各後端逐店輸出。
+
+- 實測 static 每家約 6 秒(全抓約 50 分鐘)、playwright 每家約 8 秒(100 家約 15 分鐘),
+  含請求間 2.5~5 秒隨機延遲、每 15 家長休 8~15 秒;兩後端各自節流、並行跑,
+  整趟約 50 分鐘(排程上限 4 小時)。DB 走 WAL + 逐店 commit,所以能同時寫。
+- 用量用環境變數調:`SNAPSHOT_LIMIT_STATIC`(預設空 = 全抓)、`SNAPSHOT_LIMIT_PLAYWRIGHT`
+  (預設 100)。設了 N 就會**輪替**:優先抓從沒被該後端抓過的店,其次最久沒抓的,
+  每天跑同樣的數字會自動輪完整個 seed(100 家約 6 天一輪)。被降級/失敗變多時調小。
+- diff 是每家店跟**自己上一次**成功快照比(不是跟上一個批次比),輪抓時才有東西可比。
 
 ## 採集端備忘
 

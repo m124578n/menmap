@@ -88,8 +88,15 @@ _SHOP_MIGRATIONS = ["fan_page", "location_id", "closed_at", "menu_photos_json"]
 
 def connect(db_path: str | Path) -> sqlite3.Connection:
     Path(db_path).parent.mkdir(parents=True, exist_ok=True)
-    conn = sqlite3.connect(str(db_path))
+    # static 與 playwright 兩個快照程序會同時寫這顆 DB:
+    # WAL 讓讀寫不互擋;busy timeout 讓另一方在寫入時等待而不是直接「database is locked」。
+    conn = sqlite3.connect(str(db_path), timeout=60)
     conn.row_factory = sqlite3.Row
+    try:
+        conn.execute("PRAGMA journal_mode=WAL")
+    except sqlite3.OperationalError:
+        pass  # 別的連線正持有鎖時切不過去,維持現有模式即可
+    conn.execute("PRAGMA busy_timeout=60000")
     conn.executescript(SCHEMA)
     existing = {r["name"] for r in conn.execute("PRAGMA table_info(shop)")}
     for col in _SHOP_MIGRATIONS:
@@ -224,6 +231,42 @@ def previous_snapshot_time(conn: sqlite3.Connection, backend: str,
     )
     row = cur.fetchone()
     return row["captured_at"] if row else None
+
+
+def last_ok_capture_per_shop(conn: sqlite3.Connection,
+                             backend: str) -> dict[str, str]:
+    """同後端每家店最近一次成功快照的 captured_at(從沒成功過的店不在裡面)。"""
+    cur = conn.execute(
+        """
+        SELECT ftid, MAX(captured_at) AS at FROM snapshot
+        WHERE backend = ? AND ok = 1
+        GROUP BY ftid
+        """,
+        (backend,),
+    )
+    return {r["ftid"]: r["at"] for r in cur.fetchall()}
+
+
+def previous_snapshots_per_shop(conn: sqlite3.Connection, backend: str,
+                                before: str) -> dict[str, sqlite3.Row]:
+    """同後端、早於 before,每家店各自最近一次成功快照(不限同一批次)。
+
+    每日輪抓一部分店時,上一批次和本批次的店幾乎不重疊,所以 diff 要對「該店自己
+    上一次」比,而不是對「上一個批次」比。
+    """
+    cur = conn.execute(
+        """
+        SELECT s.* FROM snapshot s
+        JOIN (
+            SELECT ftid, MAX(captured_at) AS at FROM snapshot
+            WHERE backend = ? AND ok = 1 AND captured_at < ?
+            GROUP BY ftid
+        ) m ON m.ftid = s.ftid AND m.at = s.captured_at
+        WHERE s.backend = ? AND s.ok = 1
+        """,
+        (backend, before, backend),
+    )
+    return {r["ftid"]: r for r in cur.fetchall()}
 
 
 def snapshots_at(conn: sqlite3.Connection, backend: str,

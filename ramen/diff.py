@@ -23,13 +23,15 @@ def _hours_readable(raw: str | None) -> str:
 def build_diff(conn: sqlite3.Connection, backend: str, date: str,
                current_at: str, seed: list[dict]) -> tuple[str, int]:
     """回傳 (markdown, 變動數)。current_at 是本次批次的 captured_at。"""
-    prev_at = db.previous_snapshot_time(conn, backend, current_at)
     cur = db.snapshots_at(conn, backend, current_at)
+    # 每家店對「自己上一次成功快照」比(不限同批次):輪抓時批次間店家不重疊
+    prev = db.previous_snapshots_per_shop(conn, backend, current_at)
     name_by_ftid = {s["ftid"]: s.get("name") for s in seed}
+    compared = sum(1 for f, c in cur.items() if c["ok"] and f in prev)
 
     lines = [f"# 快照差異報告 — {backend} — {date}", ""]
-    lines.append(f"- 本次批次:`{current_at}`")
-    lines.append(f"- 對比批次:`{prev_at or '(無,首次快照)'}`")
+    lines.append(f"- 本次批次:`{current_at}`(共 {len(cur)} 家)")
+    lines.append(f"- 對比基準:各店自己上一次成功快照;本次有基準可比 {compared} 家")
     lines.append("")
 
     # 失敗清單
@@ -42,12 +44,11 @@ def build_diff(conn: sqlite3.Connection, backend: str, date: str,
         lines.append("- 無")
     lines.append("")
 
-    if prev_at is None:
+    if compared == 0:
         lines.append("## 變動")
-        lines.append("- 首次快照,無對比基準。")
+        lines.append("- 本次店家皆為首次快照,無對比基準。")
         return "\n".join(lines) + "\n", 0
 
-    prev = db.snapshots_at(conn, backend, prev_at)
     changes = 0
     status_lines, hours_lines, rating_lines = [], [], []
 

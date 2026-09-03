@@ -32,8 +32,9 @@ SLEEP_MAX = float(os.environ.get("RAMEN_SLEEP_MAX", "5.0"))
 # 每處理 LONG_PAUSE_EVERY 家店,插入一次較長休息([LONG_MIN, LONG_MAX] 秒),
 # 打散請求節奏,模擬真人瀏覽
 LONG_PAUSE_EVERY = int(os.environ.get("RAMEN_LONG_PAUSE_EVERY", "15"))
-LONG_PAUSE_MIN = float(os.environ.get("RAMEN_LONG_PAUSE_MIN", "20"))
-LONG_PAUSE_MAX = float(os.environ.get("RAMEN_LONG_PAUSE_MAX", "45"))
+# (2026-09 實測全抽 617 家 0 失敗後,從 20~45 秒縮短;若失敗/精簡版變多再調回去)
+LONG_PAUSE_MIN = float(os.environ.get("RAMEN_LONG_PAUSE_MIN", "8"))
+LONG_PAUSE_MAX = float(os.environ.get("RAMEN_LONG_PAUSE_MAX", "15"))
 
 _request_count = 0
 
