@@ -7,6 +7,9 @@ import type { Shop, BusinessStatus } from "../types";
 import { StatusBadge } from "./StatusBadge";
 import { formatCount, statusColor, hiRes } from "../lib/format";
 import { useShopDetail, type Review } from "../hooks/useShopDetail";
+import Lightbox from "./Lightbox";
+
+type OpenPhotos = (photos: string[], index: number) => void;
 
 interface Props {
   shop: Shop;
@@ -26,6 +29,9 @@ export default function DetailPanel({ shop, onClose }: Props) {
   const cover = d?.cover_photo ?? shop.cover;
   // 詳情 API 沒回來(或還沒有快照)時,退回 shops.json 帶的整週營業時間
   const hours = d?.latest?.opening_hours ?? shop.hours;
+  // 圖片燈箱:同視窗浮現(封面/菜單/評論照片共用)
+  const [lightbox, setLightbox] = useState<{ photos: string[]; index: number } | null>(null);
+  const openPhotos: OpenPhotos = (photos, index) => setLightbox({ photos, index });
 
   return (
     <aside className="detail panel noren-top" role="dialog" aria-label={shop.name ?? "店家詳情"}>
@@ -34,15 +40,22 @@ export default function DetailPanel({ shop, onClose }: Props) {
       </button>
       <div className="detail-scroll">
         {cover && (
-          <img
-            className="detail-cover"
-            src={hiRes(cover, "w1000")}
-            alt=""
-            loading="lazy"
-            onError={(e) => {
-              e.currentTarget.style.display = "none";
-            }}
-          />
+          <button
+            type="button"
+            className="photo-btn detail-cover-btn"
+            onClick={() => openPhotos([cover], 0)}
+            aria-label="放大封面照片"
+          >
+            <img
+              className="detail-cover"
+              src={hiRes(cover, "w1000")}
+              alt=""
+              loading="lazy"
+              onError={(e) => {
+                e.currentTarget.parentElement!.style.display = "none";
+              }}
+            />
+          </button>
         )}
 
         <div className="detail-head">
@@ -179,7 +192,13 @@ export default function DetailPanel({ shop, onClose }: Props) {
             </h3>
             <div className="menu-photos">
               {d.menu_photos.map((m, i) => (
-                <a key={i} href={hiRes(m, "s1600")} target="_blank" rel="noreferrer">
+                <button
+                  key={i}
+                  type="button"
+                  className="photo-btn"
+                  onClick={() => openPhotos(d.menu_photos, i)}
+                  aria-label={`放大菜單 ${i + 1}`}
+                >
                   <img
                     src={hiRes(m, "w400")}
                     alt={`菜單 ${i + 1}`}
@@ -188,7 +207,7 @@ export default function DetailPanel({ shop, onClose }: Props) {
                       e.currentTarget.parentElement!.style.display = "none";
                     }}
                   />
-                </a>
+                </button>
               ))}
             </div>
           </div>
@@ -199,7 +218,7 @@ export default function DetailPanel({ shop, onClose }: Props) {
           <div className="detail-section">
             <h3>最新評論({d.reviews.length})</h3>
             {d.reviews.map((r, i) => (
-              <ReviewItem key={i} r={r} />
+              <ReviewItem key={i} r={r} onOpen={openPhotos} />
             ))}
           </div>
         )}
@@ -211,6 +230,13 @@ export default function DetailPanel({ shop, onClose }: Props) {
           </a>
         )}
       </div>
+      {lightbox && (
+        <Lightbox
+          photos={lightbox.photos}
+          index={lightbox.index}
+          onClose={() => setLightbox(null)}
+        />
+      )}
     </aside>
   );
 }
@@ -257,7 +283,7 @@ function PostItem({ p }: { p: import("../hooks/useShopDetail").MerchantPost }) {
 
 const REVIEW_CLAMP = 90; // 超過這長度先收合
 
-function ReviewItem({ r }: { r: Review }) {
+function ReviewItem({ r, onOpen }: { r: Review; onOpen: OpenPhotos }) {
   const [expanded, setExpanded] = useState(false);
   const long = (r.text?.length ?? 0) > REVIEW_CLAMP;
   return (
@@ -280,15 +306,22 @@ function ReviewItem({ r }: { r: Review }) {
       {r.photos.length > 0 && (
         <div className="review-photos">
           {r.photos.slice(0, 6).map((p, i) => (
-            <img
+            <button
               key={i}
-              src={hiRes(p, "w400")}
-              alt={`評論照片 ${i + 1}`}
-              loading="lazy"
-              onError={(e) => {
-                e.currentTarget.style.display = "none";
-              }}
-            />
+              type="button"
+              className="photo-btn"
+              onClick={() => onOpen(r.photos.slice(0, 6), i)}
+              aria-label={`放大評論照片 ${i + 1}`}
+            >
+              <img
+                src={hiRes(p, "w400")}
+                alt={`評論照片 ${i + 1}`}
+                loading="lazy"
+                onError={(e) => {
+                  e.currentTarget.parentElement!.style.display = "none";
+                }}
+              />
+            </button>
           ))}
         </div>
       )}

@@ -107,7 +107,7 @@ export default function App() {
   // Esc:關閉骰子 → 關閉詳情
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
-      if (e.key !== "Escape") return;
+      if (e.key !== "Escape" || e.defaultPrevented) return; // 燈箱開著時由它處理
       if (dice.phase !== "idle") dice.reset();
       else if (selected) setSelected(null);
     };
