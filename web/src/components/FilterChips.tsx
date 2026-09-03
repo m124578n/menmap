@@ -3,18 +3,20 @@ import { createPortal } from "react-dom";
 import { ChevronDown, Check } from "lucide-react";
 
 export interface Filters {
-  districts: Set<string>;
+  cities: Set<string>;      // 縣市層級(粗)
+  districts: Set<string>;   // 行政區層級(細)
   openNow: boolean;
   minRating: number; // 0 = 不限
 }
 
 interface Props {
   filters: Filters;
+  cities: { name: string; count: number }[];
   districts: { name: string; count: number }[];
   onChange: (f: Filters) => void;
 }
 
-export default function FilterChips({ filters, districts, onChange }: Props) {
+export default function FilterChips({ filters, cities, districts, onChange }: Props) {
   const [openMenu, setOpenMenu] = useState(false);
   const menuRef = useRef<HTMLDivElement>(null);
   const btnRef = useRef<HTMLButtonElement>(null);
@@ -48,11 +50,14 @@ export default function FilterChips({ filters, districts, onChange }: Props) {
     next.has(d) ? next.delete(d) : next.add(d);
     onChange({ ...filters, districts: next });
   };
+  const toggleCity = (c: string) => {
+    const next = new Set(filters.cities);
+    next.has(c) ? next.delete(c) : next.add(c);
+    onChange({ ...filters, cities: next });
+  };
 
-  const distLabel =
-    filters.districts.size === 0
-      ? "區域"
-      : `區域 · ${filters.districts.size}`;
+  const regionCount = filters.cities.size + filters.districts.size;
+  const distLabel = regionCount === 0 ? "區域" : `區域 · ${regionCount}`;
 
   const ratings = [4.5, 4.0];
 
@@ -62,7 +67,7 @@ export default function FilterChips({ filters, districts, onChange }: Props) {
         <button
           ref={btnRef}
           className="chip"
-          data-active={filters.districts.size > 0}
+          data-active={regionCount > 0}
           onClick={() => setOpenMenu((v) => !v)}
         >
           {distLabel}
@@ -75,6 +80,28 @@ export default function FilterChips({ filters, districts, onChange }: Props) {
               ref={dropRef}
               style={{ position: "fixed", top: pos.top, left: pos.left }}
             >
+              {cities.length > 0 && (
+                <div className="dist-group">縣市(整市)</div>
+              )}
+              {cities.map((c) => (
+                <button
+                  key={c.name}
+                  className="dist-opt"
+                  data-active={filters.cities.has(c.name)}
+                  onClick={() => toggleCity(c.name)}
+                >
+                  {filters.cities.has(c.name) ? (
+                    <Check size={13} />
+                  ) : (
+                    <span style={{ width: 13 }} />
+                  )}
+                  {c.name}
+                  <span className="count" style={{ marginLeft: "auto", opacity: 0.6 }}>
+                    {c.count}
+                  </span>
+                </button>
+              ))}
+              {districts.length > 0 && <div className="dist-group">行政區</div>}
               {districts.map((d) => (
                 <button
                   key={d.name}
@@ -119,11 +146,16 @@ export default function FilterChips({ filters, districts, onChange }: Props) {
         </button>
       ))}
 
-      {(filters.districts.size > 0 || filters.openNow || filters.minRating > 0) && (
+      {(regionCount > 0 || filters.openNow || filters.minRating > 0) && (
         <button
           className="chip"
           onClick={() =>
-            onChange({ districts: new Set(), openNow: false, minRating: 0 })
+            onChange({
+              cities: new Set(),
+              districts: new Set(),
+              openNow: false,
+              minRating: 0,
+            })
           }
         >
           清除

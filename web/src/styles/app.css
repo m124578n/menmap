@@ -234,6 +234,96 @@ a {
   color: var(--primary);
   font-weight: 600;
 }
+.dist-group {
+  grid-column: 1 / -1;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  color: var(--fg-muted);
+  padding: 6px 8px 2px;
+}
+
+/* ---- 拉麵骰子 ---- */
+.dice-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 40;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: color-mix(in srgb, var(--fg) 28%, transparent);
+  backdrop-filter: blur(2px);
+  padding: 20px;
+}
+.dice-card {
+  position: relative;
+  width: min(340px, 92vw);
+  padding: 28px 24px 22px;
+  text-align: center;
+  background: var(--surface-solid);
+}
+.dice-emoji {
+  color: var(--accent);
+  display: inline-flex;
+}
+.dice-emoji.spin {
+  animation: dice-spin 0.5s linear infinite;
+}
+@keyframes dice-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+.dice-label {
+  margin-top: 8px;
+  font-size: 13px;
+  color: var(--fg-muted);
+}
+.dice-name {
+  margin-top: 6px;
+  font-family: var(--font-serif);
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 1.35;
+  min-height: 1.8em;
+}
+.dice-name[data-rolling="true"] {
+  opacity: 0.55;
+}
+.dice-meta {
+  margin-top: 6px;
+  font-size: 13px;
+  color: var(--fg-muted);
+}
+.dice-actions {
+  margin-top: 18px;
+  display: flex;
+  gap: 10px;
+}
+.dice-btn {
+  flex: 1;
+  height: 42px;
+  border-radius: var(--radius);
+  font-size: 14px;
+  font-weight: 600;
+  transition: opacity 0.15s ease;
+}
+.dice-btn.primary {
+  background: var(--primary);
+  color: var(--on-primary);
+}
+.dice-btn.secondary {
+  background: transparent;
+  border: 1px solid var(--border);
+  color: var(--fg);
+}
+.dice-btn:hover {
+  opacity: 0.88;
+}
+.dice-trigger:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
 
 /* ---- List drawer (desktop) / bottom sheet (mobile) ---- */
 .drawer {

@@ -1,12 +1,14 @@
 import { useMemo, useState } from "react";
 import type { LngLatBounds } from "maplibre-gl";
-import { Search, X, Moon, Sun, PanelLeftClose, PanelLeftOpen } from "lucide-react";
+import { Search, X, Moon, Sun, PanelLeftClose, PanelLeftOpen, Dices } from "lucide-react";
 import { useShops } from "./hooks/useShops";
 import { useTheme } from "./hooks/useTheme";
+import { useDice } from "./hooks/useDice";
 import MapView from "./components/MapView";
 import FilterChips, { type Filters } from "./components/FilterChips";
 import ShopList from "./components/ShopList";
 import DetailPanel from "./components/DetailPanel";
+import DiceOverlay from "./components/DiceOverlay";
 import type { Shop } from "./types";
 
 export default function App() {
@@ -15,6 +17,7 @@ export default function App() {
 
   const [search, setSearch] = useState("");
   const [filters, setFilters] = useState<Filters>({
+    cities: new Set(),
     districts: new Set(),
     openNow: false,
     minRating: 0,
@@ -32,18 +35,34 @@ export default function App() {
       .sort((a, b) => b.count - a.count);
   }, [shops]);
 
+  // 縣市清單
+  const cities = useMemo(() => {
+    const m = new Map<string, number>();
+    for (const s of shops) if (s.city) m.set(s.city, (m.get(s.city) ?? 0) + 1);
+    return [...m.entries()]
+      .map(([name, count]) => ({ name, count }))
+      .sort((a, b) => b.count - a.count);
+  }, [shops]);
+
   // 依 search + filters 篩選(給地圖標記用,不含地圖範圍)
   const matched = useMemo(() => {
     const q = search.trim().toLowerCase();
+    const hasRegion = filters.cities.size > 0 || filters.districts.size > 0;
     return shops.filter((s) => {
       if (q && !(s.name ?? "").toLowerCase().includes(q)) return false;
-      if (filters.districts.size > 0 && !(s.district && filters.districts.has(s.district)))
-        return false;
+      // 區域:選了縣市或區才過濾;縣市(粗)或區(細)任一命中即可
+      if (hasRegion) {
+        const cityHit = !!(s.city && filters.cities.has(s.city));
+        const distHit = !!(s.district && filters.districts.has(s.district));
+        if (!cityHit && !distHit) return false;
+      }
       if (filters.openNow && s.status !== "OPERATIONAL") return false;
       if (filters.minRating > 0 && (s.rating ?? 0) < filters.minRating) return false;
       return true;
     });
   }, [shops, search, filters]);
+
+  const dice = useDice(matched);
 
   // 列表:再套目前地圖可視範圍
   const listShops = useMemo(() => {
@@ -87,6 +106,15 @@ export default function App() {
             </button>
           )}
         </div>
+        <button
+          className="icon-btn panel dice-trigger"
+          onClick={dice.roll}
+          disabled={dice.count === 0}
+          aria-label="拉麵骰子:隨機選一間"
+          title={`拉麵骰子(從 ${dice.count} 家中選)`}
+        >
+          <Dices size={18} />
+        </button>
         <button className="icon-btn panel" onClick={toggle} aria-label="切換深淺色">
           {theme === "dark" ? <Sun size={18} /> : <Moon size={18} />}
         </button>
@@ -99,7 +127,12 @@ export default function App() {
         </button>
       </div>
 
-      <FilterChips filters={filters} districts={districts} onChange={setFilters} />
+      <FilterChips
+        filters={filters}
+        cities={cities}
+        districts={districts}
+        onChange={setFilters}
+      />
 
       {!selectedShop && (
         <section className="drawer panel" data-collapsed={collapsed}>
@@ -118,6 +151,19 @@ export default function App() {
 
       {selectedShop && (
         <DetailPanel shop={selectedShop} onClose={() => setSelected(null)} />
+      )}
+
+      {dice.phase !== "idle" && (
+        <DiceOverlay
+          phase={dice.phase}
+          shop={dice.display}
+          onChoose={(ftid) => {
+            setSelected(ftid);
+            dice.reset();
+          }}
+          onReroll={dice.roll}
+          onClose={dice.reset}
+        />
       )}
     </div>
   );
