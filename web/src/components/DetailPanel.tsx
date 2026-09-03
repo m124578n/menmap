@@ -24,6 +24,8 @@ export default function DetailPanel({ shop, onClose }: Props) {
   const ratingCount = d?.latest?.rating_count ?? shop.rating_count;
   const price = d?.latest?.price_text ?? shop.price;
   const cover = d?.cover_photo ?? shop.cover;
+  // 詳情 API 沒回來(或還沒有快照)時,退回 shops.json 帶的整週營業時間
+  const hours = d?.latest?.opening_hours ?? shop.hours;
 
   return (
     <aside className="detail panel noren-top" role="dialog" aria-label={shop.name ?? "店家詳情"}>
@@ -139,17 +141,20 @@ export default function DetailPanel({ shop, onClose }: Props) {
         )}
         {detail.status === "error" && (
           <div className="detail-section detail-note">
-            詳情 API 無法連線({detail.error})。請確認 worker(wrangler dev)有啟動。
+            詳細資料暫時取不到,請稍後再試。已顯示基本資料。
+            {import.meta.env.DEV && (
+              <><br /><code>{detail.error}(本機請確認 worker 有啟動)</code></>
+            )}
           </div>
         )}
 
         {/* 營業時間 */}
-        {d?.latest?.opening_hours && d.latest.opening_hours.length > 0 && (
+        {hours && hours.length > 0 && (
           <div className="detail-section">
             <h3>
               <Clock size={12} style={{ verticalAlign: "-1px" }} /> 營業時間
             </h3>
-            <Hours hours={d.latest.opening_hours} />
+            <Hours hours={hours} />
           </div>
         )}
 
@@ -278,7 +283,7 @@ function ReviewItem({ r }: { r: Review }) {
             <img
               key={i}
               src={hiRes(p, "w400")}
-              alt=""
+              alt={`評論照片 ${i + 1}`}
               loading="lazy"
               onError={(e) => {
                 e.currentTarget.style.display = "none";

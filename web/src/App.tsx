@@ -97,6 +97,24 @@ export default function App() {
     window.history.replaceState(null, "", url);
   }, [selected]);
 
+  // 分頁標題跟著選中的店走(分享/多分頁時好辨認)
+  useEffect(() => {
+    document.title = selectedShop?.name
+      ? `${selectedShop.name} · 雙北拉麵地圖`
+      : "雙北拉麵地圖 · menmap";
+  }, [selectedShop]);
+
+  // Esc:關閉骰子 → 關閉詳情
+  useEffect(() => {
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key !== "Escape") return;
+      if (dice.phase !== "idle") dice.reset();
+      else if (selected) setSelected(null);
+    };
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, [dice, selected]);
+
   return (
     <div className="app">
       <MapView
@@ -117,6 +135,9 @@ export default function App() {
         <div className="searchbar panel">
           <Search size={18} color="var(--fg-muted)" />
           <input
+            type="search"
+            enterKeyHint="search"
+            autoComplete="off"
             value={search}
             onChange={(e) => setSearch(e.target.value)}
             placeholder="搜尋店名…"
@@ -159,7 +180,13 @@ export default function App() {
 
       {!selectedShop && (
         <section className="drawer panel" data-collapsed={collapsed}>
-          <div className="drawer-handle" onClick={() => setCollapsed((v) => !v)} />
+          <button
+            type="button"
+            className="drawer-handle"
+            onClick={() => setCollapsed((v) => !v)}
+            aria-label={collapsed ? "展開列表" : "收合列表"}
+            aria-expanded={!collapsed}
+          />
           <div className="drawer-head">
             <span className="count-label">
               {loading ? "載入中…" : error ? "載入失敗" : <><strong>{listShops.length}</strong> 家(可視範圍內)</>}
@@ -168,7 +195,12 @@ export default function App() {
           {!loading && !error && (
             <ShopList shops={listShops} selected={selected} onSelect={setSelected} />
           )}
-          {error && <div className="empty">shops.json 載入失敗:{error}</div>}
+          {error && (
+            <div className="empty">
+              店家資料暫時載入不了,請稍後重新整理。
+              {import.meta.env.DEV && <><br /><code>{error}</code></>}
+            </div>
+          )}
         </section>
       )}
 

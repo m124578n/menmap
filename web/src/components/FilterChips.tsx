@@ -44,8 +44,18 @@ export default function FilterChips({ filters, cities, districts, hasNew, onChan
       )
         setOpenMenu(false);
     };
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") {
+        setOpenMenu(false);
+        btnRef.current?.focus();
+      }
+    };
     document.addEventListener("mousedown", onDoc);
-    return () => document.removeEventListener("mousedown", onDoc);
+    document.addEventListener("keydown", onKey);
+    return () => {
+      document.removeEventListener("mousedown", onDoc);
+      document.removeEventListener("keydown", onKey);
+    };
   }, [openMenu]);
 
   const toggleDistrict = (d: string) => {
@@ -71,6 +81,8 @@ export default function FilterChips({ filters, cities, districts, hasNew, onChan
           ref={btnRef}
           className="chip"
           data-active={regionCount > 0}
+          aria-haspopup="menu"
+          aria-expanded={openMenu}
           onClick={() => setOpenMenu((v) => !v)}
         >
           {distLabel}
@@ -80,6 +92,8 @@ export default function FilterChips({ filters, cities, districts, hasNew, onChan
           createPortal(
             <div
               className="chip-dropdown panel"
+              role="menu"
+              aria-label="選擇區域"
               ref={dropRef}
               style={{ position: "fixed", top: pos.top, left: pos.left }}
             >
@@ -90,6 +104,8 @@ export default function FilterChips({ filters, cities, districts, hasNew, onChan
                 <button
                   key={c.name}
                   className="dist-opt"
+                  role="menuitemcheckbox"
+                  aria-checked={filters.cities.has(c.name)}
                   data-active={filters.cities.has(c.name)}
                   onClick={() => toggleCity(c.name)}
                 >
@@ -109,6 +125,8 @@ export default function FilterChips({ filters, cities, districts, hasNew, onChan
                 <button
                   key={d.name}
                   className="dist-opt"
+                  role="menuitemcheckbox"
+                  aria-checked={filters.districts.has(d.name)}
                   data-active={filters.districts.has(d.name)}
                   onClick={() => toggleDistrict(d.name)}
                 >
@@ -131,6 +149,7 @@ export default function FilterChips({ filters, cities, districts, hasNew, onChan
       <button
         className="chip"
         data-active={filters.openNow}
+        aria-pressed={filters.openNow}
         onClick={() => onChange({ ...filters, openNow: !filters.openNow })}
       >
         營業中
@@ -139,6 +158,7 @@ export default function FilterChips({ filters, cities, districts, hasNew, onChan
       <button
         className="chip"
         data-active={filters.lateNight}
+        aria-pressed={filters.lateNight}
         onClick={() => onChange({ ...filters, lateNight: !filters.lateNight })}
       >
         深夜營業
@@ -148,6 +168,7 @@ export default function FilterChips({ filters, cities, districts, hasNew, onChan
         <button
           className="chip"
           data-active={filters.newOnly}
+          aria-pressed={filters.newOnly}
           onClick={() => onChange({ ...filters, newOnly: !filters.newOnly })}
         >
           新店
@@ -159,6 +180,8 @@ export default function FilterChips({ filters, cities, districts, hasNew, onChan
           key={r}
           className="chip"
           data-active={filters.minRating === r}
+          aria-pressed={filters.minRating === r}
+          aria-label={`評分 ${r} 以上`}
           onClick={() =>
             onChange({ ...filters, minRating: filters.minRating === r ? 0 : r })
           }

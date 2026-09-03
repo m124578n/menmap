@@ -1,0 +1,14 @@
+{
+  "name": "雙北拉麵地圖 menmap",
+  "short_name": "menmap",
+  "description": "雙北 600+ 家拉麵店的互動地圖:營業狀態、評分評論、菜單照片,外加拉麵骰子。",
+  "lang": "zh-Hant",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f6f1e7",
+  "theme_color": "#c1352b",
+  "icons": [
+    { "src": "/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable" }
+  ]
+}

@@ -30,6 +30,20 @@ npm run dev        # http://localhost:5173
 `/api` proxy 過去。worker 未啟動時,詳情面板會優雅顯示「詳情 API 無法連線」並保留
 基本資料。
 
+## 部署(Cloudflare Pages)
+
+- 建置:root `web`、指令 `npm run build`、輸出 `dist`。
+- 環境變數 `VITE_API_BASE`:Worker 的網址(如 `https://menmap-api.<帳號>.workers.dev`)。
+  前端的 `/api/*` 呼叫會接在它後面;本機開發留空走 Vite proxy。
+  若之後把 Worker 綁到同網域的 `/api/*` 路由就可拿掉。
+- **正式網域確定後**,把 `index.html` 裡的 `https://menmap.pages.dev` 換掉
+  (canonical、og:url、og:image 需要絕對網址,分享預覽才會出現)。
+- `public/_headers`:Pages 的快取規則(`/assets/*` 長快取、`shops.json` 5~10 分鐘)。
+- SEO/分享資產都在 `public/`:`favicon.svg`、`apple-touch-icon.png`、`og.png`(1200×630)、
+  `manifest.webmanifest`、`robots.txt`。
+- 限制:單頁 hash 路由(`#ftid`),搜尋引擎只會索引首頁;單店 OG 分享卡(per-shop
+  og:image / 標題)要另做預渲染或 Worker 動態產生,見 roadmap。
+
 ## 待辦
 
 - **P3**:地圖底圖換自架 Protomaps pmtiles;評論/封面照快取進 R2(googleusercontent

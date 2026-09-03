@@ -16,6 +16,24 @@ const TW_BOUNDS: LngLatBoundsLike = [
 
 const SRC = "shops";
 
+/** 面板會遮住地圖的一部分:算出「看得到的區域」padding,fitBounds / easeTo 用。 */
+function visiblePadding(mode: "list" | "detail"): { top: number; bottom: number; left: number; right: number } {
+  const mobile = window.innerWidth < 768;
+  if (mobile) {
+    // 上方 topbar + chips 約 110px;下方 bottom sheet 45vh、詳情面板 66vh(見 app.css)
+    const sheet = mode === "detail" ? 0.66 : 0.45;
+    return { top: 110, bottom: Math.round(window.innerHeight * sheet) + 12, left: 16, right: 16 };
+  }
+  // 桌機:左側 380px 抽屜 + 12px 邊距
+  return { top: 110, bottom: 24, left: 380 + 24, right: 24 };
+}
+
+// 聚合泡泡:深色底圖上要用亮一點的靛藍,否則和底圖糊在一起
+const CLUSTER = {
+  light: { fill: "#22405f", text: "#ffffff", stroke: "rgba(255,255,255,0.6)" },
+  dark: { fill: "#6e93c9", text: "#15130f", stroke: "rgba(21,19,15,0.6)" },
+};
+
 interface Props {
   shops: Shop[];
   selected: string | null;
@@ -39,8 +57,10 @@ function toGeoJSON(shops: Shop[]): GeoJSON.FeatureCollection {
   };
 }
 
-function addLayers(map: maplibregl.Map, data: GeoJSON.FeatureCollection) {
+function addLayers(map: maplibregl.Map, data: GeoJSON.FeatureCollection,
+                   theme: "light" | "dark") {
   if (map.getSource(SRC)) return;
+  const cl = CLUSTER[theme];
   map.addSource(SRC, {
     type: "geojson",
     data,
@@ -56,11 +76,11 @@ function addLayers(map: maplibregl.Map, data: GeoJSON.FeatureCollection) {
     source: SRC,
     filter: ["has", "point_count"],
     paint: {
-      "circle-color": "#22405f",
+      "circle-color": cl.fill,
       "circle-opacity": 0.92,
       "circle-radius": ["step", ["get", "point_count"], 16, 10, 20, 30, 26],
       "circle-stroke-width": 2,
-      "circle-stroke-color": "rgba(255,255,255,0.6)",
+      "circle-stroke-color": cl.stroke,
     },
   });
   map.addLayer({
@@ -73,7 +93,7 @@ function addLayers(map: maplibregl.Map, data: GeoJSON.FeatureCollection) {
       "text-font": ["Open Sans Bold", "Noto Sans Bold"],
       "text-size": 12,
     },
-    paint: { "text-color": "#ffffff" },
+    paint: { "text-color": cl.text },
   });
 
   // 單點:依狀態上色
@@ -124,8 +144,10 @@ export default function MapView({
   const dataRef = useRef<GeoJSON.FeatureCollection>(toGeoJSON(shops));
   const onSelectRef = useRef(onSelect);
   const onBoundsRef = useRef(onBoundsChange);
+  const themeRef = useRef(theme);
   onSelectRef.current = onSelect;
   onBoundsRef.current = onBoundsChange;
+  themeRef.current = theme;
 
   // 初始化(一次)
   useEffect(() => {
@@ -134,7 +156,7 @@ export default function MapView({
       container: containerRef.current,
       style: STYLE[theme],
       bounds: TW_BOUNDS,
-      fitBoundsOptions: { padding: 40 },
+      fitBoundsOptions: { padding: visiblePadding("list") },
       attributionControl: { compact: true },
     });
     mapRef.current = map;
@@ -144,7 +166,7 @@ export default function MapView({
     const emitBounds = () => onBoundsRef.current(map.getBounds());
 
     map.on("load", () => {
-      addLayers(map, dataRef.current);
+      addLayers(map, dataRef.current, themeRef.current);
       emitBounds();
     });
     map.on("moveend", emitBounds);
@@ -189,7 +211,7 @@ export default function MapView({
     if (!map) return;
     map.setStyle(STYLE[theme]);
     const onStyle = () => {
-      addLayers(map, dataRef.current);
+      addLayers(map, dataRef.current, theme);
       applySelected(map, selected);
     };
     map.once("styledata", onStyle);
@@ -203,7 +225,14 @@ export default function MapView({
     applySelected(map, selected);
     if (selected) {
       const s = shops.find((x) => x.ftid === selected);
-      if (s) map.easeTo({ center: [s.lng, s.lat], zoom: Math.max(map.getZoom(), 15), duration: 500 });
+      // padding 讓店家落在「沒被面板遮住」的區域中央
+      if (s)
+        map.easeTo({
+          center: [s.lng, s.lat],
+          zoom: Math.max(map.getZoom(), 15),
+          padding: visiblePadding("detail"),
+          duration: 500,
+        });
     }
   }, [selected, shops]);
 

@@ -4,16 +4,47 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
     <title>雙北拉麵地圖 · menmap</title>
-    <meta name="description" content="雙北 600+ 家拉麵店的互動地圖:營業狀態、評分、評論一次看。" />
+    <meta name="description" content="雙北 600+ 家拉麵店的互動地圖:營業狀態、營業時間、評分評論、菜單照片一次看,還有幫你選店的拉麵骰子。" />
+    <meta name="theme-color" media="(prefers-color-scheme: light)" content="#f6f1e7" />
+    <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#15130f" />
+
+    <!-- 部署後把 https://menmap.pages.dev 換成正式網域(Open Graph 的圖片/網址必須是絕對路徑) -->
+    <link rel="canonical" href="https://menmap.pages.dev/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="menmap" />
+    <meta property="og:locale" content="zh_TW" />
+    <meta property="og:title" content="雙北拉麵地圖 · menmap" />
+    <meta property="og:description" content="雙北 600+ 家拉麵店:營業狀態、評分評論、菜單照片,今天吃哪間就搖拉麵骰子。" />
+    <meta property="og:url" content="https://menmap.pages.dev/" />
+    <meta property="og:image" content="https://menmap.pages.dev/og.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="雙北拉麵地圖 menmap" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="雙北拉麵地圖 · menmap" />
+    <meta name="twitter:description" content="雙北 600+ 家拉麵店:營業狀態、評分評論、菜單照片,今天吃哪間就搖拉麵骰子。" />
+    <meta name="twitter:image" content="https://menmap.pages.dev/og.png" />
+
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/manifest.webmanifest" />
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://basemaps.cartocdn.com" />
+    <!-- Noto Sans TC 已含日文假名,不另載 Noto Sans JP;Serif JP 只給標題 -->
     <link
-      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+JP:wght@500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+JP:wght@500;600;700&display=swap"
       rel="stylesheet"
     />
   </head>
   <body>
     <div id="root"></div>
+    <noscript>
+      <div style="padding:24px;font-family:system-ui,sans-serif;line-height:1.6">
+        <strong>雙北拉麵地圖</strong>需要啟用 JavaScript 才能顯示互動地圖。
+      </div>
+    </noscript>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>

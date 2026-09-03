@@ -1,0 +1,7 @@
+# Cloudflare Pages 快取規則
+# 帶 hash 的建置資產:長快取
+/assets/*
+  Cache-Control: public, max-age=31536000, immutable
+# 店家資料每天更新一次:CDN 快 10 分鐘、瀏覽器 5 分鐘
+/shops.json
+  Cache-Control: public, max-age=300, s-maxage=600

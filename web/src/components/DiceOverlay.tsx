@@ -12,7 +12,14 @@ interface Props {
 export default function DiceOverlay({ phase, shop, onChoose, onReroll, onClose }: Props) {
   return (
     <div className="dice-overlay" onClick={onClose}>
-      <div className="dice-card panel noren-top" onClick={(e) => e.stopPropagation()}>
+      <div
+        className="dice-card panel noren-top"
+        role="dialog"
+        aria-modal="true"
+        aria-label="拉麵骰子"
+        aria-live="polite"
+        onClick={(e) => e.stopPropagation()}
+      >
         <button className="close-btn" onClick={onClose} aria-label="關閉">
           <X size={18} />
         </button>

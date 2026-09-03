@@ -96,6 +96,7 @@ a {
   gap: 8px;
   padding: 10px 14px;
   height: 44px;
+  flex-shrink: 0;
   font-family: var(--font-serif);
   font-weight: 600;
   white-space: nowrap;
@@ -125,6 +126,7 @@ a {
   align-items: center;
   gap: 8px;
   flex: 1;
+  min-width: 0; /* 讓它能縮到比 input 預設寬度小,手機才塞得下右邊的按鈕 */
   max-width: 420px;
   height: 44px;
   padding: 0 12px;
@@ -197,6 +199,14 @@ a {
   background: var(--primary);
   color: var(--on-primary);
   border-color: var(--primary);
+}
+/* 觸控裝置:chip 加高到 40px 接近 44px 觸控目標 */
+@media (pointer: coarse) {
+  .chip {
+    height: 40px;
+    padding: 0 15px;
+    font-size: 14px;
+  }
 }
 .chip .count {
   opacity: 0.7;
@@ -367,6 +377,7 @@ a {
 
 .drawer-handle {
   display: none;
+  width: 100%;
 }
 @media (max-width: 767px) {
   .drawer-handle {
@@ -504,7 +515,7 @@ a {
     left: 0;
     right: 0;
     bottom: 0;
-    top: 20vh;
+    top: 34vh; /* 留一段地圖看得到選中的店(MapView 會把店移到這段的中間) */
     border-radius: var(--radius) var(--radius) 0 0;
   }
 }
@@ -737,6 +748,25 @@ a {
   .brand > span:last-child {
     display: none;
   }
+}
+
+.fatal {
+  max-width: 420px;
+  margin: 20vh auto 0;
+  padding: 24px;
+  text-align: center;
+}
+.fatal h1 {
+  font-family: var(--font-serif);
+  font-size: 22px;
+  margin-bottom: 8px;
+}
+.fatal p {
+  color: var(--fg-muted);
+  margin-bottom: 16px;
+}
+.fatal .dice-btn {
+  padding: 0 24px;
 }
 
 .empty {

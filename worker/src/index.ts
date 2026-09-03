@@ -75,6 +75,8 @@ app.get("/api/shop/:ftid", async (c) => {
     rating_count: h.user_rating_count,
   }));
 
+  // 資料每天更新一次:讓 CDN/瀏覽器快取幾分鐘,減少 D1 讀取
+  c.header("Cache-Control", "public, max-age=300, s-maxage=600");
   return c.json({
     ftid,
     found: true,

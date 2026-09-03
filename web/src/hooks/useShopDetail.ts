@@ -52,6 +52,13 @@ type State =
   | { status: "error"; error: string }
   | { status: "ok"; data: ShopDetailData };
 
+/**
+ * API 位置。本機開發走 Vite proxy(空字串 = 同源 /api);
+ * 部署到 Pages 時 Worker 在另一個網域,build 時設 VITE_API_BASE=https://menmap-api.<帳號>.workers.dev
+ * (Worker 已開 CORS GET)。若之後把 Worker 綁到同網域的 /api/* 路由,就不用設。
+ */
+const API_BASE = (import.meta.env.VITE_API_BASE ?? "").replace(/\/$/, "");
+
 export function useShopDetail(ftid: string | null): State {
   const [state, setState] = useState<State>({ status: "loading" });
 
@@ -59,7 +66,7 @@ export function useShopDetail(ftid: string | null): State {
     if (!ftid) return;
     let alive = true;
     setState({ status: "loading" });
-    fetch(`/api/shop/${encodeURIComponent(ftid)}`)
+    fetch(`${API_BASE}/api/shop/${encodeURIComponent(ftid)}`)
       .then(async (r) => {
         if (r.status === 404) return { found: false } as ShopDetailData;
         if (!r.ok) throw new Error(`HTTP ${r.status}`);
