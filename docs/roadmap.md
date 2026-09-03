@@ -13,7 +13,7 @@ P4 使用者功能)。
 - ✅ P1 詳情 API:Worker(Hono)+ D1(全部店家;其中 ~30 家含完整評論/整週營業時間)
 - ✅ 每日排程已在採集機註冊(2026-09-03,每天 20:00):static 全抓 + playwright 輪 100 家,兩者並行約 50 分鐘
 - ✅ P2 部署(2026-09-03):<https://menmap.shunzz.com>(Pages)+ `/api/*` → Worker `menmap-api` + D1 `menmap`;
-  線上資料目前手動 `db:push` / `npm run deploy`,**自動 publish 尚未做**
+  每日排程尾端自動 publish(D1 當天增量 + Pages 重新部署)
 - 註:db 的 shop 表仍有被 seed 清除的 26 家非拉麵(無害,不再更新)
 
 ## 建議執行順序
@@ -22,7 +22,7 @@ P4 使用者功能)。
    接下來就是「連跑數天觀察」(見 README 觀察清單)。
 1. **parser 欄位擴充包**(見下)——在大批 Playwright 補抓「之前」做,一次抓全拿
 2. **Playwright 分批補完 591 家**(見下)——解鎖分類/小泡泡/價格/菜單照四項
-3. ~~**P2 部署**~~ ✅ 已上線;剩「家裡 publish 自動化」(見下)
+3. ~~**P2 部署**~~ ✅ 已上線,含每日自動 publish
 4. LLM 種類分類 + 前端類型篩選/骰子種類選項
 5. P4 使用者功能(認證 → 最愛 → 麵史 → 等候回報)
 6. P3 收尾(pmtiles、照片 R2)→ 地區擴充
@@ -81,9 +81,9 @@ P4 使用者功能)。
 
 - ✅ 遠端 D1 `menmap` + schema;✅ Worker `menmap-api`(路由 `menmap.shunzz.com/api/*`);
   ✅ Pages `menmap` + 自訂網域 `menmap.shunzz.com`(同源,無 CORS)
-- ⬜ 家裡 `run_daily.ps1` 加 publish 步驟:`export_web_data.py` → `npm run deploy`(shops.json 隨 Pages 上傳,
-  先不用 R2)、變動列 → 增量寫遠端 D1(先用 `wrangler d1 execute` 只推當日新列;
-  或 ingest Worker + scoped token)。現在的 `db:push` 是整顆重灌,不適合每天跑。
+- ✅ `run_daily.ps1` publish 步驟:`npm run db:publish`(`scripts/publish_d1.py` 只推當天列,冪等)
+  → `export_web_data.py` → `npm run deploy`(shops.json 隨 Pages 上傳,先不用 R2)。
+  不做 ingest Worker:本機 SQLite 是正本,一天一次批次推送就夠。
 - ⬜ 新店封面照 → R2(併入 P3 照片快取)
 
 ### P3 — 收尾

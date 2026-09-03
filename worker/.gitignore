@@ -3,3 +3,4 @@ node_modules/
 dist/
 seed.local.sql
 *.local
+publish.local.sql

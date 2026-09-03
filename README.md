@@ -93,11 +93,13 @@ Start-ScheduledTask -TaskName RamenDailySnapshot                     # 立即測
 |---|---|---|
 | 前端 | Pages 專案 `menmap` → `menmap.shunzz.com`(備援 `menmap.pages.dev`) | `cd web && npm run deploy` |
 | API | Worker `menmap-api`,路由 `menmap.shunzz.com/api/*`(備援 `menmap-api.m23568n.workers.dev`) | `cd worker && npm run deploy` |
-| 資料 | D1 `menmap`(APAC) | `cd worker && npm run db:push`(整顆 ramen.db 重灌,約 5 千列) |
+| 資料 | D1 `menmap`(APAC) | `cd worker && npm run db:publish`(當天增量);`db:push` 整顆重灌(只在 schema 重建時用) |
 
 - 前端與 API 同源,不需要 CORS 或 `VITE_API_BASE`;本機開發仍走 Vite proxy。
-- 更新線上資料:先 `uv run python scripts/export_web_data.py`(shops.json)再 `npm run deploy`;
-  詳情資料 `npm run db:push`。目前是手動,自動 publish 見 roadmap P2。
+- **線上資料每天自動更新**:`run_daily.ps1` 抓完、compare 完後跑 publish——
+  `scripts/publish_d1.py` 只匯出當天新增/取代的列(冪等,失敗隔天可重推)推到 D1,
+  再 `export_web_data.py` → `npm run deploy` 重新上傳 Pages(shops.json 一起進 git)。
+  手動測試不想上線時設 `$env:PUBLISH="0"`。
 - 自訂網域的 DNS(CNAME `menmap` → `menmap.pages.dev`)在 Dashboard 管理。
 
 ## 採集端備忘

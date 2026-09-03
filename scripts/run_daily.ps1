@@ -1,4 +1,4 @@
-﻿# 每日採集:static + playwright 快照,再產對比報告,最後 commit 回 git。
+﻿# 每日採集:static + playwright 快照 → 對比報告 → publish 上線(D1 增量 + Pages)→ commit 回 git。
 # 由 Windows 工作排程器每天 20:00 觸發(見 register_task.ps1)。
 # 單一步驟失敗不擋後續;全程寫入 data/logs。
 
@@ -83,9 +83,21 @@ foreach ($j in $jobs) {
 
 Run-Step "compare"             { uv run python -m ramen compare }
 
-# commit 回 repo(bot 身分),保留快照與 diff 歷史
+# publish:把當天變動推上線(本機 SQLite 是正本,雲端是複本)。
+# - D1:只推當天新增/取代的列(scripts/publish_d1.py,冪等,失敗明天可重推)
+# - Pages:重新產 shops.json 後整包 deploy(含前端建置)
+# 設 $env:PUBLISH="0" 可跳過(例如手動測試時)。
+if ($env:PUBLISH -ne "0") {
+    Run-Step "publish d1"    { Set-Location (Join-Path $repo "worker"); npm run db:publish 2>&1; Set-Location $repo }
+    Run-Step "publish pages" {
+        uv run python scripts/export_web_data.py 2>&1
+        Set-Location (Join-Path $repo "web"); npm run deploy 2>&1; Set-Location $repo
+    }
+}
+
+# commit 回 repo(bot 身分),保留快照與 diff 歷史;shops.json 跟著進 git,和線上一致
 Run-Step "git commit" {
-    git add data
+    git add data web/public/shops.json
     # -c 只對這次 commit 生效,不改 repo 的 user.name/email
     git -c user.name=ramen-bot -c user.email=ramen-bot@localhost `
         commit -m "chore(data): 每日快照 $stamp" 2>&1

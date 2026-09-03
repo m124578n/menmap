@@ -34,12 +34,14 @@ npm run dev          # wrangler dev,http://localhost:8787
 ```bash
 npm run deploy             # wrangler deploy(路由與 D1 綁定都在 wrangler.toml)
 npm run db:schema:remote   # 遠端 D1 建 schema(只有 schema 變動時需要)
-npm run db:push            # 匯出 ramen.db → seed.local.sql → 整顆重灌遠端 D1(約 5 千列、7 MB)
+npm run db:publish         # 當天增量:scripts/publish_d1.py → publish.local.sql → 遠端 D1(每日排程用,冪等)
+npm run db:push            # 整顆重灌:export_d1_seed.py → seed.local.sql(先 DELETE 再 INSERT,只在重建時用)
 ```
 
 - `wrangler.toml` 的 `routes` 把 `menmap.shunzz.com/api/*` 指到這個 Worker,和 Pages 前端同源。
-- 線上資料目前是手動 `db:push`(先 DELETE 再 INSERT,跑的那幾秒詳情會查不到);
-  自動 publish(每日排程增量寫入)是 roadmap P2 的下一步。
+- 本機 `data/ramen.db` 是正本,D1 是複本。`db:publish` 的規則:shop 整列覆蓋、snapshot 依
+  captured_at 先刪再插、review/post 比照採集端「某店某後端整批取代」。
+  補推某天:`uv run python ../scripts/publish_d1.py --date 2026-09-02` 再手動 execute。
 
 ## 結構
 

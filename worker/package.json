@@ -9,7 +9,8 @@
     "db:seed": "uv run python ../scripts/load_local_d1.py",
     "deploy": "wrangler deploy",
     "db:schema:remote": "wrangler d1 execute menmap --remote --file=./schema.sql -y",
-    "db:push": "uv run python ../scripts/export_d1_seed.py && wrangler d1 execute menmap --remote --file=./seed.local.sql -y"
+    "db:push": "uv run python ../scripts/export_d1_seed.py && wrangler d1 execute menmap --remote --file=./seed.local.sql -y",
+    "db:publish": "uv run python ../scripts/publish_d1.py && wrangler d1 execute menmap --remote --file=./publish.local.sql -y"
   },
   "dependencies": {
     "hono": "^4.6.14"
