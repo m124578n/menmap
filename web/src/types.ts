@@ -21,6 +21,8 @@ export interface Shop {
   is_new: boolean;
   cover: string | null;
   maps_url: string | null;
+  categories: string[];        // LLM 分類的拉麵種類(主打在前);未分類為 []
+  beginner: boolean | null;    // 入門友善;未知為 null
 }
 
 export interface ShopsData {

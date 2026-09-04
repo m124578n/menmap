@@ -11,18 +11,26 @@ export interface Filters {
   newOnly: boolean;         // 只看新店
   minRating: number; // 0 = 不限
   price: PriceBand | null;  // 價格帶(單選;null = 不限)
+  categories: Set<string>;  // 拉麵種類(多選,任一命中)
+  beginner: boolean;        // 只看入門友善
 }
 
 interface Props {
   filters: Filters;
   cities: { name: string; count: number }[];
   districts: { name: string; count: number }[];
+  categories: { name: string; count: number }[]; // 有分類資料才顯示「種類」
   hasNew: boolean; // 有新店才顯示「新店」chip
   onChange: (f: Filters) => void;
 }
 
-export default function FilterChips({ filters, cities, districts, hasNew, onChange }: Props) {
+export default function FilterChips({ filters, cities, districts, categories, hasNew, onChange }: Props) {
   const [openMenu, setOpenMenu] = useState(false);
+  const [openCat, setOpenCat] = useState(false);
+  const catRef = useRef<HTMLDivElement>(null);
+  const catBtnRef = useRef<HTMLButtonElement>(null);
+  const catDropRef = useRef<HTMLDivElement>(null);
+  const [catPos, setCatPos] = useState<{ top: number; left: number }>({ top: 0, left: 0 });
   const menuRef = useRef<HTMLDivElement>(null);
   const btnRef = useRef<HTMLButtonElement>(null);
   const dropRef = useRef<HTMLDivElement>(null);
@@ -59,6 +67,40 @@ export default function FilterChips({ filters, cities, districts, hasNew, onChan
       document.removeEventListener("keydown", onKey);
     };
   }, [openMenu]);
+
+  // 種類下拉:定位與點外面/Esc 關閉(比照區域)
+  useLayoutEffect(() => {
+    if (openCat && catBtnRef.current) {
+      const r = catBtnRef.current.getBoundingClientRect();
+      setCatPos({ top: r.bottom + 6, left: r.left });
+    }
+  }, [openCat]);
+  useEffect(() => {
+    if (!openCat) return;
+    const onDoc = (e: MouseEvent) => {
+      const t = e.target as Node;
+      if (catRef.current && !catRef.current.contains(t) &&
+          catDropRef.current && !catDropRef.current.contains(t))
+        setOpenCat(false);
+    };
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") {
+        setOpenCat(false);
+        catBtnRef.current?.focus();
+      }
+    };
+    document.addEventListener("mousedown", onDoc);
+    document.addEventListener("keydown", onKey);
+    return () => {
+      document.removeEventListener("mousedown", onDoc);
+      document.removeEventListener("keydown", onKey);
+    };
+  }, [openCat]);
+  const toggleCategory = (c: string) => {
+    const next = new Set(filters.categories);
+    next.has(c) ? next.delete(c) : next.add(c);
+    onChange({ ...filters, categories: next });
+  };
 
   const toggleDistrict = (d: string) => {
     const next = new Set(filters.districts);
@@ -148,6 +190,61 @@ export default function FilterChips({ filters, cities, districts, hasNew, onChan
           )}
       </div>
 
+      {categories.length > 0 && (
+        <div className="chip-menu" ref={catRef}>
+          <button
+            ref={catBtnRef}
+            className="chip"
+            data-active={filters.categories.size > 0}
+            aria-haspopup="menu"
+            aria-expanded={openCat}
+            onClick={() => setOpenCat((v) => !v)}
+          >
+            {filters.categories.size === 0 ? "種類" : `種類 · ${filters.categories.size}`}
+            <ChevronDown size={14} />
+          </button>
+          {openCat &&
+            createPortal(
+              <div
+                className="chip-dropdown panel"
+                role="menu"
+                aria-label="選擇拉麵種類"
+                ref={catDropRef}
+                style={{ position: "fixed", top: catPos.top, left: catPos.left }}
+              >
+                <div className="dist-group">主打湯頭 / 類型(可複選)</div>
+                {categories.map((c) => (
+                  <button
+                    key={c.name}
+                    className="dist-opt"
+                    role="menuitemcheckbox"
+                    aria-checked={filters.categories.has(c.name)}
+                    data-active={filters.categories.has(c.name)}
+                    onClick={() => toggleCategory(c.name)}
+                  >
+                    {filters.categories.has(c.name) ? <Check size={13} /> : <span style={{ width: 13 }} />}
+                    {c.name}
+                    <span className="count" style={{ marginLeft: "auto", opacity: 0.6 }}>{c.count}</span>
+                  </button>
+                ))}
+              </div>,
+              document.body
+            )}
+        </div>
+      )}
+
+      {categories.length > 0 && (
+        <button
+          className="chip"
+          data-active={filters.beginner}
+          aria-pressed={filters.beginner}
+          title="口味大眾、點餐直覺、不用特別排隊的店"
+          onClick={() => onChange({ ...filters, beginner: !filters.beginner })}
+        >
+          新手友善
+        </button>
+      )}
+
       <button
         className="chip"
         data-active={filters.openNow}
@@ -209,7 +306,8 @@ export default function FilterChips({ filters, cities, districts, hasNew, onChan
       ))}
 
       {(regionCount > 0 || filters.openNow || filters.lateNight ||
-        filters.newOnly || filters.minRating > 0 || filters.price) && (
+        filters.newOnly || filters.minRating > 0 || filters.price ||
+        filters.categories.size > 0 || filters.beginner) && (
         <button
           className="chip"
           onClick={() =>
@@ -221,6 +319,8 @@ export default function FilterChips({ filters, cities, districts, hasNew, onChan
               newOnly: false,
               price: null,
               minRating: 0,
+              categories: new Set(),
+              beginner: false,
             })
           }
         >

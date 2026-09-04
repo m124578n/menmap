@@ -1102,3 +1102,25 @@ a {
 .drawer-head .rank-btn:hover {
   border-color: var(--accent);
 }
+
+/* ---- 拉麵種類(LLM 分類)標籤 ---- */
+.tag-cat {
+  color: var(--primary);
+  border-color: color-mix(in srgb, var(--primary) 40%, transparent);
+  background: color-mix(in srgb, var(--primary) 8%, transparent);
+}
+.detail-cats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 10px;
+}
+.detail-cats .tag-cat {
+  font-size: 12px;
+  padding: 2px 9px;
+}
+.detail-cats .tag-beginner {
+  color: var(--open);
+  border-color: color-mix(in srgb, var(--open) 40%, transparent);
+  background: color-mix(in srgb, var(--open) 8%, transparent);
+}

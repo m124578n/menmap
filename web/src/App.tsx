@@ -28,6 +28,8 @@ export default function App() {
     newOnly: false,
     minRating: 0,
     price: null,
+    categories: new Set(),
+    beginner: false,
   });
   const [selected, setSelected] = useState<string | null>(
     () => decodeURIComponent(window.location.hash.slice(1)) || null
@@ -77,11 +79,22 @@ export default function App() {
       if (filters.newOnly && !s.is_new) return false;
       if (filters.minRating > 0 && (s.rating ?? 0) < filters.minRating) return false;
       if (filters.price && priceBand(s.price) !== filters.price) return false;
+      if (filters.categories.size > 0 && !s.categories.some((c) => filters.categories.has(c))) return false;
+      if (filters.beginner && s.beginner !== true) return false;
       return true;
     });
   }, [shops, search, filters]);
 
   const hasNew = useMemo(() => shops.some((s) => s.is_new), [shops]);
+
+  // 拉麵種類清單(LLM 分類;依家數排序,「其他」放最後)
+  const categories = useMemo(() => {
+    const m = new Map<string, number>();
+    for (const s of shops) for (const c of s.categories ?? []) m.set(c, (m.get(c) ?? 0) + 1);
+    return [...m.entries()]
+      .map(([name, count]) => ({ name, count }))
+      .sort((a, b) => (a.name === "其他" ? 1 : b.name === "其他" ? -1 : b.count - a.count));
+  }, [shops]);
 
   const dice = useDice(matched);
 
@@ -186,6 +199,7 @@ export default function App() {
         filters={filters}
         cities={cities}
         districts={districts}
+        categories={categories}
         hasNew={hasNew}
         onChange={setFilters}
       />

@@ -23,9 +23,9 @@ export function useShops(): State {
       })
       .then((data) => {
         if (!alive) return;
-        const shops = data.shops.filter(
-          (s) => typeof s.lat === "number" && typeof s.lng === "number"
-        );
+        const shops = data.shops
+          .filter((s) => typeof s.lat === "number" && typeof s.lng === "number")
+          .map((s) => ({ ...s, categories: s.categories ?? [], beginner: s.beginner ?? null }));
         setState({ shops, loading: false, error: null });
       })
       .catch((e) => {

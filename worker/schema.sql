@@ -14,6 +14,10 @@ CREATE TABLE IF NOT EXISTS shop (
     location_id TEXT,
     closed_at   TEXT,
     menu_photos_json TEXT,
+    categories_json TEXT,      -- LLM 拉麵種類分類(JSON 陣列,主打在前)
+    beginner_friendly INTEGER, -- 1/0/NULL 入門友善
+    classified_at TEXT,
+    classify_model TEXT,
     first_seen  TEXT,
     last_seen   TEXT
 );

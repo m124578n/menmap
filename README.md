@@ -20,6 +20,9 @@
 - 🏆 **麵榜**:熱門(評分 × 評論數貝氏平均)、竄紅(近 7 天評論數增幅)、入門友善
   (評論多、評分穩、價格親民)三個榜 + **本週動態**(新收錄、歇業/恢復、評分變動、
   營業時間調整、改名搬家);資料每天由 `export_web_data.py` 產成 `discover.json`
+- 🍜 **拉麵種類**(LLM 分類):豚骨 / 雞白湯 / 醬油 / 鹽味 / 味噌 / 魚介煮干 / 蝦 / 家系 /
+  二郎系 / 沾麵 / 油拌麵 / 擔擔麵 / 辣味 / 蔬食,多標籤、主打在前;「種類」下拉多選、
+  「新手友善」chip;卡片與詳情顯示標籤;骰子沿用目前篩選,所以能「骰一家雞白湯」
 - 🖼️ **圖片燈箱**、💲 **價格篩選**、ⓘ **關於本站**(資料來源與免責)
 
 ## 架構(摘要)
@@ -138,6 +141,12 @@ log 在 `data/logs/`(不進 git):`{date}.log` 主流程、`{date}-static.log` /
 - 兩後端共用 `ramen/parser.py`(欄位索引集中於 `IDX_*`,Google 改版對照 `data/raw/` 修)
 - 節流:請求間隨機延遲 + 定期長休息,`RAMEN_SLEEP_MIN/MAX`、`RAMEN_LONG_PAUSE_*`、
   `RAMEN_LITE_RETRIES` 環境變數可調;出現失敗/大量精簡版就調慢
+- **LLM 種類分類**:`uv run python scripts/classify_types.py --write`(預設只跑還沒分類的店;
+  `--mode stale` 加上評論有更新的、`--mode all` 全部重跑約 $6;`--limit N` 試跑不加 `--write` 只印)。
+  金鑰放專案根目錄 `.env`(gitignore):Foundry 用 `ANTHROPIC_FOUNDRY_API_KEY` + `ANTHROPIC_FOUNDRY_RESOURCE`
+  + `ANTHROPIC_MODEL`,或第一方 `ANTHROPIC_API_KEY`。輸入是店名 + 類別 + 價格 + 貼文 + 最新 10 則評論,
+  輸出 1~3 個標籤 + 入門友善 + 一句理由;寫回 shop 表 `categories_json` / `beginner_friendly`,
+  隨 shops.json 與 D1 上線。每日排程會自動分類新收錄的店。
 - static 的 URL 模板失效時重錄:`uv run python scripts/capture_templates.py`
 - parser 加新欄位後不用重爬:`uv run python scripts/reparse_raw.py [date] [backend]`
 

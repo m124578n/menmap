@@ -66,6 +66,14 @@ export default function DetailPanel({ shop, onClose }: Props) {
           <div style={{ marginTop: 10 }}>
             <StatusBadge status={status} />
           </div>
+          {(shop.categories.length > 0 || shop.beginner) && (
+            <div className="detail-cats" aria-label="拉麵種類">
+              {shop.categories.map((c) => (
+                <span key={c} className="tag tag-cat">{c}</span>
+              ))}
+              {shop.beginner && <span className="tag tag-beginner">新手友善</span>}
+            </div>
+          )}
         </div>
 
         {/* 基本資料 */}

@@ -38,7 +38,9 @@ function ShopCard({
             </span>
           )}
           {shop.price && <span>{shop.price}</span>}
-          {shop.types[0] && <span className="tag">{shop.types[0]}</span>}
+          {shop.categories?.length
+            ? shop.categories.slice(0, 2).map((c) => <span key={c} className="tag tag-cat">{c}</span>)
+            : shop.types[0] && <span className="tag">{shop.types[0]}</span>}
         </div>
       </div>
     </button>

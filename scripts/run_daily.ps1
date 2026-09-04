@@ -91,6 +91,12 @@ foreach ($j in $jobs) {
 
 Run-Step "compare"             { uv run python -m ramen compare }
 
+# LLM 拉麵種類分類:只分類「還沒分類過」的店(通常是週日 seed refresh 新收錄的),幾家而已、幾毛錢。
+# 金鑰在 .env(Foundry 上的 Claude)。全部重跑用 --mode all(約 $6),不排程。$env:CLASSIFY="0" 跳過。
+if ($env:CLASSIFY -ne "0") {
+    Run-Step "classify new shops" { uv run python scripts/classify_types.py --write --workers 4 2>&1 }
+}
+
 # publish:把當天變動推上線(本機 SQLite 是正本,雲端是複本)。
 # - D1:只推當天新增/取代的列(scripts/publish_d1.py,冪等,失敗明天可重推)
 # - Pages:只重新產 shops.json / discover.json(麵榜);下面 git push 後 Cloudflare Pages 會自己從 GitHub 建置部署

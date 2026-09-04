@@ -94,7 +94,9 @@ CREATE INDEX IF NOT EXISTS idx_shop_change_time ON shop_change (captured_at);
 
 
 # 既有 db 補欄位用(CREATE TABLE IF NOT EXISTS 不會加新欄)
-_SHOP_MIGRATIONS = ["fan_page", "location_id", "closed_at", "menu_photos_json"]
+_SHOP_MIGRATIONS = ["fan_page", "location_id", "closed_at", "menu_photos_json",
+                    # LLM 拉麵種類分類(scripts/classify_types.py)
+                    "categories_json", "beginner_friendly", "classified_at", "classify_model"]
 
 
 def connect(db_path: str | Path) -> sqlite3.Connection:

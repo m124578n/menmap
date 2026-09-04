@@ -73,13 +73,22 @@ def latest_snapshots() -> dict[str, sqlite3.Row]:
     return out
 
 
+def _json_list(raw: str | None) -> list:
+    try:
+        v = json.loads(raw) if raw else []
+        return v if isinstance(v, list) else []
+    except (ValueError, TypeError):
+        return []
+
+
 def shop_master() -> dict[str, sqlite3.Row]:
     """shop 主檔(每日快照 upsert,改名/搬家會反映在這;seed 只有每週更新)。"""
     if not DB.exists():
         return {}
     conn = sqlite3.connect(DB)
     conn.row_factory = sqlite3.Row
-    rows = {r["ftid"]: r for r in conn.execute("SELECT ftid, name, address, lat, lng FROM shop")}
+    rows = {r["ftid"]: r for r in conn.execute(
+        "SELECT ftid, name, address, lat, lng, categories_json, beginner_friendly FROM shop")}
     conn.close()
     return rows
 
@@ -130,6 +139,9 @@ def build() -> dict:
             "is_new": bool(added and added > baseline and added >= cutoff),
             "cover": None,
             "maps_url": s.get("maps_url"),
+            # LLM 分類(scripts/classify_types.py);沒跑過就是 []/None
+            "categories": _json_list(m["categories_json"]) if m else [],
+            "beginner": (None if not m or m["beginner_friendly"] is None else bool(m["beginner_friendly"])),
         })
     return {"generated_at": None, "shops": shops}
 

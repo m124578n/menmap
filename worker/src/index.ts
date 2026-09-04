@@ -89,6 +89,8 @@ app.get("/api/shop/:ftid", async (c) => {
     fan_page: shop?.fan_page ?? null,
     menu_photos: safeParse(shop?.menu_photos_json as string, [] as string[]),
     closed_at: shop?.closed_at ?? null,
+    categories: safeParse(shop?.categories_json as string, [] as string[]),
+    beginner_friendly: shop?.beginner_friendly == null ? null : !!shop.beginner_friendly,
     posts: (postsRes.results ?? []).map((p: any) => ({
       text: p.text,
       ts: p.ts,
