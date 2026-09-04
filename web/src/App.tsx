@@ -1,6 +1,8 @@
 import { useEffect, useMemo, useState } from "react";
 import type { LngLatBounds } from "maplibre-gl";
-import { Search, X, Moon, Sun, PanelLeftClose, PanelLeftOpen, Dices } from "lucide-react";
+import { Search, X, Moon, Sun, PanelLeftClose, PanelLeftOpen, Dices, Info } from "lucide-react";
+import { priceBand } from "./lib/format";
+import AboutOverlay from "./components/AboutOverlay";
 import { useShops } from "./hooks/useShops";
 import { useTheme } from "./hooks/useTheme";
 import { useDice } from "./hooks/useDice";
@@ -24,12 +26,14 @@ export default function App() {
     lateNight: false,
     newOnly: false,
     minRating: 0,
+    price: null,
   });
   const [selected, setSelected] = useState<string | null>(
     () => decodeURIComponent(window.location.hash.slice(1)) || null
   );
   const [bounds, setBounds] = useState<LngLatBounds | null>(null);
   const [collapsed, setCollapsed] = useState(false);
+  const [about, setAbout] = useState(false);
 
   // 區域清單(依數量排序)
   const districts = useMemo(() => {
@@ -70,6 +74,7 @@ export default function App() {
       if (filters.lateNight && !isLateNight(s.hours)) return false;
       if (filters.newOnly && !s.is_new) return false;
       if (filters.minRating > 0 && (s.rating ?? 0) < filters.minRating) return false;
+      if (filters.price && priceBand(s.price) !== filters.price) return false;
       return true;
     });
   }, [shops, search, filters]);
@@ -108,12 +113,13 @@ export default function App() {
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
       if (e.key !== "Escape" || e.defaultPrevented) return; // 燈箱開著時由它處理
-      if (dice.phase !== "idle") dice.reset();
+      if (about) setAbout(false);
+      else if (dice.phase !== "idle") dice.reset();
       else if (selected) setSelected(null);
     };
     window.addEventListener("keydown", onKey);
     return () => window.removeEventListener("keydown", onKey);
-  }, [dice, selected]);
+  }, [dice, selected, about]);
 
   return (
     <div className="app">
@@ -161,6 +167,9 @@ export default function App() {
         <button className="icon-btn panel" onClick={toggle} aria-label="切換深淺色">
           {theme === "dark" ? <Sun size={18} /> : <Moon size={18} />}
         </button>
+        <button className="icon-btn panel" onClick={() => setAbout(true)} aria-label="關於本站">
+          <Info size={18} />
+        </button>
         <button
           className="icon-btn panel desktop-only"
           onClick={() => setCollapsed((v) => !v)}
@@ -207,6 +216,8 @@ export default function App() {
       {selectedShop && (
         <DetailPanel shop={selectedShop} onClose={() => setSelected(null)} />
       )}
+
+      {about && <AboutOverlay onClose={() => setAbout(false)} />}
 
       {dice.phase !== "idle" && (
         <DiceOverlay

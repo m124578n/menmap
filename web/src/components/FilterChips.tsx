@@ -1,6 +1,7 @@
 import { useEffect, useLayoutEffect, useRef, useState } from "react";
 import { createPortal } from "react-dom";
 import { ChevronDown, Check } from "lucide-react";
+import { PRICE_BANDS, type PriceBand } from "../lib/format";
 
 export interface Filters {
   cities: Set<string>;      // 縣市層級(粗)
@@ -9,6 +10,7 @@ export interface Filters {
   lateNight: boolean;       // 深夜營業(打烊 ≥23:30 或跨午夜)
   newOnly: boolean;         // 只看新店
   minRating: number; // 0 = 不限
+  price: PriceBand | null;  // 價格帶(單選;null = 不限)
 }
 
 interface Props {
@@ -190,8 +192,24 @@ export default function FilterChips({ filters, cities, districts, hasNew, onChan
         </button>
       ))}
 
+      {PRICE_BANDS.map((b) => (
+        <button
+          key={b.key}
+          className="chip"
+          data-active={filters.price === b.key}
+          aria-pressed={filters.price === b.key}
+          aria-label={`價格 ${b.label}`}
+          title={b.desc}
+          onClick={() =>
+            onChange({ ...filters, price: filters.price === b.key ? null : b.key })
+          }
+        >
+          {b.label}
+        </button>
+      ))}
+
       {(regionCount > 0 || filters.openNow || filters.lateNight ||
-        filters.newOnly || filters.minRating > 0) && (
+        filters.newOnly || filters.minRating > 0 || filters.price) && (
         <button
           className="chip"
           onClick={() =>
@@ -201,6 +219,7 @@ export default function FilterChips({ filters, cities, districts, hasNew, onChan
               openNow: false,
               lateNight: false,
               newOnly: false,
+              price: null,
               minRating: 0,
             })
           }

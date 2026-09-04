@@ -40,6 +40,23 @@ export function hiRes(url: string | null | undefined, spec = "w1000"): string {
   return /=[\w-]+$/.test(url) ? url.replace(/=[\w-]+$/, `=${spec}`) : `${url}=${spec}`;
 }
 
+/** Google 價格帶(如 "$1-200"、"$200-400"、"$200-1,000")→ 三檔;看上限。 */
+export type PriceBand = "cheap" | "mid" | "high";
+export const PRICE_BANDS: { key: PriceBand; label: string; desc: string }[] = [
+  { key: "cheap", label: "$200 以下", desc: "價格帶上限 200 元" },
+  { key: "mid", label: "$200–400", desc: "價格帶 200 到 400 元" },
+  { key: "high", label: "$400 以上", desc: "價格帶上限超過 400 元" },
+];
+export function priceBand(price: string | null | undefined): PriceBand | null {
+  if (!price) return null;
+  const nums = price.replace(/,/g, "").match(/\d+/g);
+  if (!nums || nums.length === 0) return null;
+  const max = Math.max(...nums.map(Number));
+  if (max <= 200) return "cheap";
+  if (max <= 400) return "mid";
+  return "high";
+}
+
 export function formatCount(n: number | null): string {
   if (n == null) return "";
   if (n >= 10000) return `${(n / 10000).toFixed(1)}萬`;
