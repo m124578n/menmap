@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useState } from "react";
 import type { LngLatBounds } from "maplibre-gl";
-import { Search, X, Moon, Sun, PanelLeftClose, PanelLeftOpen, Dices, Info } from "lucide-react";
+import { Search, X, Moon, Sun, PanelLeftClose, PanelLeftOpen, Dices, Info, Trophy } from "lucide-react";
+import DiscoverOverlay from "./components/DiscoverOverlay";
 import { priceBand } from "./lib/format";
 import AboutOverlay from "./components/AboutOverlay";
 import { useShops } from "./hooks/useShops";
@@ -34,6 +35,7 @@ export default function App() {
   const [bounds, setBounds] = useState<LngLatBounds | null>(null);
   const [collapsed, setCollapsed] = useState(false);
   const [about, setAbout] = useState(false);
+  const [discover, setDiscover] = useState(false);
 
   // 區域清單(依數量排序)
   const districts = useMemo(() => {
@@ -114,12 +116,13 @@ export default function App() {
     const onKey = (e: KeyboardEvent) => {
       if (e.key !== "Escape" || e.defaultPrevented) return; // 燈箱開著時由它處理
       if (about) setAbout(false);
+      else if (discover) setDiscover(false);
       else if (dice.phase !== "idle") dice.reset();
       else if (selected) setSelected(null);
     };
     window.addEventListener("keydown", onKey);
     return () => window.removeEventListener("keydown", onKey);
-  }, [dice, selected, about]);
+  }, [dice, selected, about, discover]);
 
   return (
     <div className="app">
@@ -200,6 +203,9 @@ export default function App() {
             <span className="count-label">
               {loading ? "載入中…" : error ? "載入失敗" : <><strong>{listShops.length}</strong> 家(可視範圍內)</>}
             </span>
+            <button className="rank-btn" onClick={() => setDiscover(true)} aria-label="麵榜:熱門、竄紅、入門與本週動態">
+              <Trophy size={14} /> 麵榜
+            </button>
           </div>
           {!loading && !error && (
             <ShopList shops={listShops} selected={selected} onSelect={setSelected} />
@@ -218,6 +224,9 @@ export default function App() {
       )}
 
       {about && <AboutOverlay onClose={() => setAbout(false)} />}
+      {discover && (
+        <DiscoverOverlay shops={shops} onSelect={setSelected} onClose={() => setDiscover(false)} />
+      )}
 
       {dice.phase !== "idle" && (
         <DiceOverlay

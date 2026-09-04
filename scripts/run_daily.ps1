@@ -93,7 +93,7 @@ Run-Step "compare"             { uv run python -m ramen compare }
 
 # publish:把當天變動推上線(本機 SQLite 是正本,雲端是複本)。
 # - D1:只推當天新增/取代的列(scripts/publish_d1.py,冪等,失敗明天可重推)
-# - Pages:只重新產 shops.json;下面 git push 後 Cloudflare Pages 會自己從 GitHub 建置部署
+# - Pages:只重新產 shops.json / discover.json(麵榜);下面 git push 後 Cloudflare Pages 會自己從 GitHub 建置部署
 #   (專案已接 Git,只在 web/ 有變動時建置;shops.json 天天變所以天天建)
 # 設 $env:PUBLISH="0" 可跳過 D1 推送(例如手動測試時)。
 if ($env:PUBLISH -ne "0") {
@@ -103,7 +103,7 @@ Run-Step "export shops.json" { uv run python scripts/export_web_data.py 2>&1 }
 
 # commit 回 repo(bot 身分),保留快照與 diff 歷史;shops.json 跟著進 git,和線上一致
 Run-Step "git commit" {
-    git add data web/public/shops.json
+    git add data web/public/shops.json web/public/discover.json
     # -c 只對這次 commit 生效,不改 repo 的 user.name/email
     git -c user.name=ramen-bot -c user.email=ramen-bot@localhost `
         commit -m "chore(data): 每日快照 $stamp" 2>&1

@@ -134,6 +134,114 @@ def build() -> dict:
     return {"generated_at": None, "shops": shops}
 
 
+# ---------------------------------------------------------------------------
+# 麵榜 / 本週動態(discover.json):全部從現有資料算,零使用者也有內容
+# ---------------------------------------------------------------------------
+DISCOVER_OUT = ROOT / "web" / "public" / "discover.json"
+WINDOW_DAYS = 7
+BAYES_M = 300         # 貝氏平均的「先驗評論數」:評論數少於這個量的高分會被拉回全體平均
+HOT_N, RISING_N, STARTER_N = 20, 10, 15
+
+
+def _price_max(price: str | None) -> int | None:
+    if not price:
+        return None
+    nums = re.findall(r"\d+", price.replace(",", ""))
+    return max(map(int, nums)) if nums else None
+
+
+def build_discover(shops: list[dict], seed: list[dict], baseline: str) -> dict:
+    from datetime import datetime, timedelta
+    now = datetime.now()
+    since = (now - timedelta(days=WINDOW_DAYS)).strftime("%Y-%m-%d")
+    by_ftid = {s["ftid"]: s for s in shops}
+
+    alive = [s for s in shops if s["status"] != "CLOSED_PERMANENTLY"]
+    rated = [s for s in alive if s["rating"] and s["rating_count"]]
+    C = sum(s["rating"] for s in rated) / len(rated) if rated else 0.0
+
+    def bayes(s: dict) -> float:
+        v, R = s["rating_count"], s["rating"]
+        return (v / (v + BAYES_M)) * R + (BAYES_M / (v + BAYES_M)) * C
+
+    hot = [{"ftid": s["ftid"], "score": round(bayes(s), 3)}
+           for s in sorted(rated, key=bayes, reverse=True)[:HOT_N]]
+
+    # 入門友善:大眾接受度高(評論多、評分穩)、價格親民、目前營業
+    starter = [s for s in rated
+               if s["rating"] >= 4.3 and s["rating_count"] >= 800
+               and (_price_max(s["price"]) or 0) <= 400 and s["status"] == "OPERATIONAL"]
+    starter = [{"ftid": s["ftid"]} for s in sorted(starter, key=lambda s: -s["rating_count"])[:STARTER_N]]
+
+    # 近 7 天視窗:每家店「視窗內最早 vs 最新」的成功快照
+    first: dict[str, sqlite3.Row] = {}
+    last: dict[str, sqlite3.Row] = {}
+    dates: set[str] = set()
+    if DB.exists():
+        conn = sqlite3.connect(DB)
+        conn.row_factory = sqlite3.Row
+        rows = conn.execute(
+            """SELECT ftid, captured_at, business_status, rating, user_rating_count,
+                      opening_hours_json FROM snapshot
+               WHERE ok = 1 AND captured_at >= ? ORDER BY captured_at""", (since,)).fetchall()
+        for r in rows:
+            dates.add(r["captured_at"][:10])
+            first.setdefault(r["ftid"], r)
+            last[r["ftid"]] = r
+        try:
+            renames = [{"ftid": r["ftid"], "field": r["field"], "old": r["old"], "new": r["new"]}
+                       for r in conn.execute(
+                           "SELECT ftid, field, old, new FROM shop_change WHERE captured_at >= ? ORDER BY id",
+                           (since,)) if r["ftid"] in by_ftid]
+        except sqlite3.OperationalError:  # 表由採集端 db.connect 建;第一次快照前還沒有
+            renames = []
+        conn.close()
+    else:
+        renames = []
+
+    rising, status_changes, rating_jumps, hours_changes = [], [], [], []
+    for ftid, a in first.items():
+        b = last[ftid]
+        if ftid not in by_ftid or a is b or a["captured_at"][:10] == b["captured_at"][:10]:
+            continue
+        days = max(1, (datetime.fromisoformat(b["captured_at"][:10]) -
+                       datetime.fromisoformat(a["captured_at"][:10])).days)
+        if a["user_rating_count"] is not None and b["user_rating_count"] is not None:
+            delta = b["user_rating_count"] - a["user_rating_count"]
+            if delta >= 3:
+                rising.append({"ftid": ftid, "delta": delta, "days": days})
+        if a["business_status"] != b["business_status"]:
+            status_changes.append({"ftid": ftid, "from": a["business_status"],
+                                   "to": b["business_status"], "at": b["captured_at"][:10]})
+        if a["rating"] is not None and b["rating"] is not None and abs(b["rating"] - a["rating"]) >= 0.1:
+            rating_jumps.append({"ftid": ftid, "from": a["rating"], "to": b["rating"]})
+        if a["opening_hours_json"] and b["opening_hours_json"] \
+                and a["opening_hours_json"] != b["opening_hours_json"]:
+            hours_changes.append({"ftid": ftid})
+    rising.sort(key=lambda x: (-x["delta"] / x["days"], -x["delta"]))
+    rating_jumps.sort(key=lambda x: -(x["to"] - x["from"]))
+
+    new_shops = [{"ftid": s["ftid"], "added_at": (s.get("added_at") or "")[:10]}
+                 for s in seed if s["ftid"] in by_ftid
+                 and (s.get("added_at") or "")[:10] > baseline and (s.get("added_at") or "")[:10] >= since]
+    new_shops.sort(key=lambda x: x["added_at"], reverse=True)
+
+    return {
+        "generated_at": now.strftime("%Y-%m-%dT%H:%M:%S"),
+        "window": {"from": since, "to": now.strftime("%Y-%m-%d"), "days": len(dates)},
+        "hot": hot,
+        "rising": rising[:RISING_N],
+        "starter": starter,
+        "weekly": {
+            "new_shops": new_shops,
+            "status_changes": status_changes,
+            "rating_jumps": rating_jumps[:20],
+            "hours_changes": hours_changes,
+            "renames": renames,
+        },
+    }
+
+
 def main() -> None:
     data = build()
     OUT.parent.mkdir(parents=True, exist_ok=True)
@@ -141,6 +249,15 @@ def main() -> None:
     n = len(data["shops"])
     withgeo = sum(1 for s in data["shops"] if s["lat"] and s["lng"])
     print(f"匯出 {n} 家(有座標 {withgeo})→ {OUT}")
+
+    seed = json.loads(SEED.read_text(encoding="utf-8"))
+    added_dates = sorted({(s.get("added_at") or "")[:10] for s in seed if s.get("added_at")})
+    disc = build_discover(data["shops"], seed, added_dates[0] if added_dates else "")
+    DISCOVER_OUT.write_text(json.dumps(disc, ensure_ascii=False), encoding="utf-8")
+    w = disc["weekly"]
+    print(f"麵榜 → {DISCOVER_OUT}:熱門 {len(disc['hot'])}、竄紅 {len(disc['rising'])}、入門 {len(disc['starter'])};"
+          f"本週(快照 {disc['window']['days']} 天):新店 {len(w['new_shops'])}、狀態 {len(w['status_changes'])}、"
+          f"評分 {len(w['rating_jumps'])}、時間 {len(w['hours_changes'])}、改名/搬家 {len(w['renames'])}")
 
 
 if __name__ == "__main__":
