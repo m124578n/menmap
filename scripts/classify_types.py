@@ -12,7 +12,8 @@
 - ANTHROPIC_MODEL(預設 claude-opus-5)
 
 輸入:店名、Google 類別、價格帶、商家貼文(≤3)、最新評論(≤10)。
-輸出:categories(1~3 個,主打在前)、beginner_friendly(入門友善 bool|null)、reason(短句)。
+輸出:is_ramen(是否日式拉麵店;false 會從地圖與 seed 移除)、categories(1~3 個,主打在前)、
+beginner_friendly(入門友善 bool|null)、reason(短句)。
 用 tool 強制 JSON 結構;Foundry 的 strict 是 beta,失敗就退回非 strict。
 """
 
@@ -42,7 +43,11 @@ CATEGORIES = [
 
 SYSTEM = f"""你是台灣拉麵店的分類專家。我會給你一家雙北拉麵店在 Google 地圖上的資料:店名、類別、價格帶、商家貼文、最新評論。
 
-任務:判斷這家店「主打」的拉麵種類,並判斷是否對拉麵新手友善。
+任務:先判斷這家店是不是「日式拉麵店」,再判斷「主打」的拉麵種類,以及是否對拉麵新手友善。
+
+是否日式拉麵店(is_ramen):主力品項是日式拉麵(含沾麵、油拌麵)才算 true。以下一律 false:
+台式牛肉麵/羊肉麵/魚麵/羹麵、泡麵自助店或無人泡麵店、韓式拉麵、以煎餃/丼飯/咖哩/定食為主而拉麵只是副品項、
+烏龍麵/蕎麥麵店。資料太少無法判斷時給 true(寧可保留)。
 
 分類規則:
 - 只能用這些標籤:{"、".join(CATEGORIES)}
@@ -60,6 +65,7 @@ TOOL = {
     "input_schema": {
         "type": "object",
         "properties": {
+            "is_ramen": {"type": "boolean", "description": "主力品項是日式拉麵才 true;台式麵、泡麵店、韓式、煎餃/丼飯為主等給 false"},
             "categories": {
                 "type": "array",
                 "items": {"type": "string", "enum": CATEGORIES},
@@ -71,7 +77,7 @@ TOOL = {
             },
             "reason": {"type": "string", "description": "一句話說明判斷依據(≤40 字)"},
         },
-        "required": ["categories", "beginner_friendly", "reason"],
+        "required": ["is_ramen", "categories", "beginner_friendly", "reason"],
         "additionalProperties": False,
     },
 }
@@ -134,7 +140,10 @@ def load_shops(conn: sqlite3.Connection, *, mode: str, limit: int | None,
             """SELECT author, stars, date_rel, text, captured_at FROM review
                WHERE ftid = ? AND text IS NOT NULL AND text != ''
                ORDER BY captured_at DESC, seq ASC LIMIT 10""", (ftid,)).fetchall()
-        if shop["classified_at"] and mode != "all":
+        if shop["classified_at"] and mode == "other":
+            if shop["categories_json"] != '["其他"]':
+                continue  # other 模式:只重跑目前標「其他」的店(補 is_ramen 旗標用)
+        elif shop["classified_at"] and mode != "all":
             newest_review = max((r["captured_at"] for r in reviews), default="")
             if newest_review <= shop["classified_at"]:
                 continue  # 分類後沒有新評論,重跑也不會變
@@ -201,6 +210,7 @@ def classify_one(client, model: str, s: dict, *, strict: bool) -> tuple[dict, di
         result = json.loads(m.group(0))
     cats = [c for c in result.get("categories", []) if c in CATEGORIES][:3] or ["其他"]
     result["categories"] = cats
+    result["is_ramen"] = bool(result.get("is_ramen", True))
     u = resp.usage
     usage = {"in": u.input_tokens, "out": u.output_tokens,
              "cache_r": getattr(u, "cache_read_input_tokens", 0) or 0,
@@ -212,7 +222,7 @@ def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("--limit", type=int)
     ap.add_argument("--write", action="store_true", help="寫回 shop 表(預設只印)")
-    ap.add_argument("--mode", choices=["unclassified", "stale", "all"], default="unclassified",
+    ap.add_argument("--mode", choices=["unclassified", "stale", "other", "all"], default="unclassified",
                     help="unclassified=只跑沒分類過的(預設);stale=加上評論有更新的;all=全部重跑")
     ap.add_argument("--ftid", action="append", help="只跑指定店(可重複)")
     ap.add_argument("--workers", type=int, default=4)
@@ -260,14 +270,15 @@ def main() -> None:
             for k in total:
                 total[k] += u[k]
             bf = {True: "入門友善", False: "非入門", None: "?"}[r.get("beginner_friendly")]
-            print(f"[{done}/{len(shops)}] {s['name']} → {'/'.join(r['categories'])} | {bf} | {r.get('reason','')}")
+            flag = "" if r["is_ramen"] else " ⚠️非日式拉麵"
+            print(f"[{done}/{len(shops)}] {s['name']} → {'/'.join(r['categories'])} | {bf}{flag} | {r.get('reason','')}")
             if a.write:
                 conn.execute(
-                    """UPDATE shop SET categories_json = ?, beginner_friendly = ?,
+                    """UPDATE shop SET categories_json = ?, beginner_friendly = ?, llm_is_ramen = ?,
                        classified_at = ?, classify_model = ? WHERE ftid = ?""",
                     (json.dumps(r["categories"], ensure_ascii=False),
                      None if r.get("beginner_friendly") is None else int(bool(r["beginner_friendly"])),
-                     now, model, s["ftid"]))
+                     int(r["is_ramen"]), now, model, s["ftid"]))
                 conn.commit()
 
     dt = time.time() - t0

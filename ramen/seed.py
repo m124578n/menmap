@@ -161,7 +161,7 @@ _UPDATABLE = ("name", "address", "lat", "lng", "types", "place_id", "gid", "maps
 
 
 def merge_seed(existing: list[dict], found: dict[str, ShopDetail],
-               now: str) -> tuple[list[dict], dict]:
+               now: str, not_ramen: set[str] | None = None) -> tuple[list[dict], dict]:
     """把搜尋結果合併進既有 seed。回傳 (新 seed, 報告資料)。純函式,方便測試。
 
     - 新 ftid:追加(排在最後),added_at = now
@@ -193,6 +193,9 @@ def merge_seed(existing: list[dict], found: dict[str, ShopDetail],
             missing.append(old)
     # 過濾規則會演進:不符現行規則的(含既有的)一律移除並列在報告,seed 在 git 可回溯
     pruned = [e for e in by.values() if not looks_like_ramen(e.get("name"), e.get("types"))]
+    # LLM 分類判定「非日式拉麵店」(台式麵/泡麵店/韓式/煎餃為主…)的也移除(scripts/classify_types.py 的 is_ramen)
+    pruned += [e for e in by.values() if e["ftid"] in (not_ramen or set())
+               and looks_like_ramen(e.get("name"), e.get("types"))]
     for e in pruned:
         by.pop(e["ftid"])
     new = [e for e in new if e["ftid"] in by]
@@ -219,10 +222,24 @@ def _refresh_report(date: str, now: str, r: dict) -> str:
     L.append(f"## 本次搜尋未出現({len(r['missing'])};連續 ≥3 次者列出 {len(stale)})")
     L += [f"- {e['name']}(連續 {e['missed']} 次)" for e in stale] or ["- 無"]
     L.append("")
-    L.append(f"## 移除:不符過濾規則({len(r['pruned'])})")
+    L.append(f"## 移除:不符過濾規則或 LLM 判定非日式拉麵({len(r['pruned'])})")
     L += [f"- {e['name']} | {'、'.join(e.get('types') or [])}" for e in r["pruned"]] or ["- 無"]
     L.append("")
     return "\n".join(L) + "\n"
+
+
+def _llm_not_ramen() -> set[str]:
+    """shop 表裡被 LLM 分類判定為非日式拉麵店的 ftid(llm_is_ramen = 0)。"""
+    import sqlite3
+    if not storage.DB_FILE.exists():
+        return set()
+    conn = sqlite3.connect(storage.DB_FILE)
+    try:
+        return {r[0] for r in conn.execute("SELECT ftid FROM shop WHERE llm_is_ramen = 0")}
+    except sqlite3.OperationalError:
+        return set()
+    finally:
+        conn.close()
 
 
 def refresh_seed() -> int:
@@ -238,7 +255,8 @@ def refresh_seed() -> int:
                   len(found), len(existing))
         print(f"seed refresh 中止:只搜到 {len(found)} 家(seed {len(existing)})")
         return 1
-    merged, report = merge_seed(existing, found, now)
+    not_ramen = _llm_not_ramen()
+    merged, report = merge_seed(existing, found, now, not_ramen)
     storage.save_seed(merged)
     storage.DIFF_DIR.mkdir(parents=True, exist_ok=True)
     out = storage.DIFF_DIR / f"{date}-seed.md"

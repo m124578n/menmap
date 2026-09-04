@@ -18,6 +18,7 @@ CREATE TABLE IF NOT EXISTS shop (
     beginner_friendly INTEGER, -- 1/0/NULL 入門友善
     classified_at TEXT,
     classify_model TEXT,
+    llm_is_ramen INTEGER,      -- 1/0/NULL:LLM 判定是否日式拉麵店
     first_seen  TEXT,
     last_seen   TEXT
 );

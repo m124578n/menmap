@@ -73,6 +73,16 @@ def latest_snapshots() -> dict[str, sqlite3.Row]:
     return out
 
 
+def _int_or_none(v) -> int | None:
+    """本機 sqlite 補欄位時型別是 TEXT,0/1 會以字串存;統一轉成 int。"""
+    if v is None or v == "":
+        return None
+    try:
+        return int(v)
+    except (TypeError, ValueError):
+        return None
+
+
 def _json_list(raw: str | None) -> list:
     try:
         v = json.loads(raw) if raw else []
@@ -88,7 +98,7 @@ def shop_master() -> dict[str, sqlite3.Row]:
     conn = sqlite3.connect(DB)
     conn.row_factory = sqlite3.Row
     rows = {r["ftid"]: r for r in conn.execute(
-        "SELECT ftid, name, address, lat, lng, categories_json, beginner_friendly FROM shop")}
+        "SELECT ftid, name, address, lat, lng, categories_json, beginner_friendly, llm_is_ramen FROM shop")}
     conn.close()
     return rows
 
@@ -106,9 +116,13 @@ def build() -> dict:
     cutoff = (datetime.now() - timedelta(days=30)).strftime("%Y-%m-%d")
 
     shops = []
+    excluded = 0
     for s in seed:
         # 名稱/地址/座標優先用 shop 主檔(天天更新),沒有才退回 seed
         m = master.get(s["ftid"])
+        if m and _int_or_none(m["llm_is_ramen"]) == 0:
+            excluded += 1  # LLM 判定非日式拉麵(台式麵/泡麵店/韓式…):不上地圖;週日 seed refresh 會移出 seed
+            continue
         name = (m["name"] if m and m["name"] else None) or s.get("name")
         address = (m["address"] if m and m["address"] else None) or s.get("address")
         lat = m["lat"] if m and m["lat"] is not None else s.get("lat")
@@ -141,8 +155,11 @@ def build() -> dict:
             "maps_url": s.get("maps_url"),
             # LLM 分類(scripts/classify_types.py);沒跑過就是 []/None
             "categories": _json_list(m["categories_json"]) if m else [],
-            "beginner": (None if not m or m["beginner_friendly"] is None else bool(m["beginner_friendly"])),
+            "beginner": (None if not m or _int_or_none(m["beginner_friendly"]) is None
+                         else bool(_int_or_none(m["beginner_friendly"]))),
         })
+    if excluded:
+        print(f"  排除 LLM 判定非日式拉麵 {excluded} 家")
     return {"generated_at": None, "shops": shops}
 
 

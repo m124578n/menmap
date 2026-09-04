@@ -26,7 +26,7 @@ TZ_TAIPEI = timezone(timedelta(hours=8))  # 同 ramen/storage.py;Windows 沒 tzd
 SHOP_COLS = ["ftid", "name", "address", "lat", "lng", "phone", "website",
              "place_id", "cover_photo", "fan_page", "location_id", "closed_at",
              "menu_photos_json", "first_seen", "last_seen",
-             "categories_json", "beginner_friendly", "classified_at", "classify_model"]
+             "categories_json", "beginner_friendly", "classified_at", "classify_model", "llm_is_ramen"]
 SNAPSHOT_COLS = ["ftid", "backend", "captured_at", "ok", "error",
                  "business_status", "opening_hours_json", "price_text", "rating",
                  "user_rating_count", "phone", "website", "is_rich",
