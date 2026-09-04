@@ -10,9 +10,12 @@ from __future__ import annotations
 import json
 import re
 import sqlite3
+import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
+sys.path.insert(0, str(ROOT))
+from ramen.diff import hours_changed  # noqa: E402  只比共同星期(static 每天只回當天)
 SEED = ROOT / "data" / "seed.json"
 DB = ROOT / "data" / "ramen.db"
 OUT = ROOT / "web" / "public" / "shops.json"
@@ -172,16 +175,6 @@ BAYES_M = 300         # 貝氏平均的「先驗評論數」:評論數少於這�
 HOT_N, RISING_N, STARTER_N = 20, 10, 15
 
 
-def _hours_key(raw: str) -> str:
-    """營業時間正規化後再比:舊快照是從抓取日起算的一週順序,新快照固定星期一開頭,
-    直接比字串會把每家店都當成有變動。"""
-    try:
-        data = json.loads(raw)
-        return json.dumps(sorted(data, key=lambda d: str(d[0])), ensure_ascii=False)
-    except (ValueError, TypeError, IndexError):
-        return raw
-
-
 def _price_max(price: str | None) -> int | None:
     if not price:
         return None
@@ -254,8 +247,7 @@ def build_discover(shops: list[dict], seed: list[dict], baseline: str) -> dict:
                                    "to": b["business_status"], "at": b["captured_at"][:10]})
         if a["rating"] is not None and b["rating"] is not None and abs(b["rating"] - a["rating"]) >= 0.1:
             rating_jumps.append({"ftid": ftid, "from": a["rating"], "to": b["rating"]})
-        if a["opening_hours_json"] and b["opening_hours_json"] \
-                and _hours_key(a["opening_hours_json"]) != _hours_key(b["opening_hours_json"]):
+        if hours_changed(a["opening_hours_json"], b["opening_hours_json"]):
             hours_changes.append({"ftid": ftid})
     rising.sort(key=lambda x: (-x["delta"] / x["days"], -x["delta"]))
     rating_jumps.sort(key=lambda x: -(x["to"] - x["from"]))

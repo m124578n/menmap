@@ -20,6 +20,23 @@ def _hours_readable(raw: str | None) -> str:
     return "；".join(f"{d}: {'/'.join(spans) or '休'}" for d, spans in data)
 
 
+def hours_changed(a_raw: str | None, b_raw: str | None) -> bool:
+    """兩份 opening_hours_json 是否真的不同:只比「兩邊都有的星期」。
+
+    static 後端每天只回當天那一天(星期四那天只有星期四、星期五只有星期五),playwright 才回整週;
+    直接比字串會把每家店天天標成變動。沒有共同星期 → 無法比 → 視為沒變。
+    """
+    if not a_raw or not b_raw:
+        return False
+    try:
+        a = {str(d): list(spans) for d, spans in json.loads(a_raw)}
+        b = {str(d): list(spans) for d, spans in json.loads(b_raw)}
+    except (ValueError, TypeError):
+        return a_raw != b_raw
+    common = a.keys() & b.keys()
+    return any(a[d] != b[d] for d in common)
+
+
 def build_diff(conn: sqlite3.Connection, backend: str, date: str,
                current_at: str, seed: list[dict]) -> tuple[str, int]:
     """回傳 (markdown, 變動數)。current_at 是本次批次的 captured_at。"""
@@ -74,7 +91,7 @@ def build_diff(conn: sqlite3.Connection, backend: str, date: str,
                 f"- {nm}:`{p['business_status']}` → `{c['business_status']}`{flag}")
             changes += 1
 
-        if c["opening_hours_json"] != p["opening_hours_json"]:
+        if hours_changed(p["opening_hours_json"], c["opening_hours_json"]):
             hours_lines.append(
                 f"- {nm}\n    - 舊:{_hours_readable(p['opening_hours_json'])}"
                 f"\n    - 新:{_hours_readable(c['opening_hours_json'])}")
