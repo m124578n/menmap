@@ -145,8 +145,11 @@ log 在 `data/logs/`(不進 git):`{date}.log` 主流程、`{date}-static.log` /
   `--mode stale` 加上評論有更新的、`--mode all` 全部重跑約 $6;`--limit N` 試跑不加 `--write` 只印)。
   金鑰放專案根目錄 `.env`(gitignore):Foundry 用 `ANTHROPIC_FOUNDRY_API_KEY` + `ANTHROPIC_FOUNDRY_RESOURCE`
   + `ANTHROPIC_MODEL`,或第一方 `ANTHROPIC_API_KEY`。輸入是店名 + 類別 + 價格 + 貼文 + 最新 10 則評論,
-  輸出 1~3 個標籤 + 入門友善 + 一句理由;寫回 shop 表 `categories_json` / `beginner_friendly`,
-  隨 shops.json 與 D1 上線。每日排程會自動分類新收錄的店。
+  輸出 1~3 個標籤 + 入門友善 + **是否日式拉麵店** + 一句理由;寫回 shop 表 `categories_json` /
+  `beginner_friendly` / `llm_is_ramen`,隨 shops.json 與 D1 上線。每日排程會自動分類新收錄的店。
+- **LLM 當第二層雜訊過濾**:關鍵字規則擋不掉的「台式拉麵」「無人泡麵店」「魚麵/羹麵」「丼飯店順便賣拉麵」,
+  LLM 看評論判定 `llm_is_ramen = 0` → 不進 shops.json,週日 seed refresh 移出 seed 並列在報告。
+  `--mode other` 可對標「其他」的店重跑補旗標。
 - static 的 URL 模板失效時重錄:`uv run python scripts/capture_templates.py`
 - parser 加新欄位後不用重爬:`uv run python scripts/reparse_raw.py [date] [backend]`
 
