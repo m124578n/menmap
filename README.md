@@ -114,6 +114,10 @@ log 在 `data/logs/`(不進 git):`{date}.log` 主流程、`{date}-static.log` /
   再 `export_web_data.py` 重產 shops.json,連同 data/ commit、push;Pages 收到 push 自己建置。
   手動測試不想推 D1 時設 `$env:PUBLISH="0"`。
 - Web Analytics 已在 Pages 專案啟用(Dashboard → menmap → Metrics),beacon 由 Pages 自動注入。
+- Pages 建置設定(API 設過,Dashboard 也看得到):只在 `web/*` 變動時建、不做 preview 分支、
+  build caching 開啟、建置環境變數 `PYTHON_VERSION=3.13.3`(build image 會讀根目錄的
+  `.python-version` 3.14 而從原始碼編 Python,指到預裝版本省 2 分鐘)。首次建置約 10 分鐘,
+  之後有 cache 應該快很多。
 - publish 只推「當天日期」的列;某天沒跑或推失敗,要手動補:
   `uv run python scripts/publish_d1.py --date YYYY-MM-DD`,再到 `worker/` 執行
   `npx wrangler d1 execute menmap --remote --file=./publish.local.sql -y`。
