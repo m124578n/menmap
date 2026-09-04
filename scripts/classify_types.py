@@ -2,7 +2,7 @@
 
     uv run python scripts/classify_types.py --limit 5        # 試跑 5 家(只印結果,不寫入)
     uv run python scripts/classify_types.py --limit 5 --write
-    uv run python scripts/classify_types.py --write                 # 只跑還沒分類的店(每日排程用,通常只有新店)
+    uv run python scripts/classify_types.py --write                 # 每日排程用:沒分類過的 + 之前資料不足(其他)但有新評論的
     uv run python scripts/classify_types.py --write --mode stale    # 也重跑「分類後評論有更新」的店
     uv run python scripts/classify_types.py --write --mode all      # 全部重跑
 
@@ -100,12 +100,12 @@ def make_client(env: dict[str, str]):
             base = res.rstrip("/")
             if not base.endswith("/anthropic"):
                 base = base + "/anthropic"
-            return anthropic.AnthropicFoundry(api_key=env["ANTHROPIC_FOUNDRY_API_KEY"], base_url=base), "foundry"
+            return anthropic.AnthropicFoundry(api_key=env["ANTHROPIC_FOUNDRY_API_KEY"], base_url=base, max_retries=6), "foundry"
         if not res:
             sys.exit("ANTHROPIC_FOUNDRY_RESOURCE 沒填(資源名或 endpoint)")
-        return anthropic.AnthropicFoundry(api_key=env["ANTHROPIC_FOUNDRY_API_KEY"], resource=res), "foundry"
+        return anthropic.AnthropicFoundry(api_key=env["ANTHROPIC_FOUNDRY_API_KEY"], resource=res, max_retries=6), "foundry"
     if env.get("ANTHROPIC_API_KEY"):
-        return anthropic.Anthropic(api_key=env["ANTHROPIC_API_KEY"]), "anthropic"
+        return anthropic.Anthropic(api_key=env["ANTHROPIC_API_KEY"], max_retries=6), "anthropic"
     sys.exit("找不到金鑰:在 .env 填 ANTHROPIC_FOUNDRY_API_KEY(+RESOURCE)或 ANTHROPIC_API_KEY")
 
 
@@ -119,7 +119,7 @@ def _short(t: str | None, n: int) -> str:
 
 def load_shops(conn: sqlite3.Connection, *, mode: str, limit: int | None,
                ftids: list[str] | None) -> list[dict]:
-    """mode: unclassified(只跑沒分類過的)/ stale(加上評論有更新的)/ all(全部)。"""
+    """mode: unclassified(沒分類過的 + 之前資料不足標「其他」但現在有新評論的)/ stale(加上評論有更新的)/ all(全部)。"""
     seed = json.loads((ROOT / "data" / "seed.json").read_text(encoding="utf-8"))
     seed_ids = [e["ftid"] for e in seed]
     types_by = {e["ftid"]: e.get("types") or [] for e in seed}
@@ -135,11 +135,11 @@ def load_shops(conn: sqlite3.Connection, *, mode: str, limit: int | None,
                WHERE ftid = ? AND text IS NOT NULL AND text != ''
                ORDER BY captured_at DESC, seq ASC LIMIT 10""", (ftid,)).fetchall()
         if shop["classified_at"] and mode != "all":
-            if mode == "unclassified":
-                continue
             newest_review = max((r["captured_at"] for r in reviews), default="")
             if newest_review <= shop["classified_at"]:
-                continue
+                continue  # 分類後沒有新評論,重跑也不會變
+            if mode == "unclassified" and shop["categories_json"] != '["其他"]':
+                continue  # unclassified 模式只補「當時資料不足被標其他、現在有新評論」的店
         posts = conn.execute(
             "SELECT text FROM post WHERE ftid = ? AND text IS NOT NULL ORDER BY ts DESC LIMIT 3",
             (ftid,)).fetchall()

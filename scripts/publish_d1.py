@@ -5,7 +5,7 @@
     (兩步合起來就是 worker 的 `npm run db:publish`)
 
 本機 SQLite 是正本,遠端 D1 是複本;這支只搬「當天」的變動,不整顆重灌:
-- shop:當天有被抓到(last_seen 當天)的店,整列覆蓋(INSERT OR REPLACE)
+- shop:當天有被抓到(last_seen)或當天被 LLM 分類(classified_at)的店,整列覆蓋(INSERT OR REPLACE)
 - snapshot:當天的列;先刪遠端同 captured_at 的列再插,同一天重跑不會重複
 - review / post:比照 ramen/db.py 的 replace_*:某店某後端當天有新資料,就整批取代
 產生的 SQL 可重複執行(冪等)。
@@ -56,8 +56,10 @@ def build_sql(conn: sqlite3.Connection, date: str) -> tuple[list[str], dict[str,
     lines = [f"-- 由 scripts/publish_d1.py 產生:{date} 增量;可重複執行"]
     counts: dict[str, int] = {}
 
+    # 當天有快照(last_seen)或當天有被 LLM 分類(classified_at)的店,整列覆蓋
     shops = conn.execute(
-        f"SELECT {', '.join(SHOP_COLS)} FROM shop WHERE last_seen LIKE ?", (like,)).fetchall()
+        f"SELECT {', '.join(SHOP_COLS)} FROM shop WHERE last_seen LIKE ? OR classified_at LIKE ?",
+        (like, like)).fetchall()
     lines += [_insert("shop", SHOP_COLS, r, replace=True) for r in shops]
     counts["shop"] = len(shops)
 
