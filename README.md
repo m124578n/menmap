@@ -104,15 +104,16 @@ log 在 `data/logs/`(不進 git):`{date}.log` 主流程、`{date}-static.log` /
 
 | 元件 | 位置 | 指令 |
 |---|---|---|
-| 前端 | Pages 專案 `menmap` → `menmap.shunzz.com`(備援 `menmap.pages.dev`) | `cd web && npm run deploy` |
+| 前端 | Pages 專案 `menmap` → `menmap.shunzz.com`(備援 `menmap.pages.dev`),**已接 GitHub** | `git push` 到 main 自動建置(root `web`、`npm run build`、`dist`;只在 `web/**` 變動時建);`cd web && npm run deploy` 為手動備援 |
 | API | Worker `menmap-api`,路由 `menmap.shunzz.com/api/*`(備援 `menmap-api.m23568n.workers.dev`) | `cd worker && npm run deploy` |
 | 資料 | D1 `menmap`(APAC) | `cd worker && npm run db:publish`(當天增量);`db:push` 整顆重灌(只在 schema 重建時用) |
 
 - 前端與 API 同源,不需要 CORS 或 `VITE_API_BASE`;本機開發仍走 Vite proxy。
 - **線上資料每天自動更新**:`run_daily.ps1` 抓完、compare 完後跑 publish——
   `scripts/publish_d1.py` 只匯出當天新增/取代的列(冪等,同天重跑不會重複)推到 D1,
-  再 `export_web_data.py` → `npm run deploy` 重新上傳 Pages(shops.json 一起進 git)。
-  手動測試不想上線時設 `$env:PUBLISH="0"`。
+  再 `export_web_data.py` 重產 shops.json,連同 data/ commit、push;Pages 收到 push 自己建置。
+  手動測試不想推 D1 時設 `$env:PUBLISH="0"`。
+- Web Analytics 已在 Pages 專案啟用(Dashboard → menmap → Metrics),beacon 由 Pages 自動注入。
 - publish 只推「當天日期」的列;某天沒跑或推失敗,要手動補:
   `uv run python scripts/publish_d1.py --date YYYY-MM-DD`,再到 `worker/` 執行
   `npx wrangler d1 execute menmap --remote --file=./publish.local.sql -y`。

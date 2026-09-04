@@ -21,15 +21,14 @@ P4 使用者功能)。
 
 ## 建議執行順序(2026-09-04 重排)
 
-1. **營運面必帶**:關於/資料來源聲明頁、Cloudflare Web Analytics(Dashboard 一鍵)、
-   輕量錯誤回報 ——上線了但這三項還沒有
-2. **價格篩選 chip**——資料已分化($1–200 有 159 家),半小時的事
+1. **營運面必帶**:~~關於/資料來源聲明頁~~ ✅、~~Web Analytics~~ ✅、輕量錯誤回報(先用 GitHub Issues 頂著)
+2. ~~**價格篩選 chip**~~ ✅
 3. **LLM 種類分類 + 類型篩選 + 骰子種類**——前置已滿足,是產品最大的功能缺口;需要 API key
 4. **麵榜(冷啟動版)+ 每週動態週報**——現有資料就能做的內容面,回訪理由
 5. **已歇業店顯示策略**(決策)——目前 0 家永久停業,不急;傾向預設隱藏 + 開關
 6. P4 使用者功能(認證 → 最愛 → 麵史 → 等候回報)
 7. P3 收尾(pmtiles、照片 R2、PWA service worker)→ 地區擴充
-8. Pages 改 GitHub 自動部署(使用者說之後再弄)
+8. ~~Pages 改 GitHub 自動部署~~ ✅ 2026-09-04
 
 ~~parser 欄位擴充包~~ ✅、~~Playwright 分批補完~~ ✅(每日輪抓持續保鮮)、~~P2 部署~~ ✅
 
@@ -91,10 +90,9 @@ P4 使用者功能)。
   → `export_web_data.py` → `npm run deploy`(shops.json 隨 Pages 上傳,先不用 R2)。
   不做 ingest Worker:本機 SQLite 是正本,一天一次批次推送就夠。
 - ⬜ 新店封面照 → R2(併入 P3 照片快取)
-- ⬜ **Pages 改 GitHub push 自動部署**(之後再弄):現在的 `menmap` 是直接上傳型不能接 Git,
-  要在 Dashboard 授權 GitHub App 另建 Git 型專案(Root `web`、`npm run build`、`dist`、branch `main`),
-  再搬 `menmap.shunzz.com` 過去、刪舊專案、`run_daily.ps1` 拿掉 publish pages。
-  Workers 可選 Workers Builds(Root `worker`、`npx wrangler deploy`)。
+- ✅ **Pages 已接 GitHub**(2026-09-04):push 到 main 自動建置(Root `web`、`npm run build`、`dist`;
+  只在 `web/*` 變動時建、不做 preview 分支);`run_daily.ps1` 改成只產 shops.json 交給 push。
+  ✅ Web Analytics 已啟用。Workers 仍手動 `npm run deploy`(很少改;可選 Workers Builds)。
 
 ### P3 — 收尾
 
