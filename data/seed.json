@@ -74,7 +74,7 @@
     "gid": "/g/11w9k2_0cb",
     "maps_url": "https://www.google.com/maps/place/%E6%9D%B1%E4%BA%AC%E6%B2%B9%E7%B5%84%E7%B8%BD%E6%9C%AC%E5%BA%97%20%E5%8F%B0%E5%8C%97%E6%9E%97%E6%A3%AE%E7%B5%84/data=!4m6!3m5!1s0x3442a9ef46cef3fb:0x5025ffcc28d4fb85!8m2!3d25.0512221!4d121.52501459999999!16s%2Fg%2F11w9k2_0cb?hl=zh-TW",
     "added_at": "2026-09-03T13:39:13+0800",
-    "missed": 1
+    "missed": 0
   },
   {
     "ftid": "0x3442a9096b23eefd:0x10d848775316cc7b",
@@ -107,7 +107,7 @@
     "gid": "/g/11st73ylth",
     "maps_url": "https://www.google.com/maps/place/Yukichi%20Ramen%20%E8%AB%AD%E5%90%89%E6%8B%89%E9%BA%B5/data=!4m6!3m5!1s0x3442a96cc44a623d:0xf2fbbec675880acd!8m2!3d25.050248699999997!4d121.5250538!16s%2Fg%2F11st73ylth?hl=zh-TW",
     "added_at": "2026-09-03T13:39:13+0800",
-    "missed": 1
+    "missed": 2
   },
   {
     "ftid": "0x3442a9c2cf96bbf9:0xfb4d765a274a7fda",
@@ -140,7 +140,7 @@
     "gid": "/g/11wjk94dyr",
     "maps_url": "https://www.google.com/maps/place/%E6%9C%A8%E9%BA%92%E9%BA%9F%E6%8B%89%E9%BA%B5/data=!4m6!3m5!1s0x3442a90579536a0d:0x41e41f95a5e49d05!8m2!3d25.051399999999997!4d121.52126369999999!16s%2Fg%2F11wjk94dyr?hl=zh-TW",
     "added_at": "2026-09-03T13:39:13+0800",
-    "missed": 1
+    "missed": 2
   },
   {
     "ftid": "0x3442a9f92ace8245:0xd27bfb438c30b04a",
@@ -159,7 +159,7 @@
     "gid": "/g/11v44r6_ck",
     "maps_url": "https://www.google.com/maps/place/%E9%BA%92%E9%BA%9F%E5%89%B5%E4%BD%9C%E6%8B%89%E9%BA%B5%E5%9D%8A/data=!4m6!3m5!1s0x3442a9f92ace8245:0xd27bfb438c30b04a!8m2!3d25.0514923!4d121.52122709999999!16s%2Fg%2F11v44r6_ck?hl=zh-TW",
     "added_at": "2026-09-03T13:39:13+0800",
-    "missed": 1
+    "missed": 2
   },
   {
     "ftid": "0x3442a942af7fb877:0xae0ae19b93b3b8cb",
@@ -192,7 +192,7 @@
     "gid": "/g/11t72k217d",
     "maps_url": "https://www.google.com/maps/place/%E9%B7%B9%E6%B5%81%E6%9D%B1%E4%BA%AC%E9%86%AC%E6%B2%B9%E6%8B%89%E9%BA%B5%EF%BC%8D%E8%98%AD%E4%B8%B8/data=!4m6!3m5!1s0x3442a95f5904ae53:0x591c0741466c655e!8m2!3d25.0518346!4d121.5201673!16s%2Fg%2F11t72k217d?hl=zh-TW",
     "added_at": "2026-09-03T13:39:13+0800",
-    "missed": 1
+    "missed": 2
   },
   {
     "ftid": "0x3442a90058069b19:0xb1fcc3305692ab5f",
@@ -207,7 +207,7 @@
     "gid": "/g/11yw2s92_q",
     "maps_url": "https://www.google.com/maps/place/%E9%AD%81%E5%8A%9B%E5%B1%8B%E6%8B%89%E9%BA%B5%E5%8F%B0%E5%8C%97%E6%9C%AC%E5%BA%97/data=!4m6!3m5!1s0x3442a90058069b19:0xb1fcc3305692ab5f!8m2!3d25.0527485!4d121.5206836!16s%2Fg%2F11yw2s92_q?hl=zh-TW",
     "added_at": "2026-09-03T13:39:13+0800",
-    "missed": 1
+    "missed": 2
   },
   {
     "ftid": "0x3442a9a6e2c7a6a5:0x48b17ce5237f6caa",
@@ -283,7 +283,7 @@
     "gid": "/g/11sbhn2cd_",
     "maps_url": "https://www.google.com/maps/place/%E9%BA%B5%E5%B1%8B%E5%BE%B7%E5%AE%B6/data=!4m6!3m5!1s0x3442a9aa0a18c9b1:0x565c2bc5374f8d08!8m2!3d25.0609926!4d121.5204273!16s%2Fg%2F11sbhn2cd_?hl=zh-TW",
     "added_at": "2026-09-03T13:39:13+0800",
-    "missed": 1
+    "missed": 2
   },
   {
     "ftid": "0x3442a95e355d7fa7:0x7426381a1b95b9ab",
@@ -345,7 +345,7 @@
     "gid": "/g/11txfr92qr",
     "maps_url": "https://www.google.com/maps/place/%E4%B8%B8%E8%88%A2%E6%8B%89%E9%BA%B5%20%E5%85%89%E8%8F%AF%E5%BA%97/data=!4m6!3m5!1s0x3442a9e8b0b75c37:0x324e219c7d39f554!8m2!3d25.043747699999997!4d121.53089019999999!16s%2Fg%2F11txfr92qr?hl=zh-TW",
     "added_at": "2026-09-03T13:39:13+0800",
-    "missed": 1
+    "missed": 2
   },
   {
     "ftid": "0x3442ab68691ab6d3:0xf32b841d25339852",
@@ -422,7 +422,7 @@
     "gid": "/g/11mchy8_m1",
     "maps_url": "https://www.google.com/maps/place/%E7%BE%8E%E8%A1%93%E7%B3%BB%E6%8B%89%E9%BA%B5%20%E5%8F%B0%E5%8C%97%E8%BB%8A%E7%AB%99%E5%BA%97/data=!4m6!3m5!1s0x3442a978c69732af:0x496d03837415df26!8m2!3d25.046104099999997!4d121.5135964!16s%2Fg%2F11mchy8_m1?hl=zh-TW",
     "added_at": "2026-09-03T13:39:13+0800",
-    "missed": 1
+    "missed": 2
   },
   {
     "ftid": "0x3442a96ed5faa6b9:0x681a0464964fd86a",
@@ -528,7 +528,7 @@
     "gid": "/g/11rg6qyc8t",
     "maps_url": "https://www.google.com/maps/place/%E9%BA%B5%E5%B1%8B%E9%9B%9E%E9%87%91%20%E5%85%89%E8%8F%AF%E5%BA%97/data=!4m6!3m5!1s0x3442a9f2c5c233c1:0xa48a8b8ecd48af6f!8m2!3d25.044035899999997!4d121.53271029999999!16s%2Fg%2F11rg6qyc8t?hl=zh-TW",
     "added_at": "2026-09-03T13:39:13+0800",
-    "missed": 1
+    "missed": 2
   },
   {
     "ftid": "0x3442a972f0683c1f:0xc1dfb96e5171f405",
@@ -543,7 +543,7 @@
     "gid": "/g/12hpbgbxw",
     "maps_url": "https://www.google.com/maps/place/%E5%A4%AA%E9%99%BD%E8%95%83%E8%8C%84%E6%8B%89%E9%BA%B5%20%E7%AB%99%E5%89%8D%E6%9C%AC%E5%BA%97/data=!4m6!3m5!1s0x3442a972f0683c1f:0xc1dfb96e5171f405!8m2!3d25.0462341!4d121.5164145!16s%2Fg%2F12hpbgbxw?hl=zh-TW",
     "added_at": "2026-09-03T13:39:13+0800",
-    "missed": 1
+    "missed": 2
   },
   {
     "ftid": "0x3442a90016bfbbdb:0xec53a54132c56e49",
@@ -558,7 +558,7 @@
     "gid": "/g/11y5slnn85",
     "maps_url": "https://www.google.com/maps/place/%E8%8C%B6%E6%82%9F%E6%8B%89%E9%BA%B5/data=!4m6!3m5!1s0x3442a90016bfbbdb:0xec53a54132c56e49!8m2!3d25.0487385!4d121.52080819999999!16s%2Fg%2F11y5slnn85?hl=zh-TW",
     "added_at": "2026-09-03T13:39:13+0800",
-    "missed": 1
+    "missed": 2
   },
   {
     "ftid": "0x3442a96f77dae989:0x58d4658ed212d069",
@@ -784,7 +784,7 @@
     "lat": 25.036017299999997,
     "lng": 121.5373008,
     "types": [
-      "ラーメン屋"
+      "拉麵店"
     ],
     "place_id": null,
     "gid": "/g/11qg0f44b7",
@@ -820,7 +820,7 @@
     "gid": "/g/12ltgq6g7",
     "maps_url": "https://www.google.com/maps/place/%E8%AA%A0%E5%B1%8B%E6%8B%89%E9%BA%B5/data=!4m6!3m5!1s0x3442a96d74fc2927:0x961267757989de96!8m2!3d25.057306!4d121.518862!16s%2Fg%2F12ltgq6g7?hl=zh-TW",
     "added_at": "2026-09-03T13:39:13+0800",
-    "missed": 1
+    "missed": 2
   },
   {
     "ftid": "0x3442abb92eb43a55:0x98aed6ab02f6c2cc",
@@ -890,14 +890,14 @@
     "lat": 25.047749,
     "lng": 121.517044,
     "types": [
-      "拉麵店",
-      "日本餐廳"
+      "ラーメン屋",
+      "和食店"
     ],
-    "place_id": null,
+    "place_id": "ChIJuSG7fXKpQjQRhHEXenWwY9w",
     "gid": "/g/1pzrmkynx",
-    "maps_url": "https://www.google.com/maps/place/%E4%B8%80%E9%A2%A8%E5%A0%82%E5%BE%AE%E9%A2%A8%E5%8F%B0%E5%8C%97%E8%BB%8A%E7%AB%99%E5%BA%97/data=!4m6!3m5!1s0x3442a9727dbb21b9:0xdc63b0757a177184!8m2!3d25.047749!4d121.517044!16s%2Fg%2F1pzrmkynx?hl=zh-TW",
+    "maps_url": "https://www.google.com/maps/place/%E4%B8%80%E9%A2%A8%E5%A0%82%E5%BE%AE%E9%A2%A8%E5%8F%B0%E5%8C%97%E8%BB%8A%E7%AB%99%E5%BA%97/data=!4m6!3m5!1s0x3442a9727dbb21b9:0xdc63b0757a177184!8m2!3d25.047749!4d121.517044!16s%2Fg%2F1pzrmkynx!19sChIJuSG7fXKpQjQRhHEXenWwY9w?hl=zh-TW",
     "added_at": "2026-09-03T13:39:13+0800",
-    "missed": 1
+    "missed": 0
   },
   {
     "ftid": "0x3442abcf1d007571:0xbbc80ddc04e7b16e",
@@ -973,7 +973,7 @@
     "gid": "/g/11tmfz5drl",
     "maps_url": "https://www.google.com/maps/place/%E9%AC%BC%E9%87%91%E6%A3%92%20%E4%B8%AD%E5%B1%B1%E5%88%A5%E9%A4%A8/data=!4m6!3m5!1s0x3442a984c9dab027:0xa2c54424c7bf3e82!8m2!3d25.0488716!4d121.52086969999999!16s%2Fg%2F11tmfz5drl?hl=zh-TW",
     "added_at": "2026-09-03T13:39:13+0800",
-    "missed": 1
+    "missed": 2
   },
   {
     "ftid": "0x3442a96019c219cf:0x3d13cd5c5807f1b6",
@@ -1054,9 +1054,9 @@
       "蕎麦店",
       "うどん屋"
     ],
-    "place_id": null,
+    "place_id": "ChIJB4oKSGipQjQRT6W05W2dvIY",
     "gid": "/g/1trpng_z",
-    "maps_url": "https://www.google.com/maps/place/%E4%B8%8D%E4%BA%8C%E5%AE%B6%E6%8B%89%E9%BA%B5%28%E5%91%A8%E4%BA%8C%E5%85%AC%E4%BC%91%2C%E7%84%A1%E8%A8%82%E4%BD%8D%29/data=!4m6!3m5!1s0x3442a968480a8a07:0x86bc9d6de5b4a54f!8m2!3d25.055844999999998!4d121.523513!16s%2Fg%2F1trpng_z?hl=zh-TW",
+    "maps_url": "https://www.google.com/maps/place/%E4%B8%8D%E4%BA%8C%E5%AE%B6%E6%8B%89%E9%BA%B5%28%E5%91%A8%E4%BA%8C%E5%85%AC%E4%BC%91%2C%E7%84%A1%E8%A8%82%E4%BD%8D%29/data=!4m6!3m5!1s0x3442a968480a8a07:0x86bc9d6de5b4a54f!8m2!3d25.055844999999998!4d121.523513!16s%2Fg%2F1trpng_z!19sChIJB4oKSGipQjQRT6W05W2dvIY?hl=zh-TW",
     "added_at": "2026-09-03T13:39:13+0800",
     "missed": 0
   },
@@ -1084,9 +1084,9 @@
     "types": [
       "拉麵店"
     ],
-    "place_id": null,
+    "place_id": "ChIJ4UUatQypQjQR_LdnqibqgSg",
     "gid": "/g/11g6rkrhll",
-    "maps_url": "https://www.google.com/maps/place/%E4%B9%9D%E6%B9%AF%E5%B1%8B%E6%97%A5%E6%9C%AC%E6%8B%89%E9%BA%B5%E5%8F%B0%E5%8C%97%E4%B8%AD%E6%AD%A3%E5%BA%97/data=!4m6!3m5!1s0x3442a90cb51a45e1:0x2881ea26aa67b7fc!8m2!3d25.044637899999998!4d121.5140428!16s%2Fg%2F11g6rkrhll?hl=zh-TW",
+    "maps_url": "https://www.google.com/maps/place/%E4%B9%9D%E6%B9%AF%E5%B1%8B%E6%97%A5%E6%9C%AC%E6%8B%89%E9%BA%B5%E5%8F%B0%E5%8C%97%E4%B8%AD%E6%AD%A3%E5%BA%97/data=!4m6!3m5!1s0x3442a90cb51a45e1:0x2881ea26aa67b7fc!8m2!3d25.044637899999998!4d121.5140428!16s%2Fg%2F11g6rkrhll!19sChIJ4UUatQypQjQR_LdnqibqgSg?hl=zh-TW",
     "added_at": "2026-09-03T13:39:13+0800",
     "missed": 0
   },
@@ -1150,7 +1150,7 @@
     "gid": "/g/11zfdpc0q_",
     "maps_url": "https://www.google.com/maps/place/%E9%AD%81%E5%8A%9B%E5%B1%8B%E6%8B%89%E9%BA%B5%20%E5%8F%B0%E5%8C%97%E8%BB%8A%E7%AB%99%E5%BA%97/data=!4m6!3m5!1s0x3442a90024cc57f3:0x1338a9ccf7214e2c!8m2!3d25.0496072!4d121.51473949999999!16s%2Fg%2F11zfdpc0q_?hl=zh-TW",
     "added_at": "2026-09-03T13:39:13+0800",
-    "missed": 1
+    "missed": 2
   },
   {
     "ftid": "0x3442a9003e424487:0x13827589518361a8",
@@ -1194,9 +1194,9 @@
     "types": [
       "ラーメン屋"
     ],
-    "place_id": null,
+    "place_id": "ChIJeX5l3GapQjQRMt7EWG7aHDs",
     "gid": "/g/11gtymhhnh",
-    "maps_url": "https://www.google.com/maps/place/%E5%90%89%E5%A4%A9%E5%85%83%E6%8B%89%E9%BA%B5/data=!4m6!3m5!1s0x3442a966dc657e79:0x3b1cda6e58c4de32!8m2!3d25.043541299999998!4d121.50583429999999!16s%2Fg%2F11gtymhhnh?hl=zh-TW",
+    "maps_url": "https://www.google.com/maps/place/%E5%90%89%E5%A4%A9%E5%85%83%E6%8B%89%E9%BA%B5/data=!4m6!3m5!1s0x3442a966dc657e79:0x3b1cda6e58c4de32!8m2!3d25.043541299999998!4d121.50583429999999!16s%2Fg%2F11gtymhhnh!19sChIJeX5l3GapQjQRMt7EWG7aHDs?hl=zh-TW",
     "added_at": "2026-09-03T13:39:13+0800",
     "missed": 0
   },
@@ -1209,9 +1209,9 @@
     "types": [
       "拉麵店"
     ],
-    "place_id": null,
+    "place_id": "ChIJS0ZXMWKpQjQRv3gQQp_DzQQ",
     "gid": "/g/11h9fjyh8g",
-    "maps_url": "https://www.google.com/maps/place/%E5%8A%9B%E9%87%8F%E6%8B%89%E9%BA%B5%EF%BC%88%E4%BF%A1%E7%BE%A9%E5%BA%97%EF%BC%89/data=!4m6!3m5!1s0x3442a9623157464b:0x4cdc39f421078bf!8m2!3d25.0348899!4d121.5250246!16s%2Fg%2F11h9fjyh8g?hl=zh-TW",
+    "maps_url": "https://www.google.com/maps/place/%E5%8A%9B%E9%87%8F%E6%8B%89%E9%BA%B5%EF%BC%88%E4%BF%A1%E7%BE%A9%E5%BA%97%EF%BC%89/data=!4m6!3m5!1s0x3442a9623157464b:0x4cdc39f421078bf!8m2!3d25.0348899!4d121.5250246!16s%2Fg%2F11h9fjyh8g!19sChIJS0ZXMWKpQjQRv3gQQp_DzQQ?hl=zh-TW",
     "added_at": "2026-09-03T13:39:13+0800",
     "missed": 0
   },
@@ -1228,7 +1228,7 @@
     "gid": "/g/11yx0mbkhr",
     "maps_url": "https://www.google.com/maps/place/%E7%81%AB%E5%BD%B1%E5%BF%8D%E8%80%85%E4%B8%80%E6%A8%82%E6%8B%89%E9%BA%B5%20%E5%8F%B0%E5%8C%97%E8%A5%BF%E9%96%80%E5%BA%97/data=!4m6!3m5!1s0x3442a9c786fcf08b:0xb6fb21fe49ca6373!8m2!3d25.0438886!4d121.5088024!16s%2Fg%2F11yx0mbkhr?hl=zh-TW",
     "added_at": "2026-09-03T13:39:13+0800",
-    "missed": 1
+    "missed": 2
   },
   {
     "ftid": "0x3442a96f36c570f5:0x428a45051cf71139",
@@ -1243,7 +1243,7 @@
     ],
     "place_id": "ChIJ9XDFNm-pQjQRORH3HAVFikI",
     "gid": "/g/1tds4df7",
-    "maps_url": "https://www.google.com/maps/place/%E6%A8%82%E5%B1%B1%E5%A8%98%E6%9C%AD%E5%B9%8C%E6%8B%89%E9%BA%B5-%E6%9E%97%E6%A3%AE%E5%BA%97-/data=!4m6!3m5!1s0x3442a96f36c570f5:0x428a45051cf71139!8m2!3d25.0508134!4d121.5245581!16s%2Fg%2F1tds4df7!19sChIJ9XDFNm-pQjQRORH3HAVFikI?hl=zh-TW",
+    "maps_url": "https://www.google.com/maps/place/%E6%A8%82%E5%B1%B1%E5%A8%98%E6%9C%AD%E5%B9%8C%E6%8B%89%E9%BA%B5-%E6%9E%97%E6%A3%AE%E5%BA%97-/data=!4m6!3m5!1s0x3442a96f36c570f5:0x428a45051cf71139!8m2!3d25.0508134!4d121.5245581!16s%2Fg%2F1tds4df7?hl=zh-TW",
     "added_at": "2026-09-03T13:39:13+0800",
     "missed": 0
   },
@@ -1260,22 +1260,7 @@
     "gid": "/g/11txhpvfm7",
     "maps_url": "https://www.google.com/maps/place/%E9%BA%B5%E5%8C%A1%E5%8C%A1%E6%8B%89%E9%BA%B5%E9%A3%9F%E5%A0%82%20%E5%8F%B0%E5%8C%97%E6%9E%97%E6%A3%AE%E5%8C%97%E5%BA%97/data=!4m6!3m5!1s0x3442a9dfa93d8711:0xe112715bc448502!8m2!3d25.0663773!4d121.5255899!16s%2Fg%2F11txhpvfm7?hl=zh-TW",
     "added_at": "2026-09-03T13:39:13+0800",
-    "missed": 1
-  },
-  {
-    "ftid": "0x3442a90cd6e14e87:0xedaa5d0891c03291",
-    "name": "妻籠本拉麵(開封屋)",
-    "address": "100臺北市中正區黎明里開封街一段2-39號",
-    "lat": 25.0458414,
-    "lng": 121.5144162,
-    "types": [
-      "拉麵店"
-    ],
-    "place_id": null,
-    "gid": "/g/1vn9lsjv",
-    "maps_url": "https://www.google.com/maps/place/%E5%A6%BB%E7%B1%A0%E6%9C%AC%E6%8B%89%E9%BA%B5%28%E9%96%8B%E5%B0%81%E5%B1%8B%29/data=!4m6!3m5!1s0x3442a90cd6e14e87:0xedaa5d0891c03291!8m2!3d25.0458414!4d121.5144162!16s%2Fg%2F1vn9lsjv?hl=zh-TW",
-    "added_at": "2026-09-03T13:39:13+0800",
-    "missed": 1
+    "missed": 2
   },
   {
     "ftid": "0x3442a9dacdee2215:0x214afcbe3cc76f72",
@@ -1337,7 +1322,7 @@
     "gid": "/g/11b7q9jl0f",
     "maps_url": "https://www.google.com/maps/place/%E5%8D%81%E4%B8%89%E5%B7%9D%E6%97%A5%E6%9C%AC%E6%8B%89%E9%BA%B5%E5%AE%9A%E9%A3%9F%20%E5%85%AC%E5%9C%92%E5%BA%97/data=!4m6!3m5!1s0x3442a973aa5a674d:0x665d2a34f95af1cc!8m2!3d25.0452843!4d121.5170536!16s%2Fg%2F11b7q9jl0f?hl=zh-TW",
     "added_at": "2026-09-03T13:39:13+0800",
-    "missed": 1
+    "missed": 2
   },
   {
     "ftid": "0x3442a9b3c4ec177b:0xbc1ec1a1f41996c0",
@@ -1397,7 +1382,7 @@
     "gid": "/g/11g81f86mz",
     "maps_url": "https://www.google.com/maps/place/%E4%B9%9D%E6%B9%AF%E5%B1%8B%E6%97%A5%E5%BC%8F%E6%8B%89%E9%BA%B5%E5%8F%B0%E5%8C%97%E5%A4%A7%E5%90%8C%E5%BA%97/data=!4m6!3m5!1s0x3442a9491c5afa0b:0xdb419e8a0965c294!8m2!3d25.072047899999998!4d121.5179646!16s%2Fg%2F11g81f86mz?hl=zh-TW",
     "added_at": "2026-09-03T13:39:13+0800",
-    "missed": 0
+    "missed": 1
   },
   {
     "ftid": "0x3442ad888fd93017:0xa61ac0ae9be5870b",
@@ -1425,9 +1410,9 @@
     "types": [
       "拉麵店"
     ],
-    "place_id": null,
+    "place_id": "ChIJoX9YNLqrQjQRzZ1k4oyJIq0",
     "gid": "/g/1pzqzn0kg",
-    "maps_url": "https://www.google.com/maps/place/%E5%B1%AF%E4%BA%AC%E6%8B%89%E9%BA%B5%20%28%E6%96%B0%E5%85%89%E4%B8%89%E8%B6%8AA8%29/data=!4m6!3m5!1s0x3442abba34587fa1:0xad22898ce2649dcd!8m2!3d25.0382659!4d121.56678579999999!16s%2Fg%2F1pzqzn0kg?hl=zh-TW",
+    "maps_url": "https://www.google.com/maps/place/%E5%B1%AF%E4%BA%AC%E6%8B%89%E9%BA%B5%20%28%E6%96%B0%E5%85%89%E4%B8%89%E8%B6%8AA8%29/data=!4m6!3m5!1s0x3442abba34587fa1:0xad22898ce2649dcd!8m2!3d25.0382659!4d121.56678579999999!16s%2Fg%2F1pzqzn0kg!19sChIJoX9YNLqrQjQRzZ1k4oyJIq0?hl=zh-TW",
     "added_at": "2026-09-03T13:39:13+0800",
     "missed": 0
   },
@@ -1444,7 +1429,7 @@
     "gid": "/g/1td62_vb",
     "maps_url": "https://www.google.com/maps/place/%E6%A8%82%E5%B1%B1%E5%A8%98%E6%9C%AD%E5%B9%8C%E6%8B%89%E9%BA%B5%28%E4%B8%AD%E5%B1%B1%E5%BA%97%29/data=!4m6!3m5!1s0x3442a942fb2213c7:0x1edd4325fd0e5742!8m2!3d25.0594352!4d121.52342279999999!16s%2Fg%2F1td62_vb?hl=zh-TW",
     "added_at": "2026-09-03T13:39:13+0800",
-    "missed": 1
+    "missed": 2
   },
   {
     "ftid": "0x3442a98b16b0e85b:0xa76dfc4fff4cef8a",
@@ -1457,9 +1442,9 @@
       "麵店",
       "餐廳"
     ],
-    "place_id": null,
+    "place_id": "ChIJW-iwFoupQjQRiu9M_0_8bac",
     "gid": "/g/11b7qw_90b",
-    "maps_url": "https://www.google.com/maps/place/%E9%B7%B9%E6%B5%81%E6%9D%B1%E4%BA%AC%E9%86%AC%E6%B2%B9%E6%8B%89%E9%BA%B5-%E6%A5%B5%E5%8C%A0%28%E5%85%AC%E9%A4%A8%E5%BA%97%29/data=!4m6!3m5!1s0x3442a98b16b0e85b:0xa76dfc4fff4cef8a!8m2!3d25.0141758!4d121.5331762!16s%2Fg%2F11b7qw_90b?hl=zh-TW",
+    "maps_url": "https://www.google.com/maps/place/%E9%B7%B9%E6%B5%81%E6%9D%B1%E4%BA%AC%E9%86%AC%E6%B2%B9%E6%8B%89%E9%BA%B5-%E6%A5%B5%E5%8C%A0%28%E5%85%AC%E9%A4%A8%E5%BA%97%29/data=!4m6!3m5!1s0x3442a98b16b0e85b:0xa76dfc4fff4cef8a!8m2!3d25.0141758!4d121.5331762!16s%2Fg%2F11b7qw_90b!19sChIJW-iwFoupQjQRiu9M_0_8bac?hl=zh-TW",
     "added_at": "2026-09-03T13:39:13+0800",
     "missed": 0
   },
@@ -1476,7 +1461,7 @@
     "gid": "/g/11vz7tq99p",
     "maps_url": "https://www.google.com/maps/place/%E5%85%AB%E6%A2%9D%E6%8B%89%E9%BA%B5/data=!4m6!3m5!1s0x3442a90005e0d0b7:0x6f118f31f9131f00!8m2!3d25.0508265!4d121.52450909999999!16s%2Fg%2F11vz7tq99p?hl=zh-TW",
     "added_at": "2026-09-03T13:39:13+0800",
-    "missed": 1
+    "missed": 2
   },
   {
     "ftid": "0x3442a9145aeb874f:0xa77f0af2d4e28550",
@@ -1491,7 +1476,7 @@
     "gid": "/g/11cn312p28",
     "maps_url": "https://www.google.com/maps/place/%E5%B4%91%E5%B1%B1%E8%97%A4%E6%A4%85%E5%BA%97%E6%B5%B7%E9%AE%AE%E6%8B%89%E9%BA%B5/data=!4m6!3m5!1s0x3442a9145aeb874f:0xa77f0af2d4e28550!8m2!3d25.056841499999997!4d121.51066589999999!16s%2Fg%2F11cn312p28?hl=zh-TW",
     "added_at": "2026-09-03T13:39:13+0800",
-    "missed": 1
+    "missed": 2
   },
   {
     "ftid": "0x3442a909445bf633:0x317870de6a12cc74",
@@ -1506,7 +1491,7 @@
     "gid": "/g/12m9b4cyn",
     "maps_url": "https://www.google.com/maps/place/%E7%95%AA%E6%A8%82%E5%B1%8B%E6%97%A5%E5%BC%8F%E6%8B%89%E9%BA%B5%28%E6%BC%A2%E4%B8%AD1%E5%BA%97%29/data=!4m6!3m5!1s0x3442a909445bf633:0x317870de6a12cc74!8m2!3d25.044151!4d121.507533!16s%2Fg%2F12m9b4cyn?hl=zh-TW",
     "added_at": "2026-09-03T13:39:13+0800",
-    "missed": 1
+    "missed": 2
   },
   {
     "ftid": "0x3442a958d8864213:0x58015074753eefb8",
@@ -1521,7 +1506,7 @@
     "gid": "/g/11h5s464nh",
     "maps_url": "https://www.google.com/maps/place/%E4%B9%9D%E6%B9%AF%E5%B1%8B%E6%97%A5%E5%BC%8F%E6%8B%89%E9%BA%B5%20%E5%8F%B0%E5%8C%97%E8%90%AC%E8%8F%AF%E8%A5%BF%E8%97%8F%E5%BA%97/data=!4m6!3m5!1s0x3442a958d8864213:0x58015074753eefb8!8m2!3d25.029225999999998!4d121.50249919999999!16s%2Fg%2F11h5s464nh?hl=zh-TW",
     "added_at": "2026-09-03T13:39:13+0800",
-    "missed": 1
+    "missed": 2
   },
   {
     "ftid": "0x3442abc028d0d507:0x193f4425ef85adce",
@@ -1533,9 +1518,9 @@
       "素食餐廳",
       "餐廳"
     ],
-    "place_id": null,
+    "place_id": "ChIJB9XQKMCrQjQRzq2F7yVEPxk",
     "gid": "/g/11x16k3m9t",
-    "maps_url": "https://www.google.com/maps/place/N%C3%9CDOO%20Veg%20-%20Ramen%20Slurp%20Bar%EF%BD%9C%E7%84%A1%E8%82%89%E8%94%AC%E9%A3%9F%E6%8B%89%E9%BA%B5%E4%B8%BB%E7%BE%A9/data=!4m6!3m5!1s0x3442abc028d0d507:0x193f4425ef85adce!8m2!3d25.033458099999997!4d121.55956669999999!16s%2Fg%2F11x16k3m9t?hl=zh-TW",
+    "maps_url": "https://www.google.com/maps/place/N%C3%9CDOO%20Veg%20-%20Ramen%20Slurp%20Bar%EF%BD%9C%E7%84%A1%E8%82%89%E8%94%AC%E9%A3%9F%E6%8B%89%E9%BA%B5%E4%B8%BB%E7%BE%A9/data=!4m6!3m5!1s0x3442abc028d0d507:0x193f4425ef85adce!8m2!3d25.033458099999997!4d121.55956669999999!16s%2Fg%2F11x16k3m9t!19sChIJB9XQKMCrQjQRzq2F7yVEPxk?hl=zh-TW",
     "added_at": "2026-09-03T13:39:13+0800",
     "missed": 0
   },
@@ -1554,9 +1539,9 @@
       "餐廳",
       "日式炸豬扒餐廳"
     ],
-    "place_id": null,
+    "place_id": "ChIJ-50v7aOrQjQRh06yRSKjB6c",
     "gid": "/g/11dyzlt7km",
-    "maps_url": "https://www.google.com/maps/place/%E7%94%B7%E5%AD%90%E6%BC%A2%E6%8B%89%E9%BA%B5%E9%A3%9F%E5%A0%82-%E4%BF%A1%E7%BE%A9%E6%B0%B8%E6%98%A5%E5%BA%97/data=!4m6!3m5!1s0x3442aba3ed2f9dfb:0xa707a32245b24e87!8m2!3d25.0404186!4d121.5755568!16s%2Fg%2F11dyzlt7km?hl=zh-TW",
+    "maps_url": "https://www.google.com/maps/place/%E7%94%B7%E5%AD%90%E6%BC%A2%E6%8B%89%E9%BA%B5%E9%A3%9F%E5%A0%82-%E4%BF%A1%E7%BE%A9%E6%B0%B8%E6%98%A5%E5%BA%97/data=!4m6!3m5!1s0x3442aba3ed2f9dfb:0xa707a32245b24e87!8m2!3d25.0404186!4d121.5755568!16s%2Fg%2F11dyzlt7km!19sChIJ-50v7aOrQjQRh06yRSKjB6c?hl=zh-TW",
     "added_at": "2026-09-03T13:39:13+0800",
     "missed": 0
   },
@@ -1569,9 +1554,9 @@
     "types": [
       "拉麵店"
     ],
-    "place_id": null,
+    "place_id": "ChIJu9DoyWKrQjQRMeB_-K04hSg",
     "gid": "/g/11ss0y3p4q",
-    "maps_url": "https://www.google.com/maps/place/%E9%BA%B5%E5%8C%A1%E5%8C%A1%E6%8B%89%E9%BA%B5%E9%A3%9F%E5%A0%82%20%E5%8F%B0%E5%8C%97%E5%85%89%E5%BE%A9%E5%8C%97%E5%BA%97/data=!4m6!3m5!1s0x3442ab62c9e8d0bb:0x288538adf87fe031!8m2!3d25.050034699999998!4d121.5606665!16s%2Fg%2F11ss0y3p4q?hl=zh-TW",
+    "maps_url": "https://www.google.com/maps/place/%E9%BA%B5%E5%8C%A1%E5%8C%A1%E6%8B%89%E9%BA%B5%E9%A3%9F%E5%A0%82%20%E5%8F%B0%E5%8C%97%E5%85%89%E5%BE%A9%E5%8C%97%E5%BA%97/data=!4m6!3m5!1s0x3442ab62c9e8d0bb:0x288538adf87fe031!8m2!3d25.050034699999998!4d121.5606665!16s%2Fg%2F11ss0y3p4q!19sChIJu9DoyWKrQjQRMeB_-K04hSg?hl=zh-TW",
     "added_at": "2026-09-03T13:39:13+0800",
     "missed": 0
   },
@@ -1584,9 +1569,9 @@
     "types": [
       "拉麵店"
     ],
-    "place_id": null,
+    "place_id": "ChIJnUdOg8yrQjQR7OQYzKnUccY",
     "gid": "/g/11c6s6lshp",
-    "maps_url": "https://www.google.com/maps/place/%E4%B9%9D%E6%B9%AF%E5%B1%8B%E6%97%A5%E6%9C%AC%E6%8B%89%E9%BA%B5%20%E5%8F%B0%E5%8C%97%E5%A4%A7%E5%AE%89%E5%BA%97/data=!4m6!3m5!1s0x3442abcc834e479d:0xc671d4a9cc18e4ec!8m2!3d25.030289699999997!4d121.55356169999999!16s%2Fg%2F11c6s6lshp?hl=zh-TW",
+    "maps_url": "https://www.google.com/maps/place/%E4%B9%9D%E6%B9%AF%E5%B1%8B%E6%97%A5%E6%9C%AC%E6%8B%89%E9%BA%B5%20%E5%8F%B0%E5%8C%97%E5%A4%A7%E5%AE%89%E5%BA%97/data=!4m6!3m5!1s0x3442abcc834e479d:0xc671d4a9cc18e4ec!8m2!3d25.030289699999997!4d121.55356169999999!16s%2Fg%2F11c6s6lshp!19sChIJnUdOg8yrQjQR7OQYzKnUccY?hl=zh-TW",
     "added_at": "2026-09-03T13:39:13+0800",
     "missed": 0
   },
@@ -1617,9 +1602,9 @@
       "日本餐廳",
       "麵店"
     ],
-    "place_id": null,
+    "place_id": "ChIJtdqxDGmsQjQRG94Ux-CxhyI",
     "gid": "/g/11c5fy7hj9",
-    "maps_url": "https://www.google.com/maps/place/%E9%9B%9E%E5%90%89%E5%90%9B%E6%8B%89%E9%BA%B5%20%E5%85%A7%E6%B9%96%E7%92%B0%E5%B1%B1%E5%BA%97/data=!4m6!3m5!1s0x3442ac690cb1dab5:0x2287b1e0c714de1b!8m2!3d25.0862284!4d121.5670347!16s%2Fg%2F11c5fy7hj9?hl=zh-TW",
+    "maps_url": "https://www.google.com/maps/place/%E9%9B%9E%E5%90%89%E5%90%9B%E6%8B%89%E9%BA%B5%20%E5%85%A7%E6%B9%96%E7%92%B0%E5%B1%B1%E5%BA%97/data=!4m6!3m5!1s0x3442ac690cb1dab5:0x2287b1e0c714de1b!8m2!3d25.0862284!4d121.5670347!16s%2Fg%2F11c5fy7hj9!19sChIJtdqxDGmsQjQRG94Ux-CxhyI?hl=zh-TW",
     "added_at": "2026-09-03T13:39:13+0800",
     "missed": 0
   },
@@ -1636,7 +1621,7 @@
     "gid": "/g/11cnxzztyr",
     "maps_url": "https://www.google.com/maps/place/%E7%86%8A%E6%9C%AC%E6%8B%89%E9%BA%B5/data=!4m6!3m5!1s0x3442a9094961c6f1:0x2a9b4f4d0ae6a76b!8m2!3d25.044726999999998!4d121.5073297!16s%2Fg%2F11cnxzztyr?hl=zh-TW",
     "added_at": "2026-09-03T13:39:13+0800",
-    "missed": 1
+    "missed": 2
   },
   {
     "ftid": "0x3442ab8cb85be193:0xd2d6f85cc1800a4e",
@@ -1662,9 +1647,9 @@
     "types": [
       "拉麵店"
     ],
-    "place_id": null,
+    "place_id": "ChIJEd8cejOpQjQRY-w6wEWOyRA",
     "gid": "/g/11flc625k5",
-    "maps_url": "https://www.google.com/maps/place/%E7%86%8A%E8%B6%8A%E5%B2%B3/data=!4m6!3m5!1s0x3442a9337a1cdf11:0x10c98e45c03aec63!8m2!3d25.0492352!4d121.44780859999999!16s%2Fg%2F11flc625k5?hl=zh-TW",
+    "maps_url": "https://www.google.com/maps/place/%E7%86%8A%E8%B6%8A%E5%B2%B3/data=!4m6!3m5!1s0x3442a9337a1cdf11:0x10c98e45c03aec63!8m2!3d25.0492352!4d121.44780859999999!16s%2Fg%2F11flc625k5!19sChIJEd8cejOpQjQRY-w6wEWOyRA?hl=zh-TW",
     "added_at": "2026-09-03T13:39:13+0800",
     "missed": 0
   },
@@ -1712,7 +1697,7 @@
     "gid": "/g/11khzmrrg6",
     "maps_url": "https://www.google.com/maps/place/%E5%8D%83%E4%BB%A3%E5%A7%AC%E6%8B%89%E9%BA%B5%E5%B0%88%E9%96%80%E5%BA%97%EF%BC%88%E5%8F%B0%E5%8C%97%E4%BA%AC%E7%AB%99%E9%96%80%E5%B8%82%EF%BC%89/data=!4m6!3m5!1s0x3442a9ee7aa055bd:0xb0a76ba3ac5cad08!8m2!3d25.049257599999997!4d121.51719589999999!16s%2Fg%2F11khzmrrg6?hl=zh-TW",
     "added_at": "2026-09-03T13:39:13+0800",
-    "missed": 1
+    "missed": 2
   },
   {
     "ftid": "0x3442a96ea2c3d1e7:0x71a680846c0caf7a",
@@ -1723,9 +1708,9 @@
     "types": [
       "ラーメン屋"
     ],
-    "place_id": null,
+    "place_id": "ChIJ59HDom6pQjQReq8MbISApnE",
     "gid": "/g/11cs46rrm6",
-    "maps_url": "https://www.google.com/maps/place/%E5%8B%9D%E7%8E%8B%EF%BC%88%E9%AC%BC%E9%87%91%E6%A3%92%E7%89%9B%E9%AA%A8%E6%8B%89%E9%BA%B5%EF%BC%89/data=!4m6!3m5!1s0x3442a96ea2c3d1e7:0x71a680846c0caf7a!8m2!3d25.055865299999997!4d121.52519509999999!16s%2Fg%2F11cs46rrm6?hl=zh-TW",
+    "maps_url": "https://www.google.com/maps/place/%E5%8B%9D%E7%8E%8B%EF%BC%88%E9%AC%BC%E9%87%91%E6%A3%92%E7%89%9B%E9%AA%A8%E6%8B%89%E9%BA%B5%EF%BC%89/data=!4m6!3m5!1s0x3442a96ea2c3d1e7:0x71a680846c0caf7a!8m2!3d25.055865299999997!4d121.52519509999999!16s%2Fg%2F11cs46rrm6!19sChIJ59HDom6pQjQReq8MbISApnE?hl=zh-TW",
     "added_at": "2026-09-03T13:39:13+0800",
     "missed": 0
   },
@@ -1798,9 +1783,9 @@
     "types": [
       "拉麵店"
     ],
-    "place_id": null,
+    "place_id": "ChIJpTrUw4WpQjQRVPWxZ1gNSgw",
     "gid": "/g/11qbt58b0k",
-    "maps_url": "https://www.google.com/maps/place/%E9%86%89%E5%BF%83%E6%8B%89%E9%BA%B5%20%28%20%E3%82%89%E3%81%81%E9%BA%BA%20%E9%86%89%E5%BF%83%20%29%20%E5%85%AC%E4%BC%91%E8%A9%B3%E6%83%85IG%E6%88%96%E8%87%89%E6%9B%B8/data=!4m6!3m5!1s0x3442a985c3d43aa5:0xc4a0d5867b1f554!8m2!3d25.0135769!4d121.51416019999999!16s%2Fg%2F11qbt58b0k?hl=zh-TW",
+    "maps_url": "https://www.google.com/maps/place/%E9%86%89%E5%BF%83%E6%8B%89%E9%BA%B5%20%28%20%E3%82%89%E3%81%81%E9%BA%BA%20%E9%86%89%E5%BF%83%20%29%20%E5%85%AC%E4%BC%91%E8%A9%B3%E6%83%85IG%E6%88%96%E8%87%89%E6%9B%B8/data=!4m6!3m5!1s0x3442a985c3d43aa5:0xc4a0d5867b1f554!8m2!3d25.0135769!4d121.51416019999999!16s%2Fg%2F11qbt58b0k!19sChIJpTrUw4WpQjQRVPWxZ1gNSgw?hl=zh-TW",
     "added_at": "2026-09-03T13:39:13+0800",
     "missed": 0
   },
@@ -1844,9 +1829,9 @@
     "types": [
       "拉麵店"
     ],
-    "place_id": null,
+    "place_id": "ChIJzRGMx6EDaDQRYqdyqXz6lh8",
     "gid": "/g/11pc9kqd9m",
-    "maps_url": "https://www.google.com/maps/place/%E5%B0%8F%E9%AB%98%E6%8B%89%E9%BA%B5%E5%8D%97%E5%8B%A2%E8%A7%92/data=!4m6!3m5!1s0x346803a1c78c11cd:0x1f96fa7ca972a762!8m2!3d24.987937199999998!4d121.5135078!16s%2Fg%2F11pc9kqd9m?hl=zh-TW",
+    "maps_url": "https://www.google.com/maps/place/%E5%B0%8F%E9%AB%98%E6%8B%89%E9%BA%B5%E5%8D%97%E5%8B%A2%E8%A7%92/data=!4m6!3m5!1s0x346803a1c78c11cd:0x1f96fa7ca972a762!8m2!3d24.987937199999998!4d121.5135078!16s%2Fg%2F11pc9kqd9m!19sChIJzRGMx6EDaDQRYqdyqXz6lh8?hl=zh-TW",
     "added_at": "2026-09-03T13:39:13+0800",
     "missed": 0
   },
@@ -1890,9 +1875,9 @@
     "types": [
       "拉麵店"
     ],
-    "place_id": null,
+    "place_id": "ChIJv_7WNnioQjQRC0tv5s_W_SY",
     "gid": "/g/11byx7n862",
-    "maps_url": "https://www.google.com/maps/place/%E9%BA%B5%E5%B1%8B%E9%BE%8D%E6%8B%89%E9%BA%B5%E5%B0%88%E9%96%80%E5%BA%97/data=!4m6!3m5!1s0x3442a87836d6febf:0x26fdd6cfe66f4b0b!8m2!3d25.044019499999997!4d121.4480712!16s%2Fg%2F11byx7n862?hl=zh-TW",
+    "maps_url": "https://www.google.com/maps/place/%E9%BA%B5%E5%B1%8B%E9%BE%8D%E6%8B%89%E9%BA%B5%E5%B0%88%E9%96%80%E5%BA%97/data=!4m6!3m5!1s0x3442a87836d6febf:0x26fdd6cfe66f4b0b!8m2!3d25.044019499999997!4d121.4480712!16s%2Fg%2F11byx7n862!19sChIJv_7WNnioQjQRC0tv5s_W_SY?hl=zh-TW",
     "added_at": "2026-09-03T13:39:13+0800",
     "missed": 0
   },
@@ -1920,9 +1905,9 @@
     "types": [
       "拉麵店"
     ],
-    "place_id": null,
+    "place_id": "ChIJYaAn7H2pQjQRwwQ1js0fNZM",
     "gid": "/g/11svjm8tcv",
-    "maps_url": "https://www.google.com/maps/place/%E5%B0%8F%E9%AB%98%E6%8B%89%E9%BA%B5%20%E6%9D%BF%E6%A9%8B%E6%B0%91%E6%AC%8A%E8%B7%AF/data=!4m6!3m5!1s0x3442a97dec27a061:0x93351fcd8e3504c3!8m2!3d25.015888099999998!4d121.4574179!16s%2Fg%2F11svjm8tcv?hl=zh-TW",
+    "maps_url": "https://www.google.com/maps/place/%E5%B0%8F%E9%AB%98%E6%8B%89%E9%BA%B5%20%E6%9D%BF%E6%A9%8B%E6%B0%91%E6%AC%8A%E8%B7%AF/data=!4m6!3m5!1s0x3442a97dec27a061:0x93351fcd8e3504c3!8m2!3d25.015888099999998!4d121.4574179!16s%2Fg%2F11svjm8tcv!19sChIJYaAn7H2pQjQRwwQ1js0fNZM?hl=zh-TW",
     "added_at": "2026-09-03T13:39:13+0800",
     "missed": 0
   },
@@ -1935,9 +1920,9 @@
     "types": [
       "拉麵店"
     ],
-    "place_id": null,
+    "place_id": "ChIJv9MX9DqpQjQRx8prCoUjp7c",
     "gid": "/g/11sb3lldx6",
-    "maps_url": "https://www.google.com/maps/place/%E9%BA%B5%E3%82%84%E5%A3%B9%E3%83%A9%E3%83%BC%E3%83%A1%E3%83%B3%E5%B0%88%E9%96%80%E5%BA%97/data=!4m6!3m5!1s0x3442a93af417d3bf:0xb7a723850a6bcac7!8m2!3d25.0177466!4d121.4639426!16s%2Fg%2F11sb3lldx6?hl=zh-TW",
+    "maps_url": "https://www.google.com/maps/place/%E9%BA%B5%E3%82%84%E5%A3%B9%E3%83%A9%E3%83%BC%E3%83%A1%E3%83%B3%E5%B0%88%E9%96%80%E5%BA%97/data=!4m6!3m5!1s0x3442a93af417d3bf:0xb7a723850a6bcac7!8m2!3d25.0177466!4d121.4639426!16s%2Fg%2F11sb3lldx6!19sChIJv9MX9DqpQjQRx8prCoUjp7c?hl=zh-TW",
     "added_at": "2026-09-03T13:39:13+0800",
     "missed": 0
   },
@@ -1980,25 +1965,9 @@
     "types": [
       "拉麵店"
     ],
-    "place_id": null,
+    "place_id": "ChIJt_ZsJESoQjQRjDRLfJCL4bQ",
     "gid": "/g/11clt002qg",
-    "maps_url": "https://www.google.com/maps/place/%E7%84%A1%E4%BA%8C%E4%BA%AD%E9%A3%9F%EF%BC%88%E5%8E%9F%E7%84%A1%E4%BA%8C%E4%BA%AD%E6%8B%89%E9%BA%B5%EF%BC%89/data=!4m6!3m5!1s0x3442a844246cf6b7:0xb4e18b907c4b348c!8m2!3d25.031529499999998!4d121.4758718!16s%2Fg%2F11clt002qg?hl=zh-TW",
-    "added_at": "2026-09-03T13:39:13+0800",
-    "missed": 0
-  },
-  {
-    "ftid": "0x3442a96a39297cfb:0xe24fdc13e9cc03e6",
-    "name": "韓金智能拉麵店-三重中正店",
-    "address": "241077新北市三重區光正里中正南路232號",
-    "lat": 25.0544977,
-    "lng": 121.4936805,
-    "types": [
-      "拉麵店",
-      "餐廳"
-    ],
-    "place_id": null,
-    "gid": "/g/11ybdx95ct",
-    "maps_url": "https://www.google.com/maps/place/%E9%9F%93%E9%87%91%E6%99%BA%E8%83%BD%E6%8B%89%E9%BA%B5%E5%BA%97-%E4%B8%89%E9%87%8D%E4%B8%AD%E6%AD%A3%E5%BA%97/data=!4m6!3m5!1s0x3442a96a39297cfb:0xe24fdc13e9cc03e6!8m2!3d25.0544977!4d121.4936805!16s%2Fg%2F11ybdx95ct?hl=zh-TW",
+    "maps_url": "https://www.google.com/maps/place/%E7%84%A1%E4%BA%8C%E4%BA%AD%E9%A3%9F%EF%BC%88%E5%8E%9F%E7%84%A1%E4%BA%8C%E4%BA%AD%E6%8B%89%E9%BA%B5%EF%BC%89/data=!4m6!3m5!1s0x3442a844246cf6b7:0xb4e18b907c4b348c!8m2!3d25.031529499999998!4d121.4758718!16s%2Fg%2F11clt002qg!19sChIJt_ZsJESoQjQRjDRLfJCL4bQ?hl=zh-TW",
     "added_at": "2026-09-03T13:39:13+0800",
     "missed": 0
   },
@@ -2049,21 +2018,6 @@
     "missed": 0
   },
   {
-    "ftid": "0x3442a9a4abf61093:0x721222348ec094bd",
-    "name": "九湯屋日本拉麵 新北三重重陽店",
-    "address": "241新北市三重區過田里重陽路一段61號",
-    "lat": 25.058526399999998,
-    "lng": 121.48688419999999,
-    "types": [
-      "拉麵店"
-    ],
-    "place_id": null,
-    "gid": "/g/11h71kgrhy",
-    "maps_url": "https://www.google.com/maps/place/%E4%B9%9D%E6%B9%AF%E5%B1%8B%E6%97%A5%E6%9C%AC%E6%8B%89%E9%BA%B5%20%E6%96%B0%E5%8C%97%E4%B8%89%E9%87%8D%E9%87%8D%E9%99%BD%E5%BA%97/data=!4m6!3m5!1s0x3442a9a4abf61093:0x721222348ec094bd!8m2!3d25.058526399999998!4d121.48688419999999!16s%2Fg%2F11h71kgrhy?hl=zh-TW",
-    "added_at": "2026-09-03T13:39:13+0800",
-    "missed": 0
-  },
-  {
     "ftid": "0x3442a943cd426d59:0xc04f75b5f567a3f1",
     "name": "麵匡匡拉麵食堂 板橋民治店",
     "address": "220新北市板橋區嵐翠里民治街150號",
@@ -2087,9 +2041,9 @@
     "types": [
       "拉麵店"
     ],
-    "place_id": null,
+    "place_id": "ChIJiwxujwepQjQRoCZAWed2-fM",
     "gid": "/g/11l3d5v2nj",
-    "maps_url": "https://www.google.com/maps/place/%E9%BA%B5%E5%B1%8B%E4%B8%80%E7%95%AA%E6%96%B0%E8%8E%8A%E5%BA%97/data=!4m6!3m5!1s0x3442a9078f6e0c8b:0xf3f976e7594026a0!8m2!3d25.0328537!4d121.4497406!16s%2Fg%2F11l3d5v2nj?hl=zh-TW",
+    "maps_url": "https://www.google.com/maps/place/%E9%BA%B5%E5%B1%8B%E4%B8%80%E7%95%AA%E6%96%B0%E8%8E%8A%E5%BA%97/data=!4m6!3m5!1s0x3442a9078f6e0c8b:0xf3f976e7594026a0!8m2!3d25.0328537!4d121.4497406!16s%2Fg%2F11l3d5v2nj!19sChIJiwxujwepQjQRoCZAWed2-fM?hl=zh-TW",
     "added_at": "2026-09-03T13:39:13+0800",
     "missed": 0
   },
@@ -2133,9 +2087,9 @@
       "拉麵店",
       "日本餐廳"
     ],
-    "place_id": null,
+    "place_id": "ChIJnct1PjQBaDQRyyp47ZMEuYQ",
     "gid": "/g/11j1t059gz",
-    "maps_url": "https://www.google.com/maps/place/%E6%B5%B7%E8%B2%93%E4%BA%AD%E6%8B%89%E9%BA%B5%20%E3%81%86%E3%81%BF%E3%81%AD%E3%81%93%E4%BA%AD/data=!4m6!3m5!1s0x346801343e75cb9d:0x84b90493ed782acb!8m2!3d24.9526637!4d121.54000149999999!16s%2Fg%2F11j1t059gz?hl=zh-TW",
+    "maps_url": "https://www.google.com/maps/place/%E6%B5%B7%E8%B2%93%E4%BA%AD%E6%8B%89%E9%BA%B5%20%E3%81%86%E3%81%BF%E3%81%AD%E3%81%93%E4%BA%AD/data=!4m6!3m5!1s0x346801343e75cb9d:0x84b90493ed782acb!8m2!3d24.9526637!4d121.54000149999999!16s%2Fg%2F11j1t059gz!19sChIJnct1PjQBaDQRyyp47ZMEuYQ?hl=zh-TW",
     "added_at": "2026-09-03T13:39:13+0800",
     "missed": 0
   },
@@ -2224,9 +2178,9 @@
     "types": [
       "拉麵店"
     ],
-    "place_id": null,
+    "place_id": "ChIJPVnLuH2pQjQRGgVv-Hbm9Mk",
     "gid": "/g/11j8dmq_j7",
-    "maps_url": "https://www.google.com/maps/place/%E5%9D%82%E9%81%93%20%E6%8B%89%E9%BA%B5/data=!4m6!3m5!1s0x3442a97db8cb593d:0xc9f4e676f86f051a!8m2!3d25.0825784!4d121.4703718!16s%2Fg%2F11j8dmq_j7?hl=zh-TW",
+    "maps_url": "https://www.google.com/maps/place/%E5%9D%82%E9%81%93%20%E6%8B%89%E9%BA%B5/data=!4m6!3m5!1s0x3442a97db8cb593d:0xc9f4e676f86f051a!8m2!3d25.0825784!4d121.4703718!16s%2Fg%2F11j8dmq_j7!19sChIJPVnLuH2pQjQRGgVv-Hbm9Mk?hl=zh-TW",
     "added_at": "2026-09-03T13:39:13+0800",
     "missed": 0
   },
@@ -2269,9 +2223,9 @@
     "types": [
       "拉麵店"
     ],
-    "place_id": null,
+    "place_id": "ChIJf-epBFupQjQRDbqbhjpFc_I",
     "gid": "/g/11h0v9zft3",
-    "maps_url": "https://www.google.com/maps/place/%E5%88%9D%E5%8E%9F%E9%BA%B5%E5%A0%B4%20%E6%96%B0%E6%9D%BF%E7%89%B9%E5%8D%80%E5%BA%97/data=!4m6!3m5!1s0x3442a95b04a9e77f:0xf273453a869bba0d!8m2!3d25.0148367!4d121.4675717!16s%2Fg%2F11h0v9zft3?hl=zh-TW",
+    "maps_url": "https://www.google.com/maps/place/%E5%88%9D%E5%8E%9F%E9%BA%B5%E5%A0%B4%20%E6%96%B0%E6%9D%BF%E7%89%B9%E5%8D%80%E5%BA%97/data=!4m6!3m5!1s0x3442a95b04a9e77f:0xf273453a869bba0d!8m2!3d25.0148367!4d121.4675717!16s%2Fg%2F11h0v9zft3!19sChIJf-epBFupQjQRDbqbhjpFc_I?hl=zh-TW",
     "added_at": "2026-09-03T13:39:13+0800",
     "missed": 0
   },
@@ -2299,9 +2253,9 @@
     "types": [
       "拉麵店"
     ],
-    "place_id": null,
+    "place_id": "ChIJV1YwqBumQjQRgXRpas1WAuw",
     "gid": "/g/11c20nn4ws",
-    "maps_url": "https://www.google.com/maps/place/%E4%B9%9D%E6%B9%AF%E5%B1%8B%E6%97%A5%E6%9C%AC%E6%8B%89%E9%BA%B5%E6%96%B0%E5%8C%97%E4%BA%94%E8%82%A1%E5%BA%97%EF%BC%88%E9%A3%9F%E6%9D%90%E5%94%AE%E5%AE%8C%E6%8F%90%E6%97%A9%E6%89%93%E7%83%8A%EF%BC%89/data=!4m6!3m5!1s0x3442a61ba8305657:0xec0256cd6a697481!8m2!3d25.085369!4d121.43773259999999!16s%2Fg%2F11c20nn4ws?hl=zh-TW",
+    "maps_url": "https://www.google.com/maps/place/%E4%B9%9D%E6%B9%AF%E5%B1%8B%E6%97%A5%E6%9C%AC%E6%8B%89%E9%BA%B5%E6%96%B0%E5%8C%97%E4%BA%94%E8%82%A1%E5%BA%97%EF%BC%88%E9%A3%9F%E6%9D%90%E5%94%AE%E5%AE%8C%E6%8F%90%E6%97%A9%E6%89%93%E7%83%8A%EF%BC%89/data=!4m6!3m5!1s0x3442a61ba8305657:0xec0256cd6a697481!8m2!3d25.085369!4d121.43773259999999!16s%2Fg%2F11c20nn4ws!19sChIJV1YwqBumQjQRgXRpas1WAuw?hl=zh-TW",
     "added_at": "2026-09-03T13:39:13+0800",
     "missed": 0
   },
@@ -2453,7 +2407,7 @@
     ],
     "place_id": "ChIJVXijBgCrQjQRU_PssI_yWXM",
     "gid": "/g/11yp67zyyv",
-    "maps_url": "https://www.google.com/maps/place/%E5%B0%8F%E9%AB%98%E6%8B%89%E9%BA%B5%20%E7%AB%B9%E6%9E%97%E8%B7%AF/data=!4m6!3m5!1s0x3442ab0006a37855:0x7359f28fb0ecf353!8m2!3d25.011125399999997!4d121.5202307!16s%2Fg%2F11yp67zyyv!19sChIJVXijBgCrQjQRU_PssI_yWXM?hl=zh-TW",
+    "maps_url": "https://www.google.com/maps/place/%E5%B0%8F%E9%AB%98%E6%8B%89%E9%BA%B5%20%E7%AB%B9%E6%9E%97%E8%B7%AF/data=!4m6!3m5!1s0x3442ab0006a37855:0x7359f28fb0ecf353!8m2!3d25.011125399999997!4d121.5202307!16s%2Fg%2F11yp67zyyv?hl=zh-TW",
     "added_at": "2026-09-03T13:39:13+0800",
     "missed": 0
   },
@@ -2470,7 +2424,7 @@
     "gid": "/g/11yvsnw0b5",
     "maps_url": "https://www.google.com/maps/place/%E5%A5%BD%E5%91%B7%E6%8B%89%E9%BA%B5X%E7%87%92%E5%92%96%E5%93%A9%20%E7%94%9C%E5%93%81%E5%90%83%E5%88%B0%E9%A3%BD%28%E9%80%9A%E5%8C%96%29%20%2A%E5%91%B7%EF%BC%9A%E3%84%92%E3%84%A7%E3%84%9A%CB%8A/data=!4m6!3m5!1s0x3442ab6456581359:0x9999a40ab91c9ba9!8m2!3d25.0297408!4d121.55424439999999!16s%2Fg%2F11yvsnw0b5?hl=zh-TW",
     "added_at": "2026-09-03T13:39:13+0800",
-    "missed": 1
+    "missed": 0
   },
   {
     "ftid": "0x3468010cb391bc0d:0xd3dbb977f85af1dd",
@@ -2603,7 +2557,7 @@
     ],
     "place_id": "ChIJfwZMoJ2pQjQRkFdK_ozsTSQ",
     "gid": "/g/11nfvp4s63",
-    "maps_url": "https://www.google.com/maps/place/%E7%B4%85%E9%A8%8E%E5%A3%AB%E6%8B%89%E9%BA%B5%E5%BA%97/data=!4m6!3m5!1s0x3442a99da04c067f:0x244dec8cfe4a5790!8m2!3d25.0646588!4d121.4992834!16s%2Fg%2F11nfvp4s63!19sChIJfwZMoJ2pQjQRkFdK_ozsTSQ?hl=zh-TW",
+    "maps_url": "https://www.google.com/maps/place/%E7%B4%85%E9%A8%8E%E5%A3%AB%E6%8B%89%E9%BA%B5%E5%BA%97/data=!4m6!3m5!1s0x3442a99da04c067f:0x244dec8cfe4a5790!8m2!3d25.0646588!4d121.4992834!16s%2Fg%2F11nfvp4s63?hl=zh-TW",
     "added_at": "2026-09-03T13:39:13+0800",
     "missed": 0
   },
@@ -2618,7 +2572,7 @@
     ],
     "place_id": "ChIJgXRWyMGpQjQRpADOlK4y70g",
     "gid": "/g/11l1yyhvp_",
-    "maps_url": "https://www.google.com/maps/place/%E9%B3%B4%E5%B7%9D%E6%8B%89%E9%BA%B5-%E6%B0%B8%E5%92%8C%E7%AB%B9%E6%9E%97%E5%BA%97%EF%BC%88%E5%8E%9F%E5%8C%97%E6%B5%B7%E9%81%93%E7%82%99%E7%87%92%E6%8B%89%E9%BA%B5%EF%BC%89/data=!4m6!3m5!1s0x3442a9c1c8567481:0x48ef32ae94ce00a4!8m2!3d25.0122903!4d121.5194726!16s%2Fg%2F11l1yyhvp_!19sChIJgXRWyMGpQjQRpADOlK4y70g?hl=zh-TW",
+    "maps_url": "https://www.google.com/maps/place/%E9%B3%B4%E5%B7%9D%E6%8B%89%E9%BA%B5-%E6%B0%B8%E5%92%8C%E7%AB%B9%E6%9E%97%E5%BA%97%EF%BC%88%E5%8E%9F%E5%8C%97%E6%B5%B7%E9%81%93%E7%82%99%E7%87%92%E6%8B%89%E9%BA%B5%EF%BC%89/data=!4m6!3m5!1s0x3442a9c1c8567481:0x48ef32ae94ce00a4!8m2!3d25.0122903!4d121.5194726!16s%2Fg%2F11l1yyhvp_?hl=zh-TW",
     "added_at": "2026-09-03T13:39:13+0800",
     "missed": 0
   },
@@ -2633,7 +2587,7 @@
     ],
     "place_id": "ChIJB-0UduOpQjQRdIHcroBf2lg",
     "gid": "/g/11bz0yrfdk",
-    "maps_url": "https://www.google.com/maps/place/%E4%B9%9D%E6%B9%AF%E5%B1%8B%E6%97%A5%E6%9C%AC%E6%8B%89%E9%BA%B5%E6%96%B0%E5%8C%97%E6%B0%B8%E5%92%8C%E6%B0%91%E7%94%9F%E5%BA%97/data=!4m6!3m5!1s0x3442a9e37614ed07:0x58da5f80aedc8174!8m2!3d24.998046799999997!4d121.52291989999999!16s%2Fg%2F11bz0yrfdk!19sChIJB-0UduOpQjQRdIHcroBf2lg?hl=zh-TW",
+    "maps_url": "https://www.google.com/maps/place/%E4%B9%9D%E6%B9%AF%E5%B1%8B%E6%97%A5%E6%9C%AC%E6%8B%89%E9%BA%B5%E6%96%B0%E5%8C%97%E6%B0%B8%E5%92%8C%E6%B0%91%E7%94%9F%E5%BA%97/data=!4m6!3m5!1s0x3442a9e37614ed07:0x58da5f80aedc8174!8m2!3d24.998046799999997!4d121.52291989999999!16s%2Fg%2F11bz0yrfdk?hl=zh-TW",
     "added_at": "2026-09-03T13:39:13+0800",
     "missed": 0
   },
@@ -2680,7 +2634,7 @@
     "gid": "/g/11p0w0h4rv",
     "maps_url": "https://www.google.com/maps/place/%E5%A1%A9%E7%90%89/data=!4m6!3m5!1s0x3442a9c54e2a997b:0xce274ce69131b5b8!8m2!3d25.0419372!4d121.5130037!16s%2Fg%2F11p0w0h4rv?hl=zh-TW",
     "added_at": "2026-09-03T13:39:13+0800",
-    "missed": 1
+    "missed": 2
   },
   {
     "ftid": "0x3442a9dd95c5b945:0xffff547a13c532cf",
@@ -2708,7 +2662,7 @@
     ],
     "place_id": "ChIJkXaoXCWoQjQR7gZQbKfoCmg",
     "gid": "/g/11g6_y66c3",
-    "maps_url": "https://www.google.com/maps/place/%E5%A5%BD%E5%91%B7%E6%8B%89%E9%BA%B5%20%E7%94%9C%E5%93%81%E5%90%83%E5%88%B0%E9%A3%BD%28%E6%9D%BF%E6%A9%8B%29%20%2A%E5%91%B7%EF%BC%9A%E3%84%92%E3%84%A7%E3%84%9A%CB%8A/data=!4m6!3m5!1s0x3442a8255ca87691:0x680ae8a76c5006ee!8m2!3d25.0136385!4d121.4791339!16s%2Fg%2F11g6_y66c3!19sChIJkXaoXCWoQjQR7gZQbKfoCmg?hl=zh-TW",
+    "maps_url": "https://www.google.com/maps/place/%E5%A5%BD%E5%91%B7%E6%8B%89%E9%BA%B5%20%E7%94%9C%E5%93%81%E5%90%83%E5%88%B0%E9%A3%BD%28%E6%9D%BF%E6%A9%8B%29%20%2A%E5%91%B7%EF%BC%9A%E3%84%92%E3%84%A7%E3%84%9A%CB%8A/data=!4m6!3m5!1s0x3442a8255ca87691:0x680ae8a76c5006ee!8m2!3d25.0136385!4d121.4791339!16s%2Fg%2F11g6_y66c3?hl=zh-TW",
     "added_at": "2026-09-03T13:39:13+0800",
     "missed": 0
   },
@@ -2738,7 +2692,7 @@
     ],
     "place_id": "ChIJqxrV6ripQjQRc_KO4OaeoUs",
     "gid": "/g/11jg67ny0p",
-    "maps_url": "https://www.google.com/maps/place/%E5%A5%BD%E5%91%B7%E6%8B%89%E9%BA%B5%20%E7%94%9C%E5%93%81%E5%90%83%E5%88%B0%E9%A3%BD%28%E6%B0%B8%E5%92%8C%29%20%2A%E5%91%B7%EF%BC%9A%E3%84%92%E3%84%A7%E3%84%9A%CB%8A/data=!4m6!3m5!1s0x3442a9b8ead51aab:0x4ba19ee6e08ef273!8m2!3d25.0074465!4d121.51273769999999!16s%2Fg%2F11jg67ny0p!19sChIJqxrV6ripQjQRc_KO4OaeoUs?hl=zh-TW",
+    "maps_url": "https://www.google.com/maps/place/%E5%A5%BD%E5%91%B7%E6%8B%89%E9%BA%B5%20%E7%94%9C%E5%93%81%E5%90%83%E5%88%B0%E9%A3%BD%28%E6%B0%B8%E5%92%8C%29%20%2A%E5%91%B7%EF%BC%9A%E3%84%92%E3%84%A7%E3%84%9A%CB%8A/data=!4m6!3m5!1s0x3442a9b8ead51aab:0x4ba19ee6e08ef273!8m2!3d25.0074465!4d121.51273769999999!16s%2Fg%2F11jg67ny0p?hl=zh-TW",
     "added_at": "2026-09-03T13:39:13+0800",
     "missed": 0
   },
@@ -2753,7 +2707,7 @@
     ],
     "place_id": "ChIJg0PLyPkBaDQRIHvyB-5ytmw",
     "gid": "/g/11cnbdydxy",
-    "maps_url": "https://www.google.com/maps/place/%E4%B9%9D%E6%B9%AF%E5%B1%8B%E6%97%A5%E6%9C%AC%E6%8B%89%E9%BA%B5%20%E6%96%B0%E5%BA%97%E5%A4%A7%E8%B1%90%E5%BA%97/data=!4m6!3m5!1s0x346801f9c8cb4383:0x6cb672ee07f27b20!8m2!3d24.9799254!4d121.54047659999999!16s%2Fg%2F11cnbdydxy!19sChIJg0PLyPkBaDQRIHvyB-5ytmw?hl=zh-TW",
+    "maps_url": "https://www.google.com/maps/place/%E4%B9%9D%E6%B9%AF%E5%B1%8B%E6%97%A5%E6%9C%AC%E6%8B%89%E9%BA%B5%20%E6%96%B0%E5%BA%97%E5%A4%A7%E8%B1%90%E5%BA%97/data=!4m6!3m5!1s0x346801f9c8cb4383:0x6cb672ee07f27b20!8m2!3d24.9799254!4d121.54047659999999!16s%2Fg%2F11cnbdydxy?hl=zh-TW",
     "added_at": "2026-09-03T13:39:13+0800",
     "missed": 0
   },
@@ -2768,7 +2722,7 @@
     ],
     "place_id": "ChIJYa1OL3QDaDQR-BkIfCkHWQo",
     "gid": "/g/11nfp2q3gm",
-    "maps_url": "https://www.google.com/maps/place/%E5%B9%B8%E8%8A%B1%E9%9B%9E%E7%99%BD%E6%B9%AF%E6%8B%89%E9%BA%B5%EF%BC%88%E4%B8%AD%E5%92%8C%E8%88%88%E5%8D%97%E5%BA%97%EF%BC%89%E5%8D%97%E5%8B%A2%E8%A7%92/data=!4m6!3m5!1s0x346803742f4ead61:0xa5907297c0819f8!8m2!3d24.9880134!4d121.5114832!16s%2Fg%2F11nfp2q3gm!19sChIJYa1OL3QDaDQR-BkIfCkHWQo?hl=zh-TW",
+    "maps_url": "https://www.google.com/maps/place/%E5%B9%B8%E8%8A%B1%E9%9B%9E%E7%99%BD%E6%B9%AF%E6%8B%89%E9%BA%B5%EF%BC%88%E4%B8%AD%E5%92%8C%E8%88%88%E5%8D%97%E5%BA%97%EF%BC%89%E5%8D%97%E5%8B%A2%E8%A7%92/data=!4m6!3m5!1s0x346803742f4ead61:0xa5907297c0819f8!8m2!3d24.9880134!4d121.5114832!16s%2Fg%2F11nfp2q3gm?hl=zh-TW",
     "added_at": "2026-09-03T13:39:13+0800",
     "missed": 0
   },
@@ -2783,7 +2737,7 @@
     ],
     "place_id": "ChIJ7TAF0CSpQjQRG1wkznUAg6c",
     "gid": "/g/11h4xjctz8",
-    "maps_url": "https://www.google.com/maps/place/%E7%89%A1%E4%B8%B9%E7%94%BA%E6%8B%89%E9%BA%B5/data=!4m6!3m5!1s0x3442a924d00530ed:0xa7830075ce245c1b!8m2!3d25.001842999999997!4d121.5226325!16s%2Fg%2F11h4xjctz8!19sChIJ7TAF0CSpQjQRG1wkznUAg6c?hl=zh-TW",
+    "maps_url": "https://www.google.com/maps/place/%E7%89%A1%E4%B8%B9%E7%94%BA%E6%8B%89%E9%BA%B5/data=!4m6!3m5!1s0x3442a924d00530ed:0xa7830075ce245c1b!8m2!3d25.001842999999997!4d121.5226325!16s%2Fg%2F11h4xjctz8?hl=zh-TW",
     "added_at": "2026-09-03T13:39:13+0800",
     "missed": 0
   },
@@ -2811,9 +2765,9 @@
     "types": [
       "拉麵店"
     ],
-    "place_id": null,
+    "place_id": "ChIJE_YQX7OnQjQRwq6zUlF8Pv8",
     "gid": "/g/11vknq6xpd",
-    "maps_url": "https://www.google.com/maps/place/%E9%9B%9E%E7%99%BD%E6%B9%AF%E5%B0%88%E9%96%80%20%E6%8B%89%E9%BA%B5%E4%B8%80%E8%B2%B4%20%E3%82%89%E3%83%BC%E3%82%81%E3%82%93%E4%B8%80%E8%B2%B4/data=!4m6!3m5!1s0x3442a7b35f10f613:0xff3e7c5152b3aec2!8m2!3d25.069243!4d121.3678956!16s%2Fg%2F11vknq6xpd?hl=zh-TW",
+    "maps_url": "https://www.google.com/maps/place/%E9%9B%9E%E7%99%BD%E6%B9%AF%E5%B0%88%E9%96%80%20%E6%8B%89%E9%BA%B5%E4%B8%80%E8%B2%B4%20%E3%82%89%E3%83%BC%E3%82%81%E3%82%93%E4%B8%80%E8%B2%B4/data=!4m6!3m5!1s0x3442a7b35f10f613:0xff3e7c5152b3aec2!8m2!3d25.069243!4d121.3678956!16s%2Fg%2F11vknq6xpd!19sChIJE_YQX7OnQjQRwq6zUlF8Pv8?hl=zh-TW",
     "added_at": "2026-09-03T13:39:13+0800",
     "missed": 0
   },
@@ -2860,7 +2814,7 @@
     "gid": "/g/11w9hw46m_",
     "maps_url": "https://www.google.com/maps/place/%E8%B5%A4%E7%BE%BD%E6%8B%89%E9%BA%B5%20%E3%83%A9%E3%83%BC%E3%83%A1%E3%83%B3%20Ramen%20Akabane/data=!4m6!3m5!1s0x3442a97eeeea7685:0x5e3dae69e6c8d0af!8m2!3d25.056204299999997!4d121.50983339999999!16s%2Fg%2F11w9hw46m_?hl=zh-TW",
     "added_at": "2026-09-03T13:39:13+0800",
-    "missed": 1
+    "missed": 2
   },
   {
     "ftid": "0x3442abeba44a07f9:0xbd74a4c50cdc786c",
@@ -3000,7 +2954,7 @@
     "gid": "/g/11sss9929t",
     "maps_url": "https://www.google.com/maps/place/%E6%B9%AE%E9%AF%B1/data=!4m6!3m5!1s0x3442abdf18ab0675:0x567be5597e8a9093!8m2!3d25.044532999999998!4d121.54315919999999!16s%2Fg%2F11sss9929t?hl=zh-TW",
     "added_at": "2026-09-03T13:39:13+0800",
-    "missed": 1
+    "missed": 2
   },
   {
     "ftid": "0x3442abcd3947134f:0x5919fb8d1c87610e",
@@ -3120,22 +3074,7 @@
     "gid": "/g/11cmt8ys89",
     "maps_url": "https://www.google.com/maps/place/%E9%BA%B5%E5%B1%8B%E4%B8%80%E7%87%88%20%E5%8D%97%E4%BA%AC%E5%BA%97/data=!4m6!3m5!1s0x3442a968b9d97e35:0xc45a4fb872906ad6!8m2!3d25.052404799999998!4d121.5243965!16s%2Fg%2F11cmt8ys89?hl=zh-TW",
     "added_at": "2026-09-03T13:39:13+0800",
-    "missed": 1
-  },
-  {
-    "ftid": "0x3442ad3067d89213:0x2efd10400116b75e",
-    "name": "四不相（24H無人拉麵、占卜x解惑、空間租借、藝術創作）",
-    "address": "114臺北市內湖區西康里內湖路一段203巷11號1樓",
-    "lat": 25.084174599999997,
-    "lng": 121.5636488,
-    "types": [
-      "拉麵店"
-    ],
-    "place_id": null,
-    "gid": "/g/11yv39rfkc",
-    "maps_url": "https://www.google.com/maps/place/%E5%9B%9B%E4%B8%8D%E7%9B%B8%EF%BC%8824H%E7%84%A1%E4%BA%BA%E6%8B%89%E9%BA%B5%E3%80%81%E5%8D%A0%E5%8D%9Cx%E8%A7%A3%E6%83%91%E3%80%81%E7%A9%BA%E9%96%93%E7%A7%9F%E5%80%9F%E3%80%81%E8%97%9D%E8%A1%93%E5%89%B5%E4%BD%9C%EF%BC%89/data=!4m6!3m5!1s0x3442ad3067d89213:0x2efd10400116b75e!8m2!3d25.084174599999997!4d121.5636488!16s%2Fg%2F11yv39rfkc?hl=zh-TW",
-    "added_at": "2026-09-03T13:39:13+0800",
-    "missed": 0
+    "missed": 2
   },
   {
     "ftid": "0x3442a70009ca2353:0x8f1a9dc051283158",
@@ -3178,7 +3117,7 @@
     ],
     "place_id": "ChIJq_euIGOsQjQRuTf58p1xf6A",
     "gid": "/g/11bwkg0lkr",
-    "maps_url": "https://www.google.com/maps/place/%E5%8C%97%E4%B8%80%E5%AE%B6%E6%8B%89%E9%BA%B5/data=!4m6!3m5!1s0x3442ac6320aef7ab:0xa07f719df2f937b9!8m2!3d25.076604099999997!4d121.5800936!16s%2Fg%2F11bwkg0lkr!19sChIJq_euIGOsQjQRuTf58p1xf6A?hl=zh-TW",
+    "maps_url": "https://www.google.com/maps/place/%E5%8C%97%E4%B8%80%E5%AE%B6%E6%8B%89%E9%BA%B5/data=!4m6!3m5!1s0x3442ac6320aef7ab:0xa07f719df2f937b9!8m2!3d25.076604099999997!4d121.5800936!16s%2Fg%2F11bwkg0lkr?hl=zh-TW",
     "added_at": "2026-09-03T13:39:13+0800",
     "missed": 0
   },
@@ -3374,7 +3313,7 @@
     ],
     "place_id": "ChIJocOy1RKsQjQRsJwKrQBrE98",
     "gid": "/g/11b620cxvw",
-    "maps_url": "https://www.google.com/maps/place/%E8%B1%9A%E9%AA%A8%E6%8B%89%E9%BA%B5%20%E5%87%AA%20%E5%A4%A7%E7%9B%B4%E5%BA%97/data=!4m6!3m5!1s0x3442ac12d5b2c3a1:0xdf136b00ad0a9cb0!8m2!3d25.082973499999998!4d121.5594929!16s%2Fg%2F11b620cxvw!19sChIJocOy1RKsQjQRsJwKrQBrE98?hl=zh-TW",
+    "maps_url": "https://www.google.com/maps/place/%E8%B1%9A%E9%AA%A8%E6%8B%89%E9%BA%B5%20%E5%87%AA%20%E5%A4%A7%E7%9B%B4%E5%BA%97/data=!4m6!3m5!1s0x3442ac12d5b2c3a1:0xdf136b00ad0a9cb0!8m2!3d25.082973499999998!4d121.5594929!16s%2Fg%2F11b620cxvw?hl=zh-TW",
     "added_at": "2026-09-03T13:39:13+0800",
     "missed": 0
   },
@@ -3483,7 +3422,7 @@
     "gid": "/g/11x_jx5z8g",
     "maps_url": "https://www.google.com/maps/place/%E4%B8%BC%E4%B8%BC%EF%BD%9C%E4%B8%BC%E9%A3%AF%EF%BD%9C%E5%85%A7%E6%B9%96%E6%8B%89%E9%BA%B5%E6%8E%A8%E8%96%A6%EF%BD%9C%E5%85%A7%E6%B9%96%E4%B8%BC%E9%A3%AF%E6%8E%A8%E8%96%A6/data=!4m6!3m5!1s0x3442adbaf161bc79:0x87ca12a7f39b0f26!8m2!3d25.0698123!4d121.59216239999999!16s%2Fg%2F11x_jx5z8g?hl=zh-TW",
     "added_at": "2026-09-03T13:39:13+0800",
-    "missed": 1
+    "missed": 0
   },
   {
     "ftid": "0x3442acbb0d830cb5:0xc4861f8fb1ce52eb",
@@ -3514,7 +3453,7 @@
     "gid": "/g/11l68pqvgr",
     "maps_url": "https://www.google.com/maps/place/%E9%9B%9E%E6%B9%AF%E6%A1%91%20Torisan%20%E4%B8%AD%E5%B1%B1%E5%BA%97/data=!4m6!3m5!1s0x3442a91e86e3d3b9:0x68164e23b078ce08!8m2!3d25.0577276!4d121.52224609999999!16s%2Fg%2F11l68pqvgr?hl=zh-TW",
     "added_at": "2026-09-03T13:39:13+0800",
-    "missed": 1
+    "missed": 0
   },
   {
     "ftid": "0x3442ac7c7aeb42d5:0x5f83d3d3b03ed024",
@@ -3543,21 +3482,6 @@
     "place_id": null,
     "gid": "/g/1tlbg89_",
     "maps_url": "https://www.google.com/maps/place/%E5%8B%9D%E6%8B%89%E9%BA%B5/data=!4m6!3m5!1s0x3442ac0539f29f9f:0xa46209073b1f7452!8m2!3d25.0828299!4d121.5466781!16s%2Fg%2F1tlbg89_?hl=zh-TW",
-    "added_at": "2026-09-03T13:39:13+0800",
-    "missed": 0
-  },
-  {
-    "ftid": "0x3442ad8d3dee46c5:0x68d66797227a7ab0",
-    "name": "甘泉魚麵西湖店",
-    "address": "114臺北市內湖區西湖里內湖路一段285號2樓",
-    "lat": 25.082566099999998,
-    "lng": 121.56666919999999,
-    "types": [
-      "拉麵店"
-    ],
-    "place_id": null,
-    "gid": "/g/11h286242t",
-    "maps_url": "https://www.google.com/maps/place/%E7%94%98%E6%B3%89%E9%AD%9A%E9%BA%B5%E8%A5%BF%E6%B9%96%E5%BA%97/data=!4m6!3m5!1s0x3442ad8d3dee46c5:0x68d66797227a7ab0!8m2!3d25.082566099999998!4d121.56666919999999!16s%2Fg%2F11h286242t?hl=zh-TW",
     "added_at": "2026-09-03T13:39:13+0800",
     "missed": 0
   },
@@ -3652,22 +3576,6 @@
     "missed": 0
   },
   {
-    "ftid": "0x3442afc093c4e511:0x8fa2ebff27743434",
-    "name": "拉麵研究所-24H無人拉麵店",
-    "address": "111臺北市士林區義信里大北路61號",
-    "lat": 25.090042999999998,
-    "lng": 121.52528699999999,
-    "types": [
-      "拉麵店",
-      "餐廳"
-    ],
-    "place_id": null,
-    "gid": "/g/11y43v_5h0",
-    "maps_url": "https://www.google.com/maps/place/%E6%8B%89%E9%BA%B5%E7%A0%94%E7%A9%B6%E6%89%80-24H%E7%84%A1%E4%BA%BA%E6%8B%89%E9%BA%B5%E5%BA%97/data=!4m6!3m5!1s0x3442afc093c4e511:0x8fa2ebff27743434!8m2!3d25.090042999999998!4d121.52528699999999!16s%2Fg%2F11y43v_5h0?hl=zh-TW",
-    "added_at": "2026-09-03T13:39:13+0800",
-    "missed": 0
-  },
-  {
     "ftid": "0x3442aeb06f798787:0x84d2e3b67fa141bc",
     "name": "道樂屋台",
     "address": "111臺北市士林區義信里基河路112號",
@@ -3694,21 +3602,6 @@
     "place_id": null,
     "gid": "/g/11mp4qrls6",
     "maps_url": "https://www.google.com/maps/place/%E9%95%B7%E7%94%9F%E5%A1%A9%E4%BA%BA%20%E5%A4%A9%E6%AF%8D/data=!4m6!3m5!1s0x3442afa299b33177:0xb9ffe41a4001a9e7!8m2!3d25.1186015!4d121.5257063!16s%2Fg%2F11mp4qrls6?hl=zh-TW",
-    "added_at": "2026-09-03T13:39:13+0800",
-    "missed": 0
-  },
-  {
-    "ftid": "0x3442af0026da0fd3:0xf43a2c0211e49313",
-    "name": "Yiguo Ramen 라면 24H 異國無人拉麵店",
-    "address": "111臺北市士林區福德里福德路12號14號",
-    "lat": 25.0924065,
-    "lng": 121.5257882,
-    "types": [
-      "拉麵店"
-    ],
-    "place_id": null,
-    "gid": "/g/11vkbf09f6",
-    "maps_url": "https://www.google.com/maps/place/Yiguo%20Ramen%20%EB%9D%BC%EB%A9%B4%2024H%20%E7%95%B0%E5%9C%8B%E7%84%A1%E4%BA%BA%E6%8B%89%E9%BA%B5%E5%BA%97/data=!4m6!3m5!1s0x3442af0026da0fd3:0xf43a2c0211e49313!8m2!3d25.0924065!4d121.5257882!16s%2Fg%2F11vkbf09f6?hl=zh-TW",
     "added_at": "2026-09-03T13:39:13+0800",
     "missed": 0
   },
@@ -3781,7 +3674,7 @@
     "lat": 25.0806993,
     "lng": 121.5209143,
     "types": [
-      "ラーメン屋"
+      "拉麵店"
     ],
     "place_id": null,
     "gid": "/g/11c2pbvm_z",
@@ -3879,7 +3772,7 @@
     "gid": "/g/11x2hwhq5h",
     "maps_url": "https://www.google.com/maps/place/%E9%9A%B1%E5%AE%B6%E6%8B%89%E9%BA%B5%20%E5%8D%97%E9%99%BD%E5%BA%97/data=!4m6!3m5!1s0x3442a9f98d65b173:0xd228944300d44362!8m2!3d25.0442975!4d121.5161383!16s%2Fg%2F11x2hwhq5h?hl=zh-TW",
     "added_at": "2026-09-03T13:39:13+0800",
-    "missed": 1
+    "missed": 2
   },
   {
     "ftid": "0x3442af00531e8525:0x9c04cfb654dfe761",
@@ -3912,21 +3805,6 @@
     "missed": 0
   },
   {
-    "ftid": "0x3442adf0ec6312db:0x6286ea50c19bea0a",
-    "name": "野菜屋拉麵",
-    "address": "111臺北市士林區陽明里陽明路一段52號",
-    "lat": 25.150031,
-    "lng": 121.55000299999999,
-    "types": [
-      "拉麵店"
-    ],
-    "place_id": null,
-    "gid": "/g/1tdqr739",
-    "maps_url": "https://www.google.com/maps/place/%E9%87%8E%E8%8F%9C%E5%B1%8B%E6%8B%89%E9%BA%B5/data=!4m6!3m5!1s0x3442adf0ec6312db:0x6286ea50c19bea0a!8m2!3d25.150031!4d121.55000299999999!16s%2Fg%2F1tdqr739?hl=zh-TW",
-    "added_at": "2026-09-03T13:39:13+0800",
-    "missed": 0
-  },
-  {
     "ftid": "0x3442af0057dea42d:0x6af6f4f749f6519c",
     "name": "藤哲商行",
     "address": "111臺北市士林區德行里福華路128巷4號",
@@ -3939,21 +3817,6 @@
     "place_id": null,
     "gid": "/g/11vx257xcb",
     "maps_url": "https://www.google.com/maps/place/%E8%97%A4%E5%93%B2%E5%95%86%E8%A1%8C/data=!4m6!3m5!1s0x3442af0057dea42d:0x6af6f4f749f6519c!8m2!3d25.1028406!4d121.5229138!16s%2Fg%2F11vx257xcb?hl=zh-TW",
-    "added_at": "2026-09-03T13:39:13+0800",
-    "missed": 0
-  },
-  {
-    "ftid": "0x3442ad8958d1b117:0x417ccb0e16109776",
-    "name": "疆美味 新疆手工涼皮 手工拉麵",
-    "address": "111臺北市士林區陽明里菁山路8號",
-    "lat": 25.137958899999997,
-    "lng": 121.54686,
-    "types": [
-      "熟食店"
-    ],
-    "place_id": null,
-    "gid": "/g/11j97xtz1s",
-    "maps_url": "https://www.google.com/maps/place/%E7%96%86%E7%BE%8E%E5%91%B3%20%E6%96%B0%E7%96%86%E6%89%8B%E5%B7%A5%E6%B6%BC%E7%9A%AE%20%E6%89%8B%E5%B7%A5%E6%8B%89%E9%BA%B5/data=!4m6!3m5!1s0x3442ad8958d1b117:0x417ccb0e16109776!8m2!3d25.137958899999997!4d121.54686!16s%2Fg%2F11j97xtz1s?hl=zh-TW",
     "added_at": "2026-09-03T13:39:13+0800",
     "missed": 0
   },
@@ -3973,23 +3836,6 @@
     "missed": 0
   },
   {
-    "ftid": "0x3442afcfd6152d31:0xb8c3298b04fcfde7",
-    "name": "滿足溫泉拉麵",
-    "address": "112臺北市北投區中心里中山路1之8號",
-    "lat": 25.1370212,
-    "lng": 121.50487199999999,
-    "types": [
-      "拉麵店",
-      "麵店",
-      "餐廳"
-    ],
-    "place_id": "ChIJMS0V1s-vQjQR5_38BIspw7g",
-    "gid": "/g/11pf5q4q98",
-    "maps_url": "https://www.google.com/maps/place/%E6%BB%BF%E8%B6%B3%E6%BA%AB%E6%B3%89%E6%8B%89%E9%BA%B5/data=!4m6!3m5!1s0x3442afcfd6152d31:0xb8c3298b04fcfde7!8m2!3d25.1370212!4d121.50487199999999!16s%2Fg%2F11pf5q4q98?hl=zh-TW",
-    "added_at": "2026-09-03T13:39:13+0800",
-    "missed": 0
-  },
-  {
     "ftid": "0x3442afb39fa64295:0x41e96e9c05d7b272",
     "name": "吹風雞白湯拉麵 新北投",
     "address": "112臺北市北投區中心里中和街40-6號",
@@ -4001,21 +3847,6 @@
     "place_id": "ChIJlUKmn7OvQjQRcrLXBZxu6UE",
     "gid": "/g/11m5pl33p9",
     "maps_url": "https://www.google.com/maps/place/%E5%90%B9%E9%A2%A8%E9%9B%9E%E7%99%BD%E6%B9%AF%E6%8B%89%E9%BA%B5%20%E6%96%B0%E5%8C%97%E6%8A%95/data=!4m6!3m5!1s0x3442afb39fa64295:0x41e96e9c05d7b272!8m2!3d25.1385541!4d121.50295419999999!16s%2Fg%2F11m5pl33p9?hl=zh-TW",
-    "added_at": "2026-09-03T13:39:13+0800",
-    "missed": 0
-  },
-  {
-    "ftid": "0x3442af4b8eed5a6d:0x1992ae49548854f1",
-    "name": "好麵熟無人拉麵（24小時智煮拉麵）",
-    "address": "112臺北市北投區福興里自強街69號",
-    "lat": 25.1106332,
-    "lng": 121.5141805,
-    "types": [
-      "餐廳"
-    ],
-    "place_id": "ChIJbVrtjkuvQjQR8VSIVEmukhk",
-    "gid": "/g/11ln75fhks",
-    "maps_url": "https://www.google.com/maps/place/%E5%A5%BD%E9%BA%B5%E7%86%9F%E7%84%A1%E4%BA%BA%E6%8B%89%E9%BA%B5%EF%BC%8824%E5%B0%8F%E6%99%82%E6%99%BA%E7%85%AE%E6%8B%89%E9%BA%B5%EF%BC%89/data=!4m6!3m5!1s0x3442af4b8eed5a6d:0x1992ae49548854f1!8m2!3d25.1106332!4d121.5141805!16s%2Fg%2F11ln75fhks?hl=zh-TW",
     "added_at": "2026-09-03T13:39:13+0800",
     "missed": 0
   },
@@ -4074,7 +3905,7 @@
     "lat": 25.137918,
     "lng": 121.503029,
     "types": [
-      "拉麵店"
+      "ラーメン屋"
     ],
     "place_id": "ChIJAzYuPUWuQjQRTlPsow9JKf0",
     "gid": "/g/11by_cv5mh",
@@ -4143,23 +3974,6 @@
     "missed": 0
   },
   {
-    "ftid": "0x3442ae431b8fcc01:0x1dc711393ae72c79",
-    "name": "滿客屋拉麵",
-    "address": "112臺北市北投區林泉里溫泉路110號",
-    "lat": 25.136225399999997,
-    "lng": 121.51098089999999,
-    "types": [
-      "拉麵店",
-      "日本餐廳",
-      "餐廳"
-    ],
-    "place_id": "ChIJAcyPG0OuQjQReSznOjkRxx0",
-    "gid": "/g/1tw1bjl4",
-    "maps_url": "https://www.google.com/maps/place/%E6%BB%BF%E5%AE%A2%E5%B1%8B%E6%8B%89%E9%BA%B5/data=!4m6!3m5!1s0x3442ae431b8fcc01:0x1dc711393ae72c79!8m2!3d25.136225399999997!4d121.51098089999999!16s%2Fg%2F1tw1bjl4?hl=zh-TW",
-    "added_at": "2026-09-03T13:39:13+0800",
-    "missed": 0
-  },
-  {
     "ftid": "0x3442af8bce57311f:0x5046a4cd003548bf",
     "name": "九湯屋拉麵北投石牌店",
     "address": "112024臺北市北投區振華里裕民一路40巷13號",
@@ -4221,21 +4035,6 @@
     "missed": 0
   },
   {
-    "ftid": "0x3442af0d20786a49:0xcaabc465599155e7",
-    "name": "滿瀚鵝肉拉麵",
-    "address": "112臺北市北投區立功街80巷1號",
-    "lat": 25.125593,
-    "lng": 121.46971839999999,
-    "types": [
-      "麵店"
-    ],
-    "place_id": null,
-    "gid": "/g/1wbrvh04",
-    "maps_url": "https://www.google.com/maps/place/%E6%BB%BF%E7%80%9A%E9%B5%9D%E8%82%89%E6%8B%89%E9%BA%B5/data=!4m6!3m5!1s0x3442af0d20786a49:0xcaabc465599155e7!8m2!3d25.125593!4d121.46971839999999!16s%2Fg%2F1wbrvh04?hl=zh-TW",
-    "added_at": "2026-09-03T13:39:13+0800",
-    "missed": 0
-  },
-  {
     "ftid": "0x3442afa01edcd40b:0x8b4dd2938fc329fb",
     "name": "らあめん花月嵐 北投石牌店",
     "address": "112臺北市北投區振華里石牌路二段122號",
@@ -4247,30 +4046,6 @@
     "place_id": null,
     "gid": "/g/11q_863rjy",
     "maps_url": "https://www.google.com/maps/place/%E3%82%89%E3%81%82%E3%82%81%E3%82%93%E8%8A%B1%E6%9C%88%E5%B5%90%20%E5%8C%97%E6%8A%95%E7%9F%B3%E7%89%8C%E5%BA%97/data=!4m6!3m5!1s0x3442afa01edcd40b:0x8b4dd2938fc329fb!8m2!3d25.117831199999998!4d121.5173145!16s%2Fg%2F11q_863rjy?hl=zh-TW",
-    "added_at": "2026-09-03T13:39:13+0800",
-    "missed": 0
-  },
-  {
-    "ftid": "0x3442af6df4737233:0x9d387e6a242d7a9",
-    "name": "LANO食堂x健康餐盒",
-    "address": "112臺北市北投區振華里振華街14號",
-    "lat": 25.1157641,
-    "lng": 121.5193793,
-    "types": [
-      "拉麵店",
-      "肉檔",
-      "到會服務",
-      "健康食品店",
-      "外送速遞餐廳",
-      "肉類批發商",
-      "夏威夷蓋飯專賣店",
-      "健康食品餐廳",
-      "海鮮批發商",
-      "蔬菜批發市場"
-    ],
-    "place_id": null,
-    "gid": "/g/11l8sbqsj7",
-    "maps_url": "https://www.google.com/maps/place/LANO%E9%A3%9F%E5%A0%82x%E5%81%A5%E5%BA%B7%E9%A4%90%E7%9B%92/data=!4m6!3m5!1s0x3442af6df4737233:0x9d387e6a242d7a9!8m2!3d25.1157641!4d121.5193793!16s%2Fg%2F11l8sbqsj7?hl=zh-TW",
     "added_at": "2026-09-03T13:39:13+0800",
     "missed": 0
   },
@@ -4346,21 +4121,6 @@
     "place_id": null,
     "gid": "/g/11sb7w261m",
     "maps_url": "https://www.google.com/maps/place/%E9%BA%B5%E5%8C%A1%E5%8C%A1%E6%8B%89%E9%BA%B5%E9%A3%9F%E5%A0%82%20%E6%8D%B7%E9%81%8B%E6%99%AF%E7%BE%8E%E5%BA%97/data=!4m6!3m5!1s0x3442ab5a50ffd763:0x3642c7d5206262e3!8m2!3d24.9926104!4d121.54138409999999!16s%2Fg%2F11sb7w261m?hl=zh-TW",
-    "added_at": "2026-09-03T13:39:13+0800",
-    "missed": 0
-  },
-  {
-    "ftid": "0x346801002fbfc61d:0x59607174b2554b04",
-    "name": "箸拉麵",
-    "address": "116臺北市文山區樟腳里木新路二段249號",
-    "lat": 24.9832108,
-    "lng": 121.56700409999999,
-    "types": [
-      "日本餐廳"
-    ],
-    "place_id": null,
-    "gid": "/g/11yqdfbm8g",
-    "maps_url": "https://www.google.com/maps/place/%E7%AE%B8%E6%8B%89%E9%BA%B5/data=!4m6!3m5!1s0x346801002fbfc61d:0x59607174b2554b04!8m2!3d24.9832108!4d121.56700409999999!16s%2Fg%2F11yqdfbm8g?hl=zh-TW",
     "added_at": "2026-09-03T13:39:13+0800",
     "missed": 0
   },
@@ -4472,21 +4232,6 @@
     "missed": 0
   },
   {
-    "ftid": "0x3442ab44e915bb6d:0xd35733e458a188f9",
-    "name": "展弟拉麵店",
-    "address": "116臺北市文山區指南路二段60號",
-    "lat": 24.9876324,
-    "lng": 121.57561799999999,
-    "types": [
-      "餐廳"
-    ],
-    "place_id": null,
-    "gid": "/g/11rwqp1kdf",
-    "maps_url": "https://www.google.com/maps/place/%E5%B1%95%E5%BC%9F%E6%8B%89%E9%BA%B5%E5%BA%97/data=!4m6!3m5!1s0x3442ab44e915bb6d:0xd35733e458a188f9!8m2!3d24.9876324!4d121.57561799999999!16s%2Fg%2F11rwqp1kdf?hl=zh-TW",
-    "added_at": "2026-09-03T13:39:13+0800",
-    "missed": 0
-  },
-  {
     "ftid": "0x346801dfb213fa69:0x4cac2349caeb06e6",
     "name": "太子拉麵",
     "address": "116臺北市文山區樟腳里木新路三段126號",
@@ -4515,21 +4260,6 @@
     "place_id": null,
     "gid": "/g/11js8l15rl",
     "maps_url": "https://www.google.com/maps/place/%E5%A5%BD%E5%91%B7%E6%8B%89%E9%BA%B5%20%E7%94%9C%E5%93%81%E5%90%83%E5%88%B0%E9%A3%BD%28%E5%85%AC%E9%A4%A8%29%20%2A%E5%91%B7%EF%BC%9A%E3%84%92%E3%84%A7%E3%84%9A%CB%8A/data=!4m6!3m5!1s0x3442a9f76e72b9dd:0x30d47a23d8226149!8m2!3d25.0139872!4d121.5336346!16s%2Fg%2F11js8l15rl?hl=zh-TW",
-    "added_at": "2026-09-03T13:39:13+0800",
-    "missed": 0
-  },
-  {
-    "ftid": "0x3442aa03dc834a81:0xc72adefc4aca5272",
-    "name": "甘泉魚麵 (景美店)",
-    "address": "116臺北市文山區景仁里羅斯福路六段150巷1號",
-    "lat": 24.995269999999998,
-    "lng": 121.54096249999999,
-    "types": [
-      "拉麵店"
-    ],
-    "place_id": null,
-    "gid": "/g/11f5djs95_",
-    "maps_url": "https://www.google.com/maps/place/%E7%94%98%E6%B3%89%E9%AD%9A%E9%BA%B5%20%28%E6%99%AF%E7%BE%8E%E5%BA%97%29/data=!4m6!3m5!1s0x3442aa03dc834a81:0xc72adefc4aca5272!8m2!3d24.995269999999998!4d121.54096249999999!16s%2Fg%2F11f5djs95_?hl=zh-TW",
     "added_at": "2026-09-03T13:39:13+0800",
     "missed": 0
   },
@@ -4814,9 +4544,9 @@
       "拉麵店",
       "餐廳"
     ],
-    "place_id": null,
+    "place_id": "ChIJ0V5RCwCpQjQRlRyPpFDWIxw",
     "gid": "/g/11wwbl42g_",
-    "maps_url": "https://www.google.com/maps/place/%E6%BB%9D%E7%A6%BE%E8%A3%BD%E9%BA%B5%E6%89%80-%E6%9D%BF%E6%A9%8B%E6%B0%91%E7%94%9F%E5%BA%97/data=!4m6!3m5!1s0x3442a9000b515ed1:0x1c23d650a48f1c95!8m2!3d25.0250122!4d121.46748799999999!16s%2Fg%2F11wwbl42g_?hl=zh-TW",
+    "maps_url": "https://www.google.com/maps/place/%E6%BB%9D%E7%A6%BE%E8%A3%BD%E9%BA%B5%E6%89%80-%E6%9D%BF%E6%A9%8B%E6%B0%91%E7%94%9F%E5%BA%97/data=!4m6!3m5!1s0x3442a9000b515ed1:0x1c23d650a48f1c95!8m2!3d25.0250122!4d121.46748799999999!16s%2Fg%2F11wwbl42g_!19sChIJ0V5RCwCpQjQRlRyPpFDWIxw?hl=zh-TW",
     "added_at": "2026-09-03T13:39:13+0800",
     "missed": 0
   },
@@ -4829,9 +4559,9 @@
     "types": [
       "拉麵店"
     ],
-    "place_id": null,
+    "place_id": "ChIJ7R8PyXupQjQR83zhCmOL6Xk",
     "gid": "/g/11ypcfd6_m",
-    "maps_url": "https://www.google.com/maps/place/%E8%97%8F%E6%9C%88%E3%83%A9%E3%83%BC%E3%83%A1%E3%83%B3/data=!4m6!3m5!1s0x3442a97bc90f1fed:0x79e98b630ae17cf3!8m2!3d25.0156264!4d121.47217549999999!16s%2Fg%2F11ypcfd6_m?hl=zh-TW",
+    "maps_url": "https://www.google.com/maps/place/%E8%97%8F%E6%9C%88%E3%83%A9%E3%83%BC%E3%83%A1%E3%83%B3/data=!4m6!3m5!1s0x3442a97bc90f1fed:0x79e98b630ae17cf3!8m2!3d25.0156264!4d121.47217549999999!16s%2Fg%2F11ypcfd6_m!19sChIJ7R8PyXupQjQR83zhCmOL6Xk?hl=zh-TW",
     "added_at": "2026-09-03T13:39:13+0800",
     "missed": 0
   },
@@ -4844,9 +4574,9 @@
     "types": [
       "拉麵店"
     ],
-    "place_id": null,
+    "place_id": "ChIJAQ1HiOCpQjQRqA5sv83d8Hw",
     "gid": "/g/11nk09p0c3",
-    "maps_url": "https://www.google.com/maps/place/ONI%20NOODLE%20%E4%BA%8C%E9%AC%BC%E9%BA%B5%E8%88%96%EF%BD%9C%E6%9D%BF%E6%A9%8B%E6%96%B0%E5%9F%94%E5%BA%97/data=!4m6!3m5!1s0x3442a9e088470d01:0x7cf0ddcdbf6c0ea8!8m2!3d25.021053499999997!4d121.4676013!16s%2Fg%2F11nk09p0c3?hl=zh-TW",
+    "maps_url": "https://www.google.com/maps/place/ONI%20NOODLE%20%E4%BA%8C%E9%AC%BC%E9%BA%B5%E8%88%96%EF%BD%9C%E6%9D%BF%E6%A9%8B%E6%96%B0%E5%9F%94%E5%BA%97/data=!4m6!3m5!1s0x3442a9e088470d01:0x7cf0ddcdbf6c0ea8!8m2!3d25.021053499999997!4d121.4676013!16s%2Fg%2F11nk09p0c3!19sChIJAQ1HiOCpQjQRqA5sv83d8Hw?hl=zh-TW",
     "added_at": "2026-09-03T13:39:13+0800",
     "missed": 0
   },
@@ -4860,9 +4590,9 @@
       "拉麵店",
       "壽司店"
     ],
-    "place_id": null,
+    "place_id": "ChIJwTgH2uCpQjQR3Ng-zmsUbPY",
     "gid": "/g/11x1nnsmqc",
-    "maps_url": "https://www.google.com/maps/place/%E4%B8%BC%E5%91%B3%E6%8B%89%E9%BA%B5-%E6%9D%BF%E6%A9%8B%E5%A4%96%E5%B8%B6%E6%8B%89%E9%BA%B5%7C%E5%B9%B3%E5%83%B9%E6%8B%89%E9%BA%B5%7C%E5%BF%85%E5%90%83%E6%8B%89%E9%BA%B5%7C%E5%A4%96%E5%B8%B6%E7%BE%8E%E9%A3%9F%7CCP%E6%8B%89%E9%BA%B5%7C%E4%BA%BA%E6%B0%A3%E6%8B%89%E9%BA%B5%7C%E5%9C%A8%E5%9C%B0%E6%8E%A8%E8%96%A6%E6%8B%89%E9%BA%B5%7C%E7%89%B9%E8%89%B2%E6%8B%89%E9%BA%B5/data=!4m6!3m5!1s0x3442a9e0da0738c1:0xf66c146bce3ed8dc!8m2!3d25.0206479!4d121.4676252!16s%2Fg%2F11x1nnsmqc?hl=zh-TW",
+    "maps_url": "https://www.google.com/maps/place/%E4%B8%BC%E5%91%B3%E6%8B%89%E9%BA%B5-%E6%9D%BF%E6%A9%8B%E5%A4%96%E5%B8%B6%E6%8B%89%E9%BA%B5%7C%E5%B9%B3%E5%83%B9%E6%8B%89%E9%BA%B5%7C%E5%BF%85%E5%90%83%E6%8B%89%E9%BA%B5%7C%E5%A4%96%E5%B8%B6%E7%BE%8E%E9%A3%9F%7CCP%E6%8B%89%E9%BA%B5%7C%E4%BA%BA%E6%B0%A3%E6%8B%89%E9%BA%B5%7C%E5%9C%A8%E5%9C%B0%E6%8E%A8%E8%96%A6%E6%8B%89%E9%BA%B5%7C%E7%89%B9%E8%89%B2%E6%8B%89%E9%BA%B5/data=!4m6!3m5!1s0x3442a9e0da0738c1:0xf66c146bce3ed8dc!8m2!3d25.0206479!4d121.4676252!16s%2Fg%2F11x1nnsmqc!19sChIJwTgH2uCpQjQR3Ng-zmsUbPY?hl=zh-TW",
     "added_at": "2026-09-03T13:39:13+0800",
     "missed": 0
   },
@@ -4906,9 +4636,9 @@
     "types": [
       "拉麵店"
     ],
-    "place_id": null,
+    "place_id": "ChIJh8cuz1epQjQRbBlKVw8B13c",
     "gid": "/g/11lmn9vz9f",
-    "maps_url": "https://www.google.com/maps/place/%E6%88%90%E7%99%AE%E6%8B%89%E9%BA%B5/data=!4m6!3m5!1s0x3442a957cf2ec787:0x77d7010f574a196c!8m2!3d25.0258118!4d121.465035!16s%2Fg%2F11lmn9vz9f?hl=zh-TW",
+    "maps_url": "https://www.google.com/maps/place/%E6%88%90%E7%99%AE%E6%8B%89%E9%BA%B5/data=!4m6!3m5!1s0x3442a957cf2ec787:0x77d7010f574a196c!8m2!3d25.0258118!4d121.465035!16s%2Fg%2F11lmn9vz9f!19sChIJh8cuz1epQjQRbBlKVw8B13c?hl=zh-TW",
     "added_at": "2026-09-03T13:39:13+0800",
     "missed": 0
   },
@@ -4922,9 +4652,9 @@
       "拉麵店",
       "日本餐廳"
     ],
-    "place_id": null,
+    "place_id": "ChIJcYMHBAADaDQRbM7PLkqNEXs",
     "gid": "/g/11w7j4tzsp",
-    "maps_url": "https://www.google.com/maps/place/%E8%BE%B0%E5%99%8C%E6%8B%89%E9%BA%B5-%E6%9D%BF%E6%A9%8B%E7%BE%8E%E9%A3%9F-%E9%A4%90%E5%BB%B3-%E6%97%A5%E6%9C%AC%E6%96%99%E7%90%86/data=!4m6!3m5!1s0x3468030004078371:0x7b118d4a2ecfce6c!8m2!3d25.0000412!4d121.4585414!16s%2Fg%2F11w7j4tzsp?hl=zh-TW",
+    "maps_url": "https://www.google.com/maps/place/%E8%BE%B0%E5%99%8C%E6%8B%89%E9%BA%B5-%E6%9D%BF%E6%A9%8B%E7%BE%8E%E9%A3%9F-%E9%A4%90%E5%BB%B3-%E6%97%A5%E6%9C%AC%E6%96%99%E7%90%86/data=!4m6!3m5!1s0x3468030004078371:0x7b118d4a2ecfce6c!8m2!3d25.0000412!4d121.4585414!16s%2Fg%2F11w7j4tzsp!19sChIJcYMHBAADaDQRbM7PLkqNEXs?hl=zh-TW",
     "added_at": "2026-09-03T13:39:13+0800",
     "missed": 0
   },
@@ -4952,9 +4682,9 @@
     "types": [
       "拉麵店"
     ],
-    "place_id": null,
+    "place_id": "ChIJj2af-q2pQjQRTbViIbKoFhQ",
     "gid": "/g/11m68v598z",
-    "maps_url": "https://www.google.com/maps/place/%E5%B0%8F%E6%9D%BE%E6%8B%89%E9%BA%B5%20%E8%87%B4%E7%90%86%E8%87%AA%E7%94%B1%E8%B7%AF/data=!4m6!3m5!1s0x3442a9adfa9f668f:0x1416a8b22162b54d!8m2!3d25.023025399999998!4d121.4654169!16s%2Fg%2F11m68v598z?hl=zh-TW",
+    "maps_url": "https://www.google.com/maps/place/%E5%B0%8F%E6%9D%BE%E6%8B%89%E9%BA%B5%20%E8%87%B4%E7%90%86%E8%87%AA%E7%94%B1%E8%B7%AF/data=!4m6!3m5!1s0x3442a9adfa9f668f:0x1416a8b22162b54d!8m2!3d25.023025399999998!4d121.4654169!16s%2Fg%2F11m68v598z!19sChIJj2af-q2pQjQRTbViIbKoFhQ?hl=zh-TW",
     "added_at": "2026-09-03T13:39:13+0800",
     "missed": 0
   },
@@ -4967,9 +4697,9 @@
     "types": [
       "拉麵店"
     ],
-    "place_id": null,
+    "place_id": "ChIJA3ZkivWpQjQRZIa4mxZxUhw",
     "gid": "/g/11rcvb1j5k",
-    "maps_url": "https://www.google.com/maps/place/%E4%B8%89%E6%AD%A6%E9%AD%82%E3%83%A9%E3%83%BC%E3%83%A1%E3%83%B3/data=!4m6!3m5!1s0x3442a9f58a647603:0x1c5271169bb88664!8m2!3d25.0316716!4d121.4724856!16s%2Fg%2F11rcvb1j5k?hl=zh-TW",
+    "maps_url": "https://www.google.com/maps/place/%E4%B8%89%E6%AD%A6%E9%AD%82%E3%83%A9%E3%83%BC%E3%83%A1%E3%83%B3/data=!4m6!3m5!1s0x3442a9f58a647603:0x1c5271169bb88664!8m2!3d25.0316716!4d121.4724856!16s%2Fg%2F11rcvb1j5k!19sChIJA3ZkivWpQjQRZIa4mxZxUhw?hl=zh-TW",
     "added_at": "2026-09-03T13:39:13+0800",
     "missed": 0
   },
@@ -4982,9 +4712,9 @@
     "types": [
       "拉麵店"
     ],
-    "place_id": null,
+    "place_id": "ChIJCwGyUACpQjQRoL0rbHRVaBc",
     "gid": "/g/11yyd1b205",
-    "maps_url": "https://www.google.com/maps/place/%E9%87%8E%E6%BE%A4%E9%BA%B5%E6%89%80Nozawa%20%28%E6%9C%80%E5%BE%8C%E9%BB%9E%E9%A4%90%2023%3A30%20/%2001%3A30%EF%BC%89/data=!4m6!3m5!1s0x3442a90050b2010b:0x176855746c2bbda0!8m2!3d25.0087834!4d121.4626619!16s%2Fg%2F11yyd1b205?hl=zh-TW",
+    "maps_url": "https://www.google.com/maps/place/%E9%87%8E%E6%BE%A4%E9%BA%B5%E6%89%80Nozawa%20%28%E6%9C%80%E5%BE%8C%E9%BB%9E%E9%A4%90%2023%3A30%20/%2001%3A30%EF%BC%89/data=!4m6!3m5!1s0x3442a90050b2010b:0x176855746c2bbda0!8m2!3d25.0087834!4d121.4626619!16s%2Fg%2F11yyd1b205!19sChIJCwGyUACpQjQRoL0rbHRVaBc?hl=zh-TW",
     "added_at": "2026-09-03T13:39:13+0800",
     "missed": 0
   },
@@ -5000,9 +4730,9 @@
       "餐廳",
       "湯品餐廳"
     ],
-    "place_id": null,
+    "place_id": "ChIJKRztJ8-pQjQR_AZLrKqYT4c",
     "gid": "/g/11j97kv8sf",
-    "maps_url": "https://www.google.com/maps/place/ONI%20NOODLE%20%E4%BA%8C%E9%AC%BC%E9%BA%B5%E8%88%96%EF%BD%9C%E6%9D%BF%E6%A9%8B%E5%BA%97/data=!4m6!3m5!1s0x3442a9cf27ed1c29:0x874f98aaac4b06fc!8m2!3d25.029611199999998!4d121.4731343!16s%2Fg%2F11j97kv8sf?hl=zh-TW",
+    "maps_url": "https://www.google.com/maps/place/ONI%20NOODLE%20%E4%BA%8C%E9%AC%BC%E9%BA%B5%E8%88%96%EF%BD%9C%E6%9D%BF%E6%A9%8B%E5%BA%97/data=!4m6!3m5!1s0x3442a9cf27ed1c29:0x874f98aaac4b06fc!8m2!3d25.029611199999998!4d121.4731343!16s%2Fg%2F11j97kv8sf!19sChIJKRztJ8-pQjQR_AZLrKqYT4c?hl=zh-TW",
     "added_at": "2026-09-03T13:39:13+0800",
     "missed": 0
   },
@@ -5018,21 +4748,6 @@
     "place_id": null,
     "gid": "/g/11nqpdmgjb",
     "maps_url": "https://www.google.com/maps/place/%E9%BA%B5%E5%B1%8B%20%E5%9B%9B%E5%AD%A3%20%E6%9D%BF%E6%A9%8B%E5%BA%97/data=!4m6!3m5!1s0x3442a9e04e80434b:0xfde4bf4db8edd30f!8m2!3d25.0230107!4d121.46124089999999!16s%2Fg%2F11nqpdmgjb?hl=zh-TW",
-    "added_at": "2026-09-03T13:39:13+0800",
-    "missed": 0
-  },
-  {
-    "ftid": "0x346803a769e63fc1:0xa2863d14a4cea176",
-    "name": "CIRCLE 24小時 無人拉麵店",
-    "address": "220新北市板橋區大安里大觀路二段89號",
-    "lat": 25.001949699999997,
-    "lng": 121.4464106,
-    "types": [
-      "韓國餐廳"
-    ],
-    "place_id": null,
-    "gid": "/g/11l75d3w_v",
-    "maps_url": "https://www.google.com/maps/place/CIRCLE%2024%E5%B0%8F%E6%99%82%20%E7%84%A1%E4%BA%BA%E6%8B%89%E9%BA%B5%E5%BA%97/data=!4m6!3m5!1s0x346803a769e63fc1:0xa2863d14a4cea176!8m2!3d25.001949699999997!4d121.4464106!16s%2Fg%2F11l75d3w_v?hl=zh-TW",
     "added_at": "2026-09-03T13:39:13+0800",
     "missed": 0
   },
@@ -5123,9 +4838,9 @@
       "拉麵店",
       "餐廳"
     ],
-    "place_id": null,
+    "place_id": "ChIJj-BRRSWoQjQRkc7R6tJQoGU",
     "gid": "/g/11b7vxdmnr",
-    "maps_url": "https://www.google.com/maps/place/%E7%90%A6%E7%94%B0%E7%8E%89%E6%8B%89%E9%BA%B5/data=!4m6!3m5!1s0x3442a8254551e08f:0x65a050d2ead1ce91!8m2!3d25.0286191!4d121.46164379999999!16s%2Fg%2F11b7vxdmnr?hl=zh-TW",
+    "maps_url": "https://www.google.com/maps/place/%E7%90%A6%E7%94%B0%E7%8E%89%E6%8B%89%E9%BA%B5/data=!4m6!3m5!1s0x3442a8254551e08f:0x65a050d2ead1ce91!8m2!3d25.0286191!4d121.46164379999999!16s%2Fg%2F11b7vxdmnr!19sChIJj-BRRSWoQjQRkc7R6tJQoGU?hl=zh-TW",
     "added_at": "2026-09-03T13:39:13+0800",
     "missed": 0
   },
@@ -5138,25 +4853,9 @@
     "types": [
       "拉麵店"
     ],
-    "place_id": null,
+    "place_id": "ChIJE8S67EsdaDQRn5oqrU1AMuA",
     "gid": "/g/11fv4cyjf6",
-    "maps_url": "https://www.google.com/maps/place/%E5%88%9D%E5%8E%9F%E9%BA%B5%E5%A0%B4%28%E6%9D%BF%E6%A9%8B%E5%90%88%E5%AE%9C%E5%BA%97%29/data=!4m6!3m5!1s0x34681d4becbac413:0xe032404dad2a9a9f!8m2!3d24.997414!4d121.4428466!16s%2Fg%2F11fv4cyjf6?hl=zh-TW",
-    "added_at": "2026-09-03T13:39:13+0800",
-    "missed": 0
-  },
-  {
-    "ftid": "0x34680300169a2257:0x7f1557d12fa9e33e",
-    "name": "韓金智能拉麵店-板橋亞東店",
-    "address": "220新北市板橋區華德里四川路二段63號",
-    "lat": 24.9950282,
-    "lng": 121.45344689999999,
-    "types": [
-      "拉麵店",
-      "自助餐廳"
-    ],
-    "place_id": null,
-    "gid": "/g/11vr2fljq2",
-    "maps_url": "https://www.google.com/maps/place/%E9%9F%93%E9%87%91%E6%99%BA%E8%83%BD%E6%8B%89%E9%BA%B5%E5%BA%97-%E6%9D%BF%E6%A9%8B%E4%BA%9E%E6%9D%B1%E5%BA%97/data=!4m6!3m5!1s0x34680300169a2257:0x7f1557d12fa9e33e!8m2!3d24.9950282!4d121.45344689999999!16s%2Fg%2F11vr2fljq2?hl=zh-TW",
+    "maps_url": "https://www.google.com/maps/place/%E5%88%9D%E5%8E%9F%E9%BA%B5%E5%A0%B4%28%E6%9D%BF%E6%A9%8B%E5%90%88%E5%AE%9C%E5%BA%97%29/data=!4m6!3m5!1s0x34681d4becbac413:0xe032404dad2a9a9f!8m2!3d24.997414!4d121.4428466!16s%2Fg%2F11fv4cyjf6!19sChIJE8S67EsdaDQRn5oqrU1AMuA?hl=zh-TW",
     "added_at": "2026-09-03T13:39:13+0800",
     "missed": 0
   },
@@ -5252,21 +4951,6 @@
     "missed": 0
   },
   {
-    "ftid": "0x3442a90975c9f3cf:0x90d8ff251fa75c61",
-    "name": "二春外 鍋燒專賣店-板橋店-板橋必吃鍋燒麵|鍋燒意麵推薦|宵夜推薦|晚餐小吃|美食推薦|好吃拉麵|在地晚餐|熱門鍋燒麵",
-    "address": "220新北市板橋區玉光里永豐街23號",
-    "lat": 25.016988899999998,
-    "lng": 121.4745062,
-    "types": [
-      "小食/零食吧"
-    ],
-    "place_id": null,
-    "gid": "/g/11yjpgbq4x",
-    "maps_url": "https://www.google.com/maps/place/%E4%BA%8C%E6%98%A5%E5%A4%96%20%E9%8D%8B%E7%87%92%E5%B0%88%E8%B3%A3%E5%BA%97-%E6%9D%BF%E6%A9%8B%E5%BA%97-%E6%9D%BF%E6%A9%8B%E5%BF%85%E5%90%83%E9%8D%8B%E7%87%92%E9%BA%B5%7C%E9%8D%8B%E7%87%92%E6%84%8F%E9%BA%B5%E6%8E%A8%E8%96%A6%7C%E5%AE%B5%E5%A4%9C%E6%8E%A8%E8%96%A6%7C%E6%99%9A%E9%A4%90%E5%B0%8F%E5%90%83%7C%E7%BE%8E%E9%A3%9F%E6%8E%A8%E8%96%A6%7C%E5%A5%BD%E5%90%83%E6%8B%89%E9%BA%B5%7C%E5%9C%A8%E5%9C%B0%E6%99%9A%E9%A4%90%7C%E7%86%B1%E9%96%80%E9%8D%8B%E7%87%92%E9%BA%B5/data=!4m6!3m5!1s0x3442a90975c9f3cf:0x90d8ff251fa75c61!8m2!3d25.016988899999998!4d121.4745062!16s%2Fg%2F11yjpgbq4x?hl=zh-TW",
-    "added_at": "2026-09-03T13:39:13+0800",
-    "missed": 0
-  },
-  {
     "ftid": "0x3442a9b34a995d8f:0x64f86d326aca70c2",
     "name": "致理不倒翁拉麵食堂",
     "address": "220新北市板橋區忠誠里文化路一段311之23號",
@@ -5292,7 +4976,7 @@
     ],
     "place_id": "ChIJzcy5eRSpQjQRLU57xTHyiME",
     "gid": "/g/11f4l9zlps",
-    "maps_url": "https://www.google.com/maps/place/%E9%BA%B5%E5%B1%8B%E5%B1%B1%E8%8C%B6%20%28%E8%AB%8B%E7%A7%81%E8%A8%8AFB%E5%B0%88%E9%A0%81%E9%A0%90%E7%B4%84%29/data=!4m6!3m5!1s0x3442a91479b9cccd:0xc188f231c57b4e2d!8m2!3d25.0262851!4d121.47718789999999!16s%2Fg%2F11f4l9zlps!19sChIJzcy5eRSpQjQRLU57xTHyiME?hl=zh-TW",
+    "maps_url": "https://www.google.com/maps/place/%E9%BA%B5%E5%B1%8B%E5%B1%B1%E8%8C%B6%20%28%E8%AB%8B%E7%A7%81%E8%A8%8AFB%E5%B0%88%E9%A0%81%E9%A0%90%E7%B4%84%29/data=!4m6!3m5!1s0x3442a91479b9cccd:0xc188f231c57b4e2d!8m2!3d25.0262851!4d121.47718789999999!16s%2Fg%2F11f4l9zlps?hl=zh-TW",
     "added_at": "2026-09-03T13:39:13+0800",
     "missed": 0
   },
@@ -5354,23 +5038,6 @@
     "place_id": null,
     "gid": "/g/11lmk8d2f5",
     "maps_url": "https://www.google.com/maps/place/%E5%A5%BD%E5%91%B7%E6%8B%89%E9%BA%B5X%E7%87%92%E5%92%96%E5%93%A9%20%E7%94%9C%E5%93%81%E5%90%83%E5%88%B0%E9%A3%BD%28%E4%B8%AD%E5%92%8C%29%20%2A%E5%91%B7%EF%BC%9A%E3%84%92%E3%84%A7%E3%84%9A%CB%8A/data=!4m6!3m5!1s0x34680349f7ddfe97:0xcabb6bd76a0ba2fd!8m2!3d24.999395699999997!4d121.4838734!16s%2Fg%2F11lmk8d2f5?hl=zh-TW",
-    "added_at": "2026-09-03T13:39:13+0800",
-    "missed": 1
-  },
-  {
-    "ftid": "0x346803642736c039:0x636e347a492b3e56",
-    "name": "金海拉麵 中和興南店",
-    "address": "235新北市中和區興南路一段3號",
-    "lat": 24.991355,
-    "lng": 121.51163439999999,
-    "types": [
-      "拉麵店",
-      "關東煮餐廳",
-      "炸物串與串炸餐廳"
-    ],
-    "place_id": null,
-    "gid": "/g/11zd12zszc",
-    "maps_url": "https://www.google.com/maps/place/%E9%87%91%E6%B5%B7%E6%8B%89%E9%BA%B5%20%E4%B8%AD%E5%92%8C%E8%88%88%E5%8D%97%E5%BA%97/data=!4m6!3m5!1s0x346803642736c039:0x636e347a492b3e56!8m2!3d24.991355!4d121.51163439999999!16s%2Fg%2F11zd12zszc?hl=zh-TW",
     "added_at": "2026-09-03T13:39:13+0800",
     "missed": 0
   },
@@ -5541,21 +5208,6 @@
     "missed": 0
   },
   {
-    "ftid": "0x3468027851e763e1:0xa6e2daff1b0c3c9c",
-    "name": "日本拉麵御膳",
-    "address": "235新北市中和區新南里景平路463號",
-    "lat": 24.9966188,
-    "lng": 121.50053129999999,
-    "types": [
-      "拉麵店"
-    ],
-    "place_id": null,
-    "gid": "/g/11g726ltsh",
-    "maps_url": "https://www.google.com/maps/place/%E6%97%A5%E6%9C%AC%E6%8B%89%E9%BA%B5%E5%BE%A1%E8%86%B3/data=!4m6!3m5!1s0x3468027851e763e1:0xa6e2daff1b0c3c9c!8m2!3d24.9966188!4d121.50053129999999!16s%2Fg%2F11g726ltsh?hl=zh-TW",
-    "added_at": "2026-09-03T13:39:13+0800",
-    "missed": 0
-  },
-  {
     "ftid": "0x3442a9d653ba9525:0x23dc9bad69444ea2",
     "name": "鬼匠拉麵(中和店)",
     "address": "235新北市中和區廟美里中和路40巷6號",
@@ -5614,21 +5266,6 @@
     "place_id": null,
     "gid": "/g/11zf88v432",
     "maps_url": "https://www.google.com/maps/place/%E7%A6%8F%E6%B0%A3%E6%8B%89%E9%BA%B5%20%E6%B0%B8%E5%92%8C%E7%AB%B9%E6%9E%97%E5%BA%97/data=!4m6!3m5!1s0x3442a9bd9b032869:0x61b0d1c0fe42622f!8m2!3d25.0117384!4d121.51969489999999!16s%2Fg%2F11zf88v432?hl=zh-TW",
-    "added_at": "2026-09-03T13:39:13+0800",
-    "missed": 0
-  },
-  {
-    "ftid": "0x3442a92f3ea801e7:0xf734ed2815222273",
-    "name": "就是拉麵",
-    "address": "234新北市永和區中正路666巷2號之1",
-    "lat": 25.0089304,
-    "lng": 121.51691659999999,
-    "types": [
-      "小食/零食吧"
-    ],
-    "place_id": null,
-    "gid": "/g/11nqcj84d8",
-    "maps_url": "https://www.google.com/maps/place/%E5%B0%B1%E6%98%AF%E6%8B%89%E9%BA%B5/data=!4m6!3m5!1s0x3442a92f3ea801e7:0xf734ed2815222273!8m2!3d25.0089304!4d121.51691659999999!16s%2Fg%2F11nqcj84d8?hl=zh-TW",
     "added_at": "2026-09-03T13:39:13+0800",
     "missed": 0
   },
@@ -5692,7 +5329,7 @@
     ],
     "place_id": "ChIJncFBRQCpQjQRumko6E8JQqU",
     "gid": "/g/11ygkmyrn3",
-    "maps_url": "https://www.google.com/maps/place/%E5%B0%8F%E9%AB%98%E6%8B%89%E9%BA%B5%20%E5%85%AC%E9%A4%A8/data=!4m6!3m5!1s0x3442a9004541c19d:0xa542094fe82869ba!8m2!3d25.015070299999998!4d121.5325773!16s%2Fg%2F11ygkmyrn3!19sChIJncFBRQCpQjQRumko6E8JQqU?hl=zh-TW",
+    "maps_url": "https://www.google.com/maps/place/%E5%B0%8F%E9%AB%98%E6%8B%89%E9%BA%B5%20%E5%85%AC%E9%A4%A8/data=!4m6!3m5!1s0x3442a9004541c19d:0xa542094fe82869ba!8m2!3d25.015070299999998!4d121.5325773!16s%2Fg%2F11ygkmyrn3?hl=zh-TW",
     "added_at": "2026-09-03T13:39:13+0800",
     "missed": 0
   },
@@ -5722,7 +5359,7 @@
     ],
     "place_id": "ChIJBWpvx8KpQjQR87Pe-M0UM3U",
     "gid": "/g/11dfj4pwd0",
-    "maps_url": "https://www.google.com/maps/place/%E9%AC%BC%E5%8C%A0%E6%8B%89%E9%BA%B5%20%E6%B0%B8%E5%92%8C%E5%BA%97/data=!4m6!3m5!1s0x3442a9c2c76f6a05:0x753314cdf8deb3f3!8m2!3d24.9970558!4d121.51514309999999!16s%2Fg%2F11dfj4pwd0!19sChIJBWpvx8KpQjQR87Pe-M0UM3U?hl=zh-TW",
+    "maps_url": "https://www.google.com/maps/place/%E9%AC%BC%E5%8C%A0%E6%8B%89%E9%BA%B5%20%E6%B0%B8%E5%92%8C%E5%BA%97/data=!4m6!3m5!1s0x3442a9c2c76f6a05:0x753314cdf8deb3f3!8m2!3d24.9970558!4d121.51514309999999!16s%2Fg%2F11dfj4pwd0?hl=zh-TW",
     "added_at": "2026-09-03T13:39:13+0800",
     "missed": 0
   },
@@ -5741,7 +5378,7 @@
     "gid": "/g/1hhhrplph",
     "maps_url": "https://www.google.com/maps/place/Mr.%20%E6%8B%89%E9%BA%B5%E5%85%AC%E9%A4%A8%E5%BA%97%EF%BC%88%E5%9C%A8%E5%9C%B013%E5%B9%B4%EF%BC%89/data=!4m6!3m5!1s0x3442a98b83a5c93d:0x9c2728e82753a993!8m2!3d25.0155988!4d121.5320582!16s%2Fg%2F1hhhrplph?hl=zh-TW",
     "added_at": "2026-09-03T13:39:13+0800",
-    "missed": 0
+    "missed": 1
   },
   {
     "ftid": "0x34680328c572418f:0xa51372831df8dec9",
@@ -5887,21 +5524,6 @@
     "missed": 0
   },
   {
-    "ftid": "0x3442a764a7f83f47:0xba9dbc46d66721c1",
-    "name": "泡一下無人拉麵 24 Hours (輔大店）",
-    "address": "242047新北市新莊區福營里建國一路34號一樓",
-    "lat": 25.0313812,
-    "lng": 121.4337388,
-    "types": [
-      "餐廳"
-    ],
-    "place_id": null,
-    "gid": "/g/11y30_9sh2",
-    "maps_url": "https://www.google.com/maps/place/%E6%B3%A1%E4%B8%80%E4%B8%8B%E7%84%A1%E4%BA%BA%E6%8B%89%E9%BA%B5%2024%20Hours%20%28%E8%BC%94%E5%A4%A7%E5%BA%97%EF%BC%89/data=!4m6!3m5!1s0x3442a764a7f83f47:0xba9dbc46d66721c1!8m2!3d25.0313812!4d121.4337388!16s%2Fg%2F11y30_9sh2?hl=zh-TW",
-    "added_at": "2026-09-03T13:39:13+0800",
-    "missed": 0
-  },
-  {
     "ftid": "0x3442a78caaf9af61:0xda55827bc208b58f",
     "name": "赤麵廠 レッドラーメン - 新莊總店",
     "address": "242新北市新莊區南港里四維路154號",
@@ -5928,7 +5550,7 @@
     ],
     "place_id": "ChIJCTnaSYOnQjQRnC9uvnFmXvU",
     "gid": "/g/11ypw2f037",
-    "maps_url": "https://www.google.com/maps/place/%E6%AB%BB%E8%8A%B1%E9%A6%99%E6%8B%89%E9%BA%B5%20%E6%96%B0%E8%8E%8A%E5%BB%BA%E5%AE%89%E5%BA%97/data=!4m6!3m5!1s0x3442a78349da3909:0xf55e6671be6e2f9c!8m2!3d25.024993199999997!4d121.4269803!16s%2Fg%2F11ypw2f037!19sChIJCTnaSYOnQjQRnC9uvnFmXvU?hl=zh-TW",
+    "maps_url": "https://www.google.com/maps/place/%E6%AB%BB%E8%8A%B1%E9%A6%99%E6%8B%89%E9%BA%B5%20%E6%96%B0%E8%8E%8A%E5%BB%BA%E5%AE%89%E5%BA%97/data=!4m6!3m5!1s0x3442a78349da3909:0xf55e6671be6e2f9c!8m2!3d25.024993199999997!4d121.4269803!16s%2Fg%2F11ypw2f037?hl=zh-TW",
     "added_at": "2026-09-03T13:39:13+0800",
     "missed": 0
   },
@@ -5943,7 +5565,7 @@
     ],
     "place_id": "ChIJ16-18OWnQjQROROW5IHZ0OI",
     "gid": "/g/11c2ksdqcm",
-    "maps_url": "https://www.google.com/maps/place/%E9%BA%B5%E5%B1%8B%E4%B8%89%E9%83%8E/data=!4m6!3m5!1s0x3442a7e5f0b5afd7:0xe2d0d981e4961339!8m2!3d25.0300773!4d121.43442999999999!16s%2Fg%2F11c2ksdqcm!19sChIJ16-18OWnQjQROROW5IHZ0OI?hl=zh-TW",
+    "maps_url": "https://www.google.com/maps/place/%E9%BA%B5%E5%B1%8B%E4%B8%89%E9%83%8E/data=!4m6!3m5!1s0x3442a7e5f0b5afd7:0xe2d0d981e4961339!8m2!3d25.0300773!4d121.43442999999999!16s%2Fg%2F11c2ksdqcm?hl=zh-TW",
     "added_at": "2026-09-03T13:39:13+0800",
     "missed": 0
   },
@@ -5958,7 +5580,7 @@
     ],
     "place_id": "ChIJo_9CvgSpQjQRF5yTE3Sh52o",
     "gid": "/g/11v5fvmgj7",
-    "maps_url": "https://www.google.com/maps/place/%E9%BA%B5%E5%8C%A1%E5%8C%A1%E6%8B%89%E9%BA%B5%E9%A3%9F%E5%A0%82%20%E6%96%B0%E8%8E%8A%E4%BD%B3%E7%91%AA%E5%BA%97/data=!4m6!3m5!1s0x3442a904be42ffa3:0x6ae7a17413939c17!8m2!3d25.0491893!4d121.4464905!16s%2Fg%2F11v5fvmgj7!19sChIJo_9CvgSpQjQRF5yTE3Sh52o?hl=zh-TW",
+    "maps_url": "https://www.google.com/maps/place/%E9%BA%B5%E5%8C%A1%E5%8C%A1%E6%8B%89%E9%BA%B5%E9%A3%9F%E5%A0%82%20%E6%96%B0%E8%8E%8A%E4%BD%B3%E7%91%AA%E5%BA%97/data=!4m6!3m5!1s0x3442a904be42ffa3:0x6ae7a17413939c17!8m2!3d25.0491893!4d121.4464905!16s%2Fg%2F11v5fvmgj7?hl=zh-TW",
     "added_at": "2026-09-03T13:39:13+0800",
     "missed": 0
   },
@@ -5973,7 +5595,7 @@
     ],
     "place_id": "ChIJcbsjVH-nQjQR822yplXMvYc",
     "gid": "/g/11vz9xhvlt",
-    "maps_url": "https://www.google.com/maps/place/%E9%BA%B5%E5%8C%A1%E5%8C%A1%E6%8B%89%E9%BA%B5%E9%A3%9F%E5%A0%82%20%E6%96%B0%E8%8E%8A%E9%BE%8D%E5%AE%89%E5%BA%97/data=!4m6!3m5!1s0x3442a77f5423bb71:0x87bdcc55a6b26df3!8m2!3d25.019245599999998!4d121.42189049999999!16s%2Fg%2F11vz9xhvlt!19sChIJcbsjVH-nQjQR822yplXMvYc?hl=zh-TW",
+    "maps_url": "https://www.google.com/maps/place/%E9%BA%B5%E5%8C%A1%E5%8C%A1%E6%8B%89%E9%BA%B5%E9%A3%9F%E5%A0%82%20%E6%96%B0%E8%8E%8A%E9%BE%8D%E5%AE%89%E5%BA%97/data=!4m6!3m5!1s0x3442a77f5423bb71:0x87bdcc55a6b26df3!8m2!3d25.019245599999998!4d121.42189049999999!16s%2Fg%2F11vz9xhvlt?hl=zh-TW",
     "added_at": "2026-09-03T13:39:13+0800",
     "missed": 0
   },
@@ -5988,7 +5610,7 @@
     ],
     "place_id": "ChIJ3XU8kEKnQjQRz3L7DV8s5Is",
     "gid": "/g/11vjjyz9_6",
-    "maps_url": "https://www.google.com/maps/place/%E9%BA%B5%E5%8C%A1%E5%8C%A1%E6%8B%89%E9%BA%B5%E9%A3%9F%E5%A0%82%20%E6%96%B0%E8%8E%8A%E5%AF%8C%E5%9C%8B%E5%BA%97/data=!4m6!3m5!1s0x3442a742903c75dd:0x8be42c5f0dfb72cf!8m2!3d25.024295799999997!4d121.42462359999999!16s%2Fg%2F11vjjyz9_6!19sChIJ3XU8kEKnQjQRz3L7DV8s5Is?hl=zh-TW",
+    "maps_url": "https://www.google.com/maps/place/%E9%BA%B5%E5%8C%A1%E5%8C%A1%E6%8B%89%E9%BA%B5%E9%A3%9F%E5%A0%82%20%E6%96%B0%E8%8E%8A%E5%AF%8C%E5%9C%8B%E5%BA%97/data=!4m6!3m5!1s0x3442a742903c75dd:0x8be42c5f0dfb72cf!8m2!3d25.024295799999997!4d121.42462359999999!16s%2Fg%2F11vjjyz9_6?hl=zh-TW",
     "added_at": "2026-09-03T13:39:13+0800",
     "missed": 0
   },
@@ -6004,7 +5626,7 @@
     ],
     "place_id": "ChIJJxCjGxipQjQR75xxCAL0EoU",
     "gid": "/g/11rz4rkvn0",
-    "maps_url": "https://www.google.com/maps/place/%E4%B8%80%E9%A2%A8%E5%A0%82%E6%96%B0%E8%8E%8A%E5%AE%8F%E5%8C%AF%E5%BA%97/data=!4m6!3m5!1s0x3442a9181ba31027:0x8512f40208719cef!8m2!3d25.0594663!4d121.4497335!16s%2Fg%2F11rz4rkvn0!19sChIJJxCjGxipQjQR75xxCAL0EoU?hl=zh-TW",
+    "maps_url": "https://www.google.com/maps/place/%E4%B8%80%E9%A2%A8%E5%A0%82%E6%96%B0%E8%8E%8A%E5%AE%8F%E5%8C%AF%E5%BA%97/data=!4m6!3m5!1s0x3442a9181ba31027:0x8512f40208719cef!8m2!3d25.0594663!4d121.4497335!16s%2Fg%2F11rz4rkvn0?hl=zh-TW",
     "added_at": "2026-09-03T13:39:13+0800",
     "missed": 0
   },
@@ -6019,22 +5641,7 @@
     ],
     "place_id": "ChIJkVNSwzmnQjQR5wZCGXkmKUY",
     "gid": "/g/11lv5z59hl",
-    "maps_url": "https://www.google.com/maps/place/%E8%94%A6%E4%B9%8B%E4%BA%AD%E6%97%A5%E5%BC%8F%E6%8B%89%E9%BA%B5/data=!4m6!3m5!1s0x3442a739c3525391:0x46292679194206e7!8m2!3d25.054920499999998!4d121.43256269999999!16s%2Fg%2F11lv5z59hl!19sChIJkVNSwzmnQjQR5wZCGXkmKUY?hl=zh-TW",
-    "added_at": "2026-09-03T13:39:13+0800",
-    "missed": 0
-  },
-  {
-    "ftid": "0x3442a7eed6fd3c0f:0xebab7b80c191f128",
-    "name": "巧味羊肉拉麵",
-    "address": "242新北市新莊區福營里福營路196號",
-    "lat": 25.0307645,
-    "lng": 121.43098219999999,
-    "types": [
-      "麵店"
-    ],
-    "place_id": null,
-    "gid": "/g/11h11mvst",
-    "maps_url": "https://www.google.com/maps/place/%E5%B7%A7%E5%91%B3%E7%BE%8A%E8%82%89%E6%8B%89%E9%BA%B5/data=!4m6!3m5!1s0x3442a7eed6fd3c0f:0xebab7b80c191f128!8m2!3d25.0307645!4d121.43098219999999!16s%2Fg%2F11h11mvst?hl=zh-TW",
+    "maps_url": "https://www.google.com/maps/place/%E8%94%A6%E4%B9%8B%E4%BA%AD%E6%97%A5%E5%BC%8F%E6%8B%89%E9%BA%B5/data=!4m6!3m5!1s0x3442a739c3525391:0x46292679194206e7!8m2!3d25.054920499999998!4d121.43256269999999!16s%2Fg%2F11lv5z59hl?hl=zh-TW",
     "added_at": "2026-09-03T13:39:13+0800",
     "missed": 0
   },
@@ -6095,23 +5702,6 @@
     "place_id": null,
     "gid": "/g/11zjv8wfk7",
     "maps_url": "https://www.google.com/maps/place/%E5%B0%8F%E6%9D%BE%E6%8B%89%E9%BA%B5%20%E8%BC%94%E5%A4%A7%E4%B8%AD%E6%AD%A3%E8%B7%AF/data=!4m6!3m5!1s0x3442a7b572a9ade1:0xdcfaf75895f6b2f3!8m2!3d25.0319166!4d121.43279869999999!16s%2Fg%2F11zjv8wfk7?hl=zh-TW",
-    "added_at": "2026-09-03T13:39:13+0800",
-    "missed": 0
-  },
-  {
-    "ftid": "0x3442a91cb095d52b:0x196450e3f96e9911",
-    "name": "忘憂吧。炸物、燒烤、居酒、炒拉麵/寵物友善",
-    "address": "242新北市新莊區海山里中正路419號1 樓",
-    "lat": 25.0342485,
-    "lng": 121.4446952,
-    "types": [
-      "餐廳",
-      "燒烤",
-      "啤酒館"
-    ],
-    "place_id": null,
-    "gid": "/g/11f5zr5bpp",
-    "maps_url": "https://www.google.com/maps/place/%E5%BF%98%E6%86%82%E5%90%A7%E3%80%82%E7%82%B8%E7%89%A9%E3%80%81%E7%87%92%E7%83%A4%E3%80%81%E5%B1%85%E9%85%92%E3%80%81%E7%82%92%E6%8B%89%E9%BA%B5/%E5%AF%B5%E7%89%A9%E5%8F%8B%E5%96%84/data=!4m6!3m5!1s0x3442a91cb095d52b:0x196450e3f96e9911!8m2!3d25.0342485!4d121.4446952!16s%2Fg%2F11f5zr5bpp?hl=zh-TW",
     "added_at": "2026-09-03T13:39:13+0800",
     "missed": 0
   },
@@ -6201,7 +5791,7 @@
     ],
     "place_id": "ChIJi43iSwCpQjQReBmzXAjggiY",
     "gid": "/g/11zf5lf749",
-    "maps_url": "https://www.google.com/maps/place/%E5%88%9D%E5%8E%9F%E9%BA%B5%E5%A0%B4%28%E4%B8%89%E9%87%8D%E8%88%88%E5%B1%95%E5%BA%97%29/data=!4m6!3m5!1s0x3442a9004be28d8b:0x2682e0085cb31978!8m2!3d25.0661827!4d121.4986833!16s%2Fg%2F11zf5lf749!19sChIJi43iSwCpQjQReBmzXAjggiY?hl=zh-TW",
+    "maps_url": "https://www.google.com/maps/place/%E5%88%9D%E5%8E%9F%E9%BA%B5%E5%A0%B4%28%E4%B8%89%E9%87%8D%E8%88%88%E5%B1%95%E5%BA%97%29/data=!4m6!3m5!1s0x3442a9004be28d8b:0x2682e0085cb31978!8m2!3d25.0661827!4d121.4986833!16s%2Fg%2F11zf5lf749?hl=zh-TW",
     "added_at": "2026-09-03T13:39:13+0800",
     "missed": 0
   },
@@ -6231,7 +5821,7 @@
     ],
     "place_id": "ChIJ88GW3papQjQROgWxiI2UeHU",
     "gid": "/g/11ldw147l6",
-    "maps_url": "https://www.google.com/maps/place/%E9%BA%B5%E5%8C%A1%E5%8C%A1%E6%8B%89%E9%BA%B5%E9%A3%9F%E5%A0%82%20%E4%B8%89%E9%87%8D%E9%9B%86%E6%88%90%E5%BA%97/data=!4m6!3m5!1s0x3442a996de96c1f3:0x7578948d88b1053a!8m2!3d25.053021299999997!4d121.4890231!16s%2Fg%2F11ldw147l6!19sChIJ88GW3papQjQROgWxiI2UeHU?hl=zh-TW",
+    "maps_url": "https://www.google.com/maps/place/%E9%BA%B5%E5%8C%A1%E5%8C%A1%E6%8B%89%E9%BA%B5%E9%A3%9F%E5%A0%82%20%E4%B8%89%E9%87%8D%E9%9B%86%E6%88%90%E5%BA%97/data=!4m6!3m5!1s0x3442a996de96c1f3:0x7578948d88b1053a!8m2!3d25.053021299999997!4d121.4890231!16s%2Fg%2F11ldw147l6?hl=zh-TW",
     "added_at": "2026-09-03T13:39:13+0800",
     "missed": 0
   },
@@ -6247,21 +5837,6 @@
     "place_id": null,
     "gid": "/g/11lttcgns5",
     "maps_url": "https://www.google.com/maps/place/%E9%87%87%E6%8B%89%E9%BA%B5/data=!4m6!3m5!1s0x3442a9a98511a4c7:0xd35e8a45b6956e21!8m2!3d25.0816411!4d121.48217439999999!16s%2Fg%2F11lttcgns5?hl=zh-TW",
-    "added_at": "2026-09-03T13:39:13+0800",
-    "missed": 0
-  },
-  {
-    "ftid": "0x3442a91d738762d1:0x71b6659089655a9b",
-    "name": "海全牛肉羊肉拉麵",
-    "address": "241新北市三重區光明里重安街98號",
-    "lat": 25.056189,
-    "lng": 121.49254769999999,
-    "types": [
-      "麵店"
-    ],
-    "place_id": "ChIJ0WKHcx2pQjQRm1pliZBltnE",
-    "gid": "/g/11c43p9n5z",
-    "maps_url": "https://www.google.com/maps/place/%E6%B5%B7%E5%85%A8%E7%89%9B%E8%82%89%E7%BE%8A%E8%82%89%E6%8B%89%E9%BA%B5/data=!4m6!3m5!1s0x3442a91d738762d1:0x71b6659089655a9b!8m2!3d25.056189!4d121.49254769999999!16s%2Fg%2F11c43p9n5z!19sChIJ0WKHcx2pQjQRm1pliZBltnE?hl=zh-TW",
     "added_at": "2026-09-03T13:39:13+0800",
     "missed": 0
   },
@@ -6469,9 +6044,9 @@
     "types": [
       "拉麵店"
     ],
-    "place_id": null,
+    "place_id": "ChIJ42hQRCsBaDQR-hthvSJskA4",
     "gid": "/g/11zdr__3nq",
-    "maps_url": "https://www.google.com/maps/place/%E6%9F%91%E6%A9%98Shinn-%E5%B0%8F%E6%9F%91%E6%A9%98%20Mikan%20Ramen%20%E6%96%B0%E5%8C%97%E6%96%B0%E5%BA%97%E5%BA%97/data=!4m6!3m5!1s0x3468012b445068e3:0xe906c22bd611bfa!8m2!3d24.9730153!4d121.543582!16s%2Fg%2F11zdr__3nq?hl=zh-TW",
+    "maps_url": "https://www.google.com/maps/place/%E6%9F%91%E6%A9%98Shinn-%E5%B0%8F%E6%9F%91%E6%A9%98%20Mikan%20Ramen%20%E6%96%B0%E5%8C%97%E6%96%B0%E5%BA%97%E5%BA%97/data=!4m6!3m5!1s0x3468012b445068e3:0xe906c22bd611bfa!8m2!3d24.9730153!4d121.543582!16s%2Fg%2F11zdr__3nq!19sChIJ42hQRCsBaDQR-hthvSJskA4?hl=zh-TW",
     "added_at": "2026-09-03T13:39:13+0800",
     "missed": 0
   },
@@ -6566,21 +6141,6 @@
     "missed": 0
   },
   {
-    "ftid": "0x34680300752e3ebd:0x91a1b87c97bf8111",
-    "name": "ajussi-阿啾西拉麵圖書館-華新店",
-    "address": "235新北市中和區正南里華新街180號",
-    "lat": 24.9822559,
-    "lng": 121.50710489999999,
-    "types": [
-      "快餐店"
-    ],
-    "place_id": null,
-    "gid": "/g/11y4z7v9dl",
-    "maps_url": "https://www.google.com/maps/place/ajussi-%E9%98%BF%E5%95%BE%E8%A5%BF%E6%8B%89%E9%BA%B5%E5%9C%96%E6%9B%B8%E9%A4%A8-%E8%8F%AF%E6%96%B0%E5%BA%97/data=!4m6!3m5!1s0x34680300752e3ebd:0x91a1b87c97bf8111!8m2!3d24.9822559!4d121.50710489999999!16s%2Fg%2F11y4z7v9dl?hl=zh-TW",
-    "added_at": "2026-09-03T13:39:13+0800",
-    "missed": 0
-  },
-  {
     "ftid": "0x346801003bb604a3:0x29626d218cbbf49e",
     "name": "麵屋十方（十方屋）",
     "address": "231新北市新店區中正里中華路60巷1弄1號",
@@ -6622,7 +6182,7 @@
     ],
     "place_id": "ChIJXRMtD1ADaDQR1ICvzci9pLk",
     "gid": "/g/11v5f15k6x",
-    "maps_url": "https://www.google.com/maps/place/%E9%BA%B5%E5%8C%A1%E5%8C%A1%E6%8B%89%E9%BA%B5%E9%A3%9F%E5%A0%82%20%E6%96%B0%E5%BA%97%E4%B8%AD%E5%A4%AE%E5%BA%97/data=!4m6!3m5!1s0x346803500f2d135d:0xb9a4bdc8cdaf80d4!8m2!3d24.9739732!4d121.52988029999999!16s%2Fg%2F11v5f15k6x!19sChIJXRMtD1ADaDQR1ICvzci9pLk?hl=zh-TW",
+    "maps_url": "https://www.google.com/maps/place/%E9%BA%B5%E5%8C%A1%E5%8C%A1%E6%8B%89%E9%BA%B5%E9%A3%9F%E5%A0%82%20%E6%96%B0%E5%BA%97%E4%B8%AD%E5%A4%AE%E5%BA%97/data=!4m6!3m5!1s0x346803500f2d135d:0xb9a4bdc8cdaf80d4!8m2!3d24.9739732!4d121.52988029999999!16s%2Fg%2F11v5f15k6x?hl=zh-TW",
     "added_at": "2026-09-03T13:39:13+0800",
     "missed": 0
   },
@@ -6776,7 +6336,7 @@
     "gid": "/g/11y8x6rvk_",
     "maps_url": "https://www.google.com/maps/place/%E5%8C%97%E6%B5%B7%E9%81%93%E7%82%99%E7%87%92%E6%8B%89%E9%BA%B5%20%E6%B1%90%E6%AD%A2%E5%A4%A7%E5%90%8C%E5%BA%97%E3%80%8A%E6%B1%90%E6%AD%A2%E6%97%A5%E6%96%99%E3%80%8B%E4%B8%BC%E9%A3%AF%EF%BD%9C%E5%92%96%E5%93%A9%EF%BD%9C%E6%97%A5%E5%BC%8F%E5%B0%8F%E5%90%83%EF%BD%9C%E5%A5%BD%E5%90%83%EF%BD%9C%E7%89%B9%E8%89%B2%EF%BD%9C%E4%BA%BA%E6%B0%A3%E6%8B%89%E9%BA%B5/data=!4m6!3m5!1s0x345d53120811149d:0xb5da78fc178aefb9!8m2!3d25.0659252!4d121.6557739!16s%2Fg%2F11y8x6rvk_?hl=zh-TW",
     "added_at": "2026-09-03T13:39:13+0800",
-    "missed": 1
+    "missed": 0
   },
   {
     "ftid": "0x345d531b82f4fb9b:0x22d1f2b9cdf35399",
@@ -6979,9 +6539,9 @@
     "types": [
       "拉麵店"
     ],
-    "place_id": null,
+    "place_id": "ChIJMX0qWUJTXTQR84tdmxTelrY",
     "gid": "/g/11d_v20_y_",
-    "maps_url": "https://www.google.com/maps/place/%E9%90%B5%E4%B8%B8%E5%8D%81%E4%B8%89%E5%A0%82%E6%B1%90%E9%81%A0%E5%BA%97/data=!4m6!3m5!1s0x345d5342592a7d31:0xb696de149b5d8bf3!8m2!3d25.0615842!4d121.6457504!16s%2Fg%2F11d_v20_y_?hl=zh-TW",
+    "maps_url": "https://www.google.com/maps/place/%E9%90%B5%E4%B8%B8%E5%8D%81%E4%B8%89%E5%A0%82%E6%B1%90%E9%81%A0%E5%BA%97/data=!4m6!3m5!1s0x345d5342592a7d31:0xb696de149b5d8bf3!8m2!3d25.0615842!4d121.6457504!16s%2Fg%2F11d_v20_y_!19sChIJMX0qWUJTXTQR84tdmxTelrY?hl=zh-TW",
     "added_at": "2026-09-03T13:39:13+0800",
     "missed": 0
   },
@@ -7063,24 +6623,6 @@
     "missed": 0
   },
   {
-    "ftid": "0x34681d43655681cf:0x9fa6b1a04ce8953f",
-    "name": "川牛木石亭 樹林鎮前店",
-    "address": "238新北市樹林區樹北里鎮前街128號",
-    "lat": 24.9908185,
-    "lng": 121.42473319999999,
-    "types": [
-      "拉麵店",
-      "日本餐廳",
-      "牛丼餐廳",
-      "日式燒肉餐廳"
-    ],
-    "place_id": null,
-    "gid": "/g/11qmnpsngy",
-    "maps_url": "https://www.google.com/maps/place/%E5%B7%9D%E7%89%9B%E6%9C%A8%E7%9F%B3%E4%BA%AD%20%E6%A8%B9%E6%9E%97%E9%8E%AE%E5%89%8D%E5%BA%97/data=!4m6!3m5!1s0x34681d43655681cf:0x9fa6b1a04ce8953f!8m2!3d24.9908185!4d121.42473319999999!16s%2Fg%2F11qmnpsngy?hl=zh-TW",
-    "added_at": "2026-09-03T13:39:13+0800",
-    "missed": 0
-  },
-  {
     "ftid": "0x34681d17a8ac20e1:0xcb245cd9a56f9867",
     "name": "樂拉麵(M17)",
     "address": "238新北市樹林區金寮里保安街二段70號",
@@ -7096,21 +6638,6 @@
     "missed": 0
   },
   {
-    "ftid": "0x34681de06fe2b7f1:0xc837d51728b4a840",
-    "name": "通化手工麵疙瘩拉麵",
-    "address": "238新北市樹林區保安里保安街一段18之3號號旁",
-    "lat": 24.9933926,
-    "lng": 121.42759389999999,
-    "types": [
-      "麵店"
-    ],
-    "place_id": null,
-    "gid": "/g/11fcvbh6qp",
-    "maps_url": "https://www.google.com/maps/place/%E9%80%9A%E5%8C%96%E6%89%8B%E5%B7%A5%E9%BA%B5%E7%96%99%E7%98%A9%E6%8B%89%E9%BA%B5/data=!4m6!3m5!1s0x34681de06fe2b7f1:0xc837d51728b4a840!8m2!3d24.9933926!4d121.42759389999999!16s%2Fg%2F11fcvbh6qp?hl=zh-TW",
-    "added_at": "2026-09-03T13:39:13+0800",
-    "missed": 0
-  },
-  {
     "ftid": "0x34681dba8fb2d521:0xc16bb7dac332b73e",
     "name": "麵匡匡拉麵食堂 樹林中華店",
     "address": "238新北市樹林區大同里中華路146號",
@@ -7122,21 +6649,6 @@
     "place_id": null,
     "gid": "/g/11vxg27mg0",
     "maps_url": "https://www.google.com/maps/place/%E9%BA%B5%E5%8C%A1%E5%8C%A1%E6%8B%89%E9%BA%B5%E9%A3%9F%E5%A0%82%20%E6%A8%B9%E6%9E%97%E4%B8%AD%E8%8F%AF%E5%BA%97/data=!4m6!3m5!1s0x34681dba8fb2d521:0xc16bb7dac332b73e!8m2!3d24.9803665!4d121.41673349999999!16s%2Fg%2F11vxg27mg0?hl=zh-TW",
-    "added_at": "2026-09-03T13:39:13+0800",
-    "missed": 0
-  },
-  {
-    "ftid": "0x34681d11b99b8c15:0x411616a65a8de296",
-    "name": "大魯達魯拉麵",
-    "address": "238新北市樹林區樹西里中山路一段108巷14號",
-    "lat": 24.9911247,
-    "lng": 121.42253319999999,
-    "types": [
-      "餐廳"
-    ],
-    "place_id": null,
-    "gid": "/g/11g4j0343d",
-    "maps_url": "https://www.google.com/maps/place/%E5%A4%A7%E9%AD%AF%E9%81%94%E9%AD%AF%E6%8B%89%E9%BA%B5/data=!4m6!3m5!1s0x34681d11b99b8c15:0x411616a65a8de296!8m2!3d24.9911247!4d121.42253319999999!16s%2Fg%2F11g4j0343d?hl=zh-TW",
     "added_at": "2026-09-03T13:39:13+0800",
     "missed": 0
   },
@@ -7310,37 +6822,6 @@
     "missed": 0
   },
   {
-    "ftid": "0x346802b0e8c2ac13:0x7805fdd307e54ee7",
-    "name": "健太屋",
-    "address": "236新北市土城區瑞興里四川路18號",
-    "lat": 24.996115,
-    "lng": 121.45539,
-    "types": [
-      "拉麵店",
-      "餐廳"
-    ],
-    "place_id": null,
-    "gid": "/g/11g68z5mm5",
-    "maps_url": "https://www.google.com/maps/place/%E5%81%A5%E5%A4%AA%E5%B1%8B/data=!4m6!3m5!1s0x346802b0e8c2ac13:0x7805fdd307e54ee7!8m2!3d24.996115!4d121.45539!16s%2Fg%2F11g68z5mm5?hl=zh-TW",
-    "added_at": "2026-09-03T13:39:13+0800",
-    "missed": 0
-  },
-  {
-    "ftid": "0x346802ca45b1141f:0xda28f8c1a1b487aa",
-    "name": "橫綱拉麵",
-    "address": "236新北市土城區埤林里學成路33巷2號",
-    "lat": 24.987042499999998,
-    "lng": 121.4525772,
-    "types": [
-      "拉麵店"
-    ],
-    "place_id": null,
-    "gid": "/g/11cn5r5169",
-    "maps_url": "https://www.google.com/maps/place/%E6%A9%AB%E7%B6%B1%E6%8B%89%E9%BA%B5/data=!4m6!3m5!1s0x346802ca45b1141f:0xda28f8c1a1b487aa!8m2!3d24.987042499999998!4d121.4525772!16s%2Fg%2F11cn5r5169?hl=zh-TW",
-    "added_at": "2026-09-03T13:39:13+0800",
-    "missed": 0
-  },
-  {
     "ftid": "0x34680386827c7cd7:0xb4ce9f4dbb225dc5",
     "name": "龘拉麵-土城美食-餐廳-日本料理-Restaurants",
     "address": "236新北市土城區學士里學士路87號",
@@ -7362,8 +6843,8 @@
     "lat": 25.081984799999997,
     "lng": 121.46522069999999,
     "types": [
-      "日本餐廳",
-      "餐廳"
+      "餐廳",
+      "日本餐廳"
     ],
     "place_id": null,
     "gid": "/g/11wtvt26b4",
@@ -7561,22 +7042,6 @@
     "missed": 0
   },
   {
-    "ftid": "0x3442a8c909d7ad51:0x42a4c8b6004a4e42",
-    "name": "弘田拉麵",
-    "address": "247新北市蘆洲區得勝里成功路170號",
-    "lat": 25.0837281,
-    "lng": 121.47144739999999,
-    "types": [
-      "拉麵店",
-      "麵店"
-    ],
-    "place_id": null,
-    "gid": "/g/11c6f6b7qd",
-    "maps_url": "https://www.google.com/maps/place/%E5%BC%98%E7%94%B0%E6%8B%89%E9%BA%B5/data=!4m6!3m5!1s0x3442a8c909d7ad51:0x42a4c8b6004a4e42!8m2!3d25.0837281!4d121.47144739999999!16s%2Fg%2F11c6f6b7qd?hl=zh-TW",
-    "added_at": "2026-09-03T13:39:13+0800",
-    "missed": 0
-  },
-  {
     "ftid": "0x3442a9710325be5b:0xde8cb29551fd3553",
     "name": "羽臨拉麵 • 甕仔雞飯",
     "address": "247新北市蘆洲區信義路275號1樓",
@@ -7619,7 +7084,7 @@
     "gid": "/g/11wnp524pm",
     "maps_url": "https://www.google.com/maps/place/%E9%BA%B5%E5%B1%8B%E9%8A%B7%E9%AD%82%20%E5%8C%97%E8%BB%8A%20K%20%E5%8D%80%E5%9C%B0%E4%B8%8B%E8%A1%97%E5%BA%97/data=!4m6!3m5!1s0x3442a998cfbb86ab:0x525057c19d6fb4e6!8m2!3d25.0464636!4d121.51743719999999!16s%2Fg%2F11wnp524pm?hl=zh-TW",
     "added_at": "2026-09-03T13:39:13+0800",
-    "missed": 1
+    "missed": 2
   },
   {
     "ftid": "0x3442a97f3e1d2b0b:0x180f4665f88421e5",
@@ -7705,9 +7170,9 @@
     "types": [
       "拉麵店"
     ],
-    "place_id": null,
+    "place_id": "ChIJV_bsR3CvQjQR3YsUYlBirxs",
     "gid": "/g/11wvszwhym",
-    "maps_url": "https://www.google.com/maps/place/%E9%BA%B5%E5%8C%A1%E5%8C%A1%E6%8B%89%E9%BA%B5%E9%A3%9F%E5%A0%82%20%E6%B7%A1%E6%B0%B4%E7%AB%B9%E5%9C%8D%E5%BA%97/data=!4m6!3m5!1s0x3442af7047ecf657:0x1baf625062148bdd!8m2!3d25.138076599999998!4d121.46259429999999!16s%2Fg%2F11wvszwhym?hl=zh-TW",
+    "maps_url": "https://www.google.com/maps/place/%E9%BA%B5%E5%8C%A1%E5%8C%A1%E6%8B%89%E9%BA%B5%E9%A3%9F%E5%A0%82%20%E6%B7%A1%E6%B0%B4%E7%AB%B9%E5%9C%8D%E5%BA%97/data=!4m6!3m5!1s0x3442af7047ecf657:0x1baf625062148bdd!8m2!3d25.138076599999998!4d121.46259429999999!16s%2Fg%2F11wvszwhym!19sChIJV_bsR3CvQjQR3YsUYlBirxs?hl=zh-TW",
     "added_at": "2026-09-03T13:39:13+0800",
     "missed": 0
   },
@@ -7769,9 +7234,9 @@
     "types": [
       "拉麵店"
     ],
-    "place_id": null,
+    "place_id": "ChIJTSwzqR6lQjQRM95KiHMaHt4",
     "gid": "/g/11vk84k3h7",
-    "maps_url": "https://www.google.com/maps/place/%E9%BA%B5%E5%8C%A1%E5%8C%A1%E6%8B%89%E9%BA%B5%E9%A3%9F%E5%A0%82%E6%B7%A1%E6%B0%B4%E4%B8%AD%E5%B1%B1%E5%8C%97%E5%BA%97/data=!4m6!3m5!1s0x3442a51ea9332c4d:0xde1e1a73884ade33!8m2!3d25.1752877!4d121.44137289999999!16s%2Fg%2F11vk84k3h7?hl=zh-TW",
+    "maps_url": "https://www.google.com/maps/place/%E9%BA%B5%E5%8C%A1%E5%8C%A1%E6%8B%89%E9%BA%B5%E9%A3%9F%E5%A0%82%E6%B7%A1%E6%B0%B4%E4%B8%AD%E5%B1%B1%E5%8C%97%E5%BA%97/data=!4m6!3m5!1s0x3442a51ea9332c4d:0xde1e1a73884ade33!8m2!3d25.1752877!4d121.44137289999999!16s%2Fg%2F11vk84k3h7!19sChIJTSwzqR6lQjQRM95KiHMaHt4?hl=zh-TW",
     "added_at": "2026-09-03T13:39:13+0800",
     "missed": 0
   },
@@ -7791,21 +7256,6 @@
     "missed": 0
   },
   {
-    "ftid": "0x3442a55c5d13d6e5:0x1233f37913131791",
-    "name": "交個朋友吧24hr無人拉麵店",
-    "address": "251新北市淡水區新民里新民街180巷7號",
-    "lat": 25.179182899999997,
-    "lng": 121.4373468,
-    "types": [
-      "麵店"
-    ],
-    "place_id": null,
-    "gid": "/g/11w3tdzt8x",
-    "maps_url": "https://www.google.com/maps/place/%E4%BA%A4%E5%80%8B%E6%9C%8B%E5%8F%8B%E5%90%A724hr%E7%84%A1%E4%BA%BA%E6%8B%89%E9%BA%B5%E5%BA%97/data=!4m6!3m5!1s0x3442a55c5d13d6e5:0x1233f37913131791!8m2!3d25.179182899999997!4d121.4373468!16s%2Fg%2F11w3tdzt8x?hl=zh-TW",
-    "added_at": "2026-09-03T13:39:13+0800",
-    "missed": 0
-  },
-  {
     "ftid": "0x3442af76140e8381:0x3ae93034f92a8c7b",
     "name": "豚將日式拉麵淡水店",
     "address": "251新北市淡水區幸福里博愛街19號",
@@ -7814,9 +7264,9 @@
     "types": [
       "拉麵店"
     ],
-    "place_id": null,
+    "place_id": "ChIJgYMOFHavQjQRe4wq-TQw6To",
     "gid": "/g/11gl4lz_v_",
-    "maps_url": "https://www.google.com/maps/place/%E8%B1%9A%E5%B0%87%E6%97%A5%E5%BC%8F%E6%8B%89%E9%BA%B5%E6%B7%A1%E6%B0%B4%E5%BA%97/data=!4m6!3m5!1s0x3442af76140e8381:0x3ae93034f92a8c7b!8m2!3d25.169814!4d121.44622989999999!16s%2Fg%2F11gl4lz_v_?hl=zh-TW",
+    "maps_url": "https://www.google.com/maps/place/%E8%B1%9A%E5%B0%87%E6%97%A5%E5%BC%8F%E6%8B%89%E9%BA%B5%E6%B7%A1%E6%B0%B4%E5%BA%97/data=!4m6!3m5!1s0x3442af76140e8381:0x3ae93034f92a8c7b!8m2!3d25.169814!4d121.44622989999999!16s%2Fg%2F11gl4lz_v_!19sChIJgYMOFHavQjQRe4wq-TQw6To?hl=zh-TW",
     "added_at": "2026-09-03T13:39:13+0800",
     "missed": 0
   },
@@ -7836,24 +7286,6 @@
     "missed": 0
   },
   {
-    "ftid": "0x3442a5ba6a783967:0x7f12a7a48b923042",
-    "name": "暮野食堂「前新生簡餐」宵夜、丼飯、拉麵",
-    "address": "251新北市淡水區幸福里學府路51巷3弄2號",
-    "lat": 25.1696222,
-    "lng": 121.4471954,
-    "types": [
-      "拉麵店",
-      "丼物餐廳",
-      "日本餐廳",
-      "餐廳"
-    ],
-    "place_id": null,
-    "gid": "/g/11xcjxyqtf",
-    "maps_url": "https://www.google.com/maps/place/%E6%9A%AE%E9%87%8E%E9%A3%9F%E5%A0%82%E3%80%8C%E5%89%8D%E6%96%B0%E7%94%9F%E7%B0%A1%E9%A4%90%E3%80%8D%E5%AE%B5%E5%A4%9C%E3%80%81%E4%B8%BC%E9%A3%AF%E3%80%81%E6%8B%89%E9%BA%B5/data=!4m6!3m5!1s0x3442a5ba6a783967:0x7f12a7a48b923042!8m2!3d25.1696222!4d121.4471954!16s%2Fg%2F11xcjxyqtf?hl=zh-TW",
-    "added_at": "2026-09-03T13:39:13+0800",
-    "missed": 1
-  },
-  {
     "ftid": "0x3442afff73551ae9:0xa54252403c38395c",
     "name": "日本富士八峰拉麵【淡水北新店】",
     "address": "251新北市淡水區正德里北新路149號",
@@ -7865,36 +7297,6 @@
     "place_id": null,
     "gid": "/g/1pzsx9tc2",
     "maps_url": "https://www.google.com/maps/place/%E6%97%A5%E6%9C%AC%E5%AF%8C%E5%A3%AB%E5%85%AB%E5%B3%B0%E6%8B%89%E9%BA%B5%E3%80%90%E6%B7%A1%E6%B0%B4%E5%8C%97%E6%96%B0%E5%BA%97%E3%80%91/data=!4m6!3m5!1s0x3442afff73551ae9:0xa54252403c38395c!8m2!3d25.1791141!4d121.4497332!16s%2Fg%2F1pzsx9tc2?hl=zh-TW",
-    "added_at": "2026-09-03T13:39:13+0800",
-    "missed": 0
-  },
-  {
-    "ftid": "0x3442a55754904ca7:0xafe47277f016f0b1",
-    "name": "七條通日式煎餃拉麵店",
-    "address": "251新北市淡水區協元里重建街98號",
-    "lat": 25.172638799999998,
-    "lng": 121.44009229999999,
-    "types": [
-      "拉麵店"
-    ],
-    "place_id": null,
-    "gid": "/g/1tcxxhxb",
-    "maps_url": "https://www.google.com/maps/place/%E4%B8%83%E6%A2%9D%E9%80%9A%E6%97%A5%E5%BC%8F%E7%85%8E%E9%A4%83%E6%8B%89%E9%BA%B5%E5%BA%97/data=!4m6!3m5!1s0x3442a55754904ca7:0xafe47277f016f0b1!8m2!3d25.172638799999998!4d121.44009229999999!16s%2Fg%2F1tcxxhxb?hl=zh-TW",
-    "added_at": "2026-09-03T13:39:13+0800",
-    "missed": 0
-  },
-  {
-    "ftid": "0x3442af9df2e7d919:0x23d9e1a82fbef265",
-    "name": "李讚羹。鮮拉麵",
-    "address": "251新北市淡水區民權里民族路50巷2弄2號",
-    "lat": 25.1359356,
-    "lng": 121.46141139999999,
-    "types": [
-      "拉麵店"
-    ],
-    "place_id": "ChIJGdnn8p2vQjQRZfK-L6jh2SM",
-    "gid": "/g/11crztdgsw",
-    "maps_url": "https://www.google.com/maps/place/%E6%9D%8E%E8%AE%9A%E7%BE%B9%E3%80%82%E9%AE%AE%E6%8B%89%E9%BA%B5/data=!4m6!3m5!1s0x3442af9df2e7d919:0x23d9e1a82fbef265!8m2!3d25.1359356!4d121.46141139999999!16s%2Fg%2F11crztdgsw!19sChIJGdnn8p2vQjQRZfK-L6jh2SM?hl=zh-TW",
     "added_at": "2026-09-03T13:39:13+0800",
     "missed": 0
   },
@@ -7927,21 +7329,6 @@
     "place_id": null,
     "gid": "/g/1pzpkkj0p",
     "maps_url": "https://www.google.com/maps/place/%E5%A2%88%E5%B0%87%E6%97%A5%E5%BC%8F%E6%8B%89%E9%BA%B5%E5%92%96%E5%95%A1%E9%A3%B2%E6%96%99/data=!4m6!3m5!1s0x3442af9c2be01921:0x2573ae2d726fccdf!8m2!3d25.138184499999998!4d121.4623177!16s%2Fg%2F1pzpkkj0p?hl=zh-TW",
-    "added_at": "2026-09-03T13:39:13+0800",
-    "missed": 0
-  },
-  {
-    "ftid": "0x3442a5511f7d3877:0x149ceb29e1931d73",
-    "name": "漁村拉麵屋",
-    "address": "251新北市淡水區漁人碼頭木棧道商店街C05號",
-    "lat": 25.1822411,
-    "lng": 121.41091739999999,
-    "types": [
-      "拉麵店"
-    ],
-    "place_id": null,
-    "gid": "/g/11gdkwz_fj",
-    "maps_url": "https://www.google.com/maps/place/%E6%BC%81%E6%9D%91%E6%8B%89%E9%BA%B5%E5%B1%8B/data=!4m6!3m5!1s0x3442a5511f7d3877:0x149ceb29e1931d73!8m2!3d25.1822411!4d121.41091739999999!16s%2Fg%2F11gdkwz_fj?hl=zh-TW",
     "added_at": "2026-09-03T13:39:13+0800",
     "missed": 0
   },
@@ -7986,7 +7373,7 @@
     ],
     "place_id": "ChIJQwDuz52vQjQReId08kx7h1E",
     "gid": "/g/11bw53yjdj",
-    "maps_url": "https://www.google.com/maps/place/%E6%97%A5%E6%9C%AC%E5%AF%8C%E5%A3%AB%E5%85%AB%E5%B3%B0%E6%8B%89%E9%BA%B5%E3%80%90%E7%AB%B9%E5%9C%8D%E6%B0%91%E7%94%9F%E5%BA%97%E3%80%91/data=!4m6!3m5!1s0x3442af9dcfee0043:0x51877b4cf2748778!8m2!3d25.137380999999998!4d121.46197699999999!16s%2Fg%2F11bw53yjdj!19sChIJQwDuz52vQjQReId08kx7h1E?hl=zh-TW",
+    "maps_url": "https://www.google.com/maps/place/%E6%97%A5%E6%9C%AC%E5%AF%8C%E5%A3%AB%E5%85%AB%E5%B3%B0%E6%8B%89%E9%BA%B5%E3%80%90%E7%AB%B9%E5%9C%8D%E6%B0%91%E7%94%9F%E5%BA%97%E3%80%91/data=!4m6!3m5!1s0x3442af9dcfee0043:0x51877b4cf2748778!8m2!3d25.137380999999998!4d121.46197699999999!16s%2Fg%2F11bw53yjdj?hl=zh-TW",
     "added_at": "2026-09-03T13:39:13+0800",
     "missed": 0
   },
@@ -8021,21 +7408,6 @@
     "missed": 0
   },
   {
-    "ftid": "0x34681d006c8b0131:0x188bcccd45ec5735",
-    "name": "Ajussi-阿啾西拉麵圖書館-大觀店",
-    "address": "237新北市三峽區龍學里大觀路28號",
-    "lat": 24.9452282,
-    "lng": 121.3748902,
-    "types": [
-      "自助餐餐廳"
-    ],
-    "place_id": null,
-    "gid": "/g/11w3vlpwdl",
-    "maps_url": "https://www.google.com/maps/place/Ajussi-%E9%98%BF%E5%95%BE%E8%A5%BF%E6%8B%89%E9%BA%B5%E5%9C%96%E6%9B%B8%E9%A4%A8-%E5%A4%A7%E8%A7%80%E5%BA%97/data=!4m6!3m5!1s0x34681d006c8b0131:0x188bcccd45ec5735!8m2!3d24.9452282!4d121.3748902!16s%2Fg%2F11w3vlpwdl?hl=zh-TW",
-    "added_at": "2026-09-03T13:39:13+0800",
-    "missed": 0
-  },
-  {
     "ftid": "0x34681bc32a94d71d:0x155bdb32f1705443",
     "name": "麵匡匡拉麵食堂 三峽和平店",
     "address": "237新北市三峽區永舘里和平街70號",
@@ -8066,21 +7438,6 @@
     "missed": 0
   },
   {
-    "ftid": "0x34681d908359afb7:0x96148f1b163ac285",
-    "name": "鬼匠拉麵-三峽大學店",
-    "address": "237新北市三峽區大學路141號",
-    "lat": 24.9438329,
-    "lng": 121.3742803,
-    "types": [
-      "餐廳"
-    ],
-    "place_id": null,
-    "gid": "/g/11plgwjbcp",
-    "maps_url": "https://www.google.com/maps/place/%E9%AC%BC%E5%8C%A0%E6%8B%89%E9%BA%B5-%E4%B8%89%E5%B3%BD%E5%A4%A7%E5%AD%B8%E5%BA%97/data=!4m6!3m5!1s0x34681d908359afb7:0x96148f1b163ac285!8m2!3d24.9438329!4d121.3742803!16s%2Fg%2F11plgwjbcp?hl=zh-TW",
-    "added_at": "2026-09-03T13:39:13+0800",
-    "missed": 0
-  },
-  {
     "ftid": "0x34681dd2067c6691:0x6247a1ea92aed6f8",
     "name": "青原 （拉麵、丼飯）",
     "address": "23741新北市三峽區介壽里光明路41-1號",
@@ -8095,7 +7452,7 @@
     "gid": "/g/11fmh4gpvt",
     "maps_url": "https://www.google.com/maps/place/%E9%9D%92%E5%8E%9F%20%EF%BC%88%E6%8B%89%E9%BA%B5%E3%80%81%E4%B8%BC%E9%A3%AF%EF%BC%89/data=!4m6!3m5!1s0x34681dd2067c6691:0x6247a1ea92aed6f8!8m2!3d24.929515499999997!4d121.3749843!16s%2Fg%2F11fmh4gpvt?hl=zh-TW",
     "added_at": "2026-09-03T13:39:13+0800",
-    "missed": 1
+    "missed": 0
   },
   {
     "ftid": "0x34681c740f8d5621:0x6b9e88c3aff69204",
@@ -8111,7 +7468,7 @@
     "gid": "/g/11c1v90xlk",
     "maps_url": "https://www.google.com/maps/place/11%E9%95%B7%E7%80%A8%E5%B1%8B%20%E6%8B%89%E9%BA%B5%E4%B8%BC%E9%A3%AF%E5%B0%88%E9%96%80%E5%BA%97/data=!4m6!3m5!1s0x34681c740f8d5621:0x6b9e88c3aff69204!8m2!3d24.947882999999997!4d121.38203499999999!16s%2Fg%2F11c1v90xlk?hl=zh-TW",
     "added_at": "2026-09-03T13:39:13+0800",
-    "missed": 1
+    "missed": 0
   },
   {
     "ftid": "0x34681d7784c4b66d:0xa0dafd252c5c0d40",
@@ -8155,7 +7512,8 @@
     "place_id": null,
     "gid": "/g/11byyf5_xh",
     "maps_url": "https://www.google.com/maps/place/%E9%B3%A5%E4%BA%BA%E6%8B%89%E9%BA%B5-%E5%8F%B0%E7%81%A3%E7%B8%BD%E5%BA%97TOTTO%20Ramen/data=!4m6!3m5!1s0x3442abda4ba30f7b:0x82c7699e52a82518!8m2!3d25.0442602!4d121.5443423!16s%2Fg%2F11byyf5_xh?hl=zh-TW",
-    "added_at": "2026-09-03T13:39:13+0800"
+    "added_at": "2026-09-03T13:39:13+0800",
+    "missed": 0
   },
   {
     "ftid": "0x3442ab002aced1ed:0x9122c0fa750e79ea",
@@ -8169,7 +7527,8 @@
     "place_id": null,
     "gid": "/g/11ltwy27k1",
     "maps_url": "https://www.google.com/maps/place/%E9%BA%B5%E5%B1%8B%E4%B8%80%E7%87%88%20%E4%BF%A1%E7%BE%A9%E6%96%B0%E5%85%89A11%E5%BA%97/data=!4m6!3m5!1s0x3442ab002aced1ed:0x9122c0fa750e79ea!8m2!3d25.0367465!4d121.56731959999999!16s%2Fg%2F11ltwy27k1?hl=zh-TW",
-    "added_at": "2026-09-03T13:39:13+0800"
+    "added_at": "2026-09-03T13:39:13+0800",
+    "missed": 0
   },
   {
     "ftid": "0x3442ab18b83fb847:0x42804cddbeb0de08",
@@ -8184,7 +7543,8 @@
     "place_id": null,
     "gid": "/g/11t2r5vnyp",
     "maps_url": "https://www.google.com/maps/place/%E8%92%9D%E5%B1%B1%E6%8B%89%E9%BA%B5/data=!4m6!3m5!1s0x3442ab18b83fb847:0x42804cddbeb0de08!8m2!3d25.0372962!4d121.5463333!16s%2Fg%2F11t2r5vnyp?hl=zh-TW",
-    "added_at": "2026-09-03T13:39:13+0800"
+    "added_at": "2026-09-03T13:39:13+0800",
+    "missed": 0
   },
   {
     "ftid": "0x3442abc205bf54c3:0x2ffe06a9d95f4990",
@@ -8195,10 +7555,11 @@
     "types": [
       "日本餐廳"
     ],
-    "place_id": null,
+    "place_id": "ChIJw1S_BcKrQjQRkElf2akG_i8",
     "gid": "/g/11nvksbp75",
-    "maps_url": "https://www.google.com/maps/place/MEN%20EIJI%E5%8C%97%E6%B5%B7%E9%81%93%E9%B4%A8%E7%99%BD%E6%B9%AF%E6%8B%89%E9%BA%B5-%20-%E5%8F%B0%E5%8C%97%E5%B0%8F%E5%B7%A8%E8%9B%8B%E5%BA%97/data=!4m6!3m5!1s0x3442abc205bf54c3:0x2ffe06a9d95f4990!8m2!3d25.0507925!4d121.5500235!16s%2Fg%2F11nvksbp75?hl=zh-TW",
-    "added_at": "2026-09-03T13:39:13+0800"
+    "maps_url": "https://www.google.com/maps/place/MEN%20EIJI%E5%8C%97%E6%B5%B7%E9%81%93%E9%B4%A8%E7%99%BD%E6%B9%AF%E6%8B%89%E9%BA%B5-%20-%E5%8F%B0%E5%8C%97%E5%B0%8F%E5%B7%A8%E8%9B%8B%E5%BA%97/data=!4m6!3m5!1s0x3442abc205bf54c3:0x2ffe06a9d95f4990!8m2!3d25.0507925!4d121.5500235!16s%2Fg%2F11nvksbp75!19sChIJw1S_BcKrQjQRkElf2akG_i8?hl=zh-TW",
+    "added_at": "2026-09-03T13:39:13+0800",
+    "missed": 0
   },
   {
     "ftid": "0x3442ab57a9d1207b:0x81878671580d8ab0",
@@ -8209,10 +7570,11 @@
     "types": [
       "拉麵店"
     ],
-    "place_id": null,
+    "place_id": "ChIJeyDRqVerQjQRsIoNWHGGh4E",
     "gid": "/g/11v9vpf3g9",
-    "maps_url": "https://www.google.com/maps/place/%E7%A0%94%E4%BA%8C%E6%8B%89%E9%BA%B5%E5%B1%8B%20Ramen%20Kenji%20%EF%BC%88%206/16-7/29%20%E5%BA%97%E4%BC%91%EF%BC%89/data=!4m6!3m5!1s0x3442ab57a9d1207b:0x81878671580d8ab0!8m2!3d25.040221!4d121.579927!16s%2Fg%2F11v9vpf3g9?hl=zh-TW",
-    "added_at": "2026-09-03T13:39:13+0800"
+    "maps_url": "https://www.google.com/maps/place/%E7%A0%94%E4%BA%8C%E6%8B%89%E9%BA%B5%E5%B1%8B%20Ramen%20Kenji%20%EF%BC%88%206/16-7/29%20%E5%BA%97%E4%BC%91%EF%BC%89/data=!4m6!3m5!1s0x3442ab57a9d1207b:0x81878671580d8ab0!8m2!3d25.040221!4d121.579927!16s%2Fg%2F11v9vpf3g9!19sChIJeyDRqVerQjQRsIoNWHGGh4E?hl=zh-TW",
+    "added_at": "2026-09-03T13:39:13+0800",
+    "missed": 0
   },
   {
     "ftid": "0x3442abdb39b4b5a7:0xd46684b1cae5a89",
@@ -8227,7 +7589,8 @@
     "place_id": null,
     "gid": "/g/1tfxvqhv",
     "maps_url": "https://www.google.com/maps/place/%E5%8D%9A%E5%A4%9A%E6%8B%89%E9%BA%B5%20%E5%8F%B0%E7%81%A3%E7%B8%BD%E5%BA%97/data=!4m6!3m5!1s0x3442abdb39b4b5a7:0xd46684b1cae5a89!8m2!3d25.036734499999998!4d121.5440287!16s%2Fg%2F1tfxvqhv?hl=zh-TW",
-    "added_at": "2026-09-03T13:39:13+0800"
+    "added_at": "2026-09-03T13:39:13+0800",
+    "missed": 0
   },
   {
     "ftid": "0x3442abd9e2147cc7:0xf0197e91f3a3ba7b",
@@ -8238,10 +7601,11 @@
     "types": [
       "拉麵店"
     ],
-    "place_id": null,
+    "place_id": "ChIJx3wU4tmrQjQRe7qj85F-GfA",
     "gid": "/g/11c2jwg4mm",
-    "maps_url": "https://www.google.com/maps/place/%E6%97%A5%E6%9C%AC%E6%8B%89%E9%BA%B5/data=!4m6!3m5!1s0x3442abd9e2147cc7:0xf0197e91f3a3ba7b!8m2!3d25.0424747!4d121.54171!16s%2Fg%2F11c2jwg4mm?hl=zh-TW",
-    "added_at": "2026-09-03T13:39:13+0800"
+    "maps_url": "https://www.google.com/maps/place/%E6%97%A5%E6%9C%AC%E6%8B%89%E9%BA%B5/data=!4m6!3m5!1s0x3442abd9e2147cc7:0xf0197e91f3a3ba7b!8m2!3d25.0424747!4d121.54171!16s%2Fg%2F11c2jwg4mm!19sChIJx3wU4tmrQjQRe7qj85F-GfA?hl=zh-TW",
+    "added_at": "2026-09-03T13:39:13+0800",
+    "missed": 0
   },
   {
     "ftid": "0x3442aa2bac3ef727:0xe1f7741453d55f8b",
@@ -8252,10 +7616,11 @@
     "types": [
       "拉麵店"
     ],
-    "place_id": null,
+    "place_id": "ChIJJ_c-rCuqQjQRi1_VUxR09-E",
     "gid": "/g/11g_5klpk",
-    "maps_url": "https://www.google.com/maps/place/%E7%BE%8E%E9%84%89%E6%8B%89%E9%BA%B5%E5%B1%8B/data=!4m6!3m5!1s0x3442aa2bac3ef727:0xe1f7741453d55f8b!8m2!3d25.028850199999997!4d121.54025159999999!16s%2Fg%2F11g_5klpk?hl=zh-TW",
-    "added_at": "2026-09-03T13:39:13+0800"
+    "maps_url": "https://www.google.com/maps/place/%E7%BE%8E%E9%84%89%E6%8B%89%E9%BA%B5%E5%B1%8B/data=!4m6!3m5!1s0x3442aa2bac3ef727:0xe1f7741453d55f8b!8m2!3d25.028850199999997!4d121.54025159999999!16s%2Fg%2F11g_5klpk!19sChIJJ_c-rCuqQjQRi1_VUxR09-E?hl=zh-TW",
+    "added_at": "2026-09-03T13:39:13+0800",
+    "missed": 0
   },
   {
     "ftid": "0x3442ab0033df7591:0x8a0c35e78ce79c64",
@@ -8266,10 +7631,11 @@
     "types": [
       "拉麵店"
     ],
-    "place_id": null,
+    "place_id": "ChIJkXXfMwCrQjQRZJznjOc1DIo",
     "gid": "/g/11xgx1v9jp",
-    "maps_url": "https://www.google.com/maps/place/%E9%BA%B5%E5%8C%A1%E5%8C%A1%E6%8B%89%E9%BA%B5%E9%A3%9F%E5%A0%82%20%E5%8F%B0%E5%8C%97%E5%8D%97%E5%9B%9B%E5%BA%97/data=!4m6!3m5!1s0x3442ab0033df7591:0x8a0c35e78ce79c64!8m2!3d25.0530738!4d121.5552027!16s%2Fg%2F11xgx1v9jp?hl=zh-TW",
-    "added_at": "2026-09-03T13:39:13+0800"
+    "maps_url": "https://www.google.com/maps/place/%E9%BA%B5%E5%8C%A1%E5%8C%A1%E6%8B%89%E9%BA%B5%E9%A3%9F%E5%A0%82%20%E5%8F%B0%E5%8C%97%E5%8D%97%E5%9B%9B%E5%BA%97/data=!4m6!3m5!1s0x3442ab0033df7591:0x8a0c35e78ce79c64!8m2!3d25.0530738!4d121.5552027!16s%2Fg%2F11xgx1v9jp!19sChIJkXXfMwCrQjQRZJznjOc1DIo?hl=zh-TW",
+    "added_at": "2026-09-03T13:39:13+0800",
+    "missed": 0
   },
   {
     "ftid": "0x3442abedccbbab3f:0x6ddf4d5530971886",
@@ -8280,10 +7646,11 @@
     "types": [
       "拉麵店"
     ],
-    "place_id": null,
+    "place_id": "ChIJP6u7zO2rQjQRhhiXMFVN320",
     "gid": "/g/12hn3jyc5",
-    "maps_url": "https://www.google.com/maps/place/%E4%B8%89%E5%8F%8B%E6%8B%89%E9%BA%B5%28%E6%B0%91%E7%94%9F%E5%BA%97%29/data=!4m6!3m5!1s0x3442abedccbbab3f:0x6ddf4d5530971886!8m2!3d25.057731999999998!4d121.5551708!16s%2Fg%2F12hn3jyc5?hl=zh-TW",
-    "added_at": "2026-09-03T13:39:13+0800"
+    "maps_url": "https://www.google.com/maps/place/%E4%B8%89%E5%8F%8B%E6%8B%89%E9%BA%B5%28%E6%B0%91%E7%94%9F%E5%BA%97%29/data=!4m6!3m5!1s0x3442abedccbbab3f:0x6ddf4d5530971886!8m2!3d25.057731999999998!4d121.5551708!16s%2Fg%2F12hn3jyc5!19sChIJP6u7zO2rQjQRhhiXMFVN320?hl=zh-TW",
+    "added_at": "2026-09-03T13:39:13+0800",
+    "missed": 0
   },
   {
     "ftid": "0x3442ab9697646c79:0x2db1e48c954cecdd",
@@ -8294,10 +7661,11 @@
     "types": [
       "拉麵店"
     ],
-    "place_id": null,
+    "place_id": "ChIJeWxkl5arQjQR3exMlYzksS0",
     "gid": "/g/11c0rtzqnw",
-    "maps_url": "https://www.google.com/maps/place/%E4%B9%9D%E6%B9%AF%E5%B1%8B%E6%97%A5%E6%9C%AC%E6%8B%89%E9%BA%B5%E6%9D%BE%E5%B1%B1%E5%BA%97/data=!4m6!3m5!1s0x3442ab9697646c79:0x2db1e48c954cecdd!8m2!3d25.0526564!4d121.5660759!16s%2Fg%2F11c0rtzqnw?hl=zh-TW",
-    "added_at": "2026-09-03T13:39:13+0800"
+    "maps_url": "https://www.google.com/maps/place/%E4%B9%9D%E6%B9%AF%E5%B1%8B%E6%97%A5%E6%9C%AC%E6%8B%89%E9%BA%B5%E6%9D%BE%E5%B1%B1%E5%BA%97/data=!4m6!3m5!1s0x3442ab9697646c79:0x2db1e48c954cecdd!8m2!3d25.0526564!4d121.5660759!16s%2Fg%2F11c0rtzqnw!19sChIJeWxkl5arQjQR3exMlYzksS0?hl=zh-TW",
+    "added_at": "2026-09-03T13:39:13+0800",
+    "missed": 0
   },
   {
     "ftid": "0x3442ab9ea4f60205:0x7330875ae707a93e",
@@ -8311,7 +7679,8 @@
     "place_id": null,
     "gid": "/g/1pzywnvx7",
     "maps_url": "https://www.google.com/maps/place/%E3%82%89%E3%81%82%E3%82%81%E3%82%93%E8%8A%B1%E6%9C%88%E5%B5%90%20%E6%9D%BE%E5%B1%B1%E8%BB%8A%E7%AB%99%E5%BA%97/data=!4m6!3m5!1s0x3442ab9ea4f60205:0x7330875ae707a93e!8m2!3d25.0492152!4d121.5791618!16s%2Fg%2F1pzywnvx7?hl=zh-TW",
-    "added_at": "2026-09-03T13:39:13+0800"
+    "added_at": "2026-09-03T13:39:13+0800",
+    "missed": 0
   },
   {
     "ftid": "0x3442a7377e7f5fa9:0x75824ec23a79bebd",
@@ -8326,7 +7695,8 @@
     "place_id": null,
     "gid": "/g/11nnw34wpk",
     "maps_url": "https://www.google.com/maps/place/%E5%A4%A9%E9%B3%A5%E6%8B%89%E9%BA%B5%20%E6%9E%97%E5%8F%A3%E5%BA%97/data=!4m6!3m5!1s0x3442a7377e7f5fa9:0x75824ec23a79bebd!8m2!3d25.0749162!4d121.378703!16s%2Fg%2F11nnw34wpk?hl=zh-TW",
-    "added_at": "2026-09-03T13:39:13+0800"
+    "added_at": "2026-09-03T13:39:13+0800",
+    "missed": 0
   },
   {
     "ftid": "0x3442a788e4efd331:0xa66c25aea6ae82ae",
@@ -8340,21 +7710,8 @@
     "place_id": null,
     "gid": "/g/11bw4blxxn",
     "maps_url": "https://www.google.com/maps/place/%E4%B9%9D%E6%B9%AF%E5%B1%8B%E6%97%A5%E6%9C%AC%E6%8B%89%E9%BA%B5%20%E6%96%B0%E5%8C%97%E6%9E%97%E5%8F%A3%E5%BA%97/data=!4m6!3m5!1s0x3442a788e4efd331:0xa66c25aea6ae82ae!8m2!3d25.0774717!4d121.39539699999999!16s%2Fg%2F11bw4blxxn?hl=zh-TW",
-    "added_at": "2026-09-03T13:39:13+0800"
-  },
-  {
-    "ftid": "0x3442af56af719223:0x8e26518926fc9b07",
-    "name": "八田拉麵",
-    "address": "248新北市五股區成州里凌雲路一段85號",
-    "lat": 25.1012934,
-    "lng": 121.4507051,
-    "types": [
-      "拉麵店"
-    ],
-    "place_id": null,
-    "gid": "/g/11fy5j475x",
-    "maps_url": "https://www.google.com/maps/place/%E5%85%AB%E7%94%B0%E6%8B%89%E9%BA%B5/data=!4m6!3m5!1s0x3442af56af719223:0x8e26518926fc9b07!8m2!3d25.1012934!4d121.4507051!16s%2Fg%2F11fy5j475x?hl=zh-TW",
-    "added_at": "2026-09-03T13:39:13+0800"
+    "added_at": "2026-09-03T13:39:13+0800",
+    "missed": 0
   },
   {
     "ftid": "0x3442aba274e7a9d7:0x6605709eb960ff12",
@@ -8367,8 +7724,9 @@
     ],
     "place_id": "ChIJ16nndKKrQjQREv9guZ5wBWY",
     "gid": "/g/11tmwp7rxl",
-    "maps_url": "https://www.google.com/maps/place/%E4%BE%8D%E6%8B%89%E9%BA%B5%E2%80%A2%E6%9E%9C%E9%A3%B2/data=!4m6!3m5!1s0x3442aba274e7a9d7:0x6605709eb960ff12!8m2!3d25.003594999999997!4d121.6180187!16s%2Fg%2F11tmwp7rxl!19sChIJ16nndKKrQjQREv9guZ5wBWY?hl=zh-TW",
-    "added_at": "2026-09-03T13:39:13+0800"
+    "maps_url": "https://www.google.com/maps/place/%E4%BE%8D%E6%8B%89%E9%BA%B5%E2%80%A2%E6%9E%9C%E9%A3%B2/data=!4m6!3m5!1s0x3442aba274e7a9d7:0x6605709eb960ff12!8m2!3d25.003594999999997!4d121.6180187!16s%2Fg%2F11tmwp7rxl?hl=zh-TW",
+    "added_at": "2026-09-03T13:39:13+0800",
+    "missed": 0
   },
   {
     "ftid": "0x3442a5ef40a34de9:0x8b8e991be597067c",
@@ -8382,8 +7740,9 @@
     ],
     "place_id": "ChIJ6U2jQO-lQjQRfAaX5RuZjos",
     "gid": "/g/11gmvwg01c",
-    "maps_url": "https://www.google.com/maps/place/%E6%97%A5%E5%BC%8F%E8%B1%9A%E5%B0%87%E6%8B%89%E9%BA%B5%EF%BC%88%E9%A6%AC%E8%94%A5%E9%A4%85%EF%BC%89-%E6%96%B0%E5%8C%97%E5%85%AB%E9%87%8C%E5%BA%97-%E5%85%AB%E9%87%8C%E5%8D%80%E7%BE%8E%E9%A3%9F%20%7C%20%E6%8B%89%E9%BA%B5%7C%20%E5%B9%B3%E5%83%B9%E7%BE%8E%E9%A3%9F%20%7C%20%E6%8E%A8%E8%96%A6%E9%A4%90%E5%BB%B3/data=!4m6!3m5!1s0x3442a5ef40a34de9:0x8b8e991be597067c!8m2!3d25.1469405!4d121.3985888!16s%2Fg%2F11gmvwg01c!19sChIJ6U2jQO-lQjQRfAaX5RuZjos?hl=zh-TW",
-    "added_at": "2026-09-03T13:39:13+0800"
+    "maps_url": "https://www.google.com/maps/place/%E6%97%A5%E5%BC%8F%E8%B1%9A%E5%B0%87%E6%8B%89%E9%BA%B5%EF%BC%88%E9%A6%AC%E8%94%A5%E9%A4%85%EF%BC%89-%E6%96%B0%E5%8C%97%E5%85%AB%E9%87%8C%E5%BA%97-%E5%85%AB%E9%87%8C%E5%8D%80%E7%BE%8E%E9%A3%9F%20%7C%20%E6%8B%89%E9%BA%B5%7C%20%E5%B9%B3%E5%83%B9%E7%BE%8E%E9%A3%9F%20%7C%20%E6%8E%A8%E8%96%A6%E9%A4%90%E5%BB%B3/data=!4m6!3m5!1s0x3442a5ef40a34de9:0x8b8e991be597067c!8m2!3d25.1469405!4d121.3985888!16s%2Fg%2F11gmvwg01c?hl=zh-TW",
+    "added_at": "2026-09-03T13:39:13+0800",
+    "missed": 0
   },
   {
     "ftid": "0x3442a985bd9a9c4d:0x54a6e5fe24d9a0e3",
@@ -8398,7 +7757,8 @@
     "place_id": "ChIJTZyavYWpQjQR46DZJP7lplQ",
     "gid": "/g/11b7qw29t9",
     "maps_url": "https://www.google.com/maps/place/%E5%85%83%E6%97%A5%E6%9C%AC%E8%B1%9A%E9%AA%A8%E6%8B%89%E9%BA%B5%E6%90%AC%E5%88%B0%E6%96%B0%E5%8C%97%E5%B8%82%E6%96%B0%E5%BA%97%E5%8D%80%E6%96%87%E5%8C%96%E8%B7%AF1%E8%99%9F/data=!4m6!3m5!1s0x3442a985bd9a9c4d:0x54a6e5fe24d9a0e3!8m2!3d25.0253652!4d121.52937229999999!16s%2Fg%2F11b7qw29t9!19sChIJTZyavYWpQjQR46DZJP7lplQ?hl=zh-TW",
-    "added_at": "2026-09-03T13:39:13+0800"
+    "added_at": "2026-09-03T13:39:13+0800",
+    "missed": 1
   },
   {
     "ftid": "0x3442ab0047260cab:0x1bb665025fb5f271",
@@ -8412,7 +7772,8 @@
     "place_id": null,
     "gid": "/g/11xf55z706",
     "maps_url": "https://www.google.com/maps/place/%E5%90%BE%E6%B5%81%E3%83%A9%E3%83%BC%E3%83%A1%E3%83%B3/data=!4m6!3m5!1s0x3442ab0047260cab:0x1bb665025fb5f271!8m2!3d25.04551!4d121.5582541!16s%2Fg%2F11xf55z706?hl=zh-TW",
-    "added_at": "2026-09-03T13:39:13+0800"
+    "added_at": "2026-09-03T13:39:13+0800",
+    "missed": 0
   },
   {
     "ftid": "0x3442ab0045e318eb:0xb31411e1db1ee4be",
@@ -8427,21 +7788,8 @@
     "place_id": "ChIJ6xjjRQCrQjQRvuQe2-ERFLM",
     "gid": "/g/11wj7_pz2v",
     "maps_url": "https://www.google.com/maps/place/%E7%9B%9B%E7%89%AA%E7%89%9B%E9%AA%A8%E6%8B%89%E9%BA%B5%E3%83%A9%E3%83%BC%E3%83%A1%E3%83%B3%28ShengYan-gyukotsu%20ramen%29/data=!4m6!3m5!1s0x3442ab0045e318eb:0xb31411e1db1ee4be!8m2!3d25.043453099999997!4d121.54775199999999!16s%2Fg%2F11wj7_pz2v!19sChIJ6xjjRQCrQjQRvuQe2-ERFLM?hl=zh-TW",
-    "added_at": "2026-09-03T13:39:13+0800"
-  },
-  {
-    "ftid": "0x3442a9dbf22e431b:0x637087faad9d8ecf",
-    "name": "和食ラーメン",
-    "address": "103臺北市大同區建功里鄭州路地下街出口Y21",
-    "lat": 25.049972,
-    "lng": 121.51223759999999,
-    "types": [
-      "和食店"
-    ],
-    "place_id": "ChIJG0Mu8tupQjQRz46drfqHcGM",
-    "gid": "/g/11t2z2_c48",
-    "maps_url": "https://www.google.com/maps/place/%E5%92%8C%E9%A3%9F%E3%83%A9%E3%83%BC%E3%83%A1%E3%83%B3/data=!4m6!3m5!1s0x3442a9dbf22e431b:0x637087faad9d8ecf!8m2!3d25.049972!4d121.51223759999999!16s%2Fg%2F11t2z2_c48!19sChIJG0Mu8tupQjQRz46drfqHcGM?hl=zh-TW",
-    "added_at": "2026-09-03T13:39:13+0800"
+    "added_at": "2026-09-03T13:39:13+0800",
+    "missed": 0
   },
   {
     "ftid": "0x3442abcb658abd59:0xdb6b2a5bdc1419a0",
@@ -8455,7 +7803,8 @@
     "place_id": null,
     "gid": "/g/11yb3m78x7",
     "maps_url": "https://www.google.com/maps/place/%E6%B2%90%E5%B1%A5%E6%8B%89%E9%BA%B5%20MURI%20RAMEN/data=!4m6!3m5!1s0x3442abcb658abd59:0xdb6b2a5bdc1419a0!8m2!3d25.041542699999997!4d121.57802699999999!16s%2Fg%2F11yb3m78x7?hl=zh-TW",
-    "added_at": "2026-09-03T13:39:13+0800"
+    "added_at": "2026-09-03T13:39:13+0800",
+    "missed": 1
   },
   {
     "ftid": "0x3442a900722a6937:0x2fe9d94e645bb58d",
@@ -8469,7 +7818,8 @@
     "place_id": null,
     "gid": "/g/11yytfzyqn",
     "maps_url": "https://www.google.com/maps/place/%E6%BB%BF%E9%9B%9E%E8%BB%92%20%EF%BD%9C%20%E9%BA%B5%E9%AD%9A/data=!4m6!3m5!1s0x3442a900722a6937:0x2fe9d94e645bb58d!8m2!3d25.057252!4d121.52115359999999!16s%2Fg%2F11yytfzyqn?hl=zh-TW",
-    "added_at": "2026-09-03T13:39:13+0800"
+    "added_at": "2026-09-03T13:39:13+0800",
+    "missed": 1
   },
   {
     "ftid": "0x3442a9004794bee3:0x17cf1da8cf787bfd",
@@ -8483,7 +7833,8 @@
     "place_id": null,
     "gid": "/g/11nbnc2m3b",
     "maps_url": "https://www.google.com/maps/place/%E7%9C%9F%E9%AF%9B%E3%82%89%E3%83%BC%E3%82%81%E3%82%93%20%E9%BA%BA%E9%AD%9A%20%E4%B8%AD%E5%B1%B1%E5%BA%97/data=!4m6!3m5!1s0x3442a9004794bee3:0x17cf1da8cf787bfd!8m2!3d25.057126099999998!4d121.5212358!16s%2Fg%2F11nbnc2m3b?hl=zh-TW",
-    "added_at": "2026-09-03T13:39:13+0800"
+    "added_at": "2026-09-03T13:39:13+0800",
+    "missed": 1
   },
   {
     "ftid": "0x3442ac65f18e3a6f:0xc723b594a903b1cb",
@@ -8497,7 +7848,8 @@
     "place_id": null,
     "gid": "/g/11bzxyf2db",
     "maps_url": "https://www.google.com/maps/place/%E4%B8%80%E5%89%8D%E4%B8%80%E7%94%BA%E6%8B%89%E9%BA%B5/data=!4m6!3m5!1s0x3442ac65f18e3a6f:0xc723b594a903b1cb!8m2!3d25.0819825!4d121.5718438!16s%2Fg%2F11bzxyf2db?hl=zh-TW",
-    "added_at": "2026-09-03T13:39:13+0800"
+    "added_at": "2026-09-03T13:39:13+0800",
+    "missed": 0
   },
   {
     "ftid": "0x3442ab347edf2ab3:0xaa0472569fa0a08e",
@@ -8511,7 +7863,8 @@
     "place_id": null,
     "gid": "/g/11w46qx4z0",
     "maps_url": "https://www.google.com/maps/place/%E7%94%B7%E5%AD%90%E6%BC%A2%E6%8B%89%E9%BA%B5%E9%A3%9F%E5%A0%82-%E5%8D%97%E4%BA%AC%E5%BA%97/data=!4m6!3m5!1s0x3442ab347edf2ab3:0xaa0472569fa0a08e!8m2!3d25.053575!4d121.560761!16s%2Fg%2F11w46qx4z0?hl=zh-TW",
-    "added_at": "2026-09-03T13:39:13+0800"
+    "added_at": "2026-09-03T13:39:13+0800",
+    "missed": 0
   },
   {
     "ftid": "0x3442a9001a53818b:0xe65d8ebc9c1a70c8",
@@ -8525,7 +7878,8 @@
     "place_id": null,
     "gid": "/g/11vz2qt__3",
     "maps_url": "https://www.google.com/maps/place/%E9%BE%8D%E9%B1%97%E6%8B%89%E9%BA%B5/data=!4m6!3m5!1s0x3442a9001a53818b:0xe65d8ebc9c1a70c8!8m2!3d25.053618699999998!4d121.51826349999999!16s%2Fg%2F11vz2qt__3?hl=zh-TW",
-    "added_at": "2026-09-03T13:39:13+0800"
+    "added_at": "2026-09-03T13:39:13+0800",
+    "missed": 0
   },
   {
     "ftid": "0x3442a99d37125945:0x2580bac05fb4a982",
@@ -8539,7 +7893,8 @@
     "place_id": null,
     "gid": "/g/11lzm4_30y",
     "maps_url": "https://www.google.com/maps/place/%E9%BA%B5%E5%B1%8B%E9%A5%97/data=!4m6!3m5!1s0x3442a99d37125945:0x2580bac05fb4a982!8m2!3d25.0289991!4d121.4613009!16s%2Fg%2F11lzm4_30y?hl=zh-TW",
-    "added_at": "2026-09-03T13:39:13+0800"
+    "added_at": "2026-09-03T13:39:13+0800",
+    "missed": 1
   },
   {
     "ftid": "0x34680349bf0ace75:0x7461e6ee28f55b4d",
@@ -8553,7 +7908,8 @@
     "place_id": null,
     "gid": "/g/11x7w8bc2g",
     "maps_url": "https://www.google.com/maps/place/%E4%B8%80%E5%B9%B8%E6%8B%89%E9%BA%B5%E5%A4%A7%E5%8B%87%E5%BA%97/data=!4m6!3m5!1s0x34680349bf0ace75:0x7461e6ee28f55b4d!8m2!3d24.9932287!4d121.5169689!16s%2Fg%2F11x7w8bc2g?hl=zh-TW",
-    "added_at": "2026-09-03T13:39:13+0800"
+    "added_at": "2026-09-03T13:39:13+0800",
+    "missed": 1
   },
   {
     "ftid": "0x3442a9b929b43fc5:0xf7dd0f0d8a8473a7",
@@ -8567,7 +7923,8 @@
     "place_id": null,
     "gid": "/g/11m766ccyr",
     "maps_url": "https://www.google.com/maps/place/%E5%B0%8F%E9%AB%98%E6%8B%89%E9%BA%B5%20%E9%80%A3%E5%9F%8E%E8%B7%AF/data=!4m6!3m5!1s0x3442a9b929b43fc5:0xf7dd0f0d8a8473a7!8m2!3d25.0018!4d121.4978498!16s%2Fg%2F11m766ccyr?hl=zh-TW",
-    "added_at": "2026-09-03T13:39:13+0800"
+    "added_at": "2026-09-03T13:39:13+0800",
+    "missed": 0
   },
   {
     "ftid": "0x3442a9ce7a8f4f5f:0x2cd78ffabbe7a8b1",
@@ -8581,7 +7938,8 @@
     "place_id": null,
     "gid": "/g/11svg0hbp8",
     "maps_url": "https://www.google.com/maps/place/%E9%BA%B5%E5%B1%8B%20%E6%9C%89%E6%BC%81/data=!4m6!3m5!1s0x3442a9ce7a8f4f5f:0x2cd78ffabbe7a8b1!8m2!3d25.041673!4d121.505298!16s%2Fg%2F11svg0hbp8?hl=zh-TW",
-    "added_at": "2026-09-03T13:39:13+0800"
+    "added_at": "2026-09-03T13:39:13+0800",
+    "missed": 0
   },
   {
     "ftid": "0x3442a97a2f1ebc1f:0x47a8bbe7e552ce16",
@@ -8596,24 +7954,308 @@
     ],
     "place_id": "ChIJH7weL3qpQjQRFs5S5ee7qEc",
     "gid": "/g/11zftgv287",
-    "maps_url": "https://www.google.com/maps/place/%E9%98%BF%E7%9D%BF%E8%9D%A6%E9%9B%9E%E9%9C%B8%E3%80%8C%E8%9D%A6%E6%BF%83%E6%B9%AF.%E9%9B%9E%E6%BF%83%E6%B9%AF%E3%80%8D/data=!4m6!3m5!1s0x3442a97a2f1ebc1f:0x47a8bbe7e552ce16!8m2!3d25.033613499999998!4d121.451121!16s%2Fg%2F11zftgv287!19sChIJH7weL3qpQjQRFs5S5ee7qEc?hl=zh-TW",
-    "added_at": "2026-09-03T13:39:13+0800"
+    "maps_url": "https://www.google.com/maps/place/%E9%98%BF%E7%9D%BF%E8%9D%A6%E9%9B%9E%E9%9C%B8%E3%80%8C%E8%9D%A6%E6%BF%83%E6%B9%AF.%E9%9B%9E%E6%BF%83%E6%B9%AF%E3%80%8D/data=!4m6!3m5!1s0x3442a97a2f1ebc1f:0x47a8bbe7e552ce16!8m2!3d25.033613499999998!4d121.451121!16s%2Fg%2F11zftgv287?hl=zh-TW",
+    "added_at": "2026-09-03T13:39:13+0800",
+    "missed": 0
   },
   {
-    "ftid": "0x3442af6c68f4997b:0x29a90c3887baf7d8",
-    "name": "半山妖吐納 Khàu-iau TUNA（盒飯、下午茶、拉麵）",
-    "address": "251新北市淡水區福德里自強路401號",
-    "lat": 25.133892799999998,
-    "lng": 121.4650661,
+    "ftid": "0x3442abeefb89223f:0xc37f4f5df20847dc",
+    "name": "北海道札幌拉麵羽畠食堂",
+    "address": "105臺北市松山區精忠里民生東路四段79號",
+    "lat": 25.058063999999998,
+    "lng": 121.5514812,
+    "types": [
+      "拉麵店"
+    ],
+    "place_id": null,
+    "gid": "/g/11bxb9nqc9",
+    "maps_url": "https://www.google.com/maps/place/%E5%8C%97%E6%B5%B7%E9%81%93%E6%9C%AD%E5%B9%8C%E6%8B%89%E9%BA%B5%E7%BE%BD%E7%95%A0%E9%A3%9F%E5%A0%82/data=!4m6!3m5!1s0x3442abeefb89223f:0xc37f4f5df20847dc!8m2!3d25.058063999999998!4d121.5514812!16s%2Fg%2F11bxb9nqc9?hl=zh-TW",
+    "added_at": "2026-09-06T20:00:03+0800"
+  },
+  {
+    "ftid": "0x3442a9b154981187:0xfae7725481e9119f",
+    "name": "一階堂拉麵 古亭店",
+    "address": "106012臺北市大安區古莊里和平東路一段18號",
+    "lat": 25.0267776,
+    "lng": 121.52359899999999,
     "types": [
       "拉麵店",
-      "健康食品餐廳",
-      "咖啡店",
+      "日本餐廳"
+    ],
+    "place_id": null,
+    "gid": "/g/11krtybbw9",
+    "maps_url": "https://www.google.com/maps/place/%E4%B8%80%E9%9A%8E%E5%A0%82%E6%8B%89%E9%BA%B5%20%E5%8F%A4%E4%BA%AD%E5%BA%97/data=!4m6!3m5!1s0x3442a9b154981187:0xfae7725481e9119f!8m2!3d25.0267776!4d121.52359899999999!16s%2Fg%2F11krtybbw9?hl=zh-TW",
+    "added_at": "2026-09-06T20:00:03+0800"
+  },
+  {
+    "ftid": "0x3442a98ab824a559:0xa22bff065146a435",
+    "name": "京阪豚骨拉麵",
+    "address": "100臺北市中正區羅斯福路四段136巷6弄6號",
+    "lat": 25.0126402,
+    "lng": 121.5357009,
+    "types": [
+      "拉麵店"
+    ],
+    "place_id": null,
+    "gid": "/g/1v_s3lx2",
+    "maps_url": "https://www.google.com/maps/place/%E4%BA%AC%E9%98%AA%E8%B1%9A%E9%AA%A8%E6%8B%89%E9%BA%B5/data=!4m6!3m5!1s0x3442a98ab824a559:0xa22bff065146a435!8m2!3d25.0126402!4d121.5357009!16s%2Fg%2F1v_s3lx2?hl=zh-TW",
+    "added_at": "2026-09-06T20:00:03+0800"
+  },
+  {
+    "ftid": "0x3442ab927dbe3979:0xfa7de8ee3b59fd5a",
+    "name": "大間拉麵",
+    "address": "105臺北市松山區三民里三民路113巷6號",
+    "lat": 25.0581183,
+    "lng": 121.5627679,
+    "types": [
+      "拉麵店"
+    ],
+    "place_id": null,
+    "gid": "/g/1w2yx41f",
+    "maps_url": "https://www.google.com/maps/place/%E5%A4%A7%E9%96%93%E6%8B%89%E9%BA%B5/data=!4m6!3m5!1s0x3442ab927dbe3979:0xfa7de8ee3b59fd5a!8m2!3d25.0581183!4d121.5627679!16s%2Fg%2F1w2yx41f?hl=zh-TW",
+    "added_at": "2026-09-06T20:00:03+0800"
+  },
+  {
+    "ftid": "0x3442abb0978f6545:0x2d4acd848b7a170c",
+    "name": "らあめん花月嵐 信義威秀店",
+    "address": "110臺北市信義區西村里松壽路20號2樓",
+    "lat": 25.035264599999998,
+    "lng": 121.5672596,
+    "types": [
+      "拉麵店",
+      "日本餐廳"
+    ],
+    "place_id": null,
+    "gid": "/g/1tdbhppl",
+    "maps_url": "https://www.google.com/maps/place/%E3%82%89%E3%81%82%E3%82%81%E3%82%93%E8%8A%B1%E6%9C%88%E5%B5%90%20%E4%BF%A1%E7%BE%A9%E5%A8%81%E7%A7%80%E5%BA%97/data=!4m6!3m5!1s0x3442abb0978f6545:0x2d4acd848b7a170c!8m2!3d25.035264599999998!4d121.5672596!16s%2Fg%2F1tdbhppl?hl=zh-TW",
+    "added_at": "2026-09-06T20:00:03+0800"
+  },
+  {
+    "ftid": "0x3442abe6f35a0115:0x39eab045990c8808",
+    "name": "樂町屋日式拉麵 本舖",
+    "address": "10545臺北市松山區興安街188號一樓",
+    "lat": 25.055970799999997,
+    "lng": 121.54517009999999,
+    "types": [
+      "拉麵店"
+    ],
+    "place_id": null,
+    "gid": "/g/11f4pnq43b",
+    "maps_url": "https://www.google.com/maps/place/%E6%A8%82%E7%94%BA%E5%B1%8B%E6%97%A5%E5%BC%8F%E6%8B%89%E9%BA%B5%20%E6%9C%AC%E8%88%96/data=!4m6!3m5!1s0x3442abe6f35a0115:0x39eab045990c8808!8m2!3d25.055970799999997!4d121.54517009999999!16s%2Fg%2F11f4pnq43b?hl=zh-TW",
+    "added_at": "2026-09-06T20:00:03+0800"
+  },
+  {
+    "ftid": "0x3442ab1c64ad4f71:0xd10e8950607f943",
+    "name": "休憩Ramen&Bar",
+    "address": "106臺北市大安區仁愛路四段417-1號光復南路346巷內喔我們在1樓",
+    "lat": 25.0382753,
+    "lng": 121.556123,
+    "types": [
+      "拉麵店",
+      "雞尾酒酒吧"
+    ],
+    "place_id": null,
+    "gid": "/g/11t6jlzqly",
+    "maps_url": "https://www.google.com/maps/place/%E4%BC%91%E6%86%A9Ramen%26Bar/data=!4m6!3m5!1s0x3442ab1c64ad4f71:0xd10e8950607f943!8m2!3d25.0382753!4d121.556123!16s%2Fg%2F11t6jlzqly?hl=zh-TW",
+    "added_at": "2026-09-06T20:00:03+0800"
+  },
+  {
+    "ftid": "0x3442ab001933781b:0x2034dd299224b6e1",
+    "name": "韓辛24H無人拉麵台北敦化店",
+    "address": "106臺北市大安區義安里敦化南路二段63巷58號1 樓",
+    "lat": 25.030814499999998,
+    "lng": 121.5517524,
+    "types": [
+      "韓國餐廳"
+    ],
+    "place_id": null,
+    "gid": "/g/11wp50pf33",
+    "maps_url": "https://www.google.com/maps/place/%E9%9F%93%E8%BE%9B24H%E7%84%A1%E4%BA%BA%E6%8B%89%E9%BA%B5%E5%8F%B0%E5%8C%97%E6%95%A6%E5%8C%96%E5%BA%97/data=!4m6!3m5!1s0x3442ab001933781b:0x2034dd299224b6e1!8m2!3d25.030814499999998!4d121.5517524!16s%2Fg%2F11wp50pf33?hl=zh-TW",
+    "added_at": "2026-09-06T20:00:03+0800"
+  },
+  {
+    "ftid": "0x3442aba6d7254b85:0xc8334db120aa64df",
+    "name": "林口拉麵",
+    "address": "110臺北市信義區大仁里林口街46號",
+    "lat": 25.038171,
+    "lng": 121.57950199999999,
+    "types": [
+      "拉麵店"
+    ],
+    "place_id": null,
+    "gid": "/g/11gzzh07g",
+    "maps_url": "https://www.google.com/maps/place/%E6%9E%97%E5%8F%A3%E6%8B%89%E9%BA%B5/data=!4m6!3m5!1s0x3442aba6d7254b85:0xc8334db120aa64df!8m2!3d25.038171!4d121.57950199999999!16s%2Fg%2F11gzzh07g?hl=zh-TW",
+    "added_at": "2026-09-06T20:00:03+0800"
+  },
+  {
+    "ftid": "0x3442aa36b1fed611:0x8291694d33f7122a",
+    "name": "拉麵JAPAN和平店",
+    "address": "11056臺北市信義區黎平里和平東路三段251號",
+    "lat": 25.022709,
+    "lng": 121.5545586,
+    "types": [
+      "拉麵店"
+    ],
+    "place_id": null,
+    "gid": "/g/11b_218h05",
+    "maps_url": "https://www.google.com/maps/place/%E6%8B%89%E9%BA%B5JAPAN%E5%92%8C%E5%B9%B3%E5%BA%97/data=!4m6!3m5!1s0x3442aa36b1fed611:0x8291694d33f7122a!8m2!3d25.022709!4d121.5545586!16s%2Fg%2F11b_218h05?hl=zh-TW",
+    "added_at": "2026-09-06T20:00:03+0800"
+  },
+  {
+    "ftid": "0x3442aba06b123a19:0x466bce506fe7c768",
+    "name": "麵匡匡拉麵食堂 台北安居店",
+    "address": "106臺北市大安區黎孝里安居街45號",
+    "lat": 25.019957599999998,
+    "lng": 121.5538886,
+    "types": [
+      "麵店"
+    ],
+    "place_id": null,
+    "gid": "/g/11vwt8j9v4",
+    "maps_url": "https://www.google.com/maps/place/%E9%BA%B5%E5%8C%A1%E5%8C%A1%E6%8B%89%E9%BA%B5%E9%A3%9F%E5%A0%82%20%E5%8F%B0%E5%8C%97%E5%AE%89%E5%B1%85%E5%BA%97/data=!4m6!3m5!1s0x3442aba06b123a19:0x466bce506fe7c768!8m2!3d25.019957599999998!4d121.5538886!16s%2Fg%2F11vwt8j9v4?hl=zh-TW",
+    "added_at": "2026-09-06T20:00:03+0800"
+  },
+  {
+    "ftid": "0x34680353ea4f184b:0x3cc05d23c1d13538",
+    "name": "麵屋晴る",
+    "address": "234新北市永和區大新街33號",
+    "lat": 25.0085512,
+    "lng": 121.5153165,
+    "types": [
+      "麵店"
+    ],
+    "place_id": null,
+    "gid": "/g/11h80ltxnb",
+    "maps_url": "https://www.google.com/maps/place/%E9%BA%B5%E5%B1%8B%E6%99%B4%E3%82%8B/data=!4m6!3m5!1s0x34680353ea4f184b:0x3cc05d23c1d13538!8m2!3d25.0085512!4d121.5153165!16s%2Fg%2F11h80ltxnb?hl=zh-TW",
+    "added_at": "2026-09-06T20:00:03+0800"
+  },
+  {
+    "ftid": "0x3442abdfb9363307:0x3bcb721b38cbe049",
+    "name": "滝禾製麵所 大安瑞安店(拉麵專賣)",
+    "address": "106臺北市大安區瑞安街130號",
+    "lat": 25.0295208,
+    "lng": 121.542222,
+    "types": [
+      "拉麵店"
+    ],
+    "place_id": null,
+    "gid": "/g/11pfbl4lxt",
+    "maps_url": "https://www.google.com/maps/place/%E6%BB%9D%E7%A6%BE%E8%A3%BD%E9%BA%B5%E6%89%80%20%E5%A4%A7%E5%AE%89%E7%91%9E%E5%AE%89%E5%BA%97%28%E6%8B%89%E9%BA%B5%E5%B0%88%E8%B3%A3%29/data=!4m6!3m5!1s0x3442abdfb9363307:0x3bcb721b38cbe049!8m2!3d25.0295208!4d121.542222!16s%2Fg%2F11pfbl4lxt?hl=zh-TW",
+    "added_at": "2026-09-06T20:00:03+0800"
+  },
+  {
+    "ftid": "0x3442ab12f6ee0391:0x32e4a18ee13ec176",
+    "name": "鯛担麵專賣店（台灣）—抱きしめ鯛",
+    "address": "106臺北市大安區車層里延吉街108號",
+    "lat": 25.040858,
+    "lng": 121.55448799999999,
+    "types": [
+      "ラーメン屋",
+      "レストラン"
+    ],
+    "place_id": null,
+    "gid": "/g/11w8thl7qh",
+    "maps_url": "https://www.google.com/maps/place/%E9%AF%9B%E6%8B%85%E9%BA%B5%E5%B0%88%E8%B3%A3%E5%BA%97%EF%BC%88%E5%8F%B0%E7%81%A3%EF%BC%89%E2%80%94%E6%8A%B1%E3%81%8D%E3%81%97%E3%82%81%E9%AF%9B/data=!4m6!3m5!1s0x3442ab12f6ee0391:0x32e4a18ee13ec176!8m2!3d25.040858!4d121.55448799999999!16s%2Fg%2F11w8thl7qh?hl=zh-TW",
+    "added_at": "2026-09-06T20:00:03+0800"
+  },
+  {
+    "ftid": "0x3442ab9be9fc30ad:0x90194de3dff8d096",
+    "name": "麵屋武藏 光復店",
+    "address": "106臺北市大安區光復南路240巷23號",
+    "lat": 25.0405746,
+    "lng": 121.5565089,
+    "types": [
+      "ラーメン屋"
+    ],
+    "place_id": null,
+    "gid": "/g/11vlf4zx61",
+    "maps_url": "https://www.google.com/maps/place/%E9%BA%B5%E5%B1%8B%E6%AD%A6%E8%97%8F%20%E5%85%89%E5%BE%A9%E5%BA%97/data=!4m6!3m5!1s0x3442ab9be9fc30ad:0x90194de3dff8d096!8m2!3d25.0405746!4d121.5565089!16s%2Fg%2F11vlf4zx61?hl=zh-TW",
+    "added_at": "2026-09-06T20:00:03+0800"
+  },
+  {
+    "ftid": "0x3442af6d3b9421b1:0x1543670b9afa26e7",
+    "name": "豚將日本拉麵",
+    "address": "112臺北市北投區關渡里知行路286號",
+    "lat": 25.121631999999998,
+    "lng": 121.4675,
+    "types": [
+      "拉麵店"
+    ],
+    "place_id": null,
+    "gid": "/g/11c5blmqns",
+    "maps_url": "https://www.google.com/maps/place/%E8%B1%9A%E5%B0%87%E6%97%A5%E6%9C%AC%E6%8B%89%E9%BA%B5/data=!4m6!3m5!1s0x3442af6d3b9421b1:0x1543670b9afa26e7!8m2!3d25.121631999999998!4d121.4675!16s%2Fg%2F11c5blmqns?hl=zh-TW",
+    "added_at": "2026-09-06T20:00:03+0800"
+  },
+  {
+    "ftid": "0x3442aa13c613f849:0xb01a13c33f713de0",
+    "name": "龍丼亭",
+    "address": "116臺北市文山區興得里興隆路三段36巷10號",
+    "lat": 25.000062699999997,
+    "lng": 121.5551828,
+    "types": [
+      "拉麵店",
+      "亞洲菜餐廳",
+      "日本餐廳"
+    ],
+    "place_id": null,
+    "gid": "/g/119t72dkp",
+    "maps_url": "https://www.google.com/maps/place/%E9%BE%8D%E4%B8%BC%E4%BA%AD/data=!4m6!3m5!1s0x3442aa13c613f849:0xb01a13c33f713de0!8m2!3d25.000062699999997!4d121.5551828!16s%2Fg%2F119t72dkp?hl=zh-TW",
+    "added_at": "2026-09-06T20:00:03+0800"
+  },
+  {
+    "ftid": "0x3442ab3de69ed68b:0x3ac5197cb544f9fd",
+    "name": "長生塩人 民生",
+    "address": "105臺北市松山區三民里民生東路五段140號",
+    "lat": 25.0585685,
+    "lng": 121.56180379999999,
+    "types": [
+      "拉麵店"
+    ],
+    "place_id": null,
+    "gid": "/g/11t3c5hcs7",
+    "maps_url": "https://www.google.com/maps/place/%E9%95%B7%E7%94%9F%E5%A1%A9%E4%BA%BA%20%E6%B0%91%E7%94%9F/data=!4m6!3m5!1s0x3442ab3de69ed68b:0x3ac5197cb544f9fd!8m2!3d25.0585685!4d121.56180379999999!16s%2Fg%2F11t3c5hcs7?hl=zh-TW",
+    "added_at": "2026-09-06T20:00:03+0800"
+  },
+  {
+    "ftid": "0x3442aa7bb50e6611:0x103c0a70ca3c3999",
+    "name": "MY麵屋（自製菠菜涼麵",
+    "address": "116臺北市文山區萬興里指南路二段45巷7號",
+    "lat": 24.9883232,
+    "lng": 121.5742264,
+    "types": [
+      "麵店"
+    ],
+    "place_id": null,
+    "gid": "/g/1thx697q",
+    "maps_url": "https://www.google.com/maps/place/MY%E9%BA%B5%E5%B1%8B%EF%BC%88%E8%87%AA%E8%A3%BD%E8%8F%A0%E8%8F%9C%E6%B6%BC%E9%BA%B5/data=!4m6!3m5!1s0x3442aa7bb50e6611:0x103c0a70ca3c3999!8m2!3d24.9883232!4d121.5742264!16s%2Fg%2F1thx697q?hl=zh-TW",
+    "added_at": "2026-09-06T20:00:03+0800"
+  },
+  {
+    "ftid": "0x3442a97cf101a8e7:0x9c044dae6b72db25",
+    "name": "稻禾麵屋",
+    "address": "220新北市板橋區福丘里新民街3號",
+    "lat": 25.009752799999998,
+    "lng": 121.4638657,
+    "types": [
+      "愛心食堂"
+    ],
+    "place_id": null,
+    "gid": "/g/11sbhkdkzb",
+    "maps_url": "https://www.google.com/maps/place/%E7%A8%BB%E7%A6%BE%E9%BA%B5%E5%B1%8B/data=!4m6!3m5!1s0x3442a97cf101a8e7:0x9c044dae6b72db25!8m2!3d25.009752799999998!4d121.4638657!16s%2Fg%2F11sbhkdkzb?hl=zh-TW",
+    "added_at": "2026-09-06T20:00:03+0800"
+  },
+  {
+    "ftid": "0x3442a8b77bbdf93b:0x1aa6ede7ed1feed1",
+    "name": "麵屋程安",
+    "address": "247新北市蘆洲區中路里光華路165號",
+    "lat": 25.0819521,
+    "lng": 121.46514379999999,
+    "types": [
       "餐廳"
     ],
     "place_id": null,
-    "gid": "/g/11ghtm_jg5",
-    "maps_url": "https://www.google.com/maps/place/%E5%8D%8A%E5%B1%B1%E5%A6%96%E5%90%90%E7%B4%8D%20Kh%C3%A0u-iau%20TUNA%EF%BC%88%E7%9B%92%E9%A3%AF%E3%80%81%E4%B8%8B%E5%8D%88%E8%8C%B6%E3%80%81%E6%8B%89%E9%BA%B5%EF%BC%89/data=!4m6!3m5!1s0x3442af6c68f4997b:0x29a90c3887baf7d8!8m2!3d25.133892799999998!4d121.4650661!16s%2Fg%2F11ghtm_jg5?hl=zh-TW",
-    "added_at": "2026-09-03T13:39:13+0800"
+    "gid": "/g/11fb14z1yn",
+    "maps_url": "https://www.google.com/maps/place/%E9%BA%B5%E5%B1%8B%E7%A8%8B%E5%AE%89/data=!4m6!3m5!1s0x3442a8b77bbdf93b:0x1aa6ede7ed1feed1!8m2!3d25.0819521!4d121.46514379999999!16s%2Fg%2F11fb14z1yn?hl=zh-TW",
+    "added_at": "2026-09-06T20:00:03+0800"
   }
 ]
